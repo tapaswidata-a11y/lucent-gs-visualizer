@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucent GK Illustrated | Ancient India - 1. Harappan / Indus Valley Civilization</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              bronze: '#CD7F32',
+              terracotta: '#C86446',
+              deepnavy: '#0B1325',
+              carddark: '#141E33',
+              cardborder: '#233354',
+              sand: '#F7F3E9',
+              sandstone: '#E8DCC4'
+            }
+          },
+          fontFamily: {
+            heading: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0B1325] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- TOP NOTIFICATION / EXAM BANNER -->
+  <div class="bg-gradient-to-r from-amber-700 via-amber-600 to-amber-800 text-amber-50 text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-md flex items-center justify-center gap-2">
+    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-950/60 text-amber-200 uppercase tracking-wider">APSC & UPSC GS Booster</span>
+    <span>Lucent's General Knowledge Complete Visual Companion & Interactive Encyclopedia</span>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-[#0B1325]/90 backdrop-blur-md border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo / Title -->
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-900/30 ring-1 ring-amber-400/40">
+          <i data-lucide="landmark" class="w-6 h-6 text-slate-950"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-500 tracking-wider">LUCENT GS</span>
+            <span class="text-xs font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">VISUALIZED</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium">Ancient Indian History &bull; Book Module 1</p>
+        </div>
+      </div>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/70 p-1.5 rounded-full border border-slate-800 text-xs font-semibold">
+        <a href="#overview" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Overview</a>
+        <a href="#geography" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Boundaries</a>
+        <a href="#sites" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Major Sites</a>
+        <a href="#artifacts" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Artifacts</a>
+        <a href="#trade" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Economy & Trade</a>
+        <a href="#religion" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Society & Religion</a>
+        <a href="#quiz" class="px-3.5 py-1.5 rounded-full text-amber-400 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 transition-all flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Quiz Mode
+        </a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <!-- Quick Search -->
+        <button id="searchBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Quick Search Facts">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Chapter Switcher Dropdown Trigger -->
+        <div class="relative">
+          <button id="chapterSelectorBtn" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-xs font-semibold text-slate-200 transition-all">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Ch. 1: Harappa</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400"></i>
+          </button>
+          
+          <!-- Dropdown menu -->
+          <div id="chapterDropdown" class="hidden absolute right-0 mt-2 w-72 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-2 z-50 text-xs">
+            <div class="px-3 py-2 font-bold text-slate-400 uppercase tracking-wider text-[10px]">Ancient Indian History</div>
+            <a href="#" class="flex items-center justify-between p-2.5 rounded-lg bg-amber-500/15 text-amber-300 font-semibold border border-amber-500/20">
+              <span class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> 1. Harappan / Indus Valley
+              </span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] bg-amber-400 text-slate-950 font-bold">Active</span>
+            </a>
+            <a href="vedic.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 hover:text-amber-300 transition-all">
+              <span class="flex items-center gap-2">
+                <i data-lucide="flame" class="w-4 h-4 text-amber-400"></i> 2. Vedic Culture (1500–600 BC)
+              </span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300 font-semibold border border-emerald-500/30">Available</span>
+            </a>
+            <div class="p-2.5 rounded-lg text-slate-400 flex items-center justify-between hover:bg-slate-800/50 cursor-not-allowed">
+              <span>3. Mahajanapadas & Buddhism</span>
+              <span class="text-[10px] text-slate-500">Next Up</span>
+            </div>
+            <div class="p-2.5 rounded-lg text-slate-400 flex items-center justify-between hover:bg-slate-800/50 cursor-not-allowed">
+              <span>4. Mauryan Empire</span>
+              <span class="text-[10px] text-slate-500">Upcoming</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- SEARCH OVERLAY MODAL -->
+  <div id="searchModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-start justify-center pt-24 px-4">
+    <div class="bg-slate-900 border border-slate-700 w-full max-w-2xl rounded-2xl shadow-2xl p-4 overflow-hidden">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <i data-lucide="search" class="w-5 h-5 text-amber-400"></i>
+        <input type="text" id="searchInput" placeholder="Search any Lucent GK fact (e.g. 'dockyard', 'Pashupati', 'Meluhha', 'Kalibangan')..." class="bg-transparent w-full text-slate-100 placeholder-slate-500 focus:outline-none text-sm">
+        <button id="closeSearchBtn" class="text-slate-400 hover:text-white text-xs px-2 py-1 rounded bg-slate-800">ESC</button>
+      </div>
+      <div id="searchResults" class="mt-3 max-h-80 overflow-y-auto space-y-2 text-xs">
+        <p class="text-slate-500 text-center py-6">Type a keyword to search all sites, archaeological finds, trade routes and decline theories...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT AREA -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+
+    <!-- HERO SECTION -->
+    <section id="overview" class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900/90 to-amber-950/40 border border-slate-800 p-8 sm:p-12 shadow-2xl">
+      <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -left-20 -top-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+        
+        <!-- Left: Text Header & Meta -->
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold tracking-wide">
+            <i data-lucide="book-open" class="w-3.5 h-3.5"></i> Lucent GK &bull; Ancient India &bull; Page 1-4
+          </div>
+          
+          <h1 class="font-heading font-black text-3xl sm:text-5xl text-white tracking-tight leading-tight">
+            1. Harappan / Indus Civilization
+            <span class="block text-2xl sm:text-3xl font-light text-amber-400/90 mt-2 font-sans">
+              2500 BC &ndash; 1750 BC <span class="text-xs uppercase bg-slate-800 text-slate-300 px-2 py-0.5 rounded ml-2 align-middle">Carbon-14 Dating</span>
+            </span>
+          </h1>
+
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            The earliest urban civilization in the Indian subcontinent. Belongs to the 
+            <strong class="text-amber-300 font-semibold">Proto-Historic Period (Bronze Age / Chalcolithic)</strong>, 
+            renowned for its monumental town planning, sophisticated underground drainage, maritime trade with Sumer, and undeciphered boustrophedon script.
+          </p>
+
+          <!-- Lucent Quick Facts Ribbon -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3">
+              <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">First Coined By</span>
+              <span class="text-sm font-bold text-amber-300">Sir John Marshall</span>
+            </div>
+            <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3">
+              <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">Heartland Axis</span>
+              <span class="text-sm font-bold text-white">Harappa &ndash; Ghaggar &ndash; Mohenjodaro</span>
+            </div>
+            <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3">
+              <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">Total Area</span>
+              <span class="text-sm font-bold text-amber-300">~1,299,600 km²</span>
+              <span class="text-[10px] text-slate-400 block">Triangular Layout</span>
+            </div>
+            <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3">
+              <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">Key Metal Absent</span>
+              <span class="text-sm font-bold text-rose-400">Iron Unknown</span>
+              <span class="text-[10px] text-slate-400 block">Copper & Bronze Used</span>
+            </div>
+          </div>
+
+          <!-- Lucent Naming Logic -->
+          <div class="bg-slate-900/80 border-l-4 border-amber-500 rounded-r-xl p-4 text-xs space-y-1.5 text-slate-300">
+            <div class="font-bold text-amber-300 uppercase tracking-wider text-[11px] flex items-center gap-1.5">
+              <i data-lucide="info" class="w-3.5 h-3.5"></i> How Lucent Classifies The Nomenclature:
+            </div>
+            <p><strong>Oldest Name:</strong> <em>Indus Civilization</em> (after Indus river system).</p>
+            <p><strong>Most Appropriate Archaeological Name:</strong> <em>Harappan Civilization</em> (Harappa was the first discovered type-site in 1921).</p>
+            <p><strong>Geographical Point of View:</strong> <em>Indus-Saraswati Civilization</em> (largest concentration: 80% of settlements along the Ghaggar-Hakra/Saraswati river valley).</p>
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Hero Card with Mature Phase Map -->
+        <div class="lg:col-span-5">
+          <div class="relative group rounded-2xl overflow-hidden border border-amber-500/30 bg-slate-950/70 shadow-2xl p-3">
+            <div class="relative overflow-hidden rounded-xl">
+              <img src="assets/images/ivc_map.png" alt="Indus Valley Civilization Mature Phase Map" class="w-full h-80 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 right-3 p-3 rounded-lg bg-slate-950/85 backdrop-blur-md border border-slate-800 text-xs">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-bold text-amber-300 flex items-center gap-1">
+                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-rose-400"></i> Mature Phase Geography (2600–1900 BC)
+                  </span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-semibold">Verified ASI Data</span>
+                </div>
+                <p class="text-[11px] text-slate-300">Spread across Sindh, Baluchistan, Punjab, Haryana, Rajasthan, Gujarat, Western UP, & Northern Maharashtra.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: GEOGRAPHICAL EXTREMITIES (LUCENT COMPASS CHART) -->
+    <section id="geography" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-800 pb-4">
+        <div>
+          <span class="text-xs uppercase font-extrabold tracking-widest text-amber-400">Geographical Quadrilateral</span>
+          <h2 class="font-heading text-2xl sm:text-3xl font-bold text-white mt-1">Extreme Boundary Points of the Civilization</h2>
+        </div>
+        <p class="text-xs text-slate-400 max-w-md">
+          Frequent Question in APSC/UPSC: Lucent highlights the northernmost, southernmost, easternmost, and westernmost outposts.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        
+        <!-- North: Manda -->
+        <div class="bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 hover:border-amber-500/50 rounded-2xl p-5 shadow-lg relative group transition-all">
+          <div class="w-8 h-8 rounded-full bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 font-bold text-xs mb-3">
+            N
+          </div>
+          <span class="text-[10px] font-bold text-blue-400 uppercase tracking-wider block">Northern-most Site</span>
+          <h3 class="text-lg font-bold text-white mt-0.5">Manda</h3>
+          <p class="text-xs text-amber-400/90 font-mono mt-0.5">River: Chenab</p>
+          <p class="text-xs text-slate-300 mt-2">Jammu & Kashmir (Now)</p>
+          <div class="mt-3 text-[11px] text-slate-400 pt-2 border-t border-slate-800/80">
+            <span class="text-slate-500">Earlier considered:</span> Ropar (Sutlej) in Punjab.
+          </div>
+        </div>
+
+        <!-- South: Daimabad -->
+        <div class="bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 hover:border-amber-500/50 rounded-2xl p-5 shadow-lg relative group transition-all">
+          <div class="w-8 h-8 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-xs mb-3">
+            S
+          </div>
+          <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block">Southern-most Site</span>
+          <h3 class="text-lg font-bold text-white mt-0.5">Daimabad</h3>
+          <p class="text-xs text-amber-400/90 font-mono mt-0.5">River: Pravara (Godavari trib.)</p>
+          <p class="text-xs text-slate-300 mt-2">Ahmednagar, Maharashtra (Now)</p>
+          <div class="mt-3 text-[11px] text-slate-400 pt-2 border-t border-slate-800/80">
+            <span class="text-slate-500">Earlier considered:</span> Bhagatrav (Kim river) in Gujarat.
+          </div>
+        </div>
+
+        <!-- East: Alamgirpur -->
+        <div class="bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 hover:border-amber-500/50 rounded-2xl p-5 shadow-lg relative group transition-all">
+          <div class="w-8 h-8 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-xs mb-3">
+            E
+          </div>
+          <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider block">Eastern-most Site</span>
+          <h3 class="text-lg font-bold text-white mt-0.5">Alamgirpur</h3>
+          <p class="text-xs text-amber-400/90 font-mono mt-0.5">River: Hindon (Yamuna trib.)</p>
+          <p class="text-xs text-slate-300 mt-2">Meerut, Uttar Pradesh</p>
+          <div class="mt-3 text-[11px] text-slate-400 pt-2 border-t border-slate-800/80">
+            <span class="text-slate-500">Key marker:</span> Furthest eastern outpost in Gangetic doab.
+          </div>
+        </div>
+
+        <!-- West: Sutkagendor -->
+        <div class="bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 hover:border-amber-500/50 rounded-2xl p-5 shadow-lg relative group transition-all">
+          <div class="w-8 h-8 rounded-full bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 font-bold text-xs mb-3">
+            W
+          </div>
+          <span class="text-[10px] font-bold text-rose-400 uppercase tracking-wider block">Western-most Site</span>
+          <h3 class="text-lg font-bold text-white mt-0.5">Sutkagendor</h3>
+          <p class="text-xs text-amber-400/90 font-mono mt-0.5">River: Dasht (Dashk)</p>
+          <p class="text-xs text-slate-300 mt-2">Makran Coast (Pak-Iran Border)</p>
+          <div class="mt-3 text-[11px] text-slate-400 pt-2 border-t border-slate-800/80">
+            <span class="text-slate-500">Function:</span> Major maritime port for trade with Persian Gulf.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Capital & Port Cities Sub-bar -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800 flex items-center gap-3">
+          <div class="p-2.5 rounded-lg bg-amber-500/10 text-amber-400">
+            <i data-lucide="crown" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-slate-200 uppercase tracking-wider">Twin Capital Cities</h4>
+            <p class="text-sm font-semibold text-amber-300 mt-0.5">Harappa &amp; Mohenjodaro</p>
+            <p class="text-[11px] text-slate-400">Termed the "Twin Capitals of a Vast Empire" by Stuart Piggott.</p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800 flex items-center gap-3">
+          <div class="p-2.5 rounded-lg bg-blue-500/10 text-blue-400">
+            <i data-lucide="anchor" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-slate-200 uppercase tracking-wider">5 Major Harappan Port Cities</h4>
+            <p class="text-sm font-semibold text-blue-300 mt-0.5">Lothal, Sutkagendor, Allahdino, Balakot, Kuntasi</p>
+            <p class="text-[11px] text-slate-400">Centers of coastal trade, shell working, and seafaring vessels.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: VISUAL ARTIFACTS GALLERY (WITH REAL HISTORICAL PHOTOS) -->
+    <section id="artifacts" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-800 pb-4">
+        <div>
+          <span class="text-xs uppercase font-extrabold tracking-widest text-amber-400">Archaeological Hall of Relics</span>
+          <h2 class="font-heading text-2xl sm:text-3xl font-bold text-white mt-1">Real Historical Artifacts &amp; Architecture</h2>
+        </div>
+        <p class="text-xs text-slate-400 max-w-md">
+          Explore high-resolution museum photos of the actual finds described in Lucent's table. Click any artifact for in-depth GS notes.
+        </p>
+      </div>
+
+      <!-- Artifacts Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- 1. Dancing Girl -->
+        <div class="artifact-card group bg-slate-900/90 border border-slate-800 hover:border-amber-500/60 rounded-2xl overflow-hidden shadow-xl transition-all cursor-pointer" onclick="openModal('dancing_girl')">
+          <div class="relative h-64 overflow-hidden bg-slate-950 flex items-center justify-center">
+            <img src="assets/images/dancing_girl.jpg" alt="Dancing Girl of Mohenjodaro" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-amber-500/90 text-slate-950 text-[10px] font-black uppercase tracking-wider">
+              Mohenjodaro
+            </div>
+            <div class="absolute bottom-2 right-2 p-1.5 rounded-full bg-slate-900/80 text-amber-300 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-heading font-bold text-lg text-white">Bronze Dancing Girl</h3>
+              <span class="text-xs text-slate-400">c. 2300–1750 BC</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Found at Mohenjodaro by Ernest Mackay. Cast using the sophisticated <strong>Lost-Wax Technique (Cire Perdue)</strong>. Stands in natural <em>Tribhanga</em> pose adorned with 25 bangles on left arm.
+            </p>
+            <div class="pt-2 flex items-center justify-between text-[11px] text-amber-400 font-semibold border-t border-slate-800">
+              <span>National Museum, New Delhi</span>
+              <span class="flex items-center gap-1">Details <i data-lucide="chevron-right" class="w-3 h-3"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Priest King -->
+        <div class="artifact-card group bg-slate-900/90 border border-slate-800 hover:border-amber-500/60 rounded-2xl overflow-hidden shadow-xl transition-all cursor-pointer" onclick="openModal('priest_king')">
+          <div class="relative h-64 overflow-hidden bg-slate-950 flex items-center justify-center">
+            <img src="assets/images/priest_king.jpg" alt="Priest King Mohenjo-daro" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-amber-500/90 text-slate-950 text-[10px] font-black uppercase tracking-wider">
+              Mohenjodaro
+            </div>
+            <div class="absolute bottom-2 right-2 p-1.5 rounded-full bg-slate-900/80 text-amber-300 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-heading font-bold text-lg text-white">Steatite "Priest-King"</h3>
+              <span class="text-xs text-slate-400">White Steatite</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Carved bearded male figure wearing a filleted headband, armlet, and a shawl decorated with <strong>trefoil (clover) motifs</strong> draped over the left shoulder leaving right arm free.
+            </p>
+            <div class="pt-2 flex items-center justify-between text-[11px] text-amber-400 font-semibold border-t border-slate-800">
+              <span>National Museum, Karachi</span>
+              <span class="flex items-center gap-1">Details <i data-lucide="chevron-right" class="w-3 h-3"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Pashupati Seal -->
+        <div class="artifact-card group bg-slate-900/90 border border-slate-800 hover:border-amber-500/60 rounded-2xl overflow-hidden shadow-xl transition-all cursor-pointer" onclick="openModal('pashupati_seal')">
+          <div class="relative h-64 overflow-hidden bg-slate-950 flex items-center justify-center">
+            <img src="assets/images/pashupati_seal.jpg" alt="Pashupati Seal / Proto-Shiva" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-amber-500/90 text-slate-950 text-[10px] font-black uppercase tracking-wider">
+              Mohenjodaro
+            </div>
+            <div class="absolute bottom-2 right-2 p-1.5 rounded-full bg-slate-900/80 text-amber-300 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-heading font-bold text-lg text-white">Pashupati (Proto-Shiva) Seal</h3>
+              <span class="text-xs text-slate-400">Chief Male Deity</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Three-faced deity in yogic posture with horned headgear. Surrounded by 4 animals: <strong>Elephant &amp; Tiger</strong> (right), <strong>Rhinoceros &amp; Buffalo</strong> (left), plus <strong>Two Deer</strong> at his feet.
+            </p>
+            <div class="pt-2 flex items-center justify-between text-[11px] text-amber-400 font-semibold border-t border-slate-800">
+              <span>High-Yield UPSC Question</span>
+              <span class="flex items-center gap-1">Details <i data-lucide="chevron-right" class="w-3 h-3"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Great Bath -->
+        <div class="artifact-card group bg-slate-900/90 border border-slate-800 hover:border-amber-500/60 rounded-2xl overflow-hidden shadow-xl transition-all cursor-pointer" onclick="openModal('great_bath')">
+          <div class="relative h-64 overflow-hidden bg-slate-950">
+            <img src="assets/images/great_bath.jpg" alt="Great Bath of Mohenjodaro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-blue-500/90 text-white text-[10px] font-black uppercase tracking-wider">
+              Citadel Mound
+            </div>
+            <div class="absolute bottom-2 right-2 p-1.5 rounded-full bg-slate-900/80 text-amber-300 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-heading font-bold text-lg text-white">The Great Bath</h3>
+              <span class="text-xs text-slate-400">11.88m × 7.01m</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Finest example of public hygiene and ritual purification. Built of burnt bricks, coated with <strong>gypsum mortar &amp; natural bitumen</strong> (asphalt) to prevent water leakage, with steps at North &amp; South ends.
+            </p>
+            <div class="pt-2 flex items-center justify-between text-[11px] text-amber-400 font-semibold border-t border-slate-800">
+              <span>Mohenjodaro (Sindh)</span>
+              <span class="flex items-center gap-1">Details <i data-lucide="chevron-right" class="w-3 h-3"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Lothal Dockyard -->
+        <div class="artifact-card group bg-slate-900/90 border border-slate-800 hover:border-amber-500/60 rounded-2xl overflow-hidden shadow-xl transition-all cursor-pointer" onclick="openModal('lothal')">
+          <div class="relative h-64 overflow-hidden bg-slate-950">
+            <img src="assets/images/lothal_dockyard.jpg" alt="Lothal Dockyard Gujarat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-emerald-500/90 text-slate-950 text-[10px] font-black uppercase tracking-wider">
+              Lothal, Gujarat
+            </div>
+            <div class="absolute bottom-2 right-2 p-1.5 rounded-full bg-slate-900/80 text-amber-300 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-heading font-bold text-lg text-white">World's First Tidal Dock</h3>
+              <span class="text-xs text-slate-400">Bhogava River</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Excavated by S.R. Rao in 1954. A massive burnt-brick basin (214m × 36m) engineered to berth ships during high tide. Center of bead-making, Persian seals, and early rice cultivation.
+            </p>
+            <div class="pt-2 flex items-center justify-between text-[11px] text-amber-400 font-semibold border-t border-slate-800">
+              <span>Gulf of Khambhat</span>
+              <span class="flex items-center gap-1">Details <i data-lucide="chevron-right" class="w-3 h-3"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Dholavira Reservoir -->
+        <div class="artifact-card group bg-slate-900/90 border border-slate-800 hover:border-amber-500/60 rounded-2xl overflow-hidden shadow-xl transition-all cursor-pointer" onclick="openModal('dholavira')">
+          <div class="relative h-64 overflow-hidden bg-slate-950">
+            <img src="assets/images/dholavira.jpg" alt="Dholavira Water Reservoir" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-amber-500/90 text-slate-950 text-[10px] font-black uppercase tracking-wider">
+              UNESCO World Heritage
+            </div>
+            <div class="absolute bottom-2 right-2 p-1.5 rounded-full bg-slate-900/80 text-amber-300 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+              <i data-lucide="maximize-2" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="font-heading font-bold text-lg text-white">Dholavira Reservoirs</h3>
+              <span class="text-xs text-slate-400">Khadir Bet, Kutch</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Unique cascade of 16 rock-cut reservoirs to harvest rainwater from ephemeral streams Manhar &amp; Mansar. Only site divided into <strong>3 parts</strong> (Citadel, Middle Town, Lower Town) + 10-letter signboard.
+            </p>
+            <div class="pt-2 flex items-center justify-between text-[11px] text-amber-400 font-semibold border-t border-slate-800">
+              <span>Excavated by J.P. Joshi &amp; R.S. Bisht</span>
+              <span class="flex items-center gap-1">Details <i data-lucide="chevron-right" class="w-3 h-3"></i></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE MAJOR ARCHAEOLOGICAL SITES EXPLORER -->
+    <section id="sites" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-800 pb-4">
+        <div>
+          <span class="text-xs uppercase font-extrabold tracking-widest text-amber-400">Comprehensive Book Table</span>
+          <h2 class="font-heading text-2xl sm:text-3xl font-bold text-white mt-1">Major Sites, Excavators, Rivers &amp; Archaeological Finds</h2>
+        </div>
+        
+        <!-- Filter Pills -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs">
+          <button class="site-filter-btn px-3 py-1.5 rounded-lg bg-amber-500 text-slate-950 font-bold" data-filter="all">All Sites</button>
+          <button class="site-filter-btn px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white" data-filter="india">India Only</button>
+          <button class="site-filter-btn px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white" data-filter="pakistan">Pakistan Only</button>
+          <button class="site-filter-btn px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white" data-filter="coastal">Port Cities</button>
+        </div>
+      </div>
+
+      <!-- Sites Cards Stream -->
+      <div id="sitesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Site cards dynamically rendered or structured below -->
+
+        <!-- 1. Harappa -->
+        <div class="site-card bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-amber-500/50 transition-all space-y-4" data-country="pakistan" data-type="capital">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400">First Discovered Site (1921)</span>
+              <h3 class="font-heading text-xl font-bold text-white">Harappa</h3>
+              <p class="text-xs text-slate-400">Montgomery (Sahiwal) District, Punjab, Pakistan</p>
+            </div>
+            <span class="px-2 py-1 rounded bg-amber-500/10 text-amber-300 text-xs font-mono font-bold">Ravi River</span>
+          </div>
+
+          <div class="bg-slate-950/60 rounded-xl p-3 text-xs space-y-1">
+            <div class="text-slate-400"><strong class="text-slate-200">Excavators:</strong> Daya Ram Sahni (1921), Madho Swaroop Vatsa (1926), Wheeler (1946)</div>
+            <div class="text-slate-400"><strong class="text-slate-200">Mentioned in Rigveda:</strong> As <em>"Hariyumpia"</em></div>
+          </div>
+
+          <div class="space-y-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Lucent's Key Archaeological Finds:</span>
+            <div class="flex flex-wrap gap-1.5 text-xs">
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">6 Granaries in a row</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Workmen's Quarters</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Virgin-Goddess Seal</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Cemetery R-37 &amp; H</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Stone Lingam &amp; Yoni</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Copper Mirror &amp; Vanity Box</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Dice &amp; Copper Scale</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Mohenjodaro -->
+        <div class="site-card bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-amber-500/50 transition-all space-y-4" data-country="pakistan" data-type="capital">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-blue-400">"Mound of the Dead" (1922)</span>
+              <h3 class="font-heading text-xl font-bold text-white">Mohenjodaro</h3>
+              <p class="text-xs text-slate-400">Larkana District, Sindh, Pakistan</p>
+            </div>
+            <span class="px-2 py-1 rounded bg-blue-500/10 text-blue-300 text-xs font-mono font-bold">Indus River</span>
+          </div>
+
+          <div class="bg-slate-950/60 rounded-xl p-3 text-xs space-y-1">
+            <div class="text-slate-400"><strong class="text-slate-200">Excavators:</strong> R.D. Banerjee (1922), Mackay (1927), Sir John Marshall (1930)</div>
+            <div class="text-slate-400"><strong class="text-slate-200">Status:</strong> Largest individual site of the entire IVC</div>
+          </div>
+
+          <div class="space-y-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Lucent's Key Archaeological Finds:</span>
+            <div class="flex flex-wrap gap-1.5 text-xs">
+              <span class="px-2 py-0.5 rounded bg-amber-500/15 text-amber-300 border border-amber-500/30 font-semibold">Great Granary (Largest Building)</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">The Great Bath</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Assembly Hall (Pillared)</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Pashupati Seal (Proto-Shiva)</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Bronze Dancing Girl</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Steatite Bearded Priest</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">1398 Seals (57% of all)</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">2 Mesopotamian Seals</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Chanhudaro -->
+        <div class="site-card bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-amber-500/50 transition-all space-y-4" data-country="pakistan" data-type="industrial">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-purple-400">Craft &amp; Bead Center (1931)</span>
+              <h3 class="font-heading text-xl font-bold text-white">Chanhudaro</h3>
+              <p class="text-xs text-slate-400">Sindh, Pakistan (130 km South of Mohenjodaro)</p>
+            </div>
+            <span class="px-2 py-1 rounded bg-blue-500/10 text-blue-300 text-xs font-mono font-bold">Indus River</span>
+          </div>
+
+          <div class="bg-slate-950/60 rounded-xl p-3 text-xs space-y-1">
+            <div class="text-slate-400"><strong class="text-slate-200">Excavators:</strong> N.G. Majumdar (1931), Mackay (1935)</div>
+            <div class="text-slate-400"><strong class="text-slate-200">Unique Feature:</strong> <span class="text-amber-400 font-bold">Only Indus city without a Citadel!</span></div>
+          </div>
+
+          <div class="space-y-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Lucent's Key Archaeological Finds:</span>
+            <div class="flex flex-wrap gap-1.5 text-xs">
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Inkpot</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Lipstick &amp; Cosmetics</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Bead-makers' Factory</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Shell-ornament shop</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Paw imprint of dog chasing cat</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Bronze Toy Cart &amp; Bullock cart</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Lothal -->
+        <div class="site-card bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-amber-500/50 transition-all space-y-4" data-country="india" data-type="coastal">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400">Premier Seaport (1954)</span>
+              <h3 class="font-heading text-xl font-bold text-white">Lothal</h3>
+              <p class="text-xs text-slate-400">Ahmedabad District, Gujarat, India</p>
+            </div>
+            <span class="px-2 py-1 rounded bg-emerald-500/10 text-emerald-300 text-xs font-mono font-bold">Bhogava River</span>
+          </div>
+
+          <div class="bg-slate-950/60 rounded-xl p-3 text-xs space-y-1">
+            <div class="text-slate-400"><strong class="text-slate-200">Excavator:</strong> S.R. Rao (1954)</div>
+            <div class="text-slate-400"><strong class="text-slate-200">Lucent Tag:</strong> <em>"Manchester of Harappan Civilization"</em></div>
+          </div>
+
+          <div class="space-y-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Lucent's Key Archaeological Finds:</span>
+            <div class="flex flex-wrap gap-1.5 text-xs">
+              <span class="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-semibold">Tidal Brick Dockyard</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Rice Husk &amp; Cultivation</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Fire Altars (Sacrificial)</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Double Burial (Male &amp; Female)</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Terracotta Horse Figurine</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Persian / Gulf Circular Seal</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Painted Jar (Bird &amp; Fox tale)</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Ivory Scale &amp; Chessboard</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Kalibangan -->
+        <div class="site-card bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-amber-500/50 transition-all space-y-4" data-country="india" data-type="inland">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400">"Black Bangles" (1953)</span>
+              <h3 class="font-heading text-xl font-bold text-white">Kalibangan</h3>
+              <p class="text-xs text-slate-400">Hanumangarh District, Rajasthan, India</p>
+            </div>
+            <span class="px-2 py-1 rounded bg-amber-500/10 text-amber-300 text-xs font-mono font-bold">Ghaggar River</span>
+          </div>
+
+          <div class="bg-slate-950/60 rounded-xl p-3 text-xs space-y-1">
+            <div class="text-slate-400"><strong class="text-slate-200">Excavators:</strong> Amalananda Ghosh (1953), B.B. Lal &amp; B.K. Thapar (1961)</div>
+            <div class="text-slate-400"><strong class="text-slate-200">Significance:</strong> Earliest ploughed agricultural field in world history</div>
+          </div>
+
+          <div class="space-y-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Lucent's Key Archaeological Finds:</span>
+            <div class="flex flex-wrap gap-1.5 text-xs">
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Pre-Harappan Ploughed Field</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">7 Fire Altars on Platform</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Decorated / Patterned Bricks</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Bones of Camel</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Mesopotamian Cylindrical Seal</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Wheels of Toy Cart</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Boustrophedon Potsherds</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Dholavira -->
+        <div class="site-card bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-amber-500/50 transition-all space-y-4" data-country="india" data-type="unesco">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400">UNESCO World Heritage Site</span>
+              <h3 class="font-heading text-xl font-bold text-white">Dholavira</h3>
+              <p class="text-xs text-slate-400">Khadir Bet, Rann of Kutch, Gujarat, India</p>
+            </div>
+            <span class="px-2 py-1 rounded bg-teal-500/10 text-teal-300 text-xs font-mono font-bold">Luni River</span>
+          </div>
+
+          <div class="bg-slate-950/60 rounded-xl p-3 text-xs space-y-1">
+            <div class="text-slate-400"><strong class="text-slate-200">Excavators:</strong> J.P. Joshi (1967-68), R.S. Bisht (1990-91)</div>
+            <div class="text-slate-400"><strong class="text-slate-200">City Division:</strong> <span class="text-amber-400 font-bold">3 Parts</span> (Citadel, Middle Town, Lower Town)</div>
+          </div>
+
+          <div class="space-y-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Lucent's Key Archaeological Finds:</span>
+            <div class="flex flex-wrap gap-1.5 text-xs">
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">16 Giant Water Reservoirs</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Storm-water drainage</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">10-Symbol Civic Signboard</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Huge Ceremonial Stadium</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Stone Masonry Fortifications</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Banawali -->
+        <div class="site-card bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-amber-500/50 transition-all space-y-4" data-country="india" data-type="inland">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-rose-400">Radial Planning (1973)</span>
+              <h3 class="font-heading text-xl font-bold text-white">Banawali</h3>
+              <p class="text-xs text-slate-400">Fatehabad (Hissar) District, Haryana, India</p>
+            </div>
+            <span class="px-2 py-1 rounded bg-amber-500/10 text-amber-300 text-xs font-mono font-bold">Saraswati River</span>
+          </div>
+
+          <div class="bg-slate-950/60 rounded-xl p-3 text-xs space-y-1">
+            <div class="text-slate-400"><strong class="text-slate-200">Excavator:</strong> R.S. Bisht (1973)</div>
+            <div class="text-slate-400"><strong class="text-slate-200">Anomalous Feature:</strong> <span class="text-rose-400 font-bold">Lack of systematic drainage system!</span></div>
+          </div>
+
+          <div class="space-y-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Lucent's Key Archaeological Finds:</span>
+            <div class="flex flex-wrap gap-1.5 text-xs">
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Terracotta Toy Plough</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Radial Pattern Town Planning</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">High proportion of good Barley</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Clay Mother Goddess figures</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Surkotada -->
+        <div class="site-card bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-amber-500/50 transition-all space-y-4" data-country="india" data-type="coastal">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-yellow-400">Horse Remains Site (1964)</span>
+              <h3 class="font-heading text-xl font-bold text-white">Surkotada</h3>
+              <p class="text-xs text-slate-400">Bhuj, Kutch District, Gujarat, India</p>
+            </div>
+            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 text-xs font-mono font-bold">Rann of Kutch</span>
+          </div>
+
+          <div class="bg-slate-950/60 rounded-xl p-3 text-xs space-y-1">
+            <div class="text-slate-400"><strong class="text-slate-200">Excavator:</strong> J.P. Joshi (1964)</div>
+            <div class="text-slate-400"><strong class="text-slate-200">Lucent Highlight:</strong> Only Indus site where actual <strong class="text-yellow-300">bones of a horse</strong> were unearthed.</div>
+          </div>
+
+          <div class="space-y-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Lucent's Key Archaeological Finds:</span>
+            <div class="flex flex-wrap gap-1.5 text-xs">
+              <span class="px-2 py-0.5 rounded bg-amber-500/15 text-amber-300 border border-amber-500/30 font-semibold">Horse Bones</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Pot Burials (Urn Burials)</span>
+              <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-200 border border-slate-700">Stone-rubble fortified citadel</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Rakhigarhi & Daimabad & Others (Consolidated Card) -->
+        <div class="site-card bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-amber-500/50 transition-all space-y-4" data-country="india" data-type="other">
+          <div class="flex items-start justify-between">
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400">Other Critical Sites</span>
+              <h3 class="font-heading text-xl font-bold text-white">Rakhigarhi &amp; Daimabad</h3>
+              <p class="text-xs text-slate-400">Haryana &amp; Maharashtra</p>
+            </div>
+            <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 text-xs font-mono font-bold">Key Records</span>
+          </div>
+
+          <div class="bg-slate-950/60 rounded-xl p-3 text-xs space-y-2">
+            <div>
+              <span class="text-amber-400 font-bold">Rakhigarhi (Haryana):</span>
+              <span class="text-slate-300"> Excavated by Amarendra Nath. Largest Indus site within India.</span>
+            </div>
+            <div>
+              <span class="text-amber-400 font-bold">Daimabad (Maharashtra):</span>
+              <span class="text-slate-300"> Bronze Chariot with Charioteer, Rhino, Elephant &amp; Buffalo.</span>
+            </div>
+            <div>
+              <span class="text-amber-400 font-bold">Shortughai &amp; Mundigak:</span>
+              <span class="text-slate-300"> Only two IVC sites located in Afghanistan (Lapis Lazuli hub).</span>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">Lucent's High-Yield Exam Note:</span>
+            <p class="text-xs text-slate-300">
+              Cotton was first produced by Harappans; Greeks termed it <strong class="text-amber-300">"Sindhon"</strong> (derived from Sindh).
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: ECONOMY, TRADE MATRIX & IMPORTS/EXPORTS -->
+    <section id="trade" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-800 pb-4">
+        <div>
+          <span class="text-xs uppercase font-extrabold tracking-widest text-amber-400">Economic Foundations</span>
+          <h2 class="font-heading text-2xl sm:text-3xl font-bold text-white mt-1">Trade Routes, Raw Material Imports &amp; Sumerian Links</h2>
+        </div>
+        <p class="text-xs text-slate-400 max-w-md">
+          Lucent's verbatim commodity import table mapped to source regions with Mesopotamian trade terminology.
+        </p>
+      </div>
+
+      <!-- Mesopotamian Trade Route Diagram -->
+      <div class="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-6 shadow-xl">
+        <h3 class="text-sm font-bold text-amber-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+          <i data-lucide="navigation" class="w-4 h-4"></i> The Ancient Maritime Highway (Sumerian Cuneiform Inscriptions)
+        </h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+          
+          <div class="bg-slate-900/90 border border-amber-500/30 rounded-xl p-4 text-center">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400">Source: Indus Valley</span>
+            <h4 class="text-xl font-black text-white mt-1">MELUHHA</h4>
+            <p class="text-xs text-slate-300 mt-1">Ancient Sumerian name for the Indus civilization region.</p>
+            <div class="mt-2 text-[10px] text-amber-300/80 bg-amber-500/10 py-1 rounded">Exports: Carnelian, Timber, Cotton (Sindhon), Ivory, Gold</div>
+          </div>
+
+          <div class="flex flex-col items-center justify-center p-3">
+            <div class="w-full flex items-center justify-between text-xs text-slate-400 font-mono mb-2">
+              <span>Intermediate Stations</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 text-amber-400"></i>
+            </div>
+            <div class="w-full grid grid-cols-2 gap-2 text-center">
+              <div class="p-2.5 rounded-lg bg-slate-800 border border-slate-700">
+                <span class="text-xs font-bold text-emerald-300 block">DILMUN</span>
+                <span class="text-[10px] text-slate-400">Bahrain Island</span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-slate-800 border border-slate-700">
+                <span class="text-xs font-bold text-teal-300 block">MAKAN</span>
+                <span class="text-[10px] text-slate-400">Makran Coast</span>
+              </div>
+            </div>
+            <p class="text-[10px] text-slate-500 text-center mt-2">Mesopotamian ports Susa &amp; Ur unearthed Harappan seals.</p>
+          </div>
+
+          <div class="bg-slate-900/90 border border-blue-500/30 rounded-xl p-4 text-center">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-blue-400">Destination: Mesopotamia</span>
+            <h4 class="text-xl font-black text-white mt-1">SUMER &amp; AKKAD</h4>
+            <p class="text-xs text-slate-300 mt-1">King Sargon of Akkad (c. 2350 BC) boasted that ships from Meluhha moored at his quays.</p>
+            <div class="mt-2 text-[10px] text-blue-300/80 bg-blue-500/10 py-1 rounded">System: Normal Barter (No coins found)</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Lucent's Import Matrix Table -->
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 shadow-xl">
+        <table class="w-full text-left text-xs bg-slate-900/90">
+          <thead class="bg-slate-950 text-slate-300 uppercase tracking-wider text-[11px] font-bold border-b border-slate-800">
+            <tr>
+              <th class="py-3.5 px-4 text-amber-400">Imported Material</th>
+              <th class="py-3.5 px-4">Primary Geographic Sources (As listed in Lucent)</th>
+              <th class="py-3.5 px-4">Usage / Archaeological Example</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 text-slate-300">
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span> Gold
+              </td>
+              <td class="py-3 px-4 text-amber-300">Kolar (Karnataka), Afghanistan, Persia (Iran)</td>
+              <td class="py-3 px-4 text-slate-400">Jewellery, fillets, beads, amulets discovered in hoards.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span> Silver
+              </td>
+              <td class="py-3 px-4 text-amber-300">Afghanistan, Persia (Iran), South India</td>
+              <td class="py-3 px-4 text-slate-400">Silver vessels, ornaments, mirrors (abundant at Harappa/Mohenjo).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-600"></span> Copper
+              </td>
+              <td class="py-3 px-4 text-amber-300">Khetri Mines (Rajasthan), Baluchistan, Arabia (Oman)</td>
+              <td class="py-3 px-4 text-slate-400">Utensils, weapons, bronze alloy casting, seals, scale pans.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-zinc-400"></span> Tin
+              </td>
+              <td class="py-3 px-4 text-amber-300">Afghanistan, Central Asia, Bihar</td>
+              <td class="py-3 px-4 text-slate-400">Alloyed with copper to manufacture bronze tools (10% tin ratio).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span> Lapis Lazuli &amp; Sapphire
+              </td>
+              <td class="py-3 px-4 text-amber-300">Badakhshan (Afghanistan), Shortughai trading outpost</td>
+              <td class="py-3 px-4 text-slate-400">Deep-blue gemstone beads prized in both Indus and Mesopotamia.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Jade
+              </td>
+              <td class="py-3 px-4 text-amber-300">Central Asia (Pamir / Khotan region)</td>
+              <td class="py-3 px-4 text-slate-400">Amulets and prestigious polished stone beads.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span> Steatite (Soapstone)
+              </td>
+              <td class="py-3 px-4 text-amber-300">Shaher-i-Sokhta (Iran), Kirthar Hills (Pakistan)</td>
+              <td class="py-3 px-4 text-slate-400">Primary medium for carving Indus stamp seals &amp; Priest King statue.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-purple-500"></span> Amethyst
+              </td>
+              <td class="py-3 px-4 text-amber-300">Maharashtra</td>
+              <td class="py-3 px-4 text-slate-400">Bead manufacture in specialized lapidary workshops.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-bold text-white flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span> Agate, Chalcedony &amp; Carnelians
+              </td>
+              <td class="py-3 px-4 text-amber-300">Saurashtra and West India (Rajpipla / Khambhat)</td>
+              <td class="py-3 px-4 text-slate-400">Famous etched carnelian beads exported to Mesopotamian royal graves.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION: SOCIETY, RELIGION & SCRIPT -->
+    <section id="religion" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-800 pb-4">
+        <div>
+          <span class="text-xs uppercase font-extrabold tracking-widest text-amber-400">Spiritual &amp; Social Life</span>
+          <h2 class="font-heading text-2xl sm:text-3xl font-bold text-white mt-1">Religion, Governance &amp; Boustrophedon Script</h2>
+        </div>
+        <p class="text-xs text-slate-400 max-w-md">
+          Key points highlighting the secular merchant polity, absence of temples, and fertility cults.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- 1. Religion & Deities -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400">
+            <i data-lucide="flame" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white">Religious Beliefs &amp; Deities</h3>
+          <ul class="text-xs text-slate-300 space-y-2.5 list-disc list-inside leading-relaxed">
+            <li><strong class="text-amber-300">No Temples:</strong> Harappans did not worship in temples; religion is deduced from terracotta figurines and seals.</li>
+            <li><strong class="text-amber-300">Mother Goddess (Matridevi / Shakti):</strong> Most common figurine; plant emerging from womb depicts fertility. Prevalence of <em>Yoni</em> worship.</li>
+            <li><strong class="text-amber-300">Pashupati Mahadeva (Proto-Shiva):</strong> Chief male deity sitting in yogic posture; prevalence of phallic (<em>Lingam</em>) worship.</li>
+            <li><strong class="text-amber-300">Zoolatry (Animal Worship):</strong> Mythical unicorn, humped bull (most revered on seals), tiger, elephant.</li>
+            <li><strong class="text-amber-300">Tree &amp; Nature Worship:</strong> Sacred Peepal tree and water ablution (Great Bath).</li>
+            <li><strong class="text-amber-300">Swastika Origin:</strong> Earliest historic origin of the auspicious Swastika symbol traced to Indus seals.</li>
+          </ul>
+        </div>
+
+        <!-- 2. Polity & Society -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400">
+            <i data-lucide="scale" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white">Social Structure &amp; Polity</h3>
+          <ul class="text-xs text-slate-300 space-y-2.5 list-disc list-inside leading-relaxed">
+            <li><strong class="text-blue-300">Merchant Class Rule:</strong> No clear monarchy or standing army found. Governance was primarily steered by an affluent class of merchants.</li>
+            <li><strong class="text-blue-300">Primarily Urban Society:</strong> Stratified into upper citadel (priests/administrators) and lower town (craftsmen, merchants, laborers).</li>
+            <li><strong class="text-blue-300">Burial Customs:</strong> Three disposal modes:
+              <span class="block ml-4 mt-1 text-slate-400">&bull; <em>Complete Burial (Inhumation)</em> &ndash; Most common.</span>
+              <span class="block ml-4 text-slate-400">&bull; <em>Fractional Burial</em> &ndash; Exposure to wild animals then burying bones.</span>
+              <span class="block ml-4 text-slate-400">&bull; <em>Post-cremation Burial</em> &ndash; Urn/pot burials (Surkotada).</span>
+            </li>
+            <li><strong class="text-blue-300">Double Burial:</strong> Male and female buried together in a single grave at Lothal.</li>
+          </ul>
+        </div>
+
+        <!-- 3. Indus Script & Language -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400">
+            <i data-lucide="feather" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-heading font-bold text-lg text-white">Indus Script &amp; Language</h3>
+          <ul class="text-xs text-slate-300 space-y-2.5 list-disc list-inside leading-relaxed">
+            <li><strong class="text-purple-300">Pictographic Script:</strong> Consists of roughly 400&ndash;600 signs, predominantly engraved on square steatite seals.</li>
+            <li><strong class="text-purple-300">Boustrophedon Style:</strong> Overlap of letters on Kalibangan potsherds proves writing proceeded from <strong class="text-white">right-to-left</strong> and then <strong class="text-white">left-to-right</strong> in alternate lines.</li>
+            <li><strong class="text-purple-300">Undeciphered:</strong> Remains undeciphered till date. Believed by many scholars (Father Heras, Asko Parpola) to be <em>Proto-Dravidian</em>.</li>
+            <li><strong class="text-purple-300">Comparison Note:</strong> Oldest script in India is Harappan; oldest deciphered script is <em>Brahmi</em> (from 5th century BC / Ashokan edicts).</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: THEORIES OF DECLINE (COMPARISON CHART) -->
+    <section id="decline" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-800 pb-4">
+        <div>
+          <span class="text-xs uppercase font-extrabold tracking-widest text-rose-400">The End of an Era</span>
+          <h2 class="font-heading text-2xl sm:text-3xl font-bold text-white mt-1">Scholarly Theories on the Decline of the Indus Civilization</h2>
+        </div>
+        <p class="text-xs text-slate-400 max-w-md">
+          Frequent matching question in Prelims: Match the cause of decline with the respective scholar.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-rose-400">Theory 1</span>
+            <i data-lucide="swords" class="w-4 h-4 text-rose-400"></i>
+          </div>
+          <h3 class="font-bold text-white text-base">Aryan Invasion</h3>
+          <p class="text-xs font-semibold text-amber-400">Sir Mortimer Wheeler &amp; Gordon Childe</p>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Cites human skeletons found unburied at Mohenjodaro and Rigvedic verses where <em>Indra is praised as Purandara (Destroyer of Forts)</em>. Wheeler stated: <em class="text-amber-200">"Indra stands accused!"</em>
+          </p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-blue-400">Theory 2</span>
+            <i data-lucide="waves" class="w-4 h-4 text-blue-400"></i>
+          </div>
+          <h3 class="font-bold text-white text-base">Recurrent Floods</h3>
+          <p class="text-xs font-semibold text-amber-400">Sir John Marshall, Mackay &amp; S.R. Rao</p>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Evidence of multiple silt levels and repeated rebuilding phases at Mohenjodaro (7 levels of occupation) and Lothal due to catastrophic Indus river overflow.
+          </p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-yellow-400">Theory 3</span>
+            <i data-lucide="sun" class="w-4 h-4 text-yellow-400"></i>
+          </div>
+          <h3 class="font-bold text-white text-base">Drying of Ghaggar-Hakra</h3>
+          <p class="text-xs font-semibold text-amber-400">D.P. Agrawal &amp; Sood</p>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Tectonic shifts diverted Sutlej towards Indus and Yamuna towards Ganga, drying up the sacred Saraswati (Ghaggar-Hakra) river basin where 80% of settlements were clustered.
+          </p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400">Theory 4</span>
+            <i data-lucide="trees" class="w-4 h-4 text-emerald-400"></i>
+          </div>
+          <h3 class="font-bold text-white text-base">Ecological Imbalance</h3>
+          <p class="text-xs font-semibold text-amber-400">Walter Fairservis</p>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Overexploitation of resources, massive deforestation to fuel millions of baked bricks and bronze kilns, overgrazing by livestock leading to desertification and collapse.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE REVISION FLASHCARDS & QUIZ -->
+    <section id="quiz" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-800 pb-4">
+        <div>
+          <span class="text-xs uppercase font-extrabold tracking-widest text-amber-400">Self-Assessment Arena</span>
+          <h2 class="font-heading text-2xl sm:text-3xl font-bold text-white mt-1">Lucent High-Yield Flashcards &amp; Practice MCQs</h2>
+        </div>
+        <p class="text-xs text-slate-400 max-w-md">
+          Test your retention on direct questions frequently asked in APSC CCE, UPSC CSE, and State PSC exams.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Interactive Flashcards Deck (5 cols) -->
+        <div class="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+              <i data-lucide="layers" class="w-4 h-4"></i> Revision Flashcard Deck
+            </span>
+            <span id="cardCounter" class="text-xs text-slate-400 font-mono">1 / 6</span>
+          </div>
+
+          <!-- Flip Card Container -->
+          <div id="flashcardBox" class="relative h-60 w-full cursor-pointer perspective-1000 group">
+            <div id="flashcardInner" class="w-full h-full rounded-2xl border border-amber-500/30 bg-slate-950 p-6 flex flex-col justify-between shadow-2xl transition-transform duration-500">
+              <div class="text-[10px] uppercase font-bold text-amber-400/80 tracking-wider flex items-center justify-between">
+                <span id="cardCategory">Topic: City Planning</span>
+                <span class="text-slate-500">Click card to reveal answer</span>
+              </div>
+              <div id="cardContent" class="text-center font-heading text-lg font-bold text-white my-auto px-2">
+                Which is the ONLY Indus Valley site without a Citadel?
+              </div>
+              <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-800/80 pt-3">
+                <span class="flex items-center gap-1 text-amber-400"><i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> Tap to flip</span>
+                <span class="text-[10px] text-slate-500 font-mono">Lucent Ch.1</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flashcard Navigation Controls -->
+          <div class="flex items-center justify-between pt-2">
+            <button id="prevCardBtn" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-1.5 transition-all">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i> Previous
+            </button>
+            <button id="flipCardBtn" class="px-4 py-2 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/30 text-xs font-bold transition-all">
+              Flip Card
+            </button>
+            <button id="nextCardBtn" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold flex items-center gap-1.5 transition-all">
+              Next <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Interactive 4-Option Quiz (7 cols) -->
+        <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-5">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div>
+              <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block">Live Exam Simulation</span>
+              <h3 class="font-heading text-lg font-bold text-white">Lucent GS Mock Test Questions</h3>
+            </div>
+            <div id="quizScoreBadge" class="px-3 py-1 rounded-full bg-slate-800 text-xs font-bold text-slate-300 font-mono">
+              Score: <span id="currentScore" class="text-amber-400">0</span> / 5
+            </div>
+          </div>
+
+          <div id="quizQuestionBox" class="space-y-4">
+            <div class="text-sm font-semibold text-white leading-relaxed flex items-start gap-2">
+              <span id="quizQNum" class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-xs font-mono font-bold">Q1</span>
+              <span id="quizQuestionText">The Harappans were the earliest people in the ancient world to produce which of the following agricultural commodities?</span>
+            </div>
+
+            <!-- Options Container -->
+            <div id="quizOptionsList" class="space-y-2.5">
+              <!-- Dynamically populated via JS -->
+            </div>
+
+            <!-- Feedback Alert Box -->
+            <div id="quizFeedback" class="hidden p-3.5 rounded-xl text-xs leading-relaxed transition-all"></div>
+
+            <div class="flex items-center justify-end pt-3">
+              <button id="nextQuizBtn" class="hidden px-5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold items-center gap-2 shadow-lg transition-all">
+                Next Question <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ARTIFACT DETAILS MODAL (POPUP) -->
+  <div id="artifactModal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-200">
+      <div class="relative bg-slate-950 flex items-center justify-center h-80 sm:h-96">
+        <img id="modalImg" src="" alt="" class="max-h-full max-w-full object-contain p-4">
+        <button onclick="closeModal()" class="absolute top-4 right-4 p-2 rounded-full bg-slate-900/80 hover:bg-slate-800 text-white border border-slate-700 transition-all">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-6 sm:p-8 space-y-4">
+        <div class="flex items-center justify-between">
+          <div>
+            <span id="modalSite" class="text-xs font-bold uppercase tracking-wider text-amber-400">Site</span>
+            <h3 id="modalTitle" class="font-heading text-2xl font-bold text-white mt-0.5">Artifact Name</h3>
+          </div>
+          <span id="modalMaterial" class="text-xs px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">Material</span>
+        </div>
+        <p id="modalDesc" class="text-xs sm:text-sm text-slate-300 leading-relaxed"></p>
+        <div id="modalExamNote" class="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-300 leading-relaxed"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 bg-[#0B1325] mt-24 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
+          <i data-lucide="book" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-heading font-bold text-white">Lucent's General Knowledge Illustrated</span>
+          <p class="text-[11px] text-slate-500">Prepared for APSC &amp; UPSC General Studies Aspirants</p>
+        </div>
+      </div>
+      <div class="text-center md:text-right text-slate-500 text-[11px] space-y-1">
+        <p class="text-slate-300">
+          Section 1: Harappan / Indus Civilization complete &bull; 
+          <a href="vedic.html" class="inline-flex items-center gap-1 text-amber-400 font-bold hover:underline">
+            Go to Section 2: Vedic Culture (1500–600 BC) <i data-lucide="arrow-right" class="w-3.5 h-3.5 inline"></i>
+          </a>
+        </p>
+        <p>&copy; 2026 Interactive GS Learning Project. Content sourced directly from Lucent's GK.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/app.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
