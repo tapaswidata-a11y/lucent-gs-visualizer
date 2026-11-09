@@ -3,7 +3,137 @@
  * Application Logic for Section 1: Harappan / Indus Valley Civilization
  */
 
-// --- ARTIFACTS METADATA FOR MODAL ---
+// --- THEME TOGGLE (LIGHT / DARK) ---
+const themeToggleBtn = document.getElementById('themeToggleBtn');
+
+function initTheme() {
+  const savedTheme = localStorage.getItem('lucent_theme') || 'dark';
+  applyTheme(savedTheme);
+}
+
+function applyTheme(theme) {
+  if (theme === 'light') {
+    document.body.classList.add('light-theme');
+    if (themeToggleBtn) {
+      themeToggleBtn.innerHTML = '<i data-lucide="moon" class="w-4 h-4 text-slate-700"></i>';
+      themeToggleBtn.title = "Switch to Dark Theme";
+    }
+    localStorage.setItem('lucent_theme', 'light');
+  } else {
+    document.body.classList.remove('light-theme');
+    if (themeToggleBtn) {
+      themeToggleBtn.innerHTML = '<i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>';
+      themeToggleBtn.title = "Switch to White Theme";
+    }
+    localStorage.setItem('lucent_theme', 'dark');
+  }
+  lucide.createIcons();
+}
+
+themeToggleBtn?.addEventListener('click', () => {
+  const isLight = document.body.classList.contains('light-theme');
+  applyTheme(isLight ? 'dark' : 'light');
+});
+
+// --- FULL DETAIL IMAGE LIGHTBOX VIEWER ---
+let currentZoom = 1;
+let isPanning = false;
+let startX = 0, startY = 0;
+let translateX = 0, translateY = 0;
+
+const lightboxModal = document.getElementById('fullImageViewerModal');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxTitle = document.getElementById('lightboxTitle');
+const lightboxDescription = document.getElementById('lightboxDescription');
+const zoomLevelDisplay = document.getElementById('zoomLevelDisplay');
+const lightboxViewport = document.getElementById('lightboxViewport');
+
+function openFullImageViewer(src, title, desc) {
+  if (!lightboxModal) return;
+  lightboxImg.src = src;
+  lightboxTitle.textContent = title;
+  lightboxDescription.innerHTML = desc;
+  
+  currentZoom = 1;
+  translateX = 0;
+  translateY = 0;
+  updateImageTransform();
+
+  lightboxModal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  lucide.createIcons();
+}
+
+function closeFullImageViewer() {
+  if (!lightboxModal) return;
+  lightboxModal.classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+
+function updateImageTransform() {
+  if (!lightboxImg) return;
+  lightboxImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${currentZoom})`;
+  if (zoomLevelDisplay) {
+    zoomLevelDisplay.textContent = `${Math.round(currentZoom * 100)}%`;
+  }
+}
+
+document.getElementById('zoomInBtn')?.addEventListener('click', () => {
+  if (currentZoom < 4) {
+    currentZoom += 0.25;
+    updateImageTransform();
+  }
+});
+
+document.getElementById('zoomOutBtn')?.addEventListener('click', () => {
+  if (currentZoom > 0.5) {
+    currentZoom = Math.max(0.5, currentZoom - 0.25);
+    updateImageTransform();
+  }
+});
+
+document.getElementById('zoomResetBtn')?.addEventListener('click', () => {
+  currentZoom = 1;
+  translateX = 0;
+  translateY = 0;
+  updateImageTransform();
+});
+
+document.getElementById('closeLightboxBtn')?.addEventListener('click', closeFullImageViewer);
+
+// Mouse wheel zoom in lightbox
+lightboxViewport?.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  if (e.deltaY < 0 && currentZoom < 4) {
+    currentZoom += 0.15;
+  } else if (e.deltaY > 0 && currentZoom > 0.5) {
+    currentZoom = Math.max(0.5, currentZoom - 0.15);
+  }
+  updateImageTransform();
+});
+
+// Drag to pan in lightbox
+lightboxViewport?.addEventListener('mousedown', (e) => {
+  if (currentZoom > 1) {
+    isPanning = true;
+    startX = e.clientX - translateX;
+    startY = e.clientY - translateY;
+  }
+});
+
+window.addEventListener('mousemove', (e) => {
+  if (isPanning) {
+    translateX = e.clientX - startX;
+    translateY = e.clientY - startY;
+    updateImageTransform();
+  }
+});
+
+window.addEventListener('mouseup', () => {
+  isPanning = false;
+});
+
+// --- ARTIFACTS METADATA FOR POPUP ---
 const artifactsData = {
   dancing_girl: {
     title: "Bronze Dancing Girl",
@@ -88,6 +218,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     closeModal();
     closeSearch();
+    closeFullImageViewer();
   }
 });
 
@@ -97,7 +228,6 @@ const siteCards = document.querySelectorAll('.site-card');
 
 filterButtons.forEach(btn => {
   btn.addEventListener('click', () => {
-    // Toggle active state
     filterButtons.forEach(b => {
       b.classList.remove('bg-amber-500', 'text-slate-950', 'font-bold');
       b.classList.add('bg-slate-800', 'text-slate-300');
@@ -134,7 +264,7 @@ chapterBtn?.addEventListener('click', (e) => {
 });
 
 document.addEventListener('click', (e) => {
-  if (!chapterDropdown.contains(e.target) && e.target !== chapterBtn) {
+  if (chapterDropdown && !chapterDropdown.contains(e.target) && e.target !== chapterBtn) {
     chapterDropdown.classList.add('hidden');
   }
 });
@@ -394,7 +524,6 @@ nextQuizBtn?.addEventListener('click', () => {
   if (quizIndex < quizQuestions.length) {
     renderQuizQuestion();
   } else {
-    // Show final score banner
     const percentage = Math.round((userScore / quizQuestions.length) * 100);
     quizQuestionBox.innerHTML = `
       <div class="text-center py-8 space-y-4">
@@ -426,6 +555,7 @@ function restartQuiz() {
 
 // Initialise
 document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
   updateFlashcardUI();
   renderQuizQuestion();
   lucide.createIcons();

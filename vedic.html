@@ -84,7 +84,12 @@
       </nav>
 
       <!-- Action Buttons & Chapter Selector -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2.5">
+        <!-- Theme Toggle (White / Dark) -->
+        <button id="themeToggleBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Toggle Light / Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+
         <!-- Quick Search -->
         <button id="searchBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Search Vedic Facts">
           <i data-lucide="search" class="w-4 h-4"></i>
@@ -211,9 +216,9 @@
 
         </div>
 
-        <!-- Right Hero Visual Card -->
+        <!-- Right Hero Visual Card (Clickable Lightbox) -->
         <div class="lg:col-span-5 space-y-4">
-          <div class="relative group rounded-2xl overflow-hidden border border-amber-500/30 bg-slate-950/70 shadow-2xl p-3">
+          <div class="zoomable-hero relative group rounded-2xl overflow-hidden border border-amber-500/30 bg-slate-950/70 shadow-2xl p-3 cursor-zoom-in" onclick="openFullImageViewer('assets/images/rigveda_manuscript.jpg', 'Rigveda Samhita &ndash; Sanskrit Manuscript (Devanagari)', '<strong>Ancient Vedic Scripture:</strong> High-resolution archival view of the Rigveda Samhita Padapatha manuscript on handmade paper. Preserved at the Bhandarkar Oriental Research Institute (BORI), Pune. The Rigveda comprises 1028 hymns arranged in 10 Mandalas, transmitting mankind\'s oldest preserved poetic hymns through rigorous oral tradition (*Shruti*) and accentual accents (*Udatta, Anudatta, Svarita*).')">
             <div class="relative overflow-hidden rounded-xl bg-slate-900">
               <img src="assets/images/rigveda_manuscript.jpg" alt="Rigveda Sanskrit Manuscript" class="w-full h-72 object-cover object-center group-hover:scale-105 transition-transform duration-500">
               <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
@@ -222,7 +227,9 @@
                   <span class="font-bold text-amber-300 flex items-center gap-1">
                     <i data-lucide="file-text" class="w-3.5 h-3.5 text-amber-400"></i> Rigveda Samhita (Padapatha)
                   </span>
-                  <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 font-semibold">UNESCO Memory of World</span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 font-semibold flex items-center gap-1">
+                    <i data-lucide="maximize-2" class="w-3 h-3"></i> Click to Zoom Full Detail
+                  </span>
                 </div>
                 <p class="text-[11px] text-slate-300">1028 hymns arranged into 10 Mandalas. Preserved for millennia through strictly structured oral transmission (*Shruti*).</p>
               </div>
@@ -752,6 +759,53 @@
     </section>
 
   </main>
+
+  <!-- FULL DETAIL IMAGE VIEWER & LIGHTBOX MODAL -->
+  <div id="fullImageViewerModal" class="lightbox-modal">
+    <!-- Top Bar -->
+    <div class="h-16 px-4 sm:px-6 bg-slate-950/95 border-b border-slate-800 flex items-center justify-between z-20">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
+          <i data-lucide="zoom-in" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h4 id="lightboxTitle" class="text-xs sm:text-sm font-bold text-white tracking-wide">Image Title</h4>
+          <span class="text-[10px] text-amber-400 font-mono">High-Resolution Manuscript &amp; Inscription View</span>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex items-center gap-1.5 sm:gap-2">
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all" title="Zoom Out (-)">
+          <i data-lucide="minus" class="w-4 h-4"></i>
+        </button>
+        <span id="zoomLevelDisplay" class="px-2.5 py-1 rounded bg-slate-900 border border-slate-700 text-xs font-mono text-amber-300 min-w-14 text-center">100%</span>
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all" title="Zoom In (+)">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+        </button>
+        <button id="zoomResetBtn" class="hidden sm:inline-block px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs text-slate-300 hover:text-white transition-all" title="Reset Zoom">
+          Reset
+        </button>
+        <div class="h-6 w-px bg-slate-800 mx-1"></div>
+        <button id="closeLightboxBtn" class="p-2 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/30 transition-all" title="Close (ESC)">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Viewport Container (Draggable when zoomed) -->
+    <div id="lightboxViewport" class="lightbox-viewport">
+      <img id="lightboxImg" src="" alt="" class="lightbox-img">
+    </div>
+
+    <!-- Bottom Description Drawer -->
+    <div class="p-4 bg-slate-950/95 border-t border-slate-800 max-h-40 overflow-y-auto text-xs text-slate-300 z-20">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <p id="lightboxDescription" class="leading-relaxed text-slate-300 text-xs"></p>
+        <span class="text-[10px] text-slate-500 shrink-0 font-mono hidden sm:inline-block">Tip: Scroll mouse wheel to zoom &bull; Drag to pan</span>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="border-t border-slate-800/80 bg-[#0B1325] mt-24 py-12 text-slate-400 text-xs">
