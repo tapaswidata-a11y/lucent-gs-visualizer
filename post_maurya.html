@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucent GK Illustrated | Ancient India - 6. Post-Mauryan & Sangam Period (185 BC – 319 AD)</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              bronze: '#CD7F32',
+              terracotta: '#C86446',
+              deepnavy: '#0B1325',
+              carddark: '#141E33',
+              cardborder: '#233354',
+              sand: '#F7F3E9',
+              sandstone: '#E8DCC4'
+            }
+          },
+          fontFamily: {
+            heading: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0B1325] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- TOP BANNER -->
+  <div class="bg-gradient-to-r from-amber-800 via-amber-700 to-amber-900 text-amber-50 text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-md flex items-center justify-center gap-2">
+    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-950/70 text-amber-300 uppercase tracking-wider">APSC &amp; UPSC GS Core</span>
+    <span>Lucent's General Knowledge &bull; Chapter 6: Post-Mauryan &amp; Sangam Period (185 BC – 319 AD)</span>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-[#0B1325]/90 backdrop-blur-md border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-900/30 ring-1 ring-amber-400/40 group-hover:scale-105 transition-transform">
+          <i data-lucide="crown" class="w-6 h-6 text-slate-950"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-500 tracking-wider">LUCENT GS</span>
+            <span class="text-xs font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">VISUALIZED</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium">Ancient Indian History &bull; Module 6: Post-Maurya &amp; Sangam Age</p>
+        </div>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/70 p-1.5 rounded-full border border-slate-800 text-xs font-semibold">
+        <a href="#overview" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Overview</a>
+        <a href="#native-dynasties" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Native Rulers</a>
+        <a href="#foreign-rulers" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Kushanas &amp; Greeks</a>
+        <a href="#art-schools" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Gandhara vs Mathura</a>
+        <a href="#sangam-age" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Sangam Age</a>
+        <a href="#quiz" class="px-3.5 py-1.5 rounded-full text-amber-400 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 transition-all flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Quiz Mode
+        </a>
+      </nav>
+
+      <!-- Action Buttons & Chapter Selector -->
+      <div class="flex items-center gap-2.5">
+        <button id="themeToggleBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Toggle Light / Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+
+        <button id="searchBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Search Facts">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <div class="relative">
+          <button id="chapterSelectorBtn" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-xs font-semibold text-slate-200 transition-all">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span>Ch. 6: Post-Maurya</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400"></i>
+          </button>
+          
+          <div id="chapterDropdown" class="hidden absolute right-0 mt-2 w-72 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-2 z-50 text-xs">
+            <div class="px-3 py-2 font-bold text-slate-400 uppercase tracking-wider text-[10px]">Ancient Indian History</div>
+            <a href="index.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>1. Harappan / Indus Valley</span>
+              <span class="text-[10px] text-slate-500">2500–1750 BC</span>
+            </a>
+            <a href="vedic.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>2. Vedic Culture</span>
+              <span class="text-[10px] text-slate-500">1500–600 BC</span>
+            </a>
+            <a href="mahajanapadas.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>3. 16 Mahajanapadas &amp; Magadha</span>
+              <span class="text-[10px] text-slate-500">600–325 BC</span>
+            </a>
+            <a href="religions.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>4. Buddhism &amp; Jainism</span>
+              <span class="text-[10px] text-slate-500">600–400 BC</span>
+            </a>
+            <a href="maurya.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>5. The Mauryan Empire</span>
+              <span class="text-[10px] text-slate-500">322–185 BC</span>
+            </a>
+            <a href="post_maurya.html" class="flex items-center justify-between p-2.5 rounded-lg bg-amber-500/15 text-amber-300 font-semibold border border-amber-500/20">
+              <span class="flex items-center gap-2">
+                <i data-lucide="crown" class="w-4 h-4 text-amber-400"></i> 6. Post-Maurya &amp; Sangam
+              </span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] bg-amber-400 text-slate-950 font-bold">Active</span>
+            </a>
+            <a href="gupta.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>7. Gupta Age &amp; Harsha</span>
+              <span class="text-[10px] text-slate-500">319–647 AD</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HERO SECTION -->
+  <section id="overview" class="relative pt-12 pb-20 overflow-hidden border-b border-slate-800/60 bg-gradient-to-b from-slate-950 via-[#0B1325] to-[#0B1325]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex items-center gap-2 text-xs font-semibold text-amber-400/90 tracking-wide uppercase mb-3">
+        <span>Chapter 6</span> &bull; <span>185 BC – 319 AD</span> &bull; <span>Trans-Regional Synthesis</span>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+            Post-Mauryan &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500">Sangam</span> Age
+          </h1>
+          
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+            The fragmentation of the Mauryan Empire sparked an era of unprecedented intercultural exchange: native dynasties (<strong class="text-amber-300 font-semibold">Shungas, Satavahanas, Chedis</strong>) revived Brahmanism and Jainism, while foreign ruling houses (<strong class="text-amber-300 font-semibold">Indo-Greeks, Shakas, Kushanas</strong>) integrated Indian religion and established international trade routes via the Silk Road. Concurrently, South India witnessed the classical dawn of the <strong class="text-amber-300 font-semibold">Sangam Era</strong>.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">First Gold Coins</span>
+              <span class="font-heading text-base font-bold text-amber-300">Indo-Greeks</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">National Era</span>
+              <span class="font-heading text-base font-bold text-amber-300">Saka 78 AD (Kanishka)</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Sanskrit Inscription</span>
+              <span class="font-heading text-base font-bold text-amber-300">Rudradaman (150 AD)</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Tamil Classic</span>
+              <span class="font-heading text-base font-bold text-amber-300">Tirukkural &amp; Tolkappiyam</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Interactive Artifact -->
+        <div class="lg:col-span-5">
+          <div class="relative group rounded-2xl overflow-hidden border border-amber-500/30 bg-slate-900 shadow-2xl shadow-amber-950/40 cursor-pointer" onclick="openFullImageViewer('assets/images/kanishka_statue.jpg', 'Headless Statue of Kushan Emperor Kanishka I (Mathura Museum)', 'Discovered at Mat near Mathura, this red sandstone statue portrays Kanishka dressed in nomadic steppe military attire: a long tunic, heavy boots, and grasping a mace and broadsword. Inscribed with: Maharajah Rajadhiraja Devaputra Kanishka.')">
+            <img src="assets/images/kanishka_statue.jpg" alt="Headless Statue of Emperor Kanishka" class="w-full h-80 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-amber-500/40 text-xs font-semibold text-amber-300 flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i> Click to Inspect in Full Detail
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-400">Imperial Kushan Sculpture</span>
+              <h3 class="text-sm font-bold text-white font-heading">Kanishka I &bull; Mathura School of Art</h3>
+              <p class="text-[11px] text-slate-300 line-clamp-2">Spotted red sandstone portrait with title 'Devaputra' (Son of God), preserved at Mathura Govt Museum.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: NATIVE SUCCESSORS -->
+  <section id="native-dynasties" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Indigenous Kingdoms</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Native Successor Dynasties</h2>
+        <p class="text-sm text-slate-300">The Shungas, Kanvas, Satavahanas (Andhras), and Chedis of Kalinga.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Shunga Dynasty -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">185–73 BC</span>
+            <span class="text-xs text-slate-400 font-mono">Vidisha</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white">Shunga Dynasty</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Founded by <strong class="text-amber-300">Pushyamitra Shunga</strong> after slaying Brihadratha. Performed two Ashvamedha sacrifices officiated by <strong class="text-amber-300">Patanjali</strong> (author of *Mahabhashya*).
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5">
+            <div class="text-amber-400 font-bold">Heliodorus Garuda Pillar:</div>
+            <p class="text-slate-300">Greek ambassador Heliodorus visited the 9th Shunga king <strong class="text-white">Bhagabhadra</strong> at Vidisha and dedicated a Garuda pillar to Lord Vasudeva.</p>
+          </div>
+        </div>
+
+        <!-- Kanva Dynasty -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">73–28 BC</span>
+            <span class="text-xs text-slate-400 font-mono">Pataliputra</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white">Kanva Dynasty</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Founded by <strong class="text-amber-300">Vasudeva Kanva</strong> after assassinating the last Shunga ruler Devabhuti. Ruled for 45 years across 4 kings (Vasudeva, Bhumimitra, Narayana, Susharman).
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5">
+            <div class="text-amber-400 font-bold">Overthrown by Andhras:</div>
+            <p class="text-slate-300">The last ruler Susharman was eliminated by the rising power of the Satavahana (Andhra) dynasty.</p>
+          </div>
+        </div>
+
+        <!-- Satavahana Dynasty -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-amber-500/40 space-y-3 shadow-xl shadow-amber-950/20">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-xs">1st C. BC – 3rd C. AD</span>
+            <span class="text-xs text-amber-400 font-mono">Paithan</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white">Satavahana (Andhra)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Founded by <strong class="text-amber-300">Simuka</strong> with capital at <strong class="text-white">Pratishtana (Paithan)</strong> on the Godavari. Official language was <strong class="text-amber-300">Prakrit</strong> (Brahmi script).
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5">
+            <div><strong class="text-amber-300">Gautamiputra Satakarni:</strong> Defeated Saka ruler Nahapana. Styled <em class="text-slate-200">Ekabrahmana</em> in the Nasik Prashasti of Gautami Balashri.</div>
+            <div><strong class="text-amber-300">Land Grants:</strong> First to give tax-free land grants to Brahmans and Buddhist monks (Nanaghat inscription).</div>
+          </div>
+        </div>
+
+        <!-- Chedi / Cheti Dynasty -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">1st C. BC</span>
+            <span class="text-xs text-slate-400 font-mono">Kalinga (Odisha)</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white">Chedi / Cheti Dynasty</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Founded by Mahameghavahana. Its greatest sovereign was <strong class="text-amber-300">Kharavela</strong>, an ardent patron of Jainism who excavated residential caves for monks at Udayagiri and Khandagiri.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5">
+            <div class="text-amber-400 font-bold">Hathigumpha Inscription:</div>
+            <p class="text-slate-300">Engraved in Brahmi script and Prakrit language, records Kharavela’s military campaigns, canal repairs, and retrieval of the Jina idol from Magadha.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: FOREIGN RULING HOUSES -->
+  <section id="foreign-rulers" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Northwestern Entrants</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Foreign Dynasties: Indo-Greeks, Shakas &amp; Kushanas</h2>
+        <p class="text-sm text-slate-300">Invasions, numismatic revolutions, and imperial expansion connecting India to Central Asia.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Indo-Greeks -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-4 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Indo-Greeks &bull; 190 BC</span>
+            <span class="text-xs text-slate-400 font-mono">Bactria &rarr; Sakala</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Indo-Greeks (Bactrian Greeks)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Demetrius I entered India in 190 BC. The most renowned ruler was <strong class="text-amber-300">Menander (Milinda, 165–145 BC)</strong> with his capital at <strong class="text-white">Sakala (modern Sialkot)</strong>.
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-2 text-xs">
+            <div><strong class="text-amber-400">Milindapanho:</strong> Buddhist sage <strong class="text-amber-200">Nagasena</strong> converted Menander after answering his deep philosophical questions.</div>
+            <div><strong class="text-amber-400">First Gold Coins:</strong> First rulers in India to issue coins with portraits and names of kings, introducing the <strong class="text-slate-100">Hellenistic art</strong> into Indian sculpture.</div>
+          </div>
+        </div>
+
+        <!-- Shakas / Western Kshatrapas -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-4 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Shakas (Scythians)</span>
+            <span class="text-xs text-slate-400 font-mono">Ujjain &bull; Kathiawar</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">The Shakas &amp; Rudradaman I</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Migrated from Central Asia. The most famous branch was the Western Kshatrapas of Ujjain, spearheaded by <strong class="text-amber-300">Rudradaman I (130–150 AD)</strong>.
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-2 text-xs">
+            <div><strong class="text-amber-400">Junagadh Inscription (150 AD):</strong> Earliest long inscription written in chaste <strong class="text-amber-200">classical Sanskrit</strong>.</div>
+            <div><strong class="text-amber-400">Sudarshana Lake:</strong> Repaired the embankment of Sudarshana lake without levying emergency taxes (*Vishti* / forced labor) on the people.</div>
+            <div><strong class="text-amber-400">Vikrama Samvat (58 BC):</strong> Commemorates the defeat of Shakas by the legendary King of Ujjain, Vikramaditya.</div>
+          </div>
+        </div>
+
+        <!-- Kushanas -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-amber-500/40 space-y-4 shadow-xl shadow-amber-950/20">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-xs">Kushanas &bull; 1st–3rd C. AD</span>
+            <span class="text-xs text-amber-400 font-mono">Peshawar &bull; Mathura</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">The Kushan Empire &amp; Kanishka</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Originated from the <strong class="text-amber-300">Yueh-chi</strong> nomadic tribe. Kujula Kadphises issued copper coins, Vima Kadphises issued gold coins, and <strong class="text-amber-300">Kanishka I (78–101 AD)</strong> expanded the empire across Central Asia and the Gangetic valley.
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-2 text-xs">
+            <div><strong class="text-amber-400">Saka Era:</strong> Founded in <strong class="text-amber-200">78 AD</strong> by Kanishka at his accession.</div>
+            <div><strong class="text-amber-400">4th Buddhist Council:</strong> Convened at Kundalvana (Kashmir) under Vasumitra and Ashvaghosha; split into Hinayana &amp; Mahayana.</div>
+            <div><strong class="text-amber-400">Court Luminaries:</strong> Ashvaghosha (*Buddhacharita*), Nagarjuna (*Madhyamika Sutra* / Indian Einstein), Charaka (*Charaka Samhita*), Vasumitra (*Mahavibhasha*).</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: GANDHARA VS MATHURA ART -->
+  <section id="art-schools" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Artistic Renaissance</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Gandhara Art vs. Mathura Art Matrix</h2>
+        <p class="text-sm text-slate-300">A definitive comparative analysis of the two dominant sculptural schools under Kushan patronage.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left: Image of Gandhara Buddha -->
+        <div class="lg:col-span-5">
+          <div class="relative group rounded-2xl overflow-hidden border border-[#233354] bg-slate-900 shadow-xl cursor-pointer" onclick="openFullImageViewer('assets/images/gandhara_buddha.jpg', 'Seated Buddha in Gandhara Greco-Buddhist Style (Tokyo National Museum)', 'Dating from 1st–2nd century AD Gandhara (Peshawar region). Characterized by realistic anatomical muscularity, wavy Apollo-like hair, moustache, and Greek toga-style drapery with deep clinging folds.')">
+            <img src="assets/images/gandhara_buddha.jpg" alt="Gandhara Buddha Statue" class="w-full h-96 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-amber-500/40 text-xs font-semibold text-amber-300 flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i> Click to Zoom &amp; Inspect
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400">Gandhara School</span>
+              <h3 class="text-sm font-bold text-white font-heading">Greco-Buddhist Hybrid Sculptural Style</h3>
+              <p class="text-[11px] text-slate-300">Carved from blue-grey schist sandstone; Greek realism applied to Buddhist themes.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Comparison Matrix Table -->
+        <div class="lg:col-span-7">
+          <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/60 shadow-xl">
+            <table class="w-full text-left text-xs text-slate-300">
+              <thead class="bg-slate-950/80 text-amber-300 font-heading uppercase text-[11px] tracking-wider border-b border-slate-800">
+                <tr>
+                  <th class="py-3 px-4">Feature</th>
+                  <th class="py-3 px-4">Gandhara School of Art</th>
+                  <th class="py-3 px-4">Mathura School of Art</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60 font-medium">
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="py-3 px-4 text-amber-400 font-bold">Influence</td>
+                  <td class="py-3 px-4 text-white">Greco-Roman / Hellenistic influence (Western classical)</td>
+                  <td class="py-3 px-4 text-white">Purely indigenous; evolved from ancient Yaksha statues</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="py-3 px-4 text-amber-400 font-bold">Medium / Stone</td>
+                  <td class="py-3 px-4 text-slate-200">Blue-grey schist stone and stucco (lime plaster)</td>
+                  <td class="py-3 px-4 text-slate-200">Spotted red sandstone from Sikri quarries</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="py-3 px-4 text-amber-400 font-bold">Religious Scope</td>
+                  <td class="py-3 px-4 text-slate-200">Exclusively Buddhist (Mahayana icons)</td>
+                  <td class="py-3 px-4 text-slate-200">All three: Buddhism, Jainism (Ayagapatas), Brahmanism (Vishnu/Shiva)</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="py-3 px-4 text-amber-400 font-bold">Depiction of Buddha</td>
+                  <td class="py-3 px-4 text-slate-200">Wavy hair, Apollo-like sharp nose, realistic drapery, moustache</td>
+                  <td class="py-3 px-4 text-slate-200">Shaven head or curls, smiling face, energetic posture, transparent dhoti</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="py-3 px-4 text-amber-400 font-bold">Halo / Prabhavali</td>
+                  <td class="py-3 px-4 text-slate-200">Plain or modest halo behind the head</td>
+                  <td class="py-3 px-4 text-slate-200">Elaborately ornamented and carved floral halo</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="py-3 px-4 text-amber-400 font-bold">Key Patrons</td>
+                  <td class="py-3 px-4 text-amber-300">Shakas and Kushanas (NWFP &amp; Punjab)</td>
+                  <td class="py-3 px-4 text-amber-300">Kushanas (Central &amp; Northern India)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: THE SANGAM PERIOD IN SOUTH INDIA -->
+  <section id="sangam-age" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Early South India</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">The Sangam Age (300 BC – 300 AD)</h2>
+        <p class="text-sm text-slate-300">The three Tamil academies (*Sangams*), the triumvirate of Cheras, Cholas, and Pandyas, and classical epics.</p>
+      </div>
+
+      <!-- The 3 Kingdoms Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Kerala Coast</span>
+            <span class="text-xs text-amber-400 font-bold">Royal Emblem: Bow &amp; Arrow</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">The Cheras (Keralaputras)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Capital at <strong class="text-white">Vanji (Karur)</strong> with major ports at Muziris (Cranganore) and Tondi. Traded spices, ivory, and pearls with the Roman Empire.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5">
+            <div class="text-amber-400 font-bold">Senguttuvan (Red Chera):</div>
+            <p class="text-slate-300">Greatest Chera sovereign; established the <strong class="text-amber-200">Pattini Cult</strong> (worship of Kannagi as the ideal chaste wife) using stones brought from the Himalayas.</p>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Cauvery Delta</span>
+            <span class="text-xs text-amber-400 font-bold">Royal Emblem: Tiger</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">The Cholas (Cholamandalam)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Capital at <strong class="text-white">Uraiyur</strong> (famed for cotton trade) and later at the port city of <strong class="text-white">Puhar (Kaveripattinam)</strong>.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5">
+            <div class="text-amber-400 font-bold">Karikala:</div>
+            <p class="text-slate-300">Greatest early Chola ruler; defeated a confederacy of Cheras, Pandyas, and 11 minor chieftains at the <strong class="text-amber-200">Battle of Venni</strong>. Built the Grand Anicut (Kallanai dam) on the Cauvery.</p>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Southern Tamil Nadu</span>
+            <span class="text-xs text-amber-400 font-bold">Royal Emblem: Carp / Twin Fish</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">The Pandyas</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Capital at <strong class="text-white">Madurai</strong>; chief port at Korkai (famous for pearls). Megasthenes noted that their kingdom was ruled by a woman and celebrated for its pearls.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5">
+            <div class="text-amber-400 font-bold">Nedunjeliyan:</div>
+            <p class="text-slate-300">Won the famed <strong class="text-amber-200">Battle of Talaiyalanganam</strong> against the combined forces of Cheras and Cholas. Figure in the epic *Silappadikaram* who died of grief on realizing his miscarriage of justice.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- The 3 Sangams & Literary Works Table -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="p-5 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+            <i data-lucide="book-open" class="w-4 h-4"></i>
+            <span>The Three Tamil Sangams (Academies)</span>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+              <div class="flex items-center justify-between font-bold text-white">
+                <span>1st Sangam (Thenmadurai)</span>
+                <span class="text-amber-400">Sage Agastya</span>
+              </div>
+              <p class="text-slate-400 mt-1">No surviving books; submerged under the sea.</p>
+            </li>
+            <li class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+              <div class="flex items-center justify-between font-bold text-white">
+                <span>2nd Sangam (Kapadapuram)</span>
+                <span class="text-amber-400">Agastya &amp; Tolkappiyar</span>
+              </div>
+              <p class="text-slate-400 mt-1">Only <strong class="text-amber-300">Tolkappiyam</strong> (Tamil grammar treatise by Tolkappiyar) survived.</p>
+            </li>
+            <li class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+              <div class="flex items-center justify-between font-bold text-white">
+                <span>3rd Sangam (North Madurai)</span>
+                <span class="text-amber-400">Nakkirar</span>
+              </div>
+              <p class="text-slate-400 mt-1">Yielded the canonical anthologies: <strong class="text-slate-200">Ettutogai</strong> (8 anthologies) and <strong class="text-slate-200">Pattupattu</strong> (10 idylls).</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+            <i data-lucide="scroll" class="w-4 h-4"></i>
+            <span>The Great Tamil Epics &amp; Didactic Works</span>
+          </div>
+          <ul class="space-y-2 text-xs text-slate-300">
+            <li class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+              <div class="flex items-center justify-between font-bold text-white">
+                <span>Silappadikaram ("The Jewelled Anklet")</span>
+                <span class="text-amber-400">Ilango Adigal</span>
+              </div>
+              <p class="text-slate-400 mt-1">Story of Kovalan, Kannagi, and courtesan Madhavi; founding text of the Pattini cult.</p>
+            </li>
+            <li class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+              <div class="flex items-center justify-between font-bold text-white">
+                <span>Manimekalai (Buddhist Sequel)</span>
+                <span class="text-amber-400">Sittalai Sattanar</span>
+              </div>
+              <p class="text-slate-400 mt-1">Narrates adventures of Manimekalai, daughter of Kovalan and Madhavi, who embraced Buddhism.</p>
+            </li>
+            <li class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+              <div class="flex items-center justify-between font-bold text-white">
+                <span>Tirukkural ("Bible of Tamil Land")</span>
+                <span class="text-amber-400">Tiruvalluvar</span>
+              </div>
+              <p class="text-slate-400 mt-1">Masterpiece containing 1330 couplets divided into Dharma (*Aram*), Artha (*Porul*), and Kama (*Inbam*).</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5: INTERACTIVE STUDY TOOLS (FLASHCARDS & QUIZ) -->
+  <section id="quiz" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Active Recall Engine</span>
+        <h2 class="font-heading text-3xl font-extrabold text-white">Lucent Exam Readiness Practice</h2>
+        <p class="text-sm text-slate-300">Test your command over Indo-Greeks, Kushanas, Rudradaman, and Sangam epics.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: 3D Flashcard Deck -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-heading text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="layers" class="w-4 h-4 text-amber-400"></i> Post-Maurya Flashcards
+            </h3>
+            <span id="flashcardCountDisplay" class="text-xs font-mono text-slate-400">Card 1 of 8</span>
+          </div>
+
+          <div id="flashcardContainer" class="flashcard-container" onclick="toggleFlashcardFlip()">
+            <div id="flashcardInner" class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded border border-amber-500/20">Question</span>
+                <p id="cardFrontText" class="font-heading text-base font-semibold text-white px-2">Loading flashcard...</p>
+                <span class="text-[10px] text-slate-400 font-medium">Click card to reveal answer</span>
+              </div>
+              <div class="flashcard-face flashcard-back">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20">Lucent Fact Answer</span>
+                <p id="cardBackText" class="text-xs text-slate-100 font-medium leading-relaxed px-2">Loading answer...</p>
+                <span class="text-[10px] text-slate-400 font-medium">Click to flip back</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between gap-3 pt-2">
+            <button id="prevCardBtn" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 hover:text-white flex items-center gap-1.5 transition-all">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i> Prev Card
+            </button>
+            <button onclick="toggleFlashcardFlip()" class="px-4 py-2 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-xs font-semibold text-amber-300 transition-all">
+              Flip Card
+            </button>
+            <button id="nextCardBtn" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 hover:text-white flex items-center gap-1.5 transition-all">
+              Next Card <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: 5-Question Mock Quiz -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-heading text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="help-circle" class="w-4 h-4 text-amber-400"></i> Post-Maurya Prelims Mock Test
+            </h3>
+            <div class="text-xs text-slate-400 font-mono">
+              Score: <span id="currentScore" class="text-amber-400 font-bold">0</span> / 5
+            </div>
+          </div>
+
+          <div id="quizQuestionBox" class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-5">
+            <div class="flex items-center justify-between">
+              <span id="quizQNum" class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2.5 py-1 rounded border border-amber-500/20">Q1</span>
+              <span class="text-[11px] text-slate-500 font-mono">Multiple Choice</span>
+            </div>
+
+            <p id="quizQuestionText" class="text-sm font-semibold text-white leading-relaxed">
+              Loading quiz question...
+            </p>
+
+            <div id="quizOptionsList" class="space-y-2.5">
+              <!-- Options rendered by JS -->
+            </div>
+
+            <div id="quizFeedback" class="hidden">
+              <!-- Correct/incorrect feedback rendered by JS -->
+            </div>
+
+            <button id="nextQuizBtn" class="hidden w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-lg transition-all items-center justify-center gap-2">
+              Next Question <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden items-start justify-center pt-20 px-4">
+    <div class="bg-slate-900 border border-slate-700 w-full max-w-xl rounded-2xl shadow-2xl overflow-hidden">
+      <div class="p-4 border-b border-slate-800 flex items-center gap-3">
+        <i data-lucide="search" class="w-5 h-5 text-amber-400"></i>
+        <input id="searchInput" type="text" placeholder="Search Pushyamitra, Kanishka, Rudradaman, Sangam..." class="bg-transparent border-none text-white text-sm focus:outline-none w-full">
+        <button id="closeSearchBtn" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div id="searchResults" class="p-4 max-h-96 overflow-y-auto space-y-2 text-xs">
+        <p class="text-slate-500 text-center py-4">Type a keyword to search across this module...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER MODAL -->
+  <div id="fullImageViewerModal" class="lightbox-modal">
+    <div class="p-4 bg-slate-950/95 border-b border-slate-800 flex items-center justify-between z-20">
+      <div>
+        <h4 id="lightboxTitle" class="font-heading text-sm font-bold text-white">Image Viewer</h4>
+        <p class="text-[11px] text-slate-400">Full Archaeological &amp; Inscriptional Inspection</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all">
+          <i data-lucide="minus" class="w-4 h-4"></i>
+        </button>
+        <span id="zoomLevelDisplay" class="px-2.5 py-1 rounded bg-slate-900 border border-slate-700 text-xs font-mono text-amber-300 min-w-14 text-center">100%</span>
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+        </button>
+        <button id="zoomResetBtn" class="hidden sm:inline-block px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs text-slate-300 hover:text-white transition-all">Reset</button>
+        <div class="h-6 w-px bg-slate-800 mx-1"></div>
+        <button id="closeLightboxBtn" class="p-2 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/30 transition-all">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="lightboxViewport" class="lightbox-viewport">
+      <img id="lightboxImg" src="" alt="" class="lightbox-img">
+    </div>
+
+    <div class="p-4 bg-slate-950/95 border-t border-slate-800 max-h-40 overflow-y-auto text-xs text-slate-300 z-20">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <p id="lightboxDescription" class="leading-relaxed text-slate-300 text-xs"></p>
+        <span class="text-[10px] text-slate-500 shrink-0 font-mono hidden sm:inline-block">Tip: Scroll mouse wheel to zoom &bull; Drag to pan</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER & BOTTOM NAV -->
+  <footer class="border-t border-slate-800/80 bg-[#0B1325] mt-24 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
+          <i data-lucide="book" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-heading font-bold text-white">Lucent's General Knowledge Illustrated</span>
+          <p class="text-[11px] text-slate-500">Prepared for APSC &amp; UPSC General Studies Aspirants</p>
+        </div>
+      </div>
+      <div class="text-center md:text-right text-slate-500 text-[11px] space-y-1">
+        <div class="flex items-center justify-center md:justify-end gap-3 text-slate-300">
+          <a href="maurya.html" class="inline-flex items-center gap-1.5 text-amber-400 font-bold hover:underline">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5 inline"></i> Ch. 5: Mauryan Empire
+          </a>
+          <span class="text-slate-600">&bull;</span>
+          <a href="gupta.html" class="inline-flex items-center gap-1.5 text-amber-400 font-bold hover:underline">
+            Ch. 7: Gupta Age &amp; Harsha <i data-lucide="arrow-right" class="w-3.5 h-3.5 inline"></i>
+          </a>
+        </div>
+        <p>&copy; 2026 Interactive GS Learning Project. Content sourced directly from Lucent's GK.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/post_maurya.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucent GK Illustrated | Ancient India - 7. The Gupta Empire & Harshavardhana (319–647 AD)</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              bronze: '#CD7F32',
+              terracotta: '#C86446',
+              deepnavy: '#0B1325',
+              carddark: '#141E33',
+              cardborder: '#233354',
+              sand: '#F7F3E9',
+              sandstone: '#E8DCC4'
+            }
+          },
+          fontFamily: {
+            heading: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0B1325] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- TOP BANNER -->
+  <div class="bg-gradient-to-r from-amber-800 via-amber-700 to-amber-900 text-amber-50 text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-md flex items-center justify-center gap-2">
+    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-950/70 text-amber-300 uppercase tracking-wider">APSC &amp; UPSC GS Core</span>
+    <span>Lucent's General Knowledge &bull; Chapter 7: The Gupta Period &amp; Harshavardhana (319 AD – 647 AD)</span>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-[#0B1325]/90 backdrop-blur-md border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-900/30 ring-1 ring-amber-400/40 group-hover:scale-105 transition-transform">
+          <i data-lucide="sparkle" class="w-6 h-6 text-slate-950"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-500 tracking-wider">LUCENT GS</span>
+            <span class="text-xs font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">VISUALIZED</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium">Ancient Indian History &bull; Module 7: The Golden Age of Guptas &amp; Harsha</p>
+        </div>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/70 p-1.5 rounded-full border border-slate-800 text-xs font-semibold">
+        <a href="#overview" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Overview</a>
+        <a href="#gupta-rulers" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Sovereigns</a>
+        <a href="#golden-age" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Science &amp; Literature</a>
+        <a href="#monuments" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Nalanda &amp; Art</a>
+        <a href="#harsha" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Harshavardhana</a>
+        <a href="#quiz" class="px-3.5 py-1.5 rounded-full text-amber-400 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 transition-all flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Quiz Mode
+        </a>
+      </nav>
+
+      <!-- Action Buttons & Chapter Selector -->
+      <div class="flex items-center gap-2.5">
+        <button id="themeToggleBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Toggle Light / Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+
+        <button id="searchBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Search Facts">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <div class="relative">
+          <button id="chapterSelectorBtn" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-xs font-semibold text-slate-200 transition-all">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span>Ch. 7: Guptas &amp; Harsha</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400"></i>
+          </button>
+          
+          <div id="chapterDropdown" class="hidden absolute right-0 mt-2 w-72 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-2 z-50 text-xs">
+            <div class="px-3 py-2 font-bold text-slate-400 uppercase tracking-wider text-[10px]">Ancient Indian History</div>
+            <a href="index.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>1. Harappan / Indus Valley</span>
+              <span class="text-[10px] text-slate-500">2500–1750 BC</span>
+            </a>
+            <a href="vedic.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>2. Vedic Culture</span>
+              <span class="text-[10px] text-slate-500">1500–600 BC</span>
+            </a>
+            <a href="mahajanapadas.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>3. 16 Mahajanapadas &amp; Magadha</span>
+              <span class="text-[10px] text-slate-500">600–325 BC</span>
+            </a>
+            <a href="religions.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>4. Buddhism &amp; Jainism</span>
+              <span class="text-[10px] text-slate-500">600–400 BC</span>
+            </a>
+            <a href="maurya.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>5. The Mauryan Empire</span>
+              <span class="text-[10px] text-slate-500">322–185 BC</span>
+            </a>
+            <a href="post_maurya.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>6. Post-Maurya &amp; Sangam</span>
+              <span class="text-[10px] text-slate-500">185 BC–319 AD</span>
+            </a>
+            <a href="gupta.html" class="flex items-center justify-between p-2.5 rounded-lg bg-amber-500/15 text-amber-300 font-semibold border border-amber-500/20">
+              <span class="flex items-center gap-2">
+                <i data-lucide="sparkle" class="w-4 h-4 text-amber-400"></i> 7. Gupta Age &amp; Harsha
+              </span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] bg-amber-400 text-slate-950 font-bold">Active</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HERO SECTION -->
+  <section id="overview" class="relative pt-12 pb-20 overflow-hidden border-b border-slate-800/60 bg-gradient-to-b from-slate-950 via-[#0B1325] to-[#0B1325]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex items-center gap-2 text-xs font-semibold text-amber-400/90 tracking-wide uppercase mb-3">
+        <span>Chapter 7</span> &bull; <span>319 AD – 647 AD</span> &bull; <span>The Classical Golden Age</span>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+            The <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500">Gupta</span> Golden Age
+          </h1>
+          
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+            Regarded in Indian historiography as the <strong class="text-amber-300 font-semibold">Classical Golden Age</strong>, the Gupta Period produced unmatched summits in mathematics, astronomy, Sanskrit drama, fine arts, and international monastic learning. Following the Gupta decline, Emperor <strong class="text-amber-300 font-semibold">Harshavardhana</strong> unified northern India from Kannauj, patronizing Banabhatta and the famed pilgrim Hiuen Tsang.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Gupta Era</span>
+              <span class="font-heading text-base font-bold text-amber-300">319–320 AD</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Indian Napoleon</span>
+              <span class="font-heading text-base font-bold text-amber-300">Samudragupta</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Premier University</span>
+              <span class="font-heading text-base font-bold text-amber-300">Nalanda Mahavihara</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Astronomer</span>
+              <span class="font-heading text-base font-bold text-amber-300">Aryabhata (499 AD)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Interactive Artifact -->
+        <div class="lg:col-span-5">
+          <div class="relative group rounded-2xl overflow-hidden border border-amber-500/30 bg-slate-900 shadow-2xl shadow-amber-950/40 cursor-pointer" onclick="openFullImageViewer('assets/images/samudragupta_veena_coin.jpg', 'Gold Dinar of Samudragupta as Musician (Lyrist Type)', 'Struck in pure high-grade gold, this coin depicts Emperor Samudragupta seated cross-legged on a cushioned high couch, playing the 7-stringed Veena (lyre). The legend commemorates his mastery of sacred music and poetry, validating Harisena’s claim in the Prayag Prashasti.')">
+            <img src="assets/images/samudragupta_veena_coin.jpg" alt="Samudragupta Lyrist Gold Coin" class="w-full h-80 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-amber-500/40 text-xs font-semibold text-amber-300 flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i> Click to Inspect in Full Detail
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-400">Numismatic Masterpiece</span>
+              <h3 class="text-sm font-bold text-white font-heading">Samudragupta &bull; Veena-Playing Gold Dinar</h3>
+              <p class="text-[11px] text-slate-300 line-clamp-2">Authentic numismatic testament proving the emperor's patronage of the fine arts and music.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: GUPTA DYNASTIC RULERS -->
+  <section id="gupta-rulers" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Dynastic Imperium</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">The Imperial Gupta Lineage</h2>
+        <p class="text-sm text-slate-300">Lucent GK essentials covering all key sovereigns from Chandragupta I to Skandagupta.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Chandragupta I -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">319–335 AD</span>
+            <span class="text-xs text-slate-400 font-mono">Maharajadhiraja</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Chandragupta I</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Real founder of the Gupta Empire. Ascended the throne in <strong class="text-amber-300">319–320 AD</strong>, starting the celebrated <strong class="text-white">Gupta Era</strong>.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5">
+            <div><strong class="text-amber-400">Matrimonial Alliance:</strong> Married Lichchhavi princess <strong class="text-slate-200">Kumaradevi</strong>, consolidating power in Magadha.</div>
+            <div><strong class="text-amber-400">King-Queen Coins:</strong> Issued joint gold coins depicting the royal couple, with legend <em class="text-slate-300">Lichchhavayah</em> on reverse.</div>
+          </div>
+        </div>
+
+        <!-- Samudragupta -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-amber-500/40 space-y-3 shadow-xl shadow-amber-950/20">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-xs">335–380 AD</span>
+            <span class="text-xs text-amber-400 font-mono">Kaviraja &bull; Ashvamedha</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Samudragupta (Indian Napoleon)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Dubbed the <strong class="text-amber-300">"Indian Napoleon"</strong> by historian V.A. Smith due to his unblemished military campaigns across north and south India.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5">
+            <div><strong class="text-amber-400">Prayag Prashasti:</strong> Composed by court poet <strong class="text-amber-200">Harisena</strong> on the Allahabad Pillar in classical Sanskrit (*Champu* style).</div>
+            <div><strong class="text-amber-400">Dakshinapatha Policy:</strong> Captured and released 12 southern kings under the policy of <strong class="text-slate-200">Grahana-Mokshanugraha</strong>.</div>
+            <div><strong class="text-amber-400">Music &amp; Religion:</strong> Struck Veena-playing gold coins; granted permission to Ceylon king Meghavarna to build Bodh Gaya monastery.</div>
+          </div>
+        </div>
+
+        <!-- Chandragupta II Vikramaditya -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">380–415 AD</span>
+            <span class="text-xs text-slate-400 font-mono">Vikramaditya &bull; Sakari</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Chandragupta II Vikramaditya</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Eliminated the last Saka ruler Rudrasimha III, annexing Gujarat/Kathiawar and assuming the titles <strong class="text-amber-300">Sakari</strong> and <strong class="text-amber-300">Vikramaditya</strong>.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5">
+            <div><strong class="text-amber-400">Navaratnas (Nine Gems):</strong> Court at Ujjain patronized Kalidasa, Varahamihira, Amarasimha, and Dhanvantari.</div>
+            <div><strong class="text-amber-400">Fa-Hien's Visit (399–414 AD):</strong> Chinese pilgrim described peaceful society with mild taxation and vegetarianism.</div>
+            <div><strong class="text-amber-400">First Silver Coins:</strong> First Gupta emperor to issue silver coins (*Rupaka*) commemorating the Shaka victory.</div>
+          </div>
+        </div>
+
+        <!-- Kumaragupta I -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">415–455 AD</span>
+            <span class="text-xs text-slate-400 font-mono">Mahendraditya</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Kumaragupta I</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Maintained peace across the subcontinental empire. Ardent devotee of Lord Kartikeya; issued distinctive peacock-type gold coins.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5">
+            <div class="text-amber-400 font-bold">Nalanda Mahavihara:</div>
+            <p class="text-slate-300">Founded the world-famous Buddhist university of <strong class="text-amber-200">Nalanda</strong> in Bihar, attracting scholars from China, Korea, Tibet, and Central Asia.</p>
+          </div>
+        </div>
+
+        <!-- Skandagupta -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">455–467 AD</span>
+            <span class="text-xs text-slate-400 font-mono">Kramaditya</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Skandagupta</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            The savior of India who successfully repulsed the catastrophic invasion of the barbaric <strong class="text-amber-300">White Hunas (Hephthalites)</strong>.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5">
+            <div class="text-amber-400 font-bold">Junagadh Inscription:</div>
+            <p class="text-slate-300">Records the comprehensive restoration of the Sudarshana Lake dam in Saurashtra by his governor <strong class="text-white">Parnadatta</strong> and son Chakrapalita.</p>
+          </div>
+        </div>
+
+        <!-- Later Guptas & Sati Note -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-rose-500/20 text-rose-300 font-bold text-xs border border-rose-500/40">510 AD</span>
+            <span class="text-xs text-slate-400 font-mono">Bhanugupta</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Eran Inscription (First Sati)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            The <strong class="text-amber-300">Eran Stone Pillar Inscription (510 AD)</strong> of King Bhanugupta in Madhya Pradesh provides the earliest epigraphical evidence of <strong class="text-rose-300">Sati</strong> (widow self-immolation of Goparaja’s wife).
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5">
+            <div class="text-rose-400 font-bold">Huna Inroads:</div>
+            <p class="text-slate-300">Toramana and his ruthless son <strong class="text-white">Mihirakula</strong> overran Malwa and Punjab, precipitating the Gupta collapse.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: SCIENCE, ASTRONOMY & LITERATURE MATRIX -->
+  <section id="golden-age" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Intellectual Zenith</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Gupta Science, Mathematics &amp; Sanskrit Literature</h2>
+        <p class="text-sm text-slate-300">Core Lucent GK table of scientific breakthroughs and literary masterpieces for UPSC/APSC prelims.</p>
+      </div>
+
+      <!-- Science & Math Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+            <i data-lucide="compass" class="w-4 h-4"></i>
+            <span>Aryabhata (b. 476 AD, Pataliputra)</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Authored <strong class="text-white">Aryabhatiya</strong> (at age 23 in 499 AD) and <strong class="text-white">Surya Siddhanta</strong>.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-1.5">
+            <li class="p-2 rounded bg-slate-900 border border-slate-800">&bull; Declared that the Earth is spherical and rotates on its own axis.</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800">&bull; Formulated scientific explanations for solar and lunar eclipses.</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800">&bull; Calculated value of &pi; (Pi) as 3.1416 and estimated year length to 365.258 days.</li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+            <i data-lucide="sun" class="w-4 h-4"></i>
+            <span>Varahamihira (Avanti / Ujjain)</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            One of the Navaratnas; legendary polymath in astronomy, astrology, and architecture.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-1.5">
+            <li class="p-2 rounded bg-slate-900 border border-slate-800">&bull; <strong class="text-amber-300">Panchasiddhantika:</strong> Summarized 5 astronomical schools (Surya, Romaka, Paulisa, Vasistha, Paitamaha).</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800">&bull; <strong class="text-amber-300">Brihatsamhita:</strong> Encyclopedic work on planetary movements, geology, botanics.</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800">&bull; <strong class="text-amber-300">Brihat Jataka:</strong> Classical treatise on predictive astrology.</li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+            <i data-lucide="activity" class="w-4 h-4"></i>
+            <span>Brahmagupta &amp; Medicine</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Brahmagupta authored the <strong class="text-white">Brahmasphuta Siddhanta</strong> and anticipated gravitational laws.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-1.5">
+            <li class="p-2 rounded bg-slate-900 border border-slate-800">&bull; Anticipated gravity: "All heavy things fall down to the earth by law of nature".</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800">&bull; First to treat zero (*Shunya*) as a full mathematical number.</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800">&bull; <strong class="text-amber-300">Dhanvantari:</strong> Master of Ayurveda among the Navaratnas; <strong class="text-amber-300">Vagbhata</strong> wrote *Ashtanga Hridaya*.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Sanskrit Masterpieces Table -->
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/60 shadow-xl">
+        <table class="w-full text-left text-xs text-slate-300">
+          <thead class="bg-slate-950/80 text-amber-300 font-heading uppercase text-[11px] tracking-wider border-b border-slate-800">
+            <tr>
+              <th class="py-3 px-4">Author / Luminary</th>
+              <th class="py-3 px-4">Immortal Treatises &amp; Plays</th>
+              <th class="py-3 px-4">Genre / Theme</th>
+              <th class="py-3 px-4">Lucent Prelims Key Fact</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 font-medium">
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Kalidasa</td>
+              <td class="py-3 px-4 text-white">Abhijnanashakuntalam, Malavikagnimitram, Vikramorvashiyam, Meghaduta, Raghuvamsha</td>
+              <td class="py-3 px-4 text-slate-300">Classical Sanskrit drama &amp; Kavya epics</td>
+              <td class="py-3 px-4 text-emerald-400 font-mono text-[11px]">First Indian work translated to European language (Sir William Jones)</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Visakhadatta</td>
+              <td class="py-3 px-4 text-white">Mudrarakshasa &bull; Devichandraguptam</td>
+              <td class="py-3 px-4 text-slate-300">Political drama (Chanakya's machinations / Ramagupta)</td>
+              <td class="py-3 px-4 text-slate-400 text-[11px]">Play without a female heroine</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Shudraka</td>
+              <td class="py-3 px-4 text-white">Mrichchhakatika ("The Little Clay Cart")</td>
+              <td class="py-3 px-4 text-slate-300">Drama of Charudatta and courtesan Vasantasena</td>
+              <td class="py-3 px-4 text-slate-400 text-[11px]">Vivid depiction of urban social realism</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Bhasa</td>
+              <td class="py-3 px-4 text-white">Svapnavasavadatta &bull; Charudatta</td>
+              <td class="py-3 px-4 text-slate-300">Romantic drama of Udayana and Vasavadatta</td>
+              <td class="py-3 px-4 text-slate-400 text-[11px]">Preceded Kalidasa; 13 plays discovered</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Vishnu Sharma</td>
+              <td class="py-3 px-4 text-white">Panchatantra</td>
+              <td class="py-3 px-4 text-slate-300">Fables and moral statecraft for princes</td>
+              <td class="py-3 px-4 text-slate-400 text-[11px]">Most translated Indian book after Bible</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Amarasimha</td>
+              <td class="py-3 px-4 text-white">Amarakosha (Namalinganushasana)</td>
+              <td class="py-3 px-4 text-slate-300">Sanskrit thesaurus and lexicon</td>
+              <td class="py-3 px-4 text-slate-400 text-[11px]">Member of Vikramaditya's Navaratnas</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: MONUMENTS, ART & NALANDA UNIVERSITY -->
+  <section id="monuments" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Architectural Triumphs</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Nalanda University, Ajanta Caves &amp; Iron Pillar</h2>
+        <p class="text-sm text-slate-300">Interactive archaeological relics preserving the artistic and metallurgical glory of the Guptas.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Nalanda University -->
+        <div class="rounded-2xl overflow-hidden bg-[#141E33] border border-[#233354] hover:border-amber-500/40 transition-all flex flex-col group cursor-pointer" onclick="openFullImageViewer('assets/images/nalanda_university.jpg', 'Excavated Ruins of Nalanda Mahavihara (Bihar)', 'Founded in the 5th century AD by Kumaragupta I, Nalanda was the ancient world’s premier residential university, accommodating over 10,000 students and 2,000 teachers. Its massive library Dharmaganja comprised three 9-story edifices: Ratnasagara, Ratnodadhi, and Ratnaranjaka.')">
+          <div class="relative h-56 overflow-hidden">
+            <img src="assets/images/nalanda_university.jpg" alt="Nalanda University Ruins" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/90 text-[10px] font-bold text-amber-300 border border-amber-500/40 flex items-center gap-1">
+              <i data-lucide="zoom-in" class="w-3 h-3"></i> Zoom Detail
+            </span>
+          </div>
+          <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Ancient International Seat</span>
+              <h3 class="font-heading text-base font-bold text-white">Nalanda Mahavihara</h3>
+              <p class="text-xs text-slate-300 mt-1">Founded by Kumaragupta I; celebrated by Hiuen Tsang and I-Tsing; destroyed in 1193 AD by Bakhtiyar Khilji.</p>
+            </div>
+            <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+              <span>Bihar &bull; Red Brick Stupas</span>
+              <span class="text-amber-400 font-semibold">UNESCO World Heritage</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mehrauli Iron Pillar -->
+        <div class="rounded-2xl overflow-hidden bg-[#141E33] border border-[#233354] hover:border-amber-500/40 transition-all flex flex-col group cursor-pointer" onclick="openFullImageViewer('assets/images/mehrauli_iron_pillar.jpg', 'Mehrauli Iron Pillar at Delhi (Qutb Complex)', 'Standing 7.2 metres high and weighing over 6 tonnes, this wrought-iron pillar was erected in the 4th century AD to honor King Chandra (identified with Chandragupta II Vikramaditya). It possesses a protective passive oxide film that has prevented rusting for over 1600 years.')">
+          <div class="relative h-56 overflow-hidden">
+            <img src="assets/images/mehrauli_iron_pillar.jpg" alt="Mehrauli Iron Pillar Delhi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/90 text-[10px] font-bold text-amber-300 border border-amber-500/40 flex items-center gap-1">
+              <i data-lucide="zoom-in" class="w-3 h-3"></i> Zoom Detail
+            </span>
+          </div>
+          <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Metallurgical Marvel</span>
+              <h3 class="font-heading text-base font-bold text-white">Mehrauli Iron Pillar</h3>
+              <p class="text-xs text-slate-300 mt-1">Erected by King Chandra (Chandragupta II); has stood rust-free in the open air for over 1,600 years.</p>
+            </div>
+            <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+              <span>Delhi &bull; Pure Wrought Iron</span>
+              <span class="text-amber-400 font-semibold">Gupta Metallurgy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ajanta Paintings -->
+        <div class="rounded-2xl overflow-hidden bg-[#141E33] border border-[#233354] hover:border-amber-500/40 transition-all flex flex-col group cursor-pointer" onclick="openFullImageViewer('assets/images/ajanta_painting.jpg', 'Ajanta Fresco Mural Paintings (Maharashtra)', 'The pinnacle of classical Indian painting. Caves 16, 17, and 19 were executed under the patronage of the Vakatakas (allies/relatives of the Guptas). Famous for masterpieces such as Bodhisattva Padmapani, Dying Princess, and scenes from the Jataka tales.')">
+          <div class="relative h-56 overflow-hidden">
+            <img src="assets/images/ajanta_painting.jpg" alt="Ajanta Cave Paintings" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/90 text-[10px] font-bold text-amber-300 border border-amber-500/40 flex items-center gap-1">
+              <i data-lucide="zoom-in" class="w-3 h-3"></i> Zoom Detail
+            </span>
+          </div>
+          <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Classical Painting</span>
+              <h3 class="font-heading text-base font-bold text-white">Ajanta Frescoes (Caves 16 &amp; 17)</h3>
+              <p class="text-xs text-slate-300 mt-1">Renowned for lyrical elegance, expressive eyes, and natural mineral pigments illustrating Buddhist Jatakas.</p>
+            </div>
+            <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+              <span>Aurangabad, Maharashtra</span>
+              <span class="text-amber-400 font-semibold">Padmapani Mural</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Free-standing Temple Architecture Box -->
+      <div class="p-5 rounded-2xl bg-[#141E33] border border-[#233354] text-xs space-y-3">
+        <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+          <i data-lucide="landmark" class="w-4 h-4"></i>
+          <span>Genesis of Free-Standing Temple Architecture &bull; The Nagara Prototype</span>
+        </div>
+        <p class="text-slate-300 leading-relaxed">
+          The Gupta period marks the birth of free-standing structural stone temples in India. Key examples include:
+          <strong class="text-white">Dashavatara Temple at Deogarh (Jhansi)</strong>—the earliest surviving temple with a Shikhara and Panchayatana layout;
+          <strong class="text-white">Bhitargaon Temple (Kanpur)</strong>—built entirely of terracotta burnt bricks with an arch roof;
+          and the stone temples at <strong class="text-slate-200">Nachna Kuthara</strong> (Parvati) and <strong class="text-slate-200">Bhumara</strong> (Shiva).
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: HARSHAVARDHANA & POST-GUPTA ERA -->
+  <section id="harsha" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">The Last Great Northern Emperor</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Harshavardhana of Kannauj (606–647 AD)</h2>
+        <p class="text-sm text-slate-300">Pushyabhuti dynasty, the conflict with Pulakeshin II, Hiuen Tsang's travels, and the plays of Harsha.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-4 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Capital: Kannauj</span>
+            <span class="text-xs text-slate-400 font-mono">Pushyabhuti</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Consolidation of North India</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Ascended the throne in 606 AD at age 16 after his brother Rajyavardhana was murdered by Shashanka of Gauda. United Thanesar and Kannauj, creating an empire spanning Punjab, UP, Bihar, and Bengal.
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5 text-xs">
+            <div class="text-amber-400 font-bold">Battle of Narmada:</div>
+            <p class="text-slate-300">Harsha’s southward expansion was halted by the Western Chalukya monarch <strong class="text-white">Pulakeshin II</strong> on the banks of Narmada, recorded in the <strong class="text-amber-300">Aihole Inscription (634 AD)</strong> composed by Ravikirti.</p>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-amber-500/40 space-y-4 shadow-xl shadow-amber-950/20">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-xs">Prince of Pilgrims</span>
+            <span class="text-xs text-amber-400 font-mono">629–645 AD</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Hiuen Tsang (Xuanzang)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Chinese Buddhist pilgrim who spent over 15 years in India during Harsha's reign. Authored the comprehensive record <strong class="text-amber-300">Si-Yu-Ki</strong> ("Records of the Western Lands").
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5 text-xs">
+            <div><strong class="text-amber-400">Kannauj Assembly:</strong> Convened in honor of Hiuen Tsang to popularize Mahayana Buddhism, attended by 20 tributary kings.</div>
+            <div><strong class="text-amber-400">Prayag Assembly:</strong> Held every 5 years (*Mahamokshaparishad*) where Harsha donated all royal treasury wealth.</div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-4 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Literary Sovereign</span>
+            <span class="text-xs text-slate-400 font-mono">Court of Harsha</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Banabhatta &amp; Royal Plays</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Court poet <strong class="text-amber-300">Banabhatta</strong> authored the first formal historical biography in Sanskrit, <strong class="text-white">Harshacharita</strong>, as well as the poetic romance <strong class="text-white">Kadambari</strong>.
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5 text-xs">
+            <div class="text-amber-400 font-bold">Harsha's Sanskrit Dramas:</div>
+            <p class="text-slate-300">Harsha was an accomplished playwright who authored three famous Sanskrit plays: <strong class="text-amber-200">Ratnavali</strong>, <strong class="text-amber-200">Priyadarshika</strong>, and <strong class="text-amber-200">Nagananda</strong> (depicting Jimutavahana's sacrifice).</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5: INTERACTIVE STUDY TOOLS (FLASHCARDS & QUIZ) -->
+  <section id="quiz" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Active Recall Engine</span>
+        <h2 class="font-heading text-3xl font-extrabold text-white">Lucent Exam Readiness Practice</h2>
+        <p class="text-sm text-slate-300">Master every key fact on Samudragupta, Vikramaditya, Nalanda, and Harshavardhana.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: 3D Flashcard Deck -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-heading text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="layers" class="w-4 h-4 text-amber-400"></i> Gupta &amp; Harsha Flashcards
+            </h3>
+            <span id="flashcardCountDisplay" class="text-xs font-mono text-slate-400">Card 1 of 8</span>
+          </div>
+
+          <div id="flashcardContainer" class="flashcard-container" onclick="toggleFlashcardFlip()">
+            <div id="flashcardInner" class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded border border-amber-500/20">Question</span>
+                <p id="cardFrontText" class="font-heading text-base font-semibold text-white px-2">Loading flashcard...</p>
+                <span class="text-[10px] text-slate-400 font-medium">Click card to reveal answer</span>
+              </div>
+              <div class="flashcard-face flashcard-back">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20">Lucent Fact Answer</span>
+                <p id="cardBackText" class="text-xs text-slate-100 font-medium leading-relaxed px-2">Loading answer...</p>
+                <span class="text-[10px] text-slate-400 font-medium">Click to flip back</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between gap-3 pt-2">
+            <button id="prevCardBtn" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 hover:text-white flex items-center gap-1.5 transition-all">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i> Prev Card
+            </button>
+            <button onclick="toggleFlashcardFlip()" class="px-4 py-2 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-xs font-semibold text-amber-300 transition-all">
+              Flip Card
+            </button>
+            <button id="nextCardBtn" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 hover:text-white flex items-center gap-1.5 transition-all">
+              Next Card <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: 5-Question Mock Quiz -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-heading text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="help-circle" class="w-4 h-4 text-amber-400"></i> Golden Age Mock Test
+            </h3>
+            <div class="text-xs text-slate-400 font-mono">
+              Score: <span id="currentScore" class="text-amber-400 font-bold">0</span> / 5
+            </div>
+          </div>
+
+          <div id="quizQuestionBox" class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-5">
+            <div class="flex items-center justify-between">
+              <span id="quizQNum" class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2.5 py-1 rounded border border-amber-500/20">Q1</span>
+              <span class="text-[11px] text-slate-500 font-mono">Multiple Choice</span>
+            </div>
+
+            <p id="quizQuestionText" class="text-sm font-semibold text-white leading-relaxed">
+              Loading quiz question...
+            </p>
+
+            <div id="quizOptionsList" class="space-y-2.5">
+              <!-- Options rendered by JS -->
+            </div>
+
+            <div id="quizFeedback" class="hidden">
+              <!-- Correct/incorrect feedback rendered by JS -->
+            </div>
+
+            <button id="nextQuizBtn" class="hidden w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-lg transition-all items-center justify-center gap-2">
+              Next Question <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden items-start justify-center pt-20 px-4">
+    <div class="bg-slate-900 border border-slate-700 w-full max-w-xl rounded-2xl shadow-2xl overflow-hidden">
+      <div class="p-4 border-b border-slate-800 flex items-center gap-3">
+        <i data-lucide="search" class="w-5 h-5 text-amber-400"></i>
+        <input id="searchInput" type="text" placeholder="Search Samudragupta, Kalidasa, Aryabhata, Harsha..." class="bg-transparent border-none text-white text-sm focus:outline-none w-full">
+        <button id="closeSearchBtn" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div id="searchResults" class="p-4 max-h-96 overflow-y-auto space-y-2 text-xs">
+        <p class="text-slate-500 text-center py-4">Type a keyword to search across this module...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER MODAL -->
+  <div id="fullImageViewerModal" class="lightbox-modal">
+    <div class="p-4 bg-slate-950/95 border-b border-slate-800 flex items-center justify-between z-20">
+      <div>
+        <h4 id="lightboxTitle" class="font-heading text-sm font-bold text-white">Image Viewer</h4>
+        <p class="text-[11px] text-slate-400">Full Archaeological &amp; Numismatic Inspection</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all">
+          <i data-lucide="minus" class="w-4 h-4"></i>
+        </button>
+        <span id="zoomLevelDisplay" class="px-2.5 py-1 rounded bg-slate-900 border border-slate-700 text-xs font-mono text-amber-300 min-w-14 text-center">100%</span>
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+        </button>
+        <button id="zoomResetBtn" class="hidden sm:inline-block px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs text-slate-300 hover:text-white transition-all">Reset</button>
+        <div class="h-6 w-px bg-slate-800 mx-1"></div>
+        <button id="closeLightboxBtn" class="p-2 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/30 transition-all">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="lightboxViewport" class="lightbox-viewport">
+      <img id="lightboxImg" src="" alt="" class="lightbox-img">
+    </div>
+
+    <div class="p-4 bg-slate-950/95 border-t border-slate-800 max-h-40 overflow-y-auto text-xs text-slate-300 z-20">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <p id="lightboxDescription" class="leading-relaxed text-slate-300 text-xs"></p>
+        <span class="text-[10px] text-slate-500 shrink-0 font-mono hidden sm:inline-block">Tip: Scroll mouse wheel to zoom &bull; Drag to pan</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER & BOTTOM NAV -->
+  <footer class="border-t border-slate-800/80 bg-[#0B1325] mt-24 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
+          <i data-lucide="book" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-heading font-bold text-white">Lucent's General Knowledge Illustrated</span>
+          <p class="text-[11px] text-slate-500">Prepared for APSC &amp; UPSC General Studies Aspirants</p>
+        </div>
+      </div>
+      <div class="text-center md:text-right text-slate-500 text-[11px] space-y-1">
+        <div class="flex items-center justify-center md:justify-end gap-3 text-slate-300">
+          <a href="post_maurya.html" class="inline-flex items-center gap-1.5 text-amber-400 font-bold hover:underline">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5 inline"></i> Ch. 6: Post-Maurya &amp; Sangam
+          </a>
+          <span class="text-slate-600">&bull;</span>
+          <a href="index.html" class="inline-flex items-center gap-1.5 text-amber-400 font-bold hover:underline">
+            Back to Ch. 1: Indus Valley <i data-lucide="home" class="w-3.5 h-3.5 inline"></i>
+          </a>
+        </div>
+        <p>&copy; 2026 Interactive GS Learning Project. Content sourced directly from Lucent's GK.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/gupta.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

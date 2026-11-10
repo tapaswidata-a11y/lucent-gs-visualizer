@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucent GK Illustrated | Ancient India - 5. The Mauryan Empire (322–185 BC)</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              bronze: '#CD7F32',
+              terracotta: '#C86446',
+              deepnavy: '#0B1325',
+              carddark: '#141E33',
+              cardborder: '#233354',
+              sand: '#F7F3E9',
+              sandstone: '#E8DCC4'
+            }
+          },
+          fontFamily: {
+            heading: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0B1325] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- TOP BANNER -->
+  <div class="bg-gradient-to-r from-amber-800 via-amber-700 to-amber-900 text-amber-50 text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-md flex items-center justify-center gap-2">
+    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-950/70 text-amber-300 uppercase tracking-wider">APSC &amp; UPSC GS Core</span>
+    <span>Lucent's General Knowledge &bull; Chapter 5: The Mauryan Empire (322 BC – 185 BC)</span>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-[#0B1325]/90 backdrop-blur-md border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-900/30 ring-1 ring-amber-400/40 group-hover:scale-105 transition-transform">
+          <i data-lucide="shield" class="w-6 h-6 text-slate-950"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-500 tracking-wider">LUCENT GS</span>
+            <span class="text-xs font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">VISUALIZED</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium">Ancient Indian History &bull; Module 5: The Mauryan Empire</p>
+        </div>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/70 p-1.5 rounded-full border border-slate-800 text-xs font-semibold">
+        <a href="#overview" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Overview</a>
+        <a href="#rulers" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Dynasty</a>
+        <a href="#edicts" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">14 Rock Edicts</a>
+        <a href="#administration" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Administration</a>
+        <a href="#art-architecture" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Art &amp; Relics</a>
+        <a href="#quiz" class="px-3.5 py-1.5 rounded-full text-amber-400 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 transition-all flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Quiz Mode
+        </a>
+      </nav>
+
+      <!-- Action Buttons & Chapter Selector -->
+      <div class="flex items-center gap-2.5">
+        <button id="themeToggleBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Toggle Light / Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+
+        <button id="searchBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Search Facts">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <div class="relative">
+          <button id="chapterSelectorBtn" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-xs font-semibold text-slate-200 transition-all">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span>Ch. 5: Maurya</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400"></i>
+          </button>
+          
+          <div id="chapterDropdown" class="hidden absolute right-0 mt-2 w-72 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-2 z-50 text-xs">
+            <div class="px-3 py-2 font-bold text-slate-400 uppercase tracking-wider text-[10px]">Ancient Indian History</div>
+            <a href="index.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>1. Harappan / Indus Valley</span>
+              <span class="text-[10px] text-slate-500">2500–1750 BC</span>
+            </a>
+            <a href="vedic.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>2. Vedic Culture</span>
+              <span class="text-[10px] text-slate-500">1500–600 BC</span>
+            </a>
+            <a href="mahajanapadas.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>3. 16 Mahajanapadas &amp; Magadha</span>
+              <span class="text-[10px] text-slate-500">600–325 BC</span>
+            </a>
+            <a href="religions.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>4. Buddhism &amp; Jainism</span>
+              <span class="text-[10px] text-slate-500">600–400 BC</span>
+            </a>
+            <a href="maurya.html" class="flex items-center justify-between p-2.5 rounded-lg bg-amber-500/15 text-amber-300 font-semibold border border-amber-500/20">
+              <span class="flex items-center gap-2">
+                <i data-lucide="shield" class="w-4 h-4 text-amber-400"></i> 5. Mauryan Empire
+              </span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] bg-amber-400 text-slate-950 font-bold">Active</span>
+            </a>
+            <a href="post_maurya.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>6. Post-Maurya &amp; Sangam</span>
+              <span class="text-[10px] text-slate-500">185 BC–319 AD</span>
+            </a>
+            <a href="gupta.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>7. Gupta Age &amp; Harsha</span>
+              <span class="text-[10px] text-slate-500">319–647 AD</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HERO SECTION -->
+  <section id="overview" class="relative pt-12 pb-20 overflow-hidden border-b border-slate-800/60 bg-gradient-to-b from-slate-950 via-[#0B1325] to-[#0B1325]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex items-center gap-2 text-xs font-semibold text-amber-400/90 tracking-wide uppercase mb-3">
+        <span>Chapter 5</span> &bull; <span>322 BC – 185 BC</span> &bull; <span>Pataliputra Imperium</span>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+            The <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500">Mauryan</span> Empire
+          </h1>
+          
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+            Founded by <strong class="text-amber-300 font-semibold">Chandragupta Maurya</strong> with the strategic genius of <strong class="text-amber-300 font-semibold">Chanakya (Kautilya)</strong>, the Mauryan Empire unified the Indian subcontinent into a centralized pan-Indian state. Reaching its zenith under <strong class="text-amber-300 font-semibold">Ashoka the Great</strong>, it substituted territorial conquest (*Bherighosha*) with ethical conquest (*Dhamma-Vijaya*).
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Capital</span>
+              <span class="font-heading text-base font-bold text-amber-300">Pataliputra</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Key Treatises</span>
+              <span class="font-heading text-base font-bold text-amber-300">Arthashastra / Indica</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Decipherment</span>
+              <span class="font-heading text-base font-bold text-amber-300">James Prinsep (1837)</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">State Emblem</span>
+              <span class="font-heading text-base font-bold text-amber-300">Lion Capital</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Interactive Artifact -->
+        <div class="lg:col-span-5">
+          <div class="relative group rounded-2xl overflow-hidden border border-amber-500/30 bg-slate-900 shadow-2xl shadow-amber-950/40 cursor-pointer" onclick="openFullImageViewer('assets/images/ashoka_edicts_rock.jpg', 'Ashokan Major Rock Edict at Junagadh (Gujarat)', 'One of the best-preserved Major Rock Inscriptions engraved in Brahmi script and Prakrit language, delineating Ashoka’s 14 edicts. It also bears later inscriptions of Western Kshatrapa Rudradaman I (150 AD) and Gupta Emperor Skandagupta (457 AD).')">
+            <img src="assets/images/ashoka_edicts_rock.jpg" alt="Ashokan Major Rock Edict Inscription" class="w-full h-80 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-amber-500/40 text-xs font-semibold text-amber-300 flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i> Click to Inspect in Full Detail
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-400">Primary Epigraphic Source</span>
+              <h3 class="text-sm font-bold text-white font-heading">Major Rock Inscriptions &bull; Prakrit in Brahmi Script</h3>
+              <p class="text-[11px] text-slate-300 line-clamp-2">First deciphered in 1837 by James Prinsep, revealing Ashoka's revolutionary Dhamma policy.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: DYNASTIC SUCCESSION -->
+  <section id="rulers" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Chronological Succession</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">The Three Great Mauryan Sovereigns</h2>
+        <p class="text-sm text-slate-300">Lucent GK essentials covering dates, conquests, foreign diplomats, and religious transitions.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Chandragupta Maurya -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-4 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Founder &bull; 322–298 BC</span>
+            <span class="text-xs text-slate-400 font-mono">24 Regnal Years</span>
+          </div>
+          
+          <h3 class="font-heading text-xl font-bold text-white">Chandragupta Maurya</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            With the guidance of <strong class="text-amber-300">Chanakya / Kautilya</strong>, he overthrew the corrupt Nanda dynasty (Dhanananda) and consolidated northern India.
+          </p>
+
+          <div class="p-3.5 rounded-xl bg-slate-900/70 border border-slate-800 space-y-2 text-xs">
+            <div><strong class="text-amber-400">War with Seleucus (305 BC):</strong> Seleucus Nicator ceded Aria (Herat), Arachosia (Kandahar), Gedrosia (Baluchistan), and Paropamisadae (Kabul) in exchange for 500 war elephants.</div>
+            <div><strong class="text-amber-400">Megasthenes:</strong> Greek ambassador sent to Pataliputra who authored <em class="text-slate-200">Indica</em>.</div>
+            <div><strong class="text-amber-400">Final Days:</strong> Embraced Jainism under Acharya <strong class="text-amber-200">Bhadrabahu</strong>. Performed *Sallekhana* (ritual fasting until death) at Chandragiri, Shravanabelagola (Karnataka).</div>
+          </div>
+        </div>
+
+        <!-- Bindusara -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-4 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Consolidator &bull; 298–273 BC</span>
+            <span class="text-xs text-slate-400 font-mono">25 Regnal Years</span>
+          </div>
+          
+          <h3 class="font-heading text-xl font-bold text-white">Bindusara (Amitraghata)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Known to the Greeks as <strong class="text-amber-300">Amitrochates</strong> (slayer of foes). Maintained diplomatic ties with Hellenistic monarchies and conquered southern kingdoms up to Mysore.
+          </p>
+
+          <div class="p-3.5 rounded-xl bg-slate-900/70 border border-slate-800 space-y-2 text-xs">
+            <div><strong class="text-amber-400">Foreign Envoys:</strong> Syrian king Antiochus I sent <strong class="text-slate-200">Deimachus</strong>; Egyptian king Ptolemy II Philadelphus sent <strong class="text-slate-200">Dionysius</strong>.</div>
+            <div><strong class="text-amber-400">Antiochus Request:</strong> Bindusara requested sweet wine, dried figs, and a sophist/philosopher (the latter was refused as Greek law prohibited selling sophists).</div>
+            <div><strong class="text-amber-400">Religious Inclination:</strong> Patronized the heterodox deterministic <strong class="text-amber-200">Ajivika</strong> sect (founded by Makkhali Gosala).</div>
+          </div>
+        </div>
+
+        <!-- Ashoka the Great -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-amber-500/40 space-y-4 shadow-xl shadow-amber-950/20">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-xs">Pinnacle &bull; 268–232 BC</span>
+            <span class="text-xs text-amber-400 font-mono">Coronated 268 BC</span>
+          </div>
+          
+          <h3 class="font-heading text-xl font-bold text-white">Ashoka the Great</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Previously Viceroy of Taxila and Ujjain. The traumatic <strong class="text-amber-300">Kalinga War (261 BC)</strong> caused a profound spiritual transformation from *Digvijaya* to *Dhammavijaya*.
+          </p>
+
+          <div class="p-3.5 rounded-xl bg-slate-900/70 border border-slate-800 space-y-2 text-xs">
+            <div><strong class="text-amber-400">Conversion:</strong> Converted to Buddhism by monk <strong class="text-slate-200">Upagupta</strong> (or Nigrodha).</div>
+            <div><strong class="text-amber-400">3rd Buddhist Council:</strong> Convened at Pataliputra (250 BC) under Moggaliputta Tissa; canonized *Abhidhamma Pitaka*.</div>
+            <div><strong class="text-amber-400">International Missions:</strong> Dispatched son <strong class="text-slate-200">Mahendra</strong> and daughter <strong class="text-slate-200">Sanghamitra</strong> with a branch of the Bodhi tree to Ceylon (Sri Lanka).</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- End of Dynasty Note -->
+      <div class="p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-start sm:items-center gap-3 text-xs text-rose-200">
+        <i data-lucide="alert-triangle" class="w-5 h-5 text-rose-400 shrink-0"></i>
+        <span><strong class="text-white">Lucent Prelims Must-Know:</strong> The last Mauryan ruler was <strong class="text-amber-300">Brihadratha</strong>, who was assassinated in 185 BC during a military parade by his commander-in-chief, <strong class="text-amber-300">Pushyamitra Shunga</strong>, who established the Shunga Dynasty.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: ASHOKA'S 14 MAJOR ROCK EDICTS -->
+  <section id="edicts" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Epigraphical Marvel</span>
+          <h2 class="font-heading text-3xl font-extrabold text-white mt-2">The 14 Major Rock Edicts (MRE)</h2>
+          <p class="text-xs text-slate-400">Discovered at 8 major sites: Kalsi, Girnar, Sopara, Dhauli, Jaugada, Yerragudi, Mansehra, Shahbazgarhi.</p>
+        </div>
+        <div class="text-xs text-slate-300 bg-slate-900 border border-slate-800 px-4 py-2.5 rounded-xl font-mono">
+          <span class="text-amber-400 font-bold">Scripts:</span> Brahmi (India), Kharoshthi (NW), Aramaic &amp; Greek (Kandahar)
+        </div>
+      </div>
+
+      <!-- 14 Rock Edicts Grid Table -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+        
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-1.5">
+          <div class="flex items-center justify-between text-amber-400 font-bold">
+            <span class="font-heading text-sm">Major Rock Edict I</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Ahimsa</span>
+          </div>
+          <p class="text-slate-300">Prohibition of animal sacrifice and bans festive gatherings (*Samaja*). State kitchen limited to two peacocks and one deer, eventually stopped altogether.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-1.5">
+          <div class="flex items-center justify-between text-amber-400 font-bold">
+            <span class="font-heading text-sm">Major Rock Edict II</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Public Welfare</span>
+          </div>
+          <p class="text-slate-300">Medical treatment for humans and animals. Digging of wells and planting medicinal herbs along roads. Mentions southern kingdoms: Cholas, Pandyas, Satiyaputa, Keralaputa, and Tamraparni (Sri Lanka).</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-1.5">
+          <div class="flex items-center justify-between text-amber-400 font-bold">
+            <span class="font-heading text-sm">Major Rock Edict III</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Administration</span>
+          </div>
+          <p class="text-slate-300">Instructs officials (<strong class="text-amber-300">Yuktas, Rajukas, Pradesikas</strong>) to tour every 5 years (*Anusamyana*) to inspect and preach Dhamma. Inculcates obedience to parents, generosity to Brahmans and Shramanas.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-1.5">
+          <div class="flex items-center justify-between text-amber-400 font-bold">
+            <span class="font-heading text-sm">Major Rock Edict IV</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Dhammaghosha</span>
+          </div>
+          <p class="text-slate-300">Proclaims that the reverberation of war drums (*Bherighosha*) has transformed into the resounding call of righteousness (*Dhammaghosha*). Proper behaviour towards elders and ascetics.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-1.5">
+          <div class="flex items-center justify-between text-amber-400 font-bold">
+            <span class="font-heading text-sm">Major Rock Edict V</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Dhamma Mahamattas</span>
+          </div>
+          <p class="text-slate-300">Introduces the special cadre of officers called <strong class="text-amber-300">Dhamma Mahamattas</strong> appointed in his 14th regnal year for supervising moral welfare, helping prisoners, and preventing unfair punishment.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-1.5">
+          <div class="flex items-center justify-between text-amber-400 font-bold">
+            <span class="font-heading text-sm">Major Rock Edict VI</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-900 border border-slate-800">King's Availability</span>
+          </div>
+          <p class="text-slate-300">Orders reporters (<strong class="text-amber-300">Pativedakas</strong>) to report state and public affairs to him at all hours and places: "whether eating, in the harem, in the inner chamber, or in the carriage".</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-1.5">
+          <div class="flex items-center justify-between text-amber-400 font-bold">
+            <span class="font-heading text-sm">Major Rock Edict VII</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Universal Harmony</span>
+          </div>
+          <p class="text-slate-300">Appeals for universal tolerance among all religious sects. "All sects may reside everywhere, for they all desire self-control and purity of mind".</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-1.5">
+          <div class="flex items-center justify-between text-amber-400 font-bold">
+            <span class="font-heading text-sm">Major Rock Edict VIII</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Dhamma-Yatras</span>
+          </div>
+          <p class="text-slate-300">Replaced royal pleasure tours (*Vihara-yatras* involving hunting) with pious pilgrimage tours (*Dhamma-yatras*). Marks his royal pilgrimage to <strong class="text-amber-300">Bodh Gaya (Sambodhi)</strong> in his 10th regnal year.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-1.5">
+          <div class="flex items-center justify-between text-amber-400 font-bold">
+            <span class="font-heading text-sm">Major Rock Edict IX</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-900 border border-slate-800">True Ceremonies</span>
+          </div>
+          <p class="text-slate-300">Condemns meaningless superstitious ceremonies performed by women during illness, weddings, or journeys. Extols the ceremony of Dhamma: proper conduct toward servants, generosity, and compassion.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-1.5">
+          <div class="flex items-center justify-between text-amber-400 font-bold">
+            <span class="font-heading text-sm">Major Rock Edict X</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Renouncing Glory</span>
+          </div>
+          <p class="text-slate-300">Denounces the pursuit of personal fame and military glory. The only true glory is having the populace strictly observe the tenets of moral conduct and Dhamma.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-1.5">
+          <div class="flex items-center justify-between text-amber-400 font-bold">
+            <span class="font-heading text-sm">Major Rock Edict XI</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Gift of Dhamma</span>
+          </div>
+          <p class="text-slate-300">Defines the gift of Dhamma (*Dhamma-dana*) as the highest conceivable gift in the universe, surpassing all material benefactions.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-1.5">
+          <div class="flex items-center justify-between text-amber-400 font-bold">
+            <span class="font-heading text-sm">Major Rock Edict XII</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Inter-faith Respect</span>
+          </div>
+          <p class="text-slate-300">Celebrated plea for mutual religious concord. Condemns praising one’s own sect while denigrating others: "Whoever exalts his own religion and disparages others does severely injure his own sect".</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 space-y-1.5 md:col-span-2 lg:col-span-2">
+          <div class="flex items-center justify-between text-amber-300 font-bold">
+            <span class="font-heading text-sm">Major Rock Edict XIII &bull; Crucial APSC / UPSC Focus</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500 text-slate-950 font-bold">Kalinga War (261 BC)</span>
+          </div>
+          <p class="text-slate-300">
+            Details the trauma of the <strong class="text-amber-300">Kalinga War</strong> in his 9th regnal year: 150,000 carried away captive, 100,000 slain, many died of hunger and grief. Expresses profound remorse and formalizes <strong class="text-amber-300">Dhamma-vijaya</strong> (conquest by righteousness).
+          </p>
+          <div class="p-2.5 rounded-lg bg-slate-950/70 text-[11px] text-amber-200/90 font-mono mt-1">
+            <strong>Mentions 5 Hellenistic contemporary kings:</strong> Amtiyoka (Antiochus II Theos of Syria), Tulamaya (Ptolemy II Philadelphus of Egypt), Antekina (Antigonus Gonatas of Macedonia), Maka (Magas of Cyrene), and Alikasudara (Alexander of Epirus).
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-1.5">
+          <div class="flex items-center justify-between text-amber-400 font-bold">
+            <span class="font-heading text-sm">Major Rock Edict XIV</span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-slate-900 border border-slate-800">Epilogue</span>
+          </div>
+          <p class="text-slate-300">Summarizes the objective of all inscriptions, clarifying that edicts were carved in full, medium, or abridged forms according to local terrain, stone space, and requirements.</p>
+        </div>
+
+      </div>
+
+      <!-- Specific Minor Edicts Highlight Box -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-2">
+          <span class="text-amber-400 font-bold block flex items-center gap-1.5">
+            <i data-lucide="tag" class="w-3.5 h-3.5"></i> Where is Ashoka Named Directly?
+          </span>
+          <p class="text-slate-300">
+            In most edicts, he is referred to as <strong class="text-slate-100">Devanampiya Piyadassi</strong> ("Beloved of the Gods, of gracious mien"). His personal name <strong class="text-amber-300">Ashoka</strong> appears only in four minor rock edicts: <strong class="text-slate-200">Maski</strong>, <strong class="text-slate-200">Gurjara</strong>, <strong class="text-slate-200">Nittur</strong>, and <strong class="text-slate-200">Udegolam</strong>.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-2">
+          <span class="text-amber-400 font-bold block flex items-center gap-1.5">
+            <i data-lucide="landmark" class="w-3.5 h-3.5"></i> Rummindei Pillar Inscription (Nepal Terai)
+          </span>
+          <p class="text-slate-300">
+            Commemorates Ashoka's visit to Buddha’s birthplace in Lumbini (in his 20th regnal year). The village was exempted from <strong class="text-slate-200">Bali</strong> (religious tributary tax) and its <strong class="text-slate-200">Bhaga</strong> (land produce tax) was reduced to <strong class="text-amber-300">1/8th</strong> (from normal 1/6th).
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: MAURYAN ADMINISTRATION -->
+  <section id="administration" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Governance &amp; Polity</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">The Saptanga State &amp; Administrative Machinery</h2>
+        <p class="text-sm text-slate-300">Kautilya's seven organs of state (*Saptanga*) and the high-ranking departmental superintendents (*Adhyakshas*).</p>
+      </div>
+
+      <!-- Saptanga 7 Limbs Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 text-center text-xs">
+        <div class="p-3.5 rounded-xl bg-[#141E33] border border-[#233354] space-y-1">
+          <span class="text-amber-400 font-bold block text-sm">1. Swami</span>
+          <span class="text-slate-200 font-semibold">The Sovereign King</span>
+          <span class="text-[10px] text-slate-400 block">Head of State</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[#141E33] border border-[#233354] space-y-1">
+          <span class="text-amber-400 font-bold block text-sm">2. Amatya</span>
+          <span class="text-slate-200 font-semibold">Bureaucracy</span>
+          <span class="text-[10px] text-slate-400 block">Ministers &amp; Officials</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[#141E33] border border-[#233354] space-y-1">
+          <span class="text-amber-400 font-bold block text-sm">3. Janapada</span>
+          <span class="text-slate-200 font-semibold">Territory &amp; People</span>
+          <span class="text-[10px] text-slate-400 block">Fertile lands</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[#141E33] border border-[#233354] space-y-1">
+          <span class="text-amber-400 font-bold block text-sm">4. Durga</span>
+          <span class="text-slate-200 font-semibold">Fortified Capital</span>
+          <span class="text-[10px] text-slate-400 block">Military defense</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[#141E33] border border-[#233354] space-y-1">
+          <span class="text-amber-400 font-bold block text-sm">5. Kosha</span>
+          <span class="text-slate-200 font-semibold">State Treasury</span>
+          <span class="text-[10px] text-slate-400 block">Revenue reserves</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[#141E33] border border-[#233354] space-y-1">
+          <span class="text-amber-400 font-bold block text-sm">6. Danda / Bala</span>
+          <span class="text-slate-200 font-semibold">The Army</span>
+          <span class="text-[10px] text-slate-400 block">Standing military</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-[#141E33] border border-[#233354] space-y-1">
+          <span class="text-amber-400 font-bold block text-sm">7. Mitra</span>
+          <span class="text-slate-200 font-semibold">Allies &amp; Friends</span>
+          <span class="text-[10px] text-slate-400 block">Diplomacy</span>
+        </div>
+      </div>
+
+      <!-- Lucent Key Officials Table -->
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/60 shadow-xl">
+        <table class="w-full text-left text-xs text-slate-300">
+          <thead class="bg-slate-950/80 text-amber-300 font-heading uppercase text-[11px] tracking-wider border-b border-slate-800">
+            <tr>
+              <th class="py-3 px-4">Official Designation</th>
+              <th class="py-3 px-4">Administrative Role &amp; Portfolio</th>
+              <th class="py-3 px-4">Department / Domain</th>
+              <th class="py-3 px-4">Lucent Exam Significance</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 font-medium">
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Samaharta</td>
+              <td class="py-3 px-4 text-white">Collector-General of Revenue</td>
+              <td class="py-3 px-4 text-slate-300">Tax collection, budget preparation &amp; expenditure</td>
+              <td class="py-3 px-4 text-emerald-400 font-mono text-[11px]">Frequently asked in UPSC/APSC</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Sannidhata</td>
+              <td class="py-3 px-4 text-white">Chief Treasury Officer</td>
+              <td class="py-3 px-4 text-slate-300">Custodian of royal treasury and royal storehouses (*Koshadhyaksha*)</td>
+              <td class="py-3 px-4 text-slate-400 text-[11px]">Direct custodian of physical bullion</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Sitadhyaksha</td>
+              <td class="py-3 px-4 text-white">Superintendent of Crown Lands</td>
+              <td class="py-3 px-4 text-slate-300">Management of *Sita* (state agricultural farms) worked by slaves/laborers</td>
+              <td class="py-3 px-4 text-emerald-400 font-mono text-[11px]">High frequency prelims fact</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Vyavaharika / Dharmastha</td>
+              <td class="py-3 px-4 text-white">Civil Court Magistrate</td>
+              <td class="py-3 px-4 text-slate-300">*Dharmasthiya* courts handling contracts, marriages, inheritances</td>
+              <td class="py-3 px-4 text-slate-400 text-[11px]">Civil jurisprudence</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Pradeshta</td>
+              <td class="py-3 px-4 text-white">Criminal Court Magistrate</td>
+              <td class="py-3 px-4 text-slate-300">*Kantakashodhana* ("removal of thorns") courts handling crimes, state subversion</td>
+              <td class="py-3 px-4 text-slate-400 text-[11px]">Criminal jurisprudence</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Akshapataladhyaksha</td>
+              <td class="py-3 px-4 text-white">Accountant-General &amp; State Archivist</td>
+              <td class="py-3 px-4 text-slate-300">Audit of accounts, archival preservation of royal edicts and land grants</td>
+              <td class="py-3 px-4 text-slate-400 text-[11px]">Accountant general of Mauryas</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Pautavadhyaksha</td>
+              <td class="py-3 px-4 text-white">Superintendent of Weights &amp; Measures</td>
+              <td class="py-3 px-4 text-slate-300">Standardization of weights (*Dharana*, *Karshapana*) and measures</td>
+              <td class="py-3 px-4 text-slate-400 text-[11px]">Commercial market inspector</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Sanstha &amp; Sanchara</td>
+              <td class="py-3 px-4 text-white">Intelligence &amp; Espionage Cadres</td>
+              <td class="py-3 px-4 text-slate-300"><strong class="text-slate-100">Sanstha</strong>: Stationary undercover agents; <strong class="text-slate-100">Sanchara</strong>: Wandering roving spies</td>
+              <td class="py-3 px-4 text-amber-300 text-[11px]">Kautilya's secret service network</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Megasthenes' Indica: 7 Castes and Pataliputra Municipal Boards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="p-5 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+            <i data-lucide="users" class="w-4 h-4"></i>
+            <span>Megasthenes' 7 Indian Classes (Castes) in <em class="text-white">Indica</em></span>
+          </div>
+          <p class="text-xs text-slate-300">Megasthenes misidentified functional occupational groups as endogamous castes:</p>
+          <ol class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-200">
+            <li class="p-2 rounded bg-slate-900 border border-slate-800"><strong class="text-amber-400">1. Philosophers:</strong> Brahmans &amp; ascetics</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800"><strong class="text-amber-400">2. Cultivators:</strong> Farmers (largest segment)</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800"><strong class="text-amber-400">3. Herdsmen/Hunters:</strong> Pastoralists</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800"><strong class="text-amber-400">4. Artisans &amp; Traders:</strong> Weapon/boat makers</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800"><strong class="text-amber-400">5. Military/Soldiers:</strong> Second largest class</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800"><strong class="text-amber-400">6. Overseers (Spies):</strong> State inspectors</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800 sm:col-span-2"><strong class="text-amber-400">7. Councillors / Assessors:</strong> Top royal advisors</li>
+          </ol>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+            <i data-lucide="building" class="w-4 h-4"></i>
+            <span>Municipal Administration of Pataliputra (30 Commissioners)</span>
+          </div>
+          <p class="text-xs text-slate-300">Pataliputra was governed by a municipal commission of 30 members split into 6 committees of 5 members each:</p>
+          <ul class="space-y-1.5 text-xs text-slate-200">
+            <li class="flex items-center justify-between p-2 rounded bg-slate-900 border border-slate-800">
+              <span><strong>Board 1:</strong> Industrial Arts &amp; Crafts</span>
+              <span class="text-[10px] text-slate-400">Fixing wages &amp; standards</span>
+            </li>
+            <li class="flex items-center justify-between p-2 rounded bg-slate-900 border border-slate-800">
+              <span><strong>Board 2:</strong> Foreigners &amp; Travellers</span>
+              <span class="text-[10px] text-slate-400">Lodging, medical care &amp; burial</span>
+            </li>
+            <li class="flex items-center justify-between p-2 rounded bg-slate-900 border border-slate-800">
+              <span><strong>Board 3:</strong> Registration of Births &amp; Deaths</span>
+              <span class="text-[10px] text-slate-400">Census &amp; taxation records</span>
+            </li>
+            <li class="flex items-center justify-between p-2 rounded bg-slate-900 border border-slate-800">
+              <span><strong>Board 4:</strong> Trade &amp; Commerce</span>
+              <span class="text-[10px] text-slate-400">Weights, measures &amp; licences</span>
+            </li>
+            <li class="flex items-center justify-between p-2 rounded bg-slate-900 border border-slate-800">
+              <span><strong>Board 5:</strong> Manufactured Goods</span>
+              <span class="text-[10px] text-slate-400">Preventing adulteration &amp; fraud</span>
+            </li>
+            <li class="flex items-center justify-between p-2 rounded bg-slate-900 border border-slate-800">
+              <span><strong>Board 6:</strong> Collection of Tenth Tax</span>
+              <span class="text-[10px] text-slate-400">10% tax on goods sold</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: MAURYAN ART, PILLARS & RELICS -->
+  <section id="art-architecture" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Monolithic Marvels</span>
+        <h2 class="font-heading text-3xl font-extrabold text-white">Mauryan Art, Architecture &amp; Sculptures</h2>
+        <p class="text-sm text-slate-300">Characterized by monolithic Chunar sandstone with a distinctive mirror-like glassy polish (*Mauryan Polish*).</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Sanchi Stupa -->
+        <div class="rounded-2xl overflow-hidden bg-[#141E33] border border-[#233354] hover:border-amber-500/40 transition-all flex flex-col group cursor-pointer" onclick="openFullImageViewer('assets/images/sanchi_stupa.jpg', 'The Great Stupa at Sanchi (Madhya Pradesh)', 'Originally commissioned by Ashoka the Great in the 3rd century BC over Buddha’s sacred relics. Expanded during the Shunga period and embellished with carved Torana gateways during the Satavahana era.')">
+          <div class="relative h-52 overflow-hidden">
+            <img src="assets/images/sanchi_stupa.jpg" alt="Great Stupa at Sanchi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/90 text-[10px] font-bold text-amber-300 border border-amber-500/40 flex items-center gap-1">
+              <i data-lucide="zoom-in" class="w-3 h-3"></i> Zoom Detail
+            </span>
+          </div>
+          <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Buddhist Architecture</span>
+              <h3 class="font-heading text-base font-bold text-white">Great Stupa at Sanchi</h3>
+              <p class="text-xs text-slate-300 mt-1">Foundation laid by Ashoka over Buddha relics; his wife Devi was from nearby Vidisha.</p>
+            </div>
+            <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+              <span>Chunar Sandstone Core</span>
+              <span class="text-amber-400 font-semibold">UNESCO World Heritage</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Didarganj Yakshi -->
+        <div class="rounded-2xl overflow-hidden bg-[#141E33] border border-[#233354] hover:border-amber-500/40 transition-all flex flex-col group cursor-pointer" onclick="openFullImageViewer('assets/images/didarganj_yakshi.jpg', 'Didarganj Yakshi (Chauri-Bearer)', 'Life-sized monolithic statue carved from Chunar sandstone found at Didarganj, Patna (Pataliputra). Shows the extraordinary lustrous glass-like Mauryan polish and sensual folk sculptural genius.')">
+          <div class="relative h-52 overflow-hidden">
+            <img src="assets/images/didarganj_yakshi.jpg" alt="Didarganj Yakshi Chauri Bearer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/90 text-[10px] font-bold text-amber-300 border border-amber-500/40 flex items-center gap-1">
+              <i data-lucide="zoom-in" class="w-3 h-3"></i> Zoom Detail
+            </span>
+          </div>
+          <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Mauryan Folk Art</span>
+              <h3 class="font-heading text-base font-bold text-white">Didarganj Yakshi (Fly-Whisk Bearer)</h3>
+              <p class="text-xs text-slate-300 mt-1">Exhibits the world-renowned glassy Mauryan polish, currently preserved at Bihar Museum, Patna.</p>
+            </div>
+            <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+              <span>Chunar Sandstone</span>
+              <span class="text-amber-400 font-semibold">Patna Museum</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ashokan Pillars & Capitals -->
+        <div class="rounded-2xl overflow-hidden bg-[#141E33] border border-[#233354] hover:border-amber-500/40 transition-all flex flex-col group cursor-pointer" onclick="openFullImageViewer('assets/images/ashoka_edicts_rock.jpg', 'Ashokan Monolithic Pillars & Rock Inscriptions', 'Monolithic pillars erected across the subcontinent without joints, standing 40 to 50 feet high. Surmounted by capitals representing lion (Sarnath, Vaishali, Rampurva), bull (Rampurva), elephant (Sankissa), and horse.')">
+          <div class="relative h-52 overflow-hidden">
+            <img src="assets/images/ashoka_edicts_rock.jpg" alt="Ashokan Monolithic Pillars & Capitals" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/90 text-[10px] font-bold text-amber-300 border border-amber-500/40 flex items-center gap-1">
+              <i data-lucide="zoom-in" class="w-3 h-3"></i> Zoom Detail
+            </span>
+          </div>
+          <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Imperial Monoliths</span>
+              <h3 class="font-heading text-base font-bold text-white">Ashokan Pillars &amp; Lion Capital</h3>
+              <p class="text-xs text-slate-300 mt-1">The Sarnath Lion Capital features 4 Asiatic lions standing back to back, adopted as India’s National Emblem.</p>
+            </div>
+            <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+              <span>National Emblem &amp; Chakra</span>
+              <span class="text-amber-400 font-semibold">Sarnath &bull; Rampurva</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barabar Caves Box -->
+      <div class="p-5 rounded-2xl bg-[#141E33] border border-[#233354] text-xs space-y-3">
+        <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+          <i data-lucide="mountain" class="w-4 h-4"></i>
+          <span>Barabar &amp; Nagarjuni Hill Caves (Gaya, Bihar) &bull; Oldest Surviving Rock-Cut Architecture</span>
+        </div>
+        <p class="text-slate-300 leading-relaxed">
+          Ashoka and his grandson <strong class="text-white">Dasharatha</strong> dedicated these artificial caves hollowed out of solid granite to the <strong class="text-amber-300">Ajivika monks</strong>. Four caves in Barabar hill: <strong class="text-slate-200">Sudama Cave</strong>, <strong class="text-slate-200">Lomas Rishi Cave</strong> (with ornamental horseshoe chaitya arch), <strong class="text-slate-200">Karna Chaupar</strong>, and <strong class="text-slate-200">Visva Zopri</strong>.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5: INTERACTIVE STUDY TOOLS (FLASHCARDS & QUIZ) -->
+  <section id="quiz" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Active Recall Engine</span>
+        <h2 class="font-heading text-3xl font-extrabold text-white">Lucent Exam Readiness Practice</h2>
+        <p class="text-sm text-slate-300">Test your mastery of Mauryan edicts, officers, and historical facts.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: 3D Flashcard Deck -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-heading text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="layers" class="w-4 h-4 text-amber-400"></i> Mauryan Flashcards
+            </h3>
+            <span id="flashcardCountDisplay" class="text-xs font-mono text-slate-400">Card 1 of 8</span>
+          </div>
+
+          <div id="flashcardContainer" class="flashcard-container" onclick="toggleFlashcardFlip()">
+            <div id="flashcardInner" class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded border border-amber-500/20">Question</span>
+                <p id="cardFrontText" class="font-heading text-base font-semibold text-white px-2">Loading flashcard...</p>
+                <span class="text-[10px] text-slate-400 font-medium">Click card to reveal answer</span>
+              </div>
+              <div class="flashcard-face flashcard-back">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20">Lucent Fact Answer</span>
+                <p id="cardBackText" class="text-xs text-slate-100 font-medium leading-relaxed px-2">Loading answer...</p>
+                <span class="text-[10px] text-slate-400 font-medium">Click to flip back</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between gap-3 pt-2">
+            <button id="prevCardBtn" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 hover:text-white flex items-center gap-1.5 transition-all">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i> Prev Card
+            </button>
+            <button onclick="toggleFlashcardFlip()" class="px-4 py-2 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-xs font-semibold text-amber-300 transition-all">
+              Flip Card
+            </button>
+            <button id="nextCardBtn" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 hover:text-white flex items-center gap-1.5 transition-all">
+              Next Card <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: 5-Question Mock Quiz -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-heading text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="help-circle" class="w-4 h-4 text-amber-400"></i> Mauryan Prelims Mock Test
+            </h3>
+            <div class="text-xs text-slate-400 font-mono">
+              Score: <span id="currentScore" class="text-amber-400 font-bold">0</span> / 5
+            </div>
+          </div>
+
+          <div id="quizQuestionBox" class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-5">
+            <div class="flex items-center justify-between">
+              <span id="quizQNum" class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2.5 py-1 rounded border border-amber-500/20">Q1</span>
+              <span class="text-[11px] text-slate-500 font-mono">Multiple Choice</span>
+            </div>
+
+            <p id="quizQuestionText" class="text-sm font-semibold text-white leading-relaxed">
+              Loading quiz question...
+            </p>
+
+            <div id="quizOptionsList" class="space-y-2.5">
+              <!-- Options rendered by JS -->
+            </div>
+
+            <div id="quizFeedback" class="hidden">
+              <!-- Correct/incorrect feedback rendered by JS -->
+            </div>
+
+            <button id="nextQuizBtn" class="hidden w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-lg transition-all items-center justify-center gap-2">
+              Next Question <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden items-start justify-center pt-20 px-4">
+    <div class="bg-slate-900 border border-slate-700 w-full max-w-xl rounded-2xl shadow-2xl overflow-hidden">
+      <div class="p-4 border-b border-slate-800 flex items-center gap-3">
+        <i data-lucide="search" class="w-5 h-5 text-amber-400"></i>
+        <input id="searchInput" type="text" placeholder="Search Mauryan edicts, officers, Kautilya, Megasthenes..." class="bg-transparent border-none text-white text-sm focus:outline-none w-full">
+        <button id="closeSearchBtn" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div id="searchResults" class="p-4 max-h-96 overflow-y-auto space-y-2 text-xs">
+        <p class="text-slate-500 text-center py-4">Type a keyword to search across this module...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER MODAL -->
+  <div id="fullImageViewerModal" class="lightbox-modal">
+    <div class="p-4 bg-slate-950/95 border-b border-slate-800 flex items-center justify-between z-20">
+      <div>
+        <h4 id="lightboxTitle" class="font-heading text-sm font-bold text-white">Image Viewer</h4>
+        <p class="text-[11px] text-slate-400">Full Archaeological &amp; Inscriptional Inspection</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all">
+          <i data-lucide="minus" class="w-4 h-4"></i>
+        </button>
+        <span id="zoomLevelDisplay" class="px-2.5 py-1 rounded bg-slate-900 border border-slate-700 text-xs font-mono text-amber-300 min-w-14 text-center">100%</span>
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+        </button>
+        <button id="zoomResetBtn" class="hidden sm:inline-block px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs text-slate-300 hover:text-white transition-all">Reset</button>
+        <div class="h-6 w-px bg-slate-800 mx-1"></div>
+        <button id="closeLightboxBtn" class="p-2 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/30 transition-all">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="lightboxViewport" class="lightbox-viewport">
+      <img id="lightboxImg" src="" alt="" class="lightbox-img">
+    </div>
+
+    <div class="p-4 bg-slate-950/95 border-t border-slate-800 max-h-40 overflow-y-auto text-xs text-slate-300 z-20">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <p id="lightboxDescription" class="leading-relaxed text-slate-300 text-xs"></p>
+        <span class="text-[10px] text-slate-500 shrink-0 font-mono hidden sm:inline-block">Tip: Scroll mouse wheel to zoom &bull; Drag to pan</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER & BOTTOM NAV -->
+  <footer class="border-t border-slate-800/80 bg-[#0B1325] mt-24 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
+          <i data-lucide="book" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-heading font-bold text-white">Lucent's General Knowledge Illustrated</span>
+          <p class="text-[11px] text-slate-500">Prepared for APSC &amp; UPSC General Studies Aspirants</p>
+        </div>
+      </div>
+      <div class="text-center md:text-right text-slate-500 text-[11px] space-y-1">
+        <div class="flex items-center justify-center md:justify-end gap-3 text-slate-300">
+          <a href="religions.html" class="inline-flex items-center gap-1.5 text-amber-400 font-bold hover:underline">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5 inline"></i> Ch. 4: Religions
+          </a>
+          <span class="text-slate-600">&bull;</span>
+          <a href="post_maurya.html" class="inline-flex items-center gap-1.5 text-amber-400 font-bold hover:underline">
+            Ch. 6: Post-Maurya &amp; Sangam <i data-lucide="arrow-right" class="w-3.5 h-3.5 inline"></i>
+          </a>
+        </div>
+        <p>&copy; 2026 Interactive GS Learning Project. Content sourced directly from Lucent's GK.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/maurya.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

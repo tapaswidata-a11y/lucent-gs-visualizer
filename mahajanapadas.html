@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucent GK Illustrated | Ancient India - 3. Mahajanapada Period & Magadha Empire (600–325 BC)</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              bronze: '#CD7F32',
+              terracotta: '#C86446',
+              deepnavy: '#0B1325',
+              carddark: '#141E33',
+              cardborder: '#233354',
+              sand: '#F7F3E9',
+              sandstone: '#E8DCC4'
+            }
+          },
+          fontFamily: {
+            heading: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0B1325] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- TOP BANNER -->
+  <div class="bg-gradient-to-r from-amber-800 via-amber-700 to-amber-900 text-amber-50 text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-md flex items-center justify-center gap-2">
+    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-950/70 text-amber-300 uppercase tracking-wider">APSC &amp; UPSC GS Module</span>
+    <span>Lucent's General Knowledge &bull; Chapter 3: 16 Mahajanapadas, Magadhan Rise &amp; Foreign Invasions</span>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-[#0B1325]/90 backdrop-blur-md border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-900/30 ring-1 ring-amber-400/40 group-hover:scale-105 transition-transform">
+          <i data-lucide="crown" class="w-6 h-6 text-slate-950"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-500 tracking-wider">LUCENT GS</span>
+            <span class="text-xs font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">VISUALIZED</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium">Ancient Indian History &bull; Module 3: Mahajanapadas</p>
+        </div>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/70 p-1.5 rounded-full border border-slate-800 text-xs font-semibold">
+        <a href="#overview" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Overview</a>
+        <a href="#mahajanapadas" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">16 States Table</a>
+        <a href="#dynasties" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Magadhan Rise</a>
+        <a href="#invasions" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Darius &amp; Alexander</a>
+        <a href="#quiz" class="px-3.5 py-1.5 rounded-full text-amber-400 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 transition-all flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Practice Quiz
+        </a>
+      </nav>
+
+      <!-- Action Buttons & Chapter Selector -->
+      <div class="flex items-center gap-2.5">
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Toggle Light / Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+
+        <!-- Quick Search -->
+        <button id="searchBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Search Facts">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <!-- Chapter Switcher Dropdown -->
+        <div class="relative">
+          <button id="chapterSelectorBtn" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-xs font-semibold text-slate-200 transition-all">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span>Ch. 3: Mahajanapadas</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400"></i>
+          </button>
+          
+          <div id="chapterDropdown" class="hidden absolute right-0 mt-2 w-72 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-2 z-50 text-xs">
+            <div class="px-3 py-2 font-bold text-slate-400 uppercase tracking-wider text-[10px]">Ancient Indian History</div>
+            <a href="index.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>1. Harappan / Indus Valley</span>
+              <span class="text-[10px] text-slate-500">2500–1750 BC</span>
+            </a>
+            <a href="vedic.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>2. Vedic Culture</span>
+              <span class="text-[10px] text-slate-500">1500–600 BC</span>
+            </a>
+            <a href="mahajanapadas.html" class="flex items-center justify-between p-2.5 rounded-lg bg-amber-500/15 text-amber-300 font-semibold border border-amber-500/20">
+              <span class="flex items-center gap-2">
+                <i data-lucide="crown" class="w-4 h-4 text-amber-400"></i> 3. 16 Mahajanapadas &amp; Magadha
+              </span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] bg-amber-400 text-slate-950 font-bold">Active</span>
+            </a>
+            <a href="religions.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>4. Buddhism &amp; Jainism</span>
+              <span class="text-[10px] text-slate-500">600–400 BC</span>
+            </a>
+            <a href="maurya.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>5. The Mauryan Empire</span>
+              <span class="text-[10px] text-slate-500">322–185 BC</span>
+            </a>
+            <a href="post_maurya.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>6. Post-Maurya &amp; Sangam Era</span>
+              <span class="text-[10px] text-slate-500">185 BC–319 AD</span>
+            </a>
+            <a href="gupta.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>7. Gupta Empire &amp; Harsha</span>
+              <span class="text-[10px] text-slate-500">319–647 AD</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- SEARCH OVERLAY MODAL -->
+  <div id="searchModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-start justify-center pt-24 px-4">
+    <div class="bg-slate-900 border border-slate-700 w-full max-w-2xl rounded-2xl shadow-2xl p-4 overflow-hidden">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <i data-lucide="search" class="w-5 h-5 text-amber-400"></i>
+        <input type="text" id="searchInput" placeholder="Search Mahajanapadas, Bimbisara, Ajatashatru, Alexander, Nanda..." class="bg-transparent w-full text-slate-100 placeholder-slate-500 focus:outline-none text-sm">
+        <button id="closeSearchBtn" class="text-slate-400 hover:text-white text-xs px-2 py-1 rounded bg-slate-800">ESC</button>
+      </div>
+      <div id="searchResults" class="mt-3 max-h-80 overflow-y-auto space-y-2 text-xs">
+        <p class="text-slate-500 text-center py-6">Type a keyword to search 16 Mahajanapadas, Magadha dynasties, and foreign invasions...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+
+    <!-- HERO SECTION -->
+    <section id="overview" class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900/90 to-amber-950/40 border border-slate-800 p-8 sm:p-12 shadow-2xl">
+      <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+        
+        <!-- Left Text -->
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold tracking-wide">
+            <i data-lucide="book-open" class="w-3.5 h-3.5"></i> Lucent GK &bull; Ancient India &bull; Page 10-12
+          </div>
+          
+          <h1 class="font-heading font-black text-3xl sm:text-5xl text-white tracking-tight leading-tight">
+            3. Mahajanapada Period
+            <span class="block text-2xl sm:text-3xl font-light text-amber-400/90 mt-2 font-sans">
+              600 BC &ndash; 325 BC
+              <span class="text-xs uppercase bg-slate-800 text-slate-300 px-2 py-0.5 rounded ml-2 align-middle">Second Urbanization &bull; Age of Iron</span>
+            </span>
+          </h1>
+
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            The 6th Century BC witnessed the transition from pastoral tribes to territorial states (*Janapadas* and *Mahajanapadas*). Marked by the dramatic rise of <strong class="text-amber-300 font-semibold">Magadha</strong> into North India's foremost imperial power, alongside significant foreign incursions by the <strong class="text-amber-300 font-semibold">Achaemenid Persians (Darius I)</strong> and <strong class="text-amber-300 font-semibold">Macedonians (Alexander the Great)</strong>.
+          </p>
+
+          <!-- Quick Stat Cards -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3">
+              <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">Scriptural Sources</span>
+              <span class="text-sm font-bold text-amber-300">16 Mahajanapadas</span>
+              <span class="text-[10px] text-slate-400 block">Anguttara Nikaya &amp; Bhagavati Sutra</span>
+            </div>
+            <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3">
+              <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">Sole Southern State</span>
+              <span class="text-sm font-bold text-white">Asmaka / Assaka</span>
+              <span class="text-[10px] text-slate-400 block">On Godavari (Capital: Potana)</span>
+            </div>
+            <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3">
+              <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">First Empire Builder</span>
+              <span class="text-sm font-bold text-amber-300">Mahapadma Nanda</span>
+              <span class="text-[10px] text-slate-400 block">Title: Ekarat (Sole Monarch)</span>
+            </div>
+            <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-3">
+              <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block">Battle of Hydaspes</span>
+              <span class="text-sm font-bold text-rose-300">326 BC</span>
+              <span class="text-[10px] text-slate-400 block">Alexander vs King Porus</span>
+            </div>
+          </div>
+
+          <!-- Lucent Highlight Box -->
+          <div class="bg-slate-900/80 border-l-4 border-amber-500 rounded-r-xl p-4 text-xs space-y-1.5 text-slate-300">
+            <div class="font-bold text-amber-300 uppercase tracking-wider text-[11px] flex items-center gap-1.5">
+              <i data-lucide="info" class="w-3.5 h-3.5"></i> Why Magadha Triumphed Over All Other Mahajanapadas:
+            </div>
+            <p>1. <strong>Rich Natural Resources:</strong> Rich iron ore reserves in Rajgir/Chota Nagpur provided superior weapons and agrarian tools.</p>
+            <p>2. <strong>Strategic Capitals:</strong> <em>Rajagriha</em> surrounded by 5 natural hills (Giri-durga) &amp; <em>Pataliputra</em> at the water confluence of Ganga, Gandak, Son, and Ghaghra (Jala-durga).</p>
+            <p>3. <strong>Military Weaponry &amp; Elephants:</strong> First state to deploy war elephants on a vast scale in dense eastern jungles, and catapults like <em>Mahashilakantaka</em> and <em>Rathamusala</em>.</p>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Photo (Map of 16 Mahajanapadas) -->
+        <div class="lg:col-span-5">
+          <div class="zoomable-hero relative group rounded-2xl overflow-hidden border border-amber-500/30 bg-slate-950/70 shadow-2xl p-3 cursor-zoom-in" onclick="openFullImageViewer('assets/images/mahajanapadas_map.png', 'The 16 Mahajanapadas of Ancient India (c. 600&ndash;300 BCE)', '<strong>Complete Territorial Map:</strong> Shows the geopolitical distribution of all 16 states mentioned in the Buddhist Anguttara Nikaya and Jain Bhagavati Sutra. Demonstrates northern monarchies (Magadha, Kosala, Vatsa, Avanti), north-western outposts (Gandhara with Taxila, Kamboja with Rajapur), central republics (Vajji, Malla), and the lone southern Mahajanapada on the Godavari (Asmaka).')">
+            <div class="relative overflow-hidden rounded-xl bg-slate-900">
+              <img src="assets/images/mahajanapadas_map.png" alt="Map of 16 Mahajanapadas" class="w-full h-80 object-contain p-2 group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute bottom-3 left-3 right-3 p-3 rounded-lg bg-slate-950/85 backdrop-blur-md border border-slate-800 text-xs">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-bold text-amber-300 flex items-center gap-1">
+                    <i data-lucide="map" class="w-3.5 h-3.5 text-amber-400"></i> 16 Mahajanapadas Geography
+                  </span>
+                  <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 font-semibold flex items-center gap-1">
+                    <i data-lucide="maximize-2" class="w-3 h-3"></i> Click to Zoom Full Detail
+                  </span>
+                </div>
+                <p class="text-[11px] text-slate-300">Geographic extent from Gandhara (Kabul/Peshawar) in North-West to Asmaka (Godavari) in South and Anga in the East.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: THE 16 MAHAJANAPADAS (LUCENT'S COMPLETE TABLE) -->
+    <section id="mahajanapadas" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-800 pb-4">
+        <div>
+          <span class="text-xs uppercase font-extrabold tracking-widest text-amber-400">Direct Exam Matching Table</span>
+          <h2 class="font-heading text-2xl sm:text-3xl font-bold text-white mt-1">The 16 Mahajanapadas: Capitals &amp; Modern Locations</h2>
+        </div>
+        <p class="text-xs text-slate-400 max-w-md">
+          Verbatim list as catalogued in Lucent GK page 10. Frequently asked matching questions in APSC &amp; UPSC.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 shadow-xl">
+        <table class="w-full text-left text-xs bg-slate-900/90">
+          <thead class="bg-slate-950 text-slate-300 uppercase tracking-wider text-[11px] font-bold border-b border-slate-800">
+            <tr>
+              <th class="py-3.5 px-4 text-amber-400">#</th>
+              <th class="py-3.5 px-4 text-amber-400">Mahajanapada</th>
+              <th class="py-3.5 px-4">Ancient Capital(s)</th>
+              <th class="py-3.5 px-4">Modern Geographical Location</th>
+              <th class="py-3.5 px-4">Type &amp; Lucent Exam Notes</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 text-slate-300">
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-mono text-slate-400">1</td>
+              <td class="py-3 px-4 font-bold text-white">Anga</td>
+              <td class="py-3 px-4 text-amber-300 font-semibold">Champa (ancient Malini)</td>
+              <td class="py-3 px-4">Bhagalpur &amp; Monghyr (Bihar)</td>
+              <td class="py-3 px-4 text-slate-300">Monarchy. Conquered by Bimbisara and annexed into Magadha.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 bg-amber-500/5">
+              <td class="py-3 px-4 font-mono text-amber-400">2</td>
+              <td class="py-3 px-4 font-bold text-amber-300">Magadha</td>
+              <td class="py-3 px-4 text-amber-300 font-semibold">Girivraja / Rajagriha ➔ Pataliputra</td>
+              <td class="py-3 px-4">Patna, Gaya, and Nalanda (Bihar)</td>
+              <td class="py-3 px-4 text-slate-200">The nucleus of ancient Indian empires; emerged supreme among all 16 states.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-mono text-slate-400">3</td>
+              <td class="py-3 px-4 font-bold text-white">Kasi</td>
+              <td class="py-3 px-4 text-amber-300 font-semibold">Varanasi</td>
+              <td class="py-3 px-4">Varanasi district (Eastern UP)</td>
+              <td class="py-3 px-4 text-slate-300">Renowned textile and horse trade hub; eventually absorbed by Kosala.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-mono text-slate-400">4</td>
+              <td class="py-3 px-4 font-bold text-white">Vatsa</td>
+              <td class="py-3 px-4 text-amber-300 font-semibold">Kaushambi</td>
+              <td class="py-3 px-4">Allahabad &amp; Mirzapur (UP)</td>
+              <td class="py-3 px-4 text-slate-300">Ruled by famous King Udayana. Major junction on the Uttarapatha trade route.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-mono text-slate-400">5</td>
+              <td class="py-3 px-4 font-bold text-white">Kosala</td>
+              <td class="py-3 px-4 text-amber-300 font-semibold">Sravasti (North) / Saketa (South)</td>
+              <td class="py-3 px-4">Faizabad, Gonda, Bahraich (Eastern UP)</td>
+              <td class="py-3 px-4 text-slate-300">Ruled by King Prasenjit. Included tribal territory of Sakyas of Kapilavastu.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-mono text-slate-400">6</td>
+              <td class="py-3 px-4 font-bold text-white">Saurasena</td>
+              <td class="py-3 px-4 text-amber-300 font-semibold">Mathura</td>
+              <td class="py-3 px-4">Mathura region (Western UP)</td>
+              <td class="py-3 px-4 text-slate-300">Center of Krishna / Vasudeva worship. Ruled by King Avantiputra.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-mono text-slate-400">7</td>
+              <td class="py-3 px-4 font-bold text-white">Panchala</td>
+              <td class="py-3 px-4 text-amber-300 font-semibold">Ahichchatra (North) / Kampilya (South)</td>
+              <td class="py-3 px-4">Bareilly, Badaun, Farrukhabad (Western UP)</td>
+              <td class="py-3 px-4 text-slate-300">Divided into Northern &amp; Southern halves by river Ganges; later shifted to republic.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-mono text-slate-400">8</td>
+              <td class="py-3 px-4 font-bold text-white">Kuru</td>
+              <td class="py-3 px-4 text-amber-300 font-semibold">Indraprastha</td>
+              <td class="py-3 px-4">Delhi, Meerut, &amp; Haryana (Thanesar)</td>
+              <td class="py-3 px-4 text-slate-300">Legendary Epic state; transitioned into republican clan in Buddha's era.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-mono text-slate-400">9</td>
+              <td class="py-3 px-4 font-bold text-white">Matsya</td>
+              <td class="py-3 px-4 text-amber-300 font-semibold">Viratnagar (modern Bairat)</td>
+              <td class="py-3 px-4">Jaipur, Alwar, Bharatpur (Rajasthan)</td>
+              <td class="py-3 px-4 text-slate-300">Associated with cattle rearing; Ashokan minor rock edict found at Bairat.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-mono text-slate-400">10</td>
+              <td class="py-3 px-4 font-bold text-white">Chedi</td>
+              <td class="py-3 px-4 text-amber-300 font-semibold">Suktimati / Sotthivati</td>
+              <td class="py-3 px-4">Bundelkhand region (MP &amp; Southern UP)</td>
+              <td class="py-3 px-4 text-slate-300">King Shishupala ruled here. A branch established Cheti dynasty in Kalinga (Kharavela).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-mono text-slate-400">11</td>
+              <td class="py-3 px-4 font-bold text-white">Avanti</td>
+              <td class="py-3 px-4 text-amber-300 font-semibold">Ujjain (North) / Mahishmati (South)</td>
+              <td class="py-3 px-4">Malwa &amp; Nimar (Madhya Pradesh)</td>
+              <td class="py-3 px-4 text-slate-300">Magadha's most formidable rival; ruled by ferocious King Chanda Pradyota.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-mono text-slate-400">12</td>
+              <td class="py-3 px-4 font-bold text-white">Gandhara</td>
+              <td class="py-3 px-4 text-amber-300 font-semibold">Taxila (Takshashila)</td>
+              <td class="py-3 px-4">Rawalpindi &amp; Peshawar (NWFP / Pakistan)</td>
+              <td class="py-3 px-4 text-slate-300">World-famous university of higher learning where Chanakya and Panini studied.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-mono text-slate-400">13</td>
+              <td class="py-3 px-4 font-bold text-white">Kamboja</td>
+              <td class="py-3 px-4 text-amber-300 font-semibold">Rajapur / Hataka</td>
+              <td class="py-3 px-4">Hazara district (Pak-Afghan frontier)</td>
+              <td class="py-3 px-4 text-slate-300">Celebrated for breeding superior cavalry horses. Republican constitution.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 bg-emerald-500/5">
+              <td class="py-3 px-4 font-mono text-emerald-400">14</td>
+              <td class="py-3 px-4 font-bold text-emerald-300">Asmaka / Assaka</td>
+              <td class="py-3 px-4 text-amber-300 font-semibold">Potana / Patali / Podana</td>
+              <td class="py-3 px-4">Between Narmada and Godavari rivers (Maharashtra/Telangana)</td>
+              <td class="py-3 px-4 text-emerald-300 font-bold">Only South Indian Mahajanapada situated south of the Vindhyas.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-mono text-slate-400">15</td>
+              <td class="py-3 px-4 font-bold text-white">Vajji</td>
+              <td class="py-3 px-4 text-amber-300 font-semibold">Vaishali</td>
+              <td class="py-3 px-4">North of Ganga (Muzaffarpur &amp; Darbhanga, Bihar)</td>
+              <td class="py-3 px-4 text-slate-300"><strong>Republic (Ganasangha):</strong> Confederation of 8 clans, foremost being Licchavis.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40">
+              <td class="py-3 px-4 font-mono text-slate-400">16</td>
+              <td class="py-3 px-4 font-bold text-white">Malla</td>
+              <td class="py-3 px-4 text-amber-300 font-semibold">Kusinara &amp; Pava</td>
+              <td class="py-3 px-4">Deoria &amp; Gorakhpur (Eastern UP)</td>
+              <td class="py-3 px-4 text-slate-300"><strong>Republic:</strong> Buddha achieved Mahaparinirvana at Kusinara; Mahavira at Pava.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION: THE RISE OF MAGADHA (THREE RULING DYNASTIES) -->
+    <section id="dynasties" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-800 pb-4">
+        <div>
+          <span class="text-xs uppercase font-extrabold tracking-widest text-amber-400">Imperial Hegemony</span>
+          <h2 class="font-heading text-2xl sm:text-3xl font-bold text-white mt-1">The Rise of Magadha: Dynasties &amp; Monarchs</h2>
+        </div>
+        <p class="text-xs text-slate-400 max-w-md">
+          How three pre-Mauryan dynasties transformed Magadha into India's powerhouse.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- 1. Haryanka Dynasty -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div>
+              <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider block">First Ruling Line</span>
+              <h3 class="font-heading font-bold text-lg text-white">Haryanka Dynasty</h3>
+            </div>
+            <span class="text-xs font-mono font-bold text-amber-300">544 &ndash; 412 BC</span>
+          </div>
+
+          <div class="space-y-3 text-xs text-slate-300">
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800">
+              <strong class="text-white block text-sm">Bimbisara (Seniya): 544 &ndash; 492 BC</strong>
+              <p class="mt-1 text-[11px] text-slate-400">
+                &bull; Founder. First Indian king who maintained a regular standing army (*Seniya*).<br>
+                &bull; Used matrimonial alliances: Kosala (*Mahakoshaladevi*, received Kasi as dowry), Licchavi (*Chellana*), and Madra (*Khema*).<br>
+                &bull; Sent physician <strong>Jivaka</strong> to treat Avanti King Pradyota for jaundice.<br>
+                &bull; Built the fortified city of New Rajagriha.
+              </p>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800">
+              <strong class="text-white block text-sm">Ajatashatru (Kunika): 492 &ndash; 460 BC</strong>
+              <p class="mt-1 text-[11px] text-slate-400">
+                &bull; Imprisoned and killed his father Bimbisara.<br>
+                &bull; Defeated Kosala and waged a 16-year war against Vaishali with secret weapons: <strong>Mahashilakantaka</strong> (war engine catapult) and <strong>Rathamusala</strong> (scythed chariot).<br>
+                &bull; Convened the <strong>First Buddhist Council (483 BC)</strong> at Sattapani cave, Rajagriha.
+              </p>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800">
+              <strong class="text-white block text-sm">Udayin: 460 &ndash; 444 BC</strong>
+              <p class="mt-1 text-[11px] text-slate-400">
+                &bull; Founded <strong>Pataliputra</strong> at the sacred confluence of the Ganga and Son rivers.<br>
+                &bull; Shifted the royal capital from Rajagriha to Pataliputra.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Shishunaga Dynasty -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div>
+              <span class="text-[10px] font-bold text-blue-400 uppercase tracking-wider block">Second Dynasty</span>
+              <h3 class="font-heading font-bold text-lg text-white">Shishunaga Dynasty</h3>
+            </div>
+            <span class="text-xs font-mono font-bold text-blue-300">412 &ndash; 344 BC</span>
+          </div>
+
+          <div class="space-y-3 text-xs text-slate-300">
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800">
+              <strong class="text-white block text-sm">Shishunaga: 412 &ndash; 394 BC</strong>
+              <p class="mt-1 text-[11px] text-slate-400">
+                &bull; Originally a viceroy of Banaras, elevated by citizens disgusted with patricidal Haryanka kings.<br>
+                &bull; <strong>Greatest Achievement:</strong> Finally crushed the 100-year rivalry with <strong>Avanti</strong> and annexed it into Magadha.<br>
+                &bull; Temporarily shifted the capital to Vaishali.
+              </p>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800">
+              <strong class="text-white block text-sm">Kalashoka (Kakavarna): 394 &ndash; 366 BC</strong>
+              <p class="mt-1 text-[11px] text-slate-400">
+                &bull; Shifted the capital permanently back to <strong>Pataliputra</strong>.<br>
+                &bull; Convened the <strong>Second Buddhist Council (383 BC)</strong> at Vaishali, presided over by Sabakami.<br>
+                &bull; Murdered in his capital by the founder of the Nanda dynasty.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Nanda Dynasty -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div>
+              <span class="text-[10px] font-bold text-purple-400 uppercase tracking-wider block">First Non-Kshatriya Line</span>
+              <h3 class="font-heading font-bold text-lg text-white">Nanda Dynasty</h3>
+            </div>
+            <span class="text-xs font-mono font-bold text-purple-300">344 &ndash; 323 BC</span>
+          </div>
+
+          <div class="space-y-3 text-xs text-slate-300">
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800">
+              <strong class="text-white block text-sm">Mahapadma Nanda: 344 &ndash; ? BC</strong>
+              <p class="mt-1 text-[11px] text-slate-400">
+                &bull; <strong>First Historical Empire Builder:</strong> Uprooted all old Kshatriya kingdoms, earning titles <em>Sarvakshatrantaka</em> and <strong>Ekarat</strong> (Sole Monarch).<br>
+                &bull; Conquered Kalinga (substantiated by the Hathigumpha inscription of Kharavela mentioning his canal construction).
+              </p>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800">
+              <strong class="text-white block text-sm">Dhana Nanda: ? &ndash; 323 BC</strong>
+              <p class="mt-1 text-[11px] text-slate-400">
+                &bull; Last Nanda ruler. Called <strong>Agrammes</strong> or <em>Xandrames</em> by classical Greek writers.<br>
+                &bull; Reigned during Alexander's invasion of the Punjab.<br>
+                &bull; Maintained a colossal army (200,000 infantry, 20,000 cavalry, 2,000 chariots, 3,000–6,000 war elephants).<br>
+                &bull; Overthrown by Chandragupta Maurya and Chanakya.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: FOREIGN INVASIONS (DARIUS & ALEXANDER) -->
+    <section id="invasions" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-800 pb-4">
+        <div>
+          <span class="text-xs uppercase font-extrabold tracking-widest text-rose-400">Clash of Civilizations</span>
+          <h2 class="font-heading text-2xl sm:text-3xl font-bold text-white mt-1">Foreign Invasions: Iranian (Persian) &amp; Macedonian</h2>
+        </div>
+        <p class="text-xs text-slate-400 max-w-md">
+          How external contacts transformed Indian commerce, writing systems, and political integration.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+
+        <!-- Persian Invasion -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield" class="w-5 h-5 text-amber-400"></i>
+              <h3 class="font-heading font-bold text-lg text-white">Iranian Invasion &ndash; Darius I (518 BC)</h3>
+            </div>
+            <span class="text-xs font-mono font-bold text-amber-400">Achaemenid Empire</span>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-relaxed">
+            The Achaemenian king <strong class="text-white">Darius I (Darayavahush)</strong> invaded North-West India in 518 BC and conquered the territories of Punjab, west of the Indus, and Sindh.
+          </p>
+
+          <div class="space-y-2 text-xs">
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800">
+              <span class="text-amber-300 font-bold block">20th Satrapy of Persian Empire:</span>
+              <p class="text-slate-300 mt-1">
+                The Indian province (*Hindush*) became the 20th and richest Satrapy of Darius's empire, yielding an annual tribute of <strong>360 talents of gold dust</strong> (one-third of total empire revenue).
+              </p>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800">
+              <span class="text-amber-300 font-bold block">Lucent's Key Effects of Persian Contact:</span>
+              <ul class="list-disc list-inside mt-1 space-y-1 text-slate-300">
+                <li>Introduced the <strong>Kharosthi script</strong> (derived from Aramaic, written right-to-left) into NW India.</li>
+                <li>Persian bell-shaped capitals and polished stone pillar techniques directly inspired Ashokan art.</li>
+                <li>Stimulated maritime and overland trade with the Persian Gulf.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alexander's Invasion Card with Clickable Painting -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div class="flex items-center gap-2">
+              <i data-lucide="swords" class="w-5 h-5 text-rose-400"></i>
+              <h3 class="font-heading font-bold text-lg text-white">Alexander's Invasion (326 BC)</h3>
+            </div>
+            <span class="text-xs font-mono font-bold text-rose-400">Battle of Hydaspes</span>
+          </div>
+
+          <!-- Clickable Lightbox Image of Battle -->
+          <div class="zoomable-hero rounded-xl overflow-hidden border border-slate-800 cursor-zoom-in" onclick="openFullImageViewer('assets/images/alexander_porus.jpg', 'Battle of the Hydaspes (326 BCE) &ndash; Alexander and King Porus', '<strong>Historical Encounter:</strong> In 326 BC, Alexander crossed the Indus and met King Porus on the banks of the river Jhelum (Hydaspes). Porus fought valiantly with his war elephant corps. When defeated and brought before Alexander, Porus was asked how he wished to be treated, replying: <em>\"Treat me, O Alexander, as a king treats another king!\"</em> Impressed by his royal dignity, Alexander restored his realm with added territory.')">
+            <img src="assets/images/alexander_porus.jpg" alt="Battle of Hydaspes 326 BC" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+          </div>
+
+          <div class="space-y-2 text-xs">
+            <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800">
+              <span class="text-rose-300 font-bold block">Chronology &amp; Route:</span>
+              <p class="text-slate-300 mt-1">
+                &bull; <strong>Ambhi (King of Taxila):</strong> Submitted without fighting and offered assistance.<br>
+                &bull; <strong>Battle of Hydaspes:</strong> Porus of Jhelum-Chenab doab put up heroic resistance before surrender.<br>
+                &bull; <strong>Mutiny at the Beas (Vipas):</strong> War-weary troops, terrified of reports of Dhana Nanda's 6,000 elephants in the Gangetic plain, refused to advance. Alexander was compelled to turn back.<br>
+                &bull; Alexander died at Babylon in 323 BC at the age of 32.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: FLASHCARDS & PRACTICE QUIZ -->
+    <section id="quiz" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-800 pb-4">
+        <div>
+          <span class="text-xs uppercase font-extrabold tracking-widest text-amber-400">Self-Assessment Arena</span>
+          <h2 class="font-heading text-2xl sm:text-3xl font-bold text-white mt-1">Revision Flashcards &amp; Practice MCQs</h2>
+        </div>
+        <p class="text-xs text-slate-400 max-w-md">
+          Direct questions testing your retention of the 16 states, Magadhan rulers, and invasions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Flashcard Deck -->
+        <div class="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+              <i data-lucide="layers" class="w-4 h-4"></i> Mahajanapada Flashcards
+            </span>
+            <span id="cardCounter" class="text-xs text-slate-400 font-mono">1 / 6</span>
+          </div>
+
+          <div id="flashcardBox" class="relative h-60 w-full cursor-pointer perspective-1000 group">
+            <div id="flashcardInner" class="w-full h-full rounded-2xl border border-amber-500/30 bg-slate-950 p-6 flex flex-col justify-between shadow-2xl transition-transform duration-500">
+              <div class="text-[10px] uppercase font-bold text-amber-400/80 tracking-wider flex items-center justify-between">
+                <span id="cardCategory">Topic: Geography</span>
+                <span class="text-slate-500">Click to flip</span>
+              </div>
+              <div id="cardContent" class="text-center font-heading text-lg font-bold text-white my-auto px-2">
+                Which was the ONLY Mahajanapada situated in South India?
+              </div>
+              <div class="flex items-center justify-between text-xs text-slate-400 border-t border-slate-800/80 pt-3">
+                <span class="flex items-center gap-1 text-amber-400"><i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> Tap to flip</span>
+                <span class="text-[10px] text-slate-500 font-mono">Lucent Ch.3</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-2">
+            <button id="prevCardBtn" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-1.5 transition-all">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i> Previous
+            </button>
+            <button id="flipCardBtn" class="px-4 py-2 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 text-amber-300 border border-amber-500/30 text-xs font-bold transition-all">
+              Flip Card
+            </button>
+            <button id="nextCardBtn" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold flex items-center gap-1.5 transition-all">
+              Next <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4-Option Mock Quiz -->
+        <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-5">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div>
+              <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider block">Live Exam Simulation</span>
+              <h3 class="font-heading text-lg font-bold text-white">Chapter 3 Mock Test</h3>
+            </div>
+            <div id="quizScoreBadge" class="px-3 py-1 rounded-full bg-slate-800 text-xs font-bold text-slate-300 font-mono">
+              Score: <span id="currentScore" class="text-amber-400">0</span> / 5
+            </div>
+          </div>
+
+          <div id="quizQuestionBox" class="space-y-4">
+            <div class="text-sm font-semibold text-white leading-relaxed flex items-start gap-2">
+              <span id="quizQNum" class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-xs font-mono font-bold">Q1</span>
+              <span id="quizQuestionText">Loading question...</span>
+            </div>
+
+            <div id="quizOptionsList" class="space-y-2.5"></div>
+            <div id="quizFeedback" class="hidden p-3.5 rounded-xl text-xs leading-relaxed transition-all"></div>
+
+            <div class="flex items-center justify-end pt-3">
+              <button id="nextQuizBtn" class="hidden px-5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold items-center gap-2 shadow-lg transition-all">
+                Next Question <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER -->
+  <div id="fullImageViewerModal" class="lightbox-modal">
+    <div class="h-16 px-4 sm:px-6 bg-slate-950/95 border-b border-slate-800 flex items-center justify-between z-20">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
+          <i data-lucide="zoom-in" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h4 id="lightboxTitle" class="text-xs sm:text-sm font-bold text-white tracking-wide">Image Title</h4>
+          <span class="text-[10px] text-amber-400 font-mono">High-Resolution Historical View</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-1.5 sm:gap-2">
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all">
+          <i data-lucide="minus" class="w-4 h-4"></i>
+        </button>
+        <span id="zoomLevelDisplay" class="px-2.5 py-1 rounded bg-slate-900 border border-slate-700 text-xs font-mono text-amber-300 min-w-14 text-center">100%</span>
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+        </button>
+        <button id="zoomResetBtn" class="hidden sm:inline-block px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs text-slate-300 hover:text-white transition-all">Reset</button>
+        <div class="h-6 w-px bg-slate-800 mx-1"></div>
+        <button id="closeLightboxBtn" class="p-2 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/30 transition-all">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="lightboxViewport" class="lightbox-viewport">
+      <img id="lightboxImg" src="" alt="" class="lightbox-img">
+    </div>
+
+    <div class="p-4 bg-slate-950/95 border-t border-slate-800 max-h-40 overflow-y-auto text-xs text-slate-300 z-20">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <p id="lightboxDescription" class="leading-relaxed text-slate-300 text-xs"></p>
+        <span class="text-[10px] text-slate-500 shrink-0 font-mono hidden sm:inline-block">Tip: Scroll mouse wheel to zoom &bull; Drag to pan</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER & BOTTOM NAV -->
+  <footer class="border-t border-slate-800/80 bg-[#0B1325] mt-24 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
+          <i data-lucide="book" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-heading font-bold text-white">Lucent's General Knowledge Illustrated</span>
+          <p class="text-[11px] text-slate-500">Prepared for APSC &amp; UPSC General Studies Aspirants</p>
+        </div>
+      </div>
+      <div class="text-center md:text-right text-slate-500 text-[11px] space-y-1">
+        <div class="flex items-center justify-center md:justify-end gap-3 text-slate-300">
+          <a href="vedic.html" class="inline-flex items-center gap-1.5 text-amber-400 font-bold hover:underline">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5 inline"></i> Ch. 2: Vedic Culture
+          </a>
+          <span class="text-slate-600">&bull;</span>
+          <a href="religions.html" class="inline-flex items-center gap-1.5 text-amber-400 font-bold hover:underline">
+            Ch. 4: Buddhism &amp; Jainism <i data-lucide="arrow-right" class="w-3.5 h-3.5 inline"></i>
+          </a>
+        </div>
+        <p>&copy; 2026 Interactive GS Learning Project. Content sourced directly from Lucent's GK.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/mahajanapadas.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
