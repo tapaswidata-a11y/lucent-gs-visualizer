@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucent GK Illustrated | Medieval India - 12. The Maratha Empire & Later Mughals (1674–1818 AD)</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              bronze: '#CD7F32',
+              terracotta: '#C86446',
+              deepnavy: '#0B1325',
+              carddark: '#141E33',
+              cardborder: '#233354',
+              sand: '#F7F3E9',
+              sandstone: '#E8DCC4'
+            }
+          },
+          fontFamily: {
+            heading: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0B1325] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- TOP BANNER -->
+  <div class="bg-gradient-to-r from-amber-800 via-amber-700 to-amber-900 text-amber-50 text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-md flex items-center justify-center gap-2">
+    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-950/70 text-amber-300 uppercase tracking-wider">APSC &amp; UPSC GS Core</span>
+    <span>Lucent's General Knowledge &bull; Chapter 12: The Maratha Empire &amp; Later Mughals (1674 AD – 1818 AD)</span>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-[#0B1325]/90 backdrop-blur-md border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-900/30 ring-1 ring-amber-400/40 group-hover:scale-105 transition-transform">
+          <i data-lucide="swords" class="w-6 h-6 text-slate-950"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-500 tracking-wider">LUCENT GS</span>
+            <span class="text-xs font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">VISUALIZED</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium">Medieval Indian History &bull; Module 12: Marathas &amp; Later Mughals</p>
+        </div>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/70 p-1.5 rounded-full border border-slate-800 text-xs font-semibold">
+        <a href="#overview" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Overview</a>
+        <a href="#shivaji" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Shivaji Maharaj</a>
+        <a href="#ashtapradhan" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Ashtapradhan</a>
+        <a href="#peshwas" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">The Peshwas</a>
+        <a href="#later-mughals" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Later Mughals</a>
+        <a href="#quiz" class="px-3.5 py-1.5 rounded-full text-amber-400 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 transition-all flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Quiz Mode
+        </a>
+      </nav>
+
+      <!-- Action Buttons & Chapter Selector -->
+      <div class="flex items-center gap-2.5">
+        <button id="themeToggleBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Toggle Light / Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+
+        <button id="searchBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Search Facts">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <div class="relative">
+          <button id="chapterSelectorBtn" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-xs font-semibold text-slate-200 transition-all">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span>Ch. 12: Marathas</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400"></i>
+          </button>
+          
+          <div id="chapterDropdown" class="hidden absolute right-0 mt-2 w-72 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-2 z-50 text-xs max-h-96 overflow-y-auto">
+            <div class="px-3 py-2 font-bold text-slate-400 uppercase tracking-wider text-[10px] ">Ancient Indian History</div>
+            <a href="index.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>1. Harappan / Indus Valley</span>
+              <span class="text-[10px] text-slate-500">2500–1750 BC</span>
+            </a>
+            <a href="vedic.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>2. Vedic Culture</span>
+              <span class="text-[10px] text-slate-500">1500–600 BC</span>
+            </a>
+            <a href="mahajanapadas.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>3. 16 Mahajanapadas & Magadha</span>
+              <span class="text-[10px] text-slate-500">600–325 BC</span>
+            </a>
+            <a href="religions.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>4. Buddhism & Jainism</span>
+              <span class="text-[10px] text-slate-500">600–400 BC</span>
+            </a>
+            <a href="maurya.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>5. The Mauryan Empire</span>
+              <span class="text-[10px] text-slate-500">322–185 BC</span>
+            </a>
+            <a href="post_maurya.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>6. Post-Maurya & Sangam</span>
+              <span class="text-[10px] text-slate-500">185 BC–319 AD</span>
+            </a>
+            <a href="gupta.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>7. Gupta Age & Harsha</span>
+              <span class="text-[10px] text-slate-500">319–647 AD</span>
+            </a>
+            <div class="px-3 py-2 font-bold text-amber-400 uppercase tracking-wider text-[10px] border-t border-slate-800 mt-1">Medieval Indian History</div>
+            <a href="early_medieval.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>8. Early Medieval (Rajputs & Cholas)</span>
+              <span class="text-[10px] text-slate-500">650–1206 AD</span>
+            </a>
+            <a href="delhi_sultanate.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>9. The Delhi Sultanate</span>
+              <span class="text-[10px] text-slate-500">1206–1526 AD</span>
+            </a>
+            <a href="vijayanagar_bahmani.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>10. Vijayanagar & Bahmani</span>
+              <span class="text-[10px] text-slate-500">1336–1646 AD</span>
+            </a>
+            <a href="mughal_empire.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>11. The Mughal Empire</span>
+              <span class="text-[10px] text-slate-500">1526–1707 AD</span>
+            </a>
+            <a href="marathas.html" class="flex items-center justify-between p-2.5 rounded-lg bg-amber-500/15 text-amber-300 font-semibold border border-amber-500/20">
+              <span>12. Maratha Empire & Later Mughals</span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] bg-amber-400 text-slate-950 font-bold">Active</span>
+            </a>
+            <a href="bhakti_sufi.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>13. Religious Movements (Bhakti & Sufi)</span>
+              <span class="text-[10px] text-slate-500">15th–16th c.</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HERO SECTION -->
+  <section id="overview" class="relative pt-12 pb-20 overflow-hidden border-b border-slate-800/60 bg-gradient-to-b from-slate-950 via-[#0B1325] to-[#0B1325]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex items-center gap-2 text-xs font-semibold text-amber-400/90 tracking-wide uppercase mb-3">
+        <span>Chapter 12</span> &bull; <span>1674 AD – 1818 AD</span> &bull; <span>Swarajya &amp; The Fall of Empires</span>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+            The <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500">Maratha</span> Empire
+          </h1>
+          
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+            Founded by <strong class="text-amber-300 font-semibold">Chhatrapati Shivaji Maharaj</strong> through revolutionary hill guerrilla warfare (*Ganimi Kava*), the Maratha Empire challenged Mughal hegemony and instituted the celebrated <strong class="text-amber-300 font-semibold">Ashtapradhan</strong> council. Expanded into a pan-Indian confederacy under <strong class="text-amber-300 font-semibold">Peshwa Baji Rao I</strong>, its expansion peaked until the tragic carnage of the <strong class="text-amber-300 font-semibold">Third Battle of Panipat (1761 AD)</strong>.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Coronation Fort</span>
+              <span class="font-heading text-base font-bold text-amber-300">Raigad (1674 AD)</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Cabinet Council</span>
+              <span class="font-heading text-base font-bold text-amber-300">Ashtapradhan (8)</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Undefeated Peshwa</span>
+              <span class="font-heading text-base font-bold text-amber-300">Baji Rao I (40 Wins)</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Panipat Catastrophe</span>
+              <span class="font-heading text-base font-bold text-amber-300">14 Jan 1761</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Interactive Artifact -->
+        <div class="lg:col-span-5">
+          <div class="relative group rounded-2xl overflow-hidden border border-amber-500/30 bg-slate-900 shadow-2xl shadow-amber-950/40 cursor-pointer" onclick="openFullImageViewer('assets/images/shivaji_maharaj.jpg', 'Chhatrapati Shivaji Maharaj (British Museum Collection)', 'Contemporary 17th-century miniature portrait depicting Chhatrapati Shivaji Maharaj in royal Maratha attire with patka turban, grasping a broadsword. Celebrated as the father of the Maratha nation, pioneer of naval defenses along the Konkan coast, and champion of religious tolerance and peasant welfare.')">
+            <img src="assets/images/shivaji_maharaj.jpg" alt="Chhatrapati Shivaji Maharaj Portrait" class="w-full h-80 object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-amber-500/40 text-xs font-semibold text-amber-300 flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i> Click to Inspect in Full Detail
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-400">Maratha Sovereign</span>
+              <h3 class="text-sm font-bold text-white font-heading">Chhatrapati Shivaji Maharaj &bull; 1627–1680 AD</h3>
+              <p class="text-[11px] text-slate-300 line-clamp-2">Founder of Hindavi Swarajya; British Museum contemporary painting depicting the Maratha liberator.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: SHIVAJI'S BIOGRAPHY & MILITARY CONQUESTS -->
+  <section id="shivaji" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">The Life of a Liberator</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Chhatrapati Shivaji's Rise &amp; Treaties</h2>
+        <p class="text-sm text-slate-300">Lucent GK essentials covering forts, the Afzal Khan episode, Purandar treaty, and Raigad coronation.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Birth &amp; Mentors</span>
+            <span class="text-xs text-slate-400 font-mono">1627 AD</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white">Origins &amp; Youth</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Born at <strong class="text-white">Shivneri Fort</strong> (Pune) to Shahji Bhonsle and Jijabai. Spiritual mentor was <strong class="text-amber-300">Samarth Ramdas</strong>; guardian-administrator was Dadaji Kondadeo.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1">
+            <div class="text-amber-400 font-bold">First Conquest (1646):</div>
+            <p class="text-slate-300">Captured the strategic fort of <strong class="text-white">Torna</strong> at age 19, followed by Raigad and Sinhagad.</p>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Milestones</span>
+            <span class="text-xs text-slate-400 font-mono">1659 &amp; 1663</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white">Afzal Khan &amp; Shaista Khan</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Slew Bijapur general <strong class="text-amber-300">Afzal Khan</strong> at Pratapgarh in 1659 using concealed *Bagh Nakh* (tiger claws) when Khan attempted an ambush.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1">
+            <div class="text-amber-400 font-bold">Lal Mahal Surprise (1663):</div>
+            <p class="text-slate-300">Daring night raid on Mughal viceroy Shaista Khan inside Pune, severing his thumb and routing his guards.</p>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-amber-500/40 space-y-3 shadow-xl shadow-amber-950/20">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-xs">Treaty of Purandar</span>
+            <span class="text-xs text-amber-400 font-mono">June 1665 AD</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white">Purandar &amp; Agra Escape</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Signed treaty with <strong class="text-amber-300">Raja Jai Singh I</strong> of Amber. Shivaji surrendered 23 of his 35 forts (yielding 4 lakh huns) to Aurangzeb.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1">
+            <div class="text-amber-400 font-bold">Agra Court Escape (1666):</div>
+            <p class="text-slate-300">Insulted by Aurangzeb at court; placed under house arrest; escaped miraculously concealed inside large sweet baskets.</p>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Coronation</span>
+            <span class="text-xs text-slate-400 font-mono">6 June 1674 AD</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white">Chhatrapati at Raigad</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Solemn coronation conducted at <strong class="text-white">Raigad Fort</strong> by celebrated scholar <strong class="text-amber-300">Gaga Bhatt</strong> of Varanasi.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1">
+            <div class="text-amber-400 font-bold">Royal Titles:</div>
+            <p class="text-slate-300">Assumed the titles of <strong class="text-amber-200">Chhatrapati</strong> and <strong class="text-amber-200">Haindava Dharmoddharak</strong> (Protector of Hindu Faith).</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: THE ASHTAPRADHAN & REVENUE SYSTEM -->
+  <section id="ashtapradhan" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">The Cabinet of Eight</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Shivaji's Ashtapradhan Council &amp; Taxes</h2>
+        <p class="text-sm text-slate-300">Eight executive ministers reporting directly to the Chhatrapati, and the Chauth/Sardeshmukhi levies.</p>
+      </div>
+
+      <!-- Ashtapradhan Table -->
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/60 shadow-xl">
+        <table class="w-full text-left text-xs text-slate-300">
+          <thead class="bg-slate-950/80 text-amber-300 font-heading uppercase text-[11px] tracking-wider border-b border-slate-800">
+            <tr>
+              <th class="py-3 px-4">Minister Title</th>
+              <th class="py-3 px-4">Administrative Role</th>
+              <th class="py-3 px-4">Portfolio Duties</th>
+              <th class="py-3 px-4">First Incumbent</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 font-medium">
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">1. Peshwa (Mukhya Pradhan)</td>
+              <td class="py-3 px-4 text-white">Prime Minister</td>
+              <td class="py-3 px-4 text-slate-300">General administration, state finances, custody of royal seal</td>
+              <td class="py-3 px-4 text-slate-400 font-mono text-[11px]">Moro Trimbak Pingle</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">2. Amatya (Majumdar)</td>
+              <td class="py-3 px-4 text-white">Finance Minister</td>
+              <td class="py-3 px-4 text-slate-300">Audit of accounts, state revenues, checking receipts and expenses</td>
+              <td class="py-3 px-4 text-slate-400 font-mono text-[11px]">Ramchandra Pant Amatya</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">3. Waqenavis (Mantri)</td>
+              <td class="py-3 px-4 text-white">Home &amp; Intelligence Minister</td>
+              <td class="py-3 px-4 text-slate-300">Royal household affairs, internal security, court daily records</td>
+              <td class="py-3 px-4 text-slate-400 font-mono text-[11px]">Dattaji Trimbak</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">4. Sachiv (Shurnavis)</td>
+              <td class="py-3 px-4 text-white">Royal Correspondence</td>
+              <td class="py-3 px-4 text-slate-300">Drafting royal decrees (*Farmans*), inspection of Pargana accounts</td>
+              <td class="py-3 px-4 text-slate-400 font-mono text-[11px]">Annaji Datto</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">5. Sumant (Dabir)</td>
+              <td class="py-3 px-4 text-white">Foreign Minister</td>
+              <td class="py-3 px-4 text-slate-300">Diplomatic alliances, reception of foreign ambassadors</td>
+              <td class="py-3 px-4 text-slate-400 font-mono text-[11px]">Trimbak Sondeo</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">6. Senapati (Sar-i-Naubat)</td>
+              <td class="py-3 px-4 text-white">Commander-in-Chief</td>
+              <td class="py-3 px-4 text-slate-300">Recruitment, training, and operational command of army</td>
+              <td class="py-3 px-4 text-slate-400 font-mono text-[11px]">Hambirrao Mohite</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">7. Panditrao (Dhanadhyaksha)</td>
+              <td class="py-3 px-4 text-white">Chief Ecclesiastical Head</td>
+              <td class="py-3 px-4 text-slate-300">Religious endowments, charities, expiations (*Prayashchitta*)</td>
+              <td class="py-3 px-4 text-slate-400 font-mono text-[11px]">Raghunath Pandit</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">8. Nyayadhish</td>
+              <td class="py-3 px-4 text-white">Chief Justice</td>
+              <td class="py-3 px-4 text-slate-300">Supreme civil and criminal administration of justice</td>
+              <td class="py-3 px-4 text-slate-400 font-mono text-[11px]">Niraji Raoji</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Chauth & Sardeshmukhi Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="p-5 rounded-2xl bg-[#141E33] border border-[#233354] space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-amber-400 font-bold font-heading text-sm">Chauth (One-Fourth / 25%)</span>
+            <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 text-[10px] font-bold">25% Assessment</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            A military protection levy equivalent to <strong class="text-amber-300">one-fourth (25%)</strong> of standard land revenue paid by neighboring Mughal and Deccan territories to ensure immunity from Maratha raids and protection against foreign aggression.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-[#141E33] border border-[#233354] space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-amber-400 font-bold font-heading text-sm">Sardeshmukhi (One-Tenth / 10%)</span>
+            <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 text-[10px] font-bold">10% Surcharge</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            An additional levy of <strong class="text-amber-300">one-tenth (10%)</strong> demanded by Shivaji on the basis of his legal claim as the hereditary supreme head (*Sardesmukh*) of all Deshmukhs in Maharashtra.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: THE PESHWAS & THIRD BATTLE OF PANIPAT -->
+  <section id="peshwas" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">The Prime Minister Sovereign</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">The Peshwa Era (1713–1818 AD)</h2>
+        <p class="text-sm text-slate-300">Balaji Vishwanath, Baji Rao I, and the catastrophic watershed of Panipat (1761 AD).</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">1713–1720 AD</span>
+            <span class="text-xs text-slate-400 font-mono">First Peshwa</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Balaji Vishwanath</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Made the office of Peshwa hereditary. Secured the historic 1719 treaty from the Sayyid brothers recognizing Shahu as sovereign of Swarajya with rights to collect Chauth across the Deccan.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-amber-500/40 space-y-3 shadow-xl shadow-amber-950/20">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-xs">1720–1740 AD</span>
+            <span class="text-xs text-amber-400 font-mono">40 Battles Undefeated</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Baji Rao I (Greatest Cavalry General)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Championed <strong class="text-amber-300">Hindu Pad-Padshahi</strong>. Smashed the Nizam of Hyderabad at the <strong class="text-white">Battle of Palkhed (1728)</strong> and <strong class="text-white">Battle of Bhopal (1737)</strong>; raided the gates of Delhi in 1737 with 500 cavalrymen.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-rose-500/40 space-y-3 hover:border-rose-500 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-rose-500/20 text-rose-300 font-bold text-xs border border-rose-500/30">14 January 1761</span>
+            <span class="text-xs text-rose-400 font-mono">Panipat III</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Third Battle of Panipat</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Fought between Marathas under <strong class="text-white">Sadashivrao Bhau</strong> and the Afghan king <strong class="text-amber-300">Ahmad Shah Abdali</strong>. Marathas were annihilated: "Two pearls were dissolved, 27 gold mohurs lost...".
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: THE LATER MUGHALS (1707–1857 AD) -->
+  <section id="later-mughals" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">The Imperial Twilight</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">The Later Mughals &amp; Regional Breakaway States</h2>
+        <p class="text-sm text-slate-300">From the Sayyid Kingmakers to the sack of Delhi by Nadir Shah and the exile of Zafar.</p>
+      </div>
+
+      <!-- Later Mughals Table -->
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/60 shadow-xl">
+        <table class="w-full text-left text-xs text-slate-300">
+          <thead class="bg-slate-950/80 text-amber-300 font-heading uppercase text-[11px] tracking-wider border-b border-slate-800">
+            <tr>
+              <th class="py-3 px-4">Ruler</th>
+              <th class="py-3 px-4">Reign</th>
+              <th class="py-3 px-4">Sobriquet / Title</th>
+              <th class="py-3 px-4">Historical Milestone in Lucent GK</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 font-medium">
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Bahadur Shah I (Muazzam)</td>
+              <td class="py-3 px-4 text-white">1707–1712</td>
+              <td class="py-3 px-4 text-slate-300">*Shah-i-Bekhabar*</td>
+              <td class="py-3 px-4 text-slate-400 text-[11px]">Adopted conciliatory policy towards Marathas and Sikhs; released Shahu.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Farrukhsiyar</td>
+              <td class="py-3 px-4 text-white">1713–1719</td>
+              <td class="py-3 px-4 text-slate-300">Raised by Sayyid Brothers</td>
+              <td class="py-3 px-4 text-emerald-400 font-mono text-[11px]">Issued 1717 Golden Farman (Magna Carta of East India Company in Bengal).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Muhammad Shah</td>
+              <td class="py-3 px-4 text-white">1719–1748</td>
+              <td class="py-3 px-4 text-slate-300">*Rangeela*</td>
+              <td class="py-3 px-4 text-rose-300 text-[11px]">Nadir Shah sacked Delhi (1739) stealing Peacock Throne &amp; Kohinoor. Hyderabad &amp; Awadh became autonomous.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Shah Alam II</td>
+              <td class="py-3 px-4 text-white">1759–1806</td>
+              <td class="py-3 px-4 text-slate-300">Ali Gauhar</td>
+              <td class="py-3 px-4 text-slate-400 text-[11px]">Defeated at Battle of Buxar (1764); signed Treaty of Allahabad granting Bengal Diwani to EIC.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Bahadur Shah II (Zafar)</td>
+              <td class="py-3 px-4 text-white">1837–1857</td>
+              <td class="py-3 px-4 text-slate-300">Last Mughal Emperor</td>
+              <td class="py-3 px-4 text-slate-400 text-[11px]">Titular head of 1857 Revolt; captured at Humayun's tomb and exiled to Rangoon (died 1862).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5: INTERACTIVE STUDY TOOLS (FLASHCARDS & QUIZ) -->
+  <section id="quiz" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Active Recall Engine</span>
+        <h2 class="font-heading text-3xl font-extrabold text-white">Lucent Exam Readiness Practice</h2>
+        <p class="text-sm text-slate-300">Master every question on Shivaji Maharaj, the Ashtapradhan, Baji Rao I, and Later Mughals.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: 3D Flashcard Deck -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-heading text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="layers" class="w-4 h-4 text-amber-400"></i> Maratha Flashcards
+            </h3>
+            <span id="flashcardCountDisplay" class="text-xs font-mono text-slate-400">Card 1 of 8</span>
+          </div>
+
+          <div id="flashcardContainer" class="flashcard-container" onclick="toggleFlashcardFlip()">
+            <div id="flashcardInner" class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded border border-amber-500/20">Question</span>
+                <p id="cardFrontText" class="font-heading text-base font-semibold text-white px-2">Loading flashcard...</p>
+                <span class="text-[10px] text-slate-400 font-medium">Click card to reveal answer</span>
+              </div>
+              <div class="flashcard-face flashcard-back">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20">Lucent Fact Answer</span>
+                <p id="cardBackText" class="text-xs text-slate-100 font-medium leading-relaxed px-2">Loading answer...</p>
+                <span class="text-[10px] text-slate-400 font-medium">Click to flip back</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between gap-3 pt-2">
+            <button id="prevCardBtn" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 hover:text-white flex items-center gap-1.5 transition-all">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i> Prev Card
+            </button>
+            <button onclick="toggleFlashcardFlip()" class="px-4 py-2 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-xs font-semibold text-amber-300 transition-all">
+              Flip Card
+            </button>
+            <button id="nextCardBtn" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 hover:text-white flex items-center gap-1.5 transition-all">
+              Next Card <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: 5-Question Mock Quiz -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-heading text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="help-circle" class="w-4 h-4 text-amber-400"></i> Marathas Mock Test
+            </h3>
+            <div class="text-xs text-slate-400 font-mono">
+              Score: <span id="currentScore" class="text-amber-400 font-bold">0</span> / 5
+            </div>
+          </div>
+
+          <div id="quizQuestionBox" class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-5">
+            <div class="flex items-center justify-between">
+              <span id="quizQNum" class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2.5 py-1 rounded border border-amber-500/20">Q1</span>
+              <span class="text-[11px] text-slate-500 font-mono">Multiple Choice</span>
+            </div>
+
+            <p id="quizQuestionText" class="text-sm font-semibold text-white leading-relaxed">
+              Loading quiz question...
+            </p>
+
+            <div id="quizOptionsList" class="space-y-2.5">
+              <!-- Options rendered by JS -->
+            </div>
+
+            <div id="quizFeedback" class="hidden">
+              <!-- Correct/incorrect feedback rendered by JS -->
+            </div>
+
+            <button id="nextQuizBtn" class="hidden w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-lg transition-all items-center justify-center gap-2">
+              Next Question <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden items-start justify-center pt-20 px-4">
+    <div class="bg-slate-900 border border-slate-700 w-full max-w-xl rounded-2xl shadow-2xl overflow-hidden">
+      <div class="p-4 border-b border-slate-800 flex items-center gap-3">
+        <i data-lucide="search" class="w-5 h-5 text-amber-400"></i>
+        <input id="searchInput" type="text" placeholder="Search Shivaji, Ashtapradhan, Baji Rao, Panipat, Nadir Shah..." class="bg-transparent border-none text-white text-sm focus:outline-none w-full">
+        <button id="closeSearchBtn" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div id="searchResults" class="p-4 max-h-96 overflow-y-auto space-y-2 text-xs">
+        <p class="text-slate-500 text-center py-4">Type a keyword to search across this module...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER MODAL -->
+  <div id="fullImageViewerModal" class="lightbox-modal">
+    <div class="p-4 bg-slate-950/95 border-b border-slate-800 flex items-center justify-between z-20">
+      <div>
+        <h4 id="lightboxTitle" class="font-heading text-sm font-bold text-white">Image Viewer</h4>
+        <p class="text-[11px] text-slate-400">Full Portrait &amp; Document Inspection</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all">
+          <i data-lucide="minus" class="w-4 h-4"></i>
+        </button>
+        <span id="zoomLevelDisplay" class="px-2.5 py-1 rounded bg-slate-900 border border-slate-700 text-xs font-mono text-amber-300 min-w-14 text-center">100%</span>
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+        </button>
+        <button id="zoomResetBtn" class="hidden sm:inline-block px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs text-slate-300 hover:text-white transition-all">Reset</button>
+        <div class="h-6 w-px bg-slate-800 mx-1"></div>
+        <button id="closeLightboxBtn" class="p-2 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/30 transition-all">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="lightboxViewport" class="lightbox-viewport">
+      <img id="lightboxImg" src="" alt="" class="lightbox-img">
+    </div>
+
+    <div class="p-4 bg-slate-950/95 border-t border-slate-800 max-h-40 overflow-y-auto text-xs text-slate-300 z-20">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <p id="lightboxDescription" class="leading-relaxed text-slate-300 text-xs"></p>
+        <span class="text-[10px] text-slate-500 shrink-0 font-mono hidden sm:inline-block">Tip: Scroll mouse wheel to zoom &bull; Drag to pan</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER & BOTTOM NAV -->
+  <footer class="border-t border-slate-800/80 bg-[#0B1325] mt-24 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
+          <i data-lucide="book" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-heading font-bold text-white">Lucent's General Knowledge Illustrated</span>
+          <p class="text-[11px] text-slate-500">Prepared for APSC &amp; UPSC General Studies Aspirants</p>
+        </div>
+      </div>
+      <div class="text-center md:text-right text-slate-500 text-[11px] space-y-1">
+        <div class="flex items-center justify-center md:justify-end gap-3 text-slate-300">
+          <a href="mughal_empire.html" class="inline-flex items-center gap-1.5 text-amber-400 font-bold hover:underline">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5 inline"></i> Ch. 11: The Mughal Empire
+          </a>
+          <span class="text-slate-600">&bull;</span>
+          <a href="index.html" class="inline-flex items-center gap-1.5 text-amber-400 font-bold hover:underline">
+            Back to Portal Gateway <i data-lucide="home" class="w-3.5 h-3.5 inline"></i>
+          </a>
+        </div>
+        <p>&copy; 2026 Interactive GS Learning Project. Content sourced directly from Lucent's GK.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/marathas.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

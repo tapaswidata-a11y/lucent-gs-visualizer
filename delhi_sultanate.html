@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucent GK Illustrated | Medieval India - 9. The Delhi Sultanate (1206–1526 AD)</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              bronze: '#CD7F32',
+              terracotta: '#C86446',
+              deepnavy: '#0B1325',
+              carddark: '#141E33',
+              cardborder: '#233354',
+              sand: '#F7F3E9',
+              sandstone: '#E8DCC4'
+            }
+          },
+          fontFamily: {
+            heading: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0B1325] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- TOP BANNER -->
+  <div class="bg-gradient-to-r from-amber-800 via-amber-700 to-amber-900 text-amber-50 text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-md flex items-center justify-center gap-2">
+    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-950/70 text-amber-300 uppercase tracking-wider">APSC &amp; UPSC GS Core</span>
+    <span>Lucent's General Knowledge &bull; Chapter 9: The Delhi Sultanate (1206 AD – 1526 AD)</span>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-[#0B1325]/90 backdrop-blur-md border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-900/30 ring-1 ring-amber-400/40 group-hover:scale-105 transition-transform">
+          <i data-lucide="tower-control" class="w-6 h-6 text-slate-950"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-500 tracking-wider">LUCENT GS</span>
+            <span class="text-xs font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">VISUALIZED</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium">Medieval Indian History &bull; Module 9: The Delhi Sultanate</p>
+        </div>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/70 p-1.5 rounded-full border border-slate-800 text-xs font-semibold">
+        <a href="#overview" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Overview</a>
+        <a href="#five-dynasties" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">5 Dynasties</a>
+        <a href="#khalji-reforms" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Market Reforms</a>
+        <a href="#tughlaq-schemes" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Tughlaq Schemes</a>
+        <a href="#architecture" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Monuments</a>
+        <a href="#quiz" class="px-3.5 py-1.5 rounded-full text-amber-400 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 transition-all flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Quiz Mode
+        </a>
+      </nav>
+
+      <!-- Action Buttons & Chapter Selector -->
+      <div class="flex items-center gap-2.5">
+        <button id="themeToggleBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Toggle Light / Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+
+        <button id="searchBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Search Facts">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <div class="relative">
+          <button id="chapterSelectorBtn" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-xs font-semibold text-slate-200 transition-all">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span>Ch. 9: Sultanate</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400"></i>
+          </button>
+          
+          <div id="chapterDropdown" class="hidden absolute right-0 mt-2 w-72 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-2 z-50 text-xs max-h-96 overflow-y-auto">
+            <div class="px-3 py-2 font-bold text-slate-400 uppercase tracking-wider text-[10px] ">Ancient Indian History</div>
+            <a href="index.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>1. Harappan / Indus Valley</span>
+              <span class="text-[10px] text-slate-500">2500–1750 BC</span>
+            </a>
+            <a href="vedic.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>2. Vedic Culture</span>
+              <span class="text-[10px] text-slate-500">1500–600 BC</span>
+            </a>
+            <a href="mahajanapadas.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>3. 16 Mahajanapadas & Magadha</span>
+              <span class="text-[10px] text-slate-500">600–325 BC</span>
+            </a>
+            <a href="religions.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>4. Buddhism & Jainism</span>
+              <span class="text-[10px] text-slate-500">600–400 BC</span>
+            </a>
+            <a href="maurya.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>5. The Mauryan Empire</span>
+              <span class="text-[10px] text-slate-500">322–185 BC</span>
+            </a>
+            <a href="post_maurya.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>6. Post-Maurya & Sangam</span>
+              <span class="text-[10px] text-slate-500">185 BC–319 AD</span>
+            </a>
+            <a href="gupta.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>7. Gupta Age & Harsha</span>
+              <span class="text-[10px] text-slate-500">319–647 AD</span>
+            </a>
+            <div class="px-3 py-2 font-bold text-amber-400 uppercase tracking-wider text-[10px] border-t border-slate-800 mt-1">Medieval Indian History</div>
+            <a href="early_medieval.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>8. Early Medieval (Rajputs & Cholas)</span>
+              <span class="text-[10px] text-slate-500">650–1206 AD</span>
+            </a>
+            <a href="delhi_sultanate.html" class="flex items-center justify-between p-2.5 rounded-lg bg-amber-500/15 text-amber-300 font-semibold border border-amber-500/20">
+              <span>9. The Delhi Sultanate</span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] bg-amber-400 text-slate-950 font-bold">Active</span>
+            </a>
+            <a href="vijayanagar_bahmani.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>10. Vijayanagar & Bahmani</span>
+              <span class="text-[10px] text-slate-500">1336–1646 AD</span>
+            </a>
+            <a href="mughal_empire.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>11. The Mughal Empire</span>
+              <span class="text-[10px] text-slate-500">1526–1707 AD</span>
+            </a>
+            <a href="marathas.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>12. Maratha Empire & Later Mughals</span>
+              <span class="text-[10px] text-slate-500">1674–1818 AD</span>
+            </a>
+            <a href="bhakti_sufi.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>13. Religious Movements (Bhakti & Sufi)</span>
+              <span class="text-[10px] text-slate-500">15th–16th c.</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HERO SECTION -->
+  <section id="overview" class="relative pt-12 pb-20 overflow-hidden border-b border-slate-800/60 bg-gradient-to-b from-slate-950 via-[#0B1325] to-[#0B1325]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex items-center gap-2 text-xs font-semibold text-amber-400/90 tracking-wide uppercase mb-3">
+        <span>Chapter 9</span> &bull; <span>1206 AD – 1526 AD</span> &bull; <span>The Five Dynasties of Delhi</span>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+            The <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500">Delhi</span> Sultanate
+          </h1>
+          
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+            Spanning over three centuries across five successive dynasties (<strong class="text-amber-300 font-semibold">Slave, Khalji, Tughlaq, Sayyid, and Lodi</strong>), the Delhi Sultanate established centralized Turko-Afghan rule. From Iltutmish's silver Tanka and Balban's Blood &amp; Iron, to Alauddin Khalji's revolutionary market price regulations and Muhammad bin Tughlaq's visionary experiments, it laid the administrative and architectural foundation of medieval India.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Duration</span>
+              <span class="font-heading text-base font-bold text-amber-300">320 Years</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Dynasties</span>
+              <span class="font-heading text-base font-bold text-amber-300">5 Imperial Houses</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">First Woman Ruler</span>
+              <span class="font-heading text-base font-bold text-amber-300">Razia Sultan (1236)</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Final Battle</span>
+              <span class="font-heading text-base font-bold text-amber-300">Panipat (1526 AD)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Interactive Artifact -->
+        <div class="lg:col-span-5">
+          <div class="relative group rounded-2xl overflow-hidden border border-amber-500/30 bg-slate-900 shadow-2xl shadow-amber-950/40 cursor-pointer" onclick="openFullImageViewer('assets/images/qutb_minar.jpg', 'The Qutb Minar (Mehrauli, New Delhi)', 'Tower of Victory standing 72.5 metres high with 379 steps, constructed from red and buff sandstone. Commenced by Qutbuddin Aibak in 1199 AD in honour of Sufi saint Khwaja Qutbuddin Bakhtiyar Kaki, finished by Iltutmish (3 storeys added), and repaired with marble storeys by Firoz Shah Tughlaq in 1368 AD after lightning damage.')">
+            <img src="assets/images/qutb_minar.jpg" alt="Qutb Minar Delhi" class="w-full h-80 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-amber-500/40 text-xs font-semibold text-amber-300 flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i> Click to Inspect in Full Detail
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-400">Architectural Symbol</span>
+              <h3 class="text-sm font-bold text-white font-heading">Qutb Minar &bull; Commenced 1199 AD</h3>
+              <p class="text-[11px] text-slate-300 line-clamp-2">UNESCO World Heritage monument symbolizing the triumph and genesis of the Delhi Sultanate.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: THE FIVE DYNASTIES CHRONOLOGY -->
+  <section id="five-dynasties" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Chronological Imperial Progression</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">The Five Dynasties of the Delhi Sultanate</h2>
+        <p class="text-sm text-slate-300">Detailed breakdown of reigns, administrative innovations, and key historical milestones.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Slave Dynasty -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-4 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Slave / Mamluk</span>
+            <span class="text-xs text-slate-400 font-mono">1206–1290 AD</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">The Slave (Ilbari) Dynasty</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Founded by <strong class="text-amber-300">Qutbuddin Aibak</strong> (titled *Lakhbaksh*). Real consolidation achieved by <strong class="text-white">Shamsuddin Iltutmish</strong> who saved India from Chengiz Khan and introduced the silver *Tanka* and copper *Jital*.
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5 text-xs">
+            <div><strong class="text-amber-400">Razia Sultan (1236–40):</strong> First woman monarch; discarded purdah; rode elephants in male dress; married Altunia.</div>
+            <div><strong class="text-amber-400">Ghiyasuddin Balban (1266–87):</strong> Smashed the Forty nobles (*Chalisa*); declared himself *Zil-i-Ilahi* (Shadow of God); doctrine of **Blood and Iron**; introduced *Sijda*, *Paibos*, and *Nauroz*.</div>
+          </div>
+        </div>
+
+        <!-- Khalji Dynasty -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-amber-500/40 space-y-4 shadow-xl shadow-amber-950/20">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-xs">Khalji Dynasty</span>
+            <span class="text-xs text-amber-400 font-mono">1290–1320 AD</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">The Khalji Imperialism</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Founded by Jalaluddin Khalji. Zenith attained under his nephew <strong class="text-amber-300">Alauddin Khalji (1296–1316 AD)</strong> who assumed the grand title of <strong class="text-white">Sikandar-i-Sani</strong> (Second Alexander).
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5 text-xs">
+            <div><strong class="text-amber-400">Standing Army:</strong> First Sultan to maintain a permanent standing army paid strictly in cash (*Naqd*).</div>
+            <div><strong class="text-amber-400">Dagh &amp; Chehra:</strong> Branding of cavalry horses (*Dagh*) and biometric descriptive rolls of soldiers (*Huliya/Chehra*).</div>
+            <div><strong class="text-amber-400">Deccan Conquests:</strong> General <strong class="text-amber-200">Malik Kafur</strong> subjugated Devagiri, Warangal (acquired Kohinoor), Dvarasamudra, and Madurai.</div>
+          </div>
+        </div>
+
+        <!-- Tughlaq Dynasty -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-4 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Tughlaq Dynasty</span>
+            <span class="text-xs text-slate-400 font-mono">1320–1414 AD</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">The Tughlaq Dynasty</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Founded by Ghiyasuddin Tughlaq. Longest ruling dynasty of the Sultanate (94 years). Marked by extraordinary intellectual boldness and tragic administrative debacles.
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5 text-xs">
+            <div><strong class="text-amber-400">Muhammad bin Tughlaq (1325–51):</strong> Polymath scholar; shifted capital to Daulatabad; issued token copper/brass currency; invited Ibn Battuta (*Rihla*).</div>
+            <div><strong class="text-amber-400">Firoz Shah Tughlaq (1351–88):</strong> Canal network builder; established *Diwan-i-Khairat*, *Diwan-i-Bandagan*, and *Dar-ul-Shifa*; imposed Jizya on Brahmans.</div>
+            <div><strong class="text-amber-400">Timur's Invasion (1398):</strong> Mongol-Turk invader Timur sacked Delhi, shattering Tughlaq authority.</div>
+          </div>
+        </div>
+
+        <!-- Sayyid Dynasty -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-4 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Sayyid Dynasty</span>
+            <span class="text-xs text-slate-400 font-mono">1414–1451 AD</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">The Sayyid Dynasty</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Claimed descent from Prophet Muhammad. Founded by <strong class="text-amber-300">Khizr Khan (1414–1421 AD)</strong>, who was appointed Governor of Multan by Timur. Refused the title of Sultan, styling himself <strong class="text-white">Raiyat-i-Ala</strong>.
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5 text-xs">
+            <div><strong class="text-amber-400">Mubarak Shah:</strong> Patronized court historian Yahya bin Ahmad Sirhindi who authored *Tarikh-i-Mubarak Shahi*.</div>
+            <div><strong class="text-amber-400">Alam Shah:</strong> Last ruler, surrendered Delhi peacefully to Bahlol Lodi and retired to Badaun.</div>
+          </div>
+        </div>
+
+        <!-- Lodi Dynasty -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-4 hover:border-amber-500/40 transition-all md:col-span-2 lg:col-span-2">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">First Afghan Empire</span>
+            <span class="text-xs text-slate-400 font-mono">1451–1526 AD</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">The Lodi Dynasty (Afghan Rule)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Founded by <strong class="text-amber-300">Bahlol Lodi</strong>. The most capable sovereign was <strong class="text-white">Sikandar Lodi (1489–1517 AD)</strong>:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
+              <strong class="text-amber-400 block">Foundation of Agra (1504 AD):</strong>
+              <p class="text-slate-300">Founded the city of Agra to exercise tighter control over Rajasthan; shifted imperial capital from Delhi to Agra in 1506 AD.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
+              <strong class="text-amber-400 block">Gaz-i-Sikandari &amp; Gulrukhi:</strong>
+              <p class="text-slate-300">Introduced standard land measurement yard *Gaz-i-Sikandari* (32 digits/30 inches). Composed Persian verses under pseudonym *Gulrukhi*.</p>
+            </div>
+          </div>
+          <div class="p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-xs text-rose-200 mt-2">
+            <strong class="text-white">Fall of Sultanate:</strong> Ibrahim Lodi was defeated and killed by Babur in the <strong class="text-amber-300">First Battle of Panipat (21 April 1526)</strong>, marking the establishment of the Mughal Empire.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: ALAUDDIN'S REVOLUTIONARY MARKET REFORMS -->
+  <section id="khalji-reforms" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Agrarian &amp; Economic Engineering</span>
+        <h2 class="font-heading text-3xl font-extrabold text-white">Alauddin Khalji's Market Control Regulations</h2>
+        <p class="text-sm text-slate-300">The world’s earliest comprehensive state price-fixing and market stabilization system.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+        
+        <div class="p-5 rounded-2xl bg-[#141E33] border border-[#233354] space-y-2.5">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+            <i data-lucide="scale" class="w-4 h-4"></i>
+            <span>Three Regulated Central Markets</span>
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            Established three distinct markets in Delhi:
+          </p>
+          <ul class="space-y-1.5 text-slate-200">
+            <li class="p-2 rounded bg-slate-900 border border-slate-800"><strong class="text-amber-300">1. Mandi:</strong> Grain market where prices of wheat, barley, rice, gram were strictly pegged.</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800"><strong class="text-amber-300">2. Sarai-i-Adl:</strong> Cloth, sugar, herbs, dry fruits, and lamp oil market.</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800"><strong class="text-amber-300">3. Horses &amp; Slaves:</strong> Market for horses, cattle, and domestic servants.</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-[#141E33] border border-[#233354] space-y-2.5">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+            <span>Administrative Officers</span>
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            Rigorous multi-tiered oversight to stamp out black-marketing and adulteration:
+          </p>
+          <ul class="space-y-1.5 text-slate-200">
+            <li class="p-2 rounded bg-slate-900 border border-slate-800"><strong class="text-amber-300">Diwan-i-Riyasat:</strong> Department of commerce headed by Malik Yaqut.</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800"><strong class="text-amber-300">Shahna-i-Mandi:</strong> Market superintendent inspecting weights, quality, and licenses.</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800"><strong class="text-amber-300">Barids &amp; Munhiyans:</strong> Official intelligence officers (*Barids*) and secret child spy agents (*Munhiyans*).</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-[#141E33] border border-[#233354] space-y-2.5">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+            <span>Land Revenue Innovations</span>
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            Revolutionized agrarian taxation to curb rural intermediaries (*Khuts*, *Muqaddams*, *Chaudharis*):
+          </p>
+          <ul class="space-y-1.5 text-slate-200">
+            <li class="p-2 rounded bg-slate-900 border border-slate-800"><strong class="text-amber-300">Measurement (Masaahat):</strong> Land assessed per standard unit (*Biswa*).</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800"><strong class="text-amber-300">50% Share:</strong> State revenue fixed at half of the total agricultural gross produce.</li>
+            <li class="p-2 rounded bg-slate-900 border border-slate-800"><strong class="text-amber-300">Grazing Taxes:</strong> Introduced *Ghari* (house tax) and *Charai* (grazing tax on milch cattle).</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: MUHAMMAD BIN TUGHLAQ'S 5 SCHEMES -->
+  <section id="tughlaq-schemes" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">The Ill-Starred Idealist</span>
+        <h2 class="font-heading text-3xl font-extrabold text-white">Muhammad bin Tughlaq's Five Ambitious Projects</h2>
+        <p class="text-sm text-slate-300">Visionary policies executed ahead of their time that met with catastrophic failure.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4 text-xs">
+        
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-2">
+          <div class="text-amber-400 font-bold font-heading text-sm">1. Doab Taxation</div>
+          <p class="text-slate-300">Increased land tax in fertile Ganga-Yamuna Doab precisely during a devastating famine, prompting widespread peasant rebellion. Established agricultural relief bureau <strong class="text-amber-300">Diwan-i-Kohi</strong> and agrarian loans (*Sondhar*).</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-2">
+          <div class="text-amber-400 font-bold font-heading text-sm">2. Transfer of Capital (1327)</div>
+          <p class="text-slate-300">Ordered entire population of Delhi to relocate 1,500 km south to <strong class="text-amber-300">Devagiri (renamed Daulatabad)</strong> to command South India. Countless perished on the grueling trek; ordered return to Delhi two years later.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-2">
+          <div class="text-amber-400 font-bold font-heading text-sm">3. Token Currency (1329–30)</div>
+          <p class="text-slate-300">Inspired by Kublai Khan of China, minted copper and brass coins giving them parity with silver *Tanka*. Because the royal mint lacked anti-counterfeiting marks, "every Hindu home turned into a mint", ruining state credit.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-2">
+          <div class="text-amber-400 font-bold font-heading text-sm">4. Khurasan Project</div>
+          <p class="text-slate-300">Envisioned conquering Central Asia and Iraq; mobilized a gargantuan army of 370,000 soldiers with one full year advance cash salary. When geopolitical conditions shifted, the expedition was abandoned.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-[#141E33] border border-[#233354] space-y-2">
+          <div class="text-amber-400 font-bold font-heading text-sm">5. Qarachil Expedition</div>
+          <p class="text-slate-300">Dispatched imperial force into Kumaon/Garhwal Himalayan hills to secure northern border against Chinese incursions. The mountain rains and guerilla ambushes wiped out virtually the entire army.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: SULTANATE ARCHITECTURE & AMIR KHUSRAU -->
+  <section id="architecture" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Indo-Islamic Architectural Synthesis</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Monuments &amp; Literature of the Sultanate</h2>
+        <p class="text-sm text-slate-300">Introduction of the arch, dome, minaret, red sandstone, and Persianized classical music.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Qutb Minar -->
+        <div class="rounded-2xl overflow-hidden bg-[#141E33] border border-[#233354] hover:border-amber-500/40 transition-all flex flex-col group cursor-pointer" onclick="openFullImageViewer('assets/images/qutb_minar.jpg', 'Qutb Minar & Quwwat-ul-Islam Complex (Delhi)', '72.5-metre red sandstone minaret with fluted columns and delicate inscriptional bands. Dedicated to Sufi saint Khwaja Qutbuddin Bakhtiyar Kaki; commenced by Aibak, completed by Iltutmish, and top two marble storeys reconstructed by Firoz Shah Tughlaq in 1368 AD.')">
+          <div class="relative h-56 overflow-hidden">
+            <img src="assets/images/qutb_minar.jpg" alt="Qutb Minar Delhi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/90 text-[10px] font-bold text-amber-300 border border-amber-500/40 flex items-center gap-1">
+              <i data-lucide="zoom-in" class="w-3 h-3"></i> Zoom Detail
+            </span>
+          </div>
+          <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Mamluk Architecture</span>
+              <h3 class="font-heading text-base font-bold text-white">Qutb Minar Complex</h3>
+              <p class="text-xs text-slate-300 mt-1">Commenced 1199 AD; incorporates Quwwat-ul-Islam mosque and Iltutmish’s tomb.</p>
+            </div>
+            <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+              <span>Red Sandstone &amp; Marble</span>
+              <span class="text-amber-400 font-semibold">UNESCO World Heritage</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alai Darwaza -->
+        <div class="rounded-2xl overflow-hidden bg-[#141E33] border border-[#233354] hover:border-amber-500/40 transition-all flex flex-col group cursor-pointer" onclick="openFullImageViewer('assets/images/alai_darwaza.jpg', 'Alai Darwaza (Erected 1311 AD by Alauddin Khalji)', 'Southern gateway to the Quwwat-ul-Islam mosque. Art historians like Percy Brown describe it as the most splendid gateway in Indo-Islamic architecture, featuring the earliest true dome, horseshoe arch, and white marble lattice inlays on red sandstone.')">
+          <div class="relative h-56 overflow-hidden">
+            <img src="assets/images/alai_darwaza.jpg" alt="Alai Darwaza Gateway" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-900/90 text-[10px] font-bold text-amber-300 border border-amber-500/40 flex items-center gap-1">
+              <i data-lucide="zoom-in" class="w-3 h-3"></i> Zoom Detail
+            </span>
+          </div>
+          <div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Khalji Masterpiece</span>
+              <h3 class="font-heading text-base font-bold text-white">Alai Darwaza (1311 AD)</h3>
+              <p class="text-xs text-slate-300 mt-1">First authentic scientific dome and horseshoe arch constructed in the subcontinent.</p>
+            </div>
+            <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+              <span>Horseshoe Arch &amp; Marble Inlay</span>
+              <span class="text-amber-400 font-semibold">Built by Alauddin Khalji</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Amir Khusrau & Sultanate Literature -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+              <i data-lucide="music" class="w-4 h-4"></i>
+              <span>Amir Khusrau (Tuti-i-Hind / Parrot of India)</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Disciple of Hazrat Nizamuddin Auliya; served at the imperial courts of 7 Sultans (from Balban to Ghiyasuddin Tughlaq).
+            </p>
+            <ul class="space-y-1.5 text-xs text-slate-200">
+              <li class="p-2 rounded bg-slate-900 border border-slate-800">&bull; <strong class="text-amber-300">Musical Innovations:</strong> Invented the <strong class="text-white">Sitar</strong> (merging Veena and Tanbur) and <strong class="text-white">Tabla</strong>; developed Khayal style and Qawwali.</li>
+              <li class="p-2 rounded bg-slate-900 border border-slate-800">&bull; <strong class="text-amber-300">Literary Classics:</strong> *Khazain-ul-Futuh* (Alauddin's conquests), *Tughlaqnama*, *Miftah-ul-Futuh*, *Ashiqa*, *Nuh Sipihr*.</li>
+              <li class="p-2 rounded bg-slate-900 border border-slate-800">&bull; <strong class="text-amber-300">Ziauddin Barani:</strong> Authored *Tarikh-i-Firoz Shahi* and *Fatwa-i-Jahandari*.</li>
+            </ul>
+          </div>
+          <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+            <span>Father of Urdu Language</span>
+            <span class="text-amber-400 font-semibold">Hindavi Pioneer</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5: INTERACTIVE STUDY TOOLS (FLASHCARDS & QUIZ) -->
+  <section id="quiz" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Active Recall Engine</span>
+        <h2 class="font-heading text-3xl font-extrabold text-white">Lucent Exam Readiness Practice</h2>
+        <p class="text-sm text-slate-300">Master every question on Iltutmish, Balban, Alauddin Khalji, Tughlaq, and Lodi dynasties.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: 3D Flashcard Deck -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-heading text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="layers" class="w-4 h-4 text-amber-400"></i> Sultanate Flashcards
+            </h3>
+            <span id="flashcardCountDisplay" class="text-xs font-mono text-slate-400">Card 1 of 8</span>
+          </div>
+
+          <div id="flashcardContainer" class="flashcard-container" onclick="toggleFlashcardFlip()">
+            <div id="flashcardInner" class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded border border-amber-500/20">Question</span>
+                <p id="cardFrontText" class="font-heading text-base font-semibold text-white px-2">Loading flashcard...</p>
+                <span class="text-[10px] text-slate-400 font-medium">Click card to reveal answer</span>
+              </div>
+              <div class="flashcard-face flashcard-back">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20">Lucent Fact Answer</span>
+                <p id="cardBackText" class="text-xs text-slate-100 font-medium leading-relaxed px-2">Loading answer...</p>
+                <span class="text-[10px] text-slate-400 font-medium">Click to flip back</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between gap-3 pt-2">
+            <button id="prevCardBtn" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 hover:text-white flex items-center gap-1.5 transition-all">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i> Prev Card
+            </button>
+            <button onclick="toggleFlashcardFlip()" class="px-4 py-2 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-xs font-semibold text-amber-300 transition-all">
+              Flip Card
+            </button>
+            <button id="nextCardBtn" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 hover:text-white flex items-center gap-1.5 transition-all">
+              Next Card <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: 5-Question Mock Quiz -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-heading text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="help-circle" class="w-4 h-4 text-amber-400"></i> Sultanate Mock Test
+            </h3>
+            <div class="text-xs text-slate-400 font-mono">
+              Score: <span id="currentScore" class="text-amber-400 font-bold">0</span> / 5
+            </div>
+          </div>
+
+          <div id="quizQuestionBox" class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-5">
+            <div class="flex items-center justify-between">
+              <span id="quizQNum" class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2.5 py-1 rounded border border-amber-500/20">Q1</span>
+              <span class="text-[11px] text-slate-500 font-mono">Multiple Choice</span>
+            </div>
+
+            <p id="quizQuestionText" class="text-sm font-semibold text-white leading-relaxed">
+              Loading quiz question...
+            </p>
+
+            <div id="quizOptionsList" class="space-y-2.5">
+              <!-- Options rendered by JS -->
+            </div>
+
+            <div id="quizFeedback" class="hidden">
+              <!-- Correct/incorrect feedback rendered by JS -->
+            </div>
+
+            <button id="nextQuizBtn" class="hidden w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-lg transition-all items-center justify-center gap-2">
+              Next Question <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden items-start justify-center pt-20 px-4">
+    <div class="bg-slate-900 border border-slate-700 w-full max-w-xl rounded-2xl shadow-2xl overflow-hidden">
+      <div class="p-4 border-b border-slate-800 flex items-center gap-3">
+        <i data-lucide="search" class="w-5 h-5 text-amber-400"></i>
+        <input id="searchInput" type="text" placeholder="Search Iltutmish, Balban, Alauddin, Tughlaq, Amir Khusrau, Sikandar Lodi..." class="bg-transparent border-none text-white text-sm focus:outline-none w-full">
+        <button id="closeSearchBtn" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div id="searchResults" class="p-4 max-h-96 overflow-y-auto space-y-2 text-xs">
+        <p class="text-slate-500 text-center py-4">Type a keyword to search across this module...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER MODAL -->
+  <div id="fullImageViewerModal" class="lightbox-modal">
+    <div class="p-4 bg-slate-950/95 border-b border-slate-800 flex items-center justify-between z-20">
+      <div>
+        <h4 id="lightboxTitle" class="font-heading text-sm font-bold text-white">Image Viewer</h4>
+        <p class="text-[11px] text-slate-400">Full Architectural &amp; Epigraphical Inspection</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all">
+          <i data-lucide="minus" class="w-4 h-4"></i>
+        </button>
+        <span id="zoomLevelDisplay" class="px-2.5 py-1 rounded bg-slate-900 border border-slate-700 text-xs font-mono text-amber-300 min-w-14 text-center">100%</span>
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+        </button>
+        <button id="zoomResetBtn" class="hidden sm:inline-block px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs text-slate-300 hover:text-white transition-all">Reset</button>
+        <div class="h-6 w-px bg-slate-800 mx-1"></div>
+        <button id="closeLightboxBtn" class="p-2 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/30 transition-all">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="lightboxViewport" class="lightbox-viewport">
+      <img id="lightboxImg" src="" alt="" class="lightbox-img">
+    </div>
+
+    <div class="p-4 bg-slate-950/95 border-t border-slate-800 max-h-40 overflow-y-auto text-xs text-slate-300 z-20">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <p id="lightboxDescription" class="leading-relaxed text-slate-300 text-xs"></p>
+        <span class="text-[10px] text-slate-500 shrink-0 font-mono hidden sm:inline-block">Tip: Scroll mouse wheel to zoom &bull; Drag to pan</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER & BOTTOM NAV -->
+  <footer class="border-t border-slate-800/80 bg-[#0B1325] mt-24 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
+          <i data-lucide="book" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-heading font-bold text-white">Lucent's General Knowledge Illustrated</span>
+          <p class="text-[11px] text-slate-500">Prepared for APSC &amp; UPSC General Studies Aspirants</p>
+        </div>
+      </div>
+      <div class="text-center md:text-right text-slate-500 text-[11px] space-y-1">
+        <div class="flex items-center justify-center md:justify-end gap-3 text-slate-300">
+          <a href="early_medieval.html" class="inline-flex items-center gap-1.5 text-amber-400 font-bold hover:underline">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5 inline"></i> Ch. 8: Early Medieval
+          </a>
+          <span class="text-slate-600">&bull;</span>
+          <a href="vijayanagar_bahmani.html" class="inline-flex items-center gap-1.5 text-amber-400 font-bold hover:underline">
+            Ch. 10: Vijayanagar &amp; Bahmani <i data-lucide="arrow-right" class="w-3.5 h-3.5 inline"></i>
+          </a>
+        </div>
+        <p>&copy; 2026 Interactive GS Learning Project. Content sourced directly from Lucent's GK.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/delhi_sultanate.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

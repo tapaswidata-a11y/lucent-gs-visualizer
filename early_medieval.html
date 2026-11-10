@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucent GK Illustrated | Medieval India - 8. Early Medieval Period & Invasions (650–1206 AD)</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              bronze: '#CD7F32',
+              terracotta: '#C86446',
+              deepnavy: '#0B1325',
+              carddark: '#141E33',
+              cardborder: '#233354',
+              sand: '#F7F3E9',
+              sandstone: '#E8DCC4'
+            }
+          },
+          fontFamily: {
+            heading: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0B1325] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- TOP BANNER -->
+  <div class="bg-gradient-to-r from-amber-800 via-amber-700 to-amber-900 text-amber-50 text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-md flex items-center justify-center gap-2">
+    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-950/70 text-amber-300 uppercase tracking-wider">APSC &amp; UPSC GS Core</span>
+    <span>Lucent's General Knowledge &bull; Chapter 8: Early Medieval Period &amp; Invasions (650 AD – 1206 AD)</span>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-[#0B1325]/90 backdrop-blur-md border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-900/30 ring-1 ring-amber-400/40 group-hover:scale-105 transition-transform">
+          <i data-lucide="castle" class="w-6 h-6 text-slate-950"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-500 tracking-wider">LUCENT GS</span>
+            <span class="text-xs font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">VISUALIZED</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium">Medieval Indian History &bull; Module 8: Early Medieval &amp; Rajput Era</p>
+        </div>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/70 p-1.5 rounded-full border border-slate-800 text-xs font-semibold">
+        <a href="#overview" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Overview</a>
+        <a href="#rajput-clans" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Rajput Clans</a>
+        <a href="#invasions" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Ghazni &amp; Ghori</a>
+        <a href="#chola-empire" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Imperial Cholas</a>
+        <a href="#rashtrakutas" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Rashtrakutas</a>
+        <a href="#quiz" class="px-3.5 py-1.5 rounded-full text-amber-400 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 transition-all flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Quiz Mode
+        </a>
+      </nav>
+
+      <!-- Action Buttons & Chapter Selector -->
+      <div class="flex items-center gap-2.5">
+        <button id="themeToggleBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Toggle Light / Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+
+        <button id="searchBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Search Facts">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <div class="relative">
+          <button id="chapterSelectorBtn" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-xs font-semibold text-slate-200 transition-all">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span>Ch. 8: Early Medieval</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400"></i>
+          </button>
+          
+          <div id="chapterDropdown" class="hidden absolute right-0 mt-2 w-72 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-2 z-50 text-xs max-h-96 overflow-y-auto">
+            <div class="px-3 py-2 font-bold text-slate-400 uppercase tracking-wider text-[10px] ">Ancient Indian History</div>
+            <a href="index.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>1. Harappan / Indus Valley</span>
+              <span class="text-[10px] text-slate-500">2500–1750 BC</span>
+            </a>
+            <a href="vedic.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>2. Vedic Culture</span>
+              <span class="text-[10px] text-slate-500">1500–600 BC</span>
+            </a>
+            <a href="mahajanapadas.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>3. 16 Mahajanapadas & Magadha</span>
+              <span class="text-[10px] text-slate-500">600–325 BC</span>
+            </a>
+            <a href="religions.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>4. Buddhism & Jainism</span>
+              <span class="text-[10px] text-slate-500">600–400 BC</span>
+            </a>
+            <a href="maurya.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>5. The Mauryan Empire</span>
+              <span class="text-[10px] text-slate-500">322–185 BC</span>
+            </a>
+            <a href="post_maurya.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>6. Post-Maurya & Sangam</span>
+              <span class="text-[10px] text-slate-500">185 BC–319 AD</span>
+            </a>
+            <a href="gupta.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>7. Gupta Age & Harsha</span>
+              <span class="text-[10px] text-slate-500">319–647 AD</span>
+            </a>
+            <div class="px-3 py-2 font-bold text-amber-400 uppercase tracking-wider text-[10px] border-t border-slate-800 mt-1">Medieval Indian History</div>
+            <a href="early_medieval.html" class="flex items-center justify-between p-2.5 rounded-lg bg-amber-500/15 text-amber-300 font-semibold border border-amber-500/20">
+              <span>8. Early Medieval (Rajputs & Cholas)</span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] bg-amber-400 text-slate-950 font-bold">Active</span>
+            </a>
+            <a href="delhi_sultanate.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>9. The Delhi Sultanate</span>
+              <span class="text-[10px] text-slate-500">1206–1526 AD</span>
+            </a>
+            <a href="vijayanagar_bahmani.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>10. Vijayanagar & Bahmani</span>
+              <span class="text-[10px] text-slate-500">1336–1646 AD</span>
+            </a>
+            <a href="mughal_empire.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>11. The Mughal Empire</span>
+              <span class="text-[10px] text-slate-500">1526–1707 AD</span>
+            </a>
+            <a href="marathas.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>12. Maratha Empire & Later Mughals</span>
+              <span class="text-[10px] text-slate-500">1674–1818 AD</span>
+            </a>
+            <a href="bhakti_sufi.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>13. Religious Movements (Bhakti & Sufi)</span>
+              <span class="text-[10px] text-slate-500">15th–16th c.</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HERO SECTION -->
+  <section id="overview" class="relative pt-12 pb-20 overflow-hidden border-b border-slate-800/60 bg-gradient-to-b from-slate-950 via-[#0B1325] to-[#0B1325]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex items-center gap-2 text-xs font-semibold text-amber-400/90 tracking-wide uppercase mb-3">
+        <span>Chapter 8</span> &bull; <span>650 AD – 1206 AD</span> &bull; <span>The Age of Chivalry &amp; Invasions</span>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+            Early Medieval &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500">Rajput</span> Era
+          </h1>
+          
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+            Following Harsha's demise, northern India fragmented into aristocratic <strong class="text-amber-300 font-semibold">Rajput clans</strong> battling for Kannauj in the <strong class="text-amber-300 font-semibold">Tripartite Struggle</strong>, while Turkish incursions led by <strong class="text-amber-300 font-semibold">Mahmud of Ghazni</strong> and <strong class="text-amber-300 font-semibold">Muhammad Ghori</strong> reshaped north India's destiny at the <strong class="text-amber-300 font-semibold">Battles of Tarain (1191 &amp; 1192)</strong>. In South India, the <strong class="text-amber-300 font-semibold">Imperial Cholas</strong> founded a formidable maritime empire and pioneering village democracies.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Tripartite Contest</span>
+              <span class="font-heading text-base font-bold text-amber-300">Kannauj Hegemony</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Tarain Battles</span>
+              <span class="font-heading text-base font-bold text-amber-300">1191 &amp; 1192 AD</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Maritime Zenith</span>
+              <span class="font-heading text-base font-bold text-amber-300">Rajendra I (Chola)</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 text-center">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Local Autonomy</span>
+              <span class="font-heading text-base font-bold text-amber-300">Uttaramerur Edicts</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Interactive Artifact -->
+        <div class="lg:col-span-5">
+          <div class="relative group rounded-2xl overflow-hidden border border-amber-500/30 bg-slate-900 shadow-2xl shadow-amber-950/40 cursor-pointer" onclick="openFullImageViewer('assets/images/brihadisvara_temple.jpg', 'Brihadisvara Temple at Thanjavur (Tamil Nadu)', 'Commissioned by Chola Emperor Rajaraja I and completed in 1010 AD. Entirely constructed from hard granite without mortar, its 16-storey Vimana rises 66 metres high, topped by an 80-tonne monolithic granite cupola. It represents the supreme pinnacle of South Indian Dravidian temple architecture.')">
+            <img src="assets/images/brihadisvara_temple.jpg" alt="Brihadisvara Temple Thanjavur" class="w-full h-80 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-4 right-4 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-amber-500/40 text-xs font-semibold text-amber-300 flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i> Click to Inspect in Full Detail
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-amber-400">Imperial Chola Monument</span>
+              <h3 class="text-sm font-bold text-white font-heading">Brihadisvara (Rajarajeshvara) Temple &bull; 1010 AD</h3>
+              <p class="text-[11px] text-slate-300 line-clamp-2">Built by Rajaraja I; UNESCO World Heritage site known as the Great Living Chola Temple.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: RAJPUT DYNASTIES & NORTH INDIA -->
+  <section id="rajput-clans" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">The Agnikula &amp; Solar Clans</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Major Rajput Dynasties of North India</h2>
+        <p class="text-sm text-slate-300">Lucent GK essentials covering capitals, founders, famous sovereigns, and architectural legacies.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Chauhans / Chahamanas -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Chahamanas</span>
+            <span class="text-xs text-slate-400 font-mono">Delhi &bull; Ajmer</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white">Chauhans (Ajmer)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Founded by Vasudeva with initial capital at Shakambhari; moved to Ajmer (*Ajayameru*) by Ajayaraja. Greatest king was <strong class="text-amber-300">Prithviraj Chauhan III (1178–1192 AD)</strong>.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5">
+            <div><strong class="text-amber-400">Prithviraj Raso:</strong> Court poet <strong class="text-slate-200">Chand Bardai</strong> authored the epic biography *Prithviraj Raso*.</div>
+            <div><strong class="text-amber-400">Vigraharaja IV:</strong> Authored the Sanskrit drama *Harakeli Nataka*; built the structure later turned into Adhai Din Ka Jhonpra.</div>
+          </div>
+        </div>
+
+        <!-- Gurjara-Pratiharas -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Pratiharas</span>
+            <span class="text-xs text-slate-400 font-mono">Kannauj</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white">Gurjara-Pratiharas</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Founded by Nagabhata I who successfully checked Arab incursions from Sindh. Dominated the Tripartite Struggle under <strong class="text-amber-300">Mihira Bhoja (836–885 AD)</strong>.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5">
+            <div><strong class="text-amber-400">Adivaraha:</strong> Bhoja adopted the title *Adivaraha* (devotee of Vishnu), issuing Varaha silver coins.</div>
+            <div><strong class="text-amber-400">Rajashekhara:</strong> Celebrated Sanskrit dramatist (*Karpuramanjari*, *Kavyamimamsa*) was court poet of Mahendrapala I.</div>
+          </div>
+        </div>
+
+        <!-- Palas of Bengal -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Palas (750–1161 AD)</span>
+            <span class="text-xs text-slate-400 font-mono">Bengal &bull; Bihar</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white">Palas of Bengal</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Founded by <strong class="text-amber-300">Gopala (750 AD)</strong> to terminate the prevailing chaos (*Matsyanyaya*). Staunch patrons of Mahayana &amp; Vajrayana Buddhism.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5">
+            <div><strong class="text-amber-400">Dharmapala:</strong> Revived Nalanda and founded the prestigious <strong class="text-slate-200">Vikramashila University</strong> (Bhagalpur).</div>
+            <div><strong class="text-amber-400">Buddhist Missionaries:</strong> Dispatched renowned scholar <strong class="text-slate-200">Atisha Dipankara</strong> to Tibet.</div>
+          </div>
+        </div>
+
+        <!-- Chandellas of Bundelkhand -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-3 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Chandellas</span>
+            <span class="text-xs text-slate-400 font-mono">Khajuraho</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold text-white">Chandellas (Jejakabhukti)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Founded by Nannuka with capital at Khajuraho and later Mahoba/Kalinjar. Renowned for majestic temple architecture.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs space-y-1.5">
+            <div><strong class="text-amber-400">Khajuraho Temples:</strong> Constructed the world-famous <strong class="text-slate-200">Kandariya Mahadeva</strong> and Lakshmana temples.</div>
+            <div><strong class="text-amber-400">Vidyadhara:</strong> The only Indian ruler who successfully resisted and turned back Mahmud of Ghazni twice (1019 &amp; 1022 AD).</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Additional Rajput Dynasties Table -->
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/60 shadow-xl">
+        <table class="w-full text-left text-xs text-slate-300">
+          <thead class="bg-slate-950/80 text-amber-300 font-heading uppercase text-[11px] tracking-wider border-b border-slate-800">
+            <tr>
+              <th class="py-3 px-4">Dynasty</th>
+              <th class="py-3 px-4">Capital</th>
+              <th class="py-3 px-4">Founder</th>
+              <th class="py-3 px-4">Greatest Ruler &amp; Lucent Exam Fact</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 font-medium">
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Paramaras of Malwa</td>
+              <td class="py-3 px-4 text-white">Dhar &bull; Ujjain</td>
+              <td class="py-3 px-4 text-slate-300">Upendra / Krishnaraja</td>
+              <td class="py-3 px-4 text-slate-200"><strong class="text-amber-300">Raja Bhoja (1018–1060 AD):</strong> Polymath author of *Samarangana Sutradhara* (architecture); built Bhojpur Shiva temple.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Solankis / Chalukyas of Gujarat</td>
+              <td class="py-3 px-4 text-white">Anhilwara (Patan)</td>
+              <td class="py-3 px-4 text-slate-300">Mularaja I</td>
+              <td class="py-3 px-4 text-slate-200"><strong class="text-amber-300">Bhima I:</strong> Rebuilt Somnath temple in stone; his minister Vimala Shah built the marble Dilwara temple at Mt. Abu.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Gahadavalas of Kannauj</td>
+              <td class="py-3 px-4 text-white">Kannauj &bull; Varanasi</td>
+              <td class="py-3 px-4 text-slate-300">Chandradeva</td>
+              <td class="py-3 px-4 text-slate-200"><strong class="text-amber-300">Jaichandra:</strong> Defeated and killed by Muhammad Ghori in the Battle of Chandawar (1194 AD).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="py-3 px-4 text-amber-400 font-bold">Senas of Bengal</td>
+              <td class="py-3 px-4 text-white">Nabadwip / Lakhnauti</td>
+              <td class="py-3 px-4 text-slate-300">Samantasena</td>
+              <td class="py-3 px-4 text-slate-200"><strong class="text-amber-300">Lakshmanasena:</strong> Patronized Jayadeva (*Gita Govinda*); kingdom overthrown by Bakhtiyar Khilji (1202 AD).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: EARLY ISLAMIC INVASIONS -->
+  <section id="invasions" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Turning Points of History</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Arab &amp; Turkish Invasions (712–1192 AD)</h2>
+        <p class="text-sm text-slate-300">From Muhammad bin Qasim's conquest of Sindh to the historic Battles of Tarain.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Arab Conquest -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-4 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">712 AD &bull; Sindh</span>
+            <span class="text-xs text-slate-400 font-mono">Umayyad Caliphate</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Muhammad bin Qasim</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Seventeen-year-old Arab commander sent by Al-Hajjaj (Governor of Iraq). Defeated Brahmin ruler <strong class="text-amber-300">Dahir</strong> at the Battle of Rawar (712 AD).
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5 text-xs">
+            <div><strong class="text-amber-400">First Jizya:</strong> Introduced the Jizya tax on non-Muslims for the first time in Indian subcontinent.</div>
+            <div><strong class="text-amber-400">Chachnama:</strong> Authentic Persian translation of the original Arabic chronicle narrating the conquest of Sindh.</div>
+          </div>
+        </div>
+
+        <!-- Mahmud of Ghazni -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-4 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">1000–1027 AD</span>
+            <span class="text-xs text-slate-400 font-mono">17 Expeditions</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Mahmud of Ghazni</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Led 17 plundering incursions into India. Plundered Mathura and Kannauj (1018 AD) and destroyed the famed <strong class="text-amber-300">Somnath Temple (1025 AD)</strong> during the reign of Solanki king Bhima I.
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5 text-xs">
+            <div><strong class="text-amber-400">Al-Biruni:</strong> Authored <em class="text-slate-200">Kitab-ul-Hind</em>, a goldmine of Indian geography, astronomy, and society.</div>
+            <div><strong class="text-amber-400">Firdausi:</strong> Court poet who composed the Persian epic <em class="text-slate-200">Shahnama</em> ("Book of Kings").</div>
+          </div>
+        </div>
+
+        <!-- Muhammad Ghori -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-amber-500/40 space-y-4 shadow-xl shadow-amber-950/20">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-xs">1191 &amp; 1192 AD</span>
+            <span class="text-xs text-amber-400 font-mono">Tarain Watershed</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Muhammad Ghori &amp; Tarain</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Ruler of Ghur who sought permanent territorial conquest rather than mere plunder, laying the cornerstone of the Delhi Sultanate.
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5 text-xs">
+            <div><strong class="text-amber-400">1st Battle of Tarain (1191):</strong> Prithviraj Chauhan decisively routed Ghori.</div>
+            <div><strong class="text-amber-400">2nd Battle of Tarain (1192):</strong> Ghori returned with mounted archers and routed Prithviraj, establishing Turkish rule in Delhi.</div>
+            <div><strong class="text-amber-400">Battle of Chandawar (1194):</strong> Defeated Jaichandra of Kannauj. Left viceroy <strong class="text-amber-200">Qutbuddin Aibak</strong> in charge.</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: THE IMPERIAL CHOLAS (SOUTH INDIA) -->
+  <section id="chola-empire" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Naval Hegemony &amp; Village Republics</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">The Imperial Cholas (850–1279 AD)</h2>
+        <p class="text-sm text-slate-300">Capital at Thanjavur and Gangaikondacholapuram; pioneers of maritime power and local autonomy.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Sovereign Monarchs -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-4">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+            <i data-lucide="crown" class="w-4 h-4"></i>
+            <span>The Great Chola Emperors</span>
+          </div>
+          <div class="space-y-3 text-xs text-slate-300">
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
+              <div class="flex items-center justify-between font-bold text-white">
+                <span>Vijayalaya (850–871 AD)</span>
+                <span class="text-amber-400">Founder</span>
+              </div>
+              <p>Re-established Chola fortunes by capturing Thanjavur from the Muttaraiyar chieftains; built temple to goddess Nisumbhasudini.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
+              <div class="flex items-center justify-between font-bold text-white">
+                <span>Rajaraja I (985–1014 AD)</span>
+                <span class="text-amber-400">Imperial Builder</span>
+              </div>
+              <p>Conquered northern Ceylon (Anuradhapura), Maldives, and Chera fleet at Kandalur Salai. Built the colossal granite <strong class="text-white">Brihadisvara Temple (Thanjavur)</strong>.</p>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
+              <div class="flex items-center justify-between font-bold text-white">
+                <span>Rajendra I (1014–1044 AD)</span>
+                <span class="text-amber-400">Gangaikonda</span>
+              </div>
+              <p>Complete conquest of Sri Lanka (captured king Mahinda V). Marched up to the Ganges defeating Mahipala of Bengal. Transoceanic naval raid against <strong class="text-amber-300">Srivijaya</strong> (Sumatra, Malaya, Kedah).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chola Democratic Village Autonomy -->
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-4">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+            <i data-lucide="vote" class="w-4 h-4"></i>
+            <span>Village Autonomy &amp; The Uttaramerur System</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            The Chola administration is internationally renowned for its deep grassroots decentralization recorded in the <strong class="text-amber-300">Uttaramerur Inscriptions (919 &amp; 921 AD)</strong> of Parantaka I:
+          </p>
+          <ul class="space-y-2 text-xs text-slate-200">
+            <li class="p-2.5 rounded bg-slate-900 border border-slate-800">
+              <strong class="text-amber-400">Ur:</strong> General assembly of ordinary village tax-paying landowners.
+            </li>
+            <li class="p-2.5 rounded bg-slate-900 border border-slate-800">
+              <strong class="text-amber-400">Sabha / Mahasabha:</strong> Exclusive gathering of learned Brahmans in *Brahmadeya* (tax-free grant) villages.
+            </li>
+            <li class="p-2.5 rounded bg-slate-900 border border-slate-800">
+              <strong class="text-amber-400">Variyams (Executive Committees):</strong> Administrative sub-committees for tanks (*Eri-variyam*), gardens (*Totta-variyam*), and justice.
+            </li>
+            <li class="p-2.5 rounded bg-slate-900 border border-slate-800">
+              <strong class="text-amber-400">Kudavolai Election System:</strong> Names of qualified candidates were inscribed on palm leaves, placed in an earthen pot (*Kuda*), and picked by an innocent boy.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: RASHTRAKUTAS & DECCAN DYNASTIES -->
+  <section id="rashtrakutas" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Deccan Hegemony</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Rashtrakutas &amp; Deccan Kingdoms</h2>
+        <p class="text-sm text-slate-300">The empire that Arab traveler Sulaiman ranked among the four greatest empires of the contemporary world.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-4 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Capital: Malkhed</span>
+            <span class="text-xs text-slate-400 font-mono">Manyakheta</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Dantidurga &amp; Expansion</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Founded by <strong class="text-amber-300">Dantidurga (753 AD)</strong> by overthrowing the Chalukyas of Badami (Kirtivarman II). Performed the *Hiranyagarbha* (Golden Womb) ritual at Ujjain.
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5 text-xs">
+            <div class="text-amber-400 font-bold">Dhruva &amp; Govinda III:</div>
+            <p class="text-slate-300">Marched into northern India, defeating both Vatsaraja Pratihara and Dharmapala of Bengal to dominate Kannauj.</p>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-amber-500/40 space-y-4 shadow-xl shadow-amber-950/20">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500 text-slate-950 font-bold text-xs">Architectural Wonder</span>
+            <span class="text-xs text-amber-400 font-mono">Ellora Cave 16</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Kailasa Temple at Ellora</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Constructed during the reign of <strong class="text-amber-300">Krishna I (756–773 AD)</strong>. A monolithic rock-cut marvel carved from a single basalt volcanic cliff from the top down.
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5 text-xs">
+            <div class="text-amber-400 font-bold">Engineering Wonder:</div>
+            <p class="text-slate-300">Over 200,000 tonnes of rock excavated without any structural joints; dedicated to Lord Shiva.</p>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-4 hover:border-amber-500/40 transition-all">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-300 font-bold text-xs border border-amber-500/30">Literary Scholar</span>
+            <span class="text-xs text-slate-400 font-mono">Reigned 64 Years</span>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-white">Amoghavarsha I (Nrupatunga)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Jain scholar-emperor (814–878 AD) who compared himself to Ashoka for peace and religious patronage. Authored <strong class="text-amber-300">Kavirajamarga</strong>, the earliest Kannada work on poetics.
+          </p>
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 space-y-1.5 text-xs">
+            <div class="text-amber-400 font-bold">Jinasena &amp; Mahaviracharya:</div>
+            <p class="text-slate-300">Court patronized Acharya Jinasena (*Adipurana*) and mathematician Mahaviracharya (*Ganitasarasangraha*).</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5: INTERACTIVE STUDY TOOLS (FLASHCARDS & QUIZ) -->
+  <section id="quiz" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">Active Recall Engine</span>
+        <h2 class="font-heading text-3xl font-extrabold text-white">Lucent Exam Readiness Practice</h2>
+        <p class="text-sm text-slate-300">Master every question on Prithviraj Chauhan, Mahmud Ghazni, Ghori, and Chola governance.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: 3D Flashcard Deck -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-heading text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="layers" class="w-4 h-4 text-amber-400"></i> Early Medieval Flashcards
+            </h3>
+            <span id="flashcardCountDisplay" class="text-xs font-mono text-slate-400">Card 1 of 8</span>
+          </div>
+
+          <div id="flashcardContainer" class="flashcard-container" onclick="toggleFlashcardFlip()">
+            <div id="flashcardInner" class="flashcard-inner">
+              <div class="flashcard-face flashcard-front">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded border border-amber-500/20">Question</span>
+                <p id="cardFrontText" class="font-heading text-base font-semibold text-white px-2">Loading flashcard...</p>
+                <span class="text-[10px] text-slate-400 font-medium">Click card to reveal answer</span>
+              </div>
+              <div class="flashcard-face flashcard-back">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20">Lucent Fact Answer</span>
+                <p id="cardBackText" class="text-xs text-slate-100 font-medium leading-relaxed px-2">Loading answer...</p>
+                <span class="text-[10px] text-slate-400 font-medium">Click to flip back</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between gap-3 pt-2">
+            <button id="prevCardBtn" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 hover:text-white flex items-center gap-1.5 transition-all">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i> Prev Card
+            </button>
+            <button onclick="toggleFlashcardFlip()" class="px-4 py-2 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-xs font-semibold text-amber-300 transition-all">
+              Flip Card
+            </button>
+            <button id="nextCardBtn" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs text-slate-300 hover:text-white flex items-center gap-1.5 transition-all">
+              Next Card <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: 5-Question Mock Quiz -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-heading text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="help-circle" class="w-4 h-4 text-amber-400"></i> Early Medieval Mock Test
+            </h3>
+            <div class="text-xs text-slate-400 font-mono">
+              Score: <span id="currentScore" class="text-amber-400 font-bold">0</span> / 5
+            </div>
+          </div>
+
+          <div id="quizQuestionBox" class="p-6 rounded-2xl bg-[#141E33] border border-[#233354] space-y-5">
+            <div class="flex items-center justify-between">
+              <span id="quizQNum" class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-500/10 px-2.5 py-1 rounded border border-amber-500/20">Q1</span>
+              <span class="text-[11px] text-slate-500 font-mono">Multiple Choice</span>
+            </div>
+
+            <p id="quizQuestionText" class="text-sm font-semibold text-white leading-relaxed">
+              Loading quiz question...
+            </p>
+
+            <div id="quizOptionsList" class="space-y-2.5">
+              <!-- Options rendered by JS -->
+            </div>
+
+            <div id="quizFeedback" class="hidden">
+              <!-- Correct/incorrect feedback rendered by JS -->
+            </div>
+
+            <button id="nextQuizBtn" class="hidden w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow-lg transition-all items-center justify-center gap-2">
+              Next Question <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden items-start justify-center pt-20 px-4">
+    <div class="bg-slate-900 border border-slate-700 w-full max-w-xl rounded-2xl shadow-2xl overflow-hidden">
+      <div class="p-4 border-b border-slate-800 flex items-center gap-3">
+        <i data-lucide="search" class="w-5 h-5 text-amber-400"></i>
+        <input id="searchInput" type="text" placeholder="Search Prithviraj, Ghazni, Ghori, Rajaraja Chola, Uttaramerur..." class="bg-transparent border-none text-white text-sm focus:outline-none w-full">
+        <button id="closeSearchBtn" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div id="searchResults" class="p-4 max-h-96 overflow-y-auto space-y-2 text-xs">
+        <p class="text-slate-500 text-center py-4">Type a keyword to search across this module...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER MODAL -->
+  <div id="fullImageViewerModal" class="lightbox-modal">
+    <div class="p-4 bg-slate-950/95 border-b border-slate-800 flex items-center justify-between z-20">
+      <div>
+        <h4 id="lightboxTitle" class="font-heading text-sm font-bold text-white">Image Viewer</h4>
+        <p class="text-[11px] text-slate-400">Full Archaeological &amp; Inscriptional Inspection</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all">
+          <i data-lucide="minus" class="w-4 h-4"></i>
+        </button>
+        <span id="zoomLevelDisplay" class="px-2.5 py-1 rounded bg-slate-900 border border-slate-700 text-xs font-mono text-amber-300 min-w-14 text-center">100%</span>
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all">
+          <i data-lucide="plus" class="w-4 h-4"></i>
+        </button>
+        <button id="zoomResetBtn" class="hidden sm:inline-block px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs text-slate-300 hover:text-white transition-all">Reset</button>
+        <div class="h-6 w-px bg-slate-800 mx-1"></div>
+        <button id="closeLightboxBtn" class="p-2 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/30 transition-all">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="lightboxViewport" class="lightbox-viewport">
+      <img id="lightboxImg" src="" alt="" class="lightbox-img">
+    </div>
+
+    <div class="p-4 bg-slate-950/95 border-t border-slate-800 max-h-40 overflow-y-auto text-xs text-slate-300 z-20">
+      <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <p id="lightboxDescription" class="leading-relaxed text-slate-300 text-xs"></p>
+        <span class="text-[10px] text-slate-500 shrink-0 font-mono hidden sm:inline-block">Tip: Scroll mouse wheel to zoom &bull; Drag to pan</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER & BOTTOM NAV -->
+  <footer class="border-t border-slate-800/80 bg-[#0B1325] mt-24 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
+          <i data-lucide="book" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-heading font-bold text-white">Lucent's General Knowledge Illustrated</span>
+          <p class="text-[11px] text-slate-500">Prepared for APSC &amp; UPSC General Studies Aspirants</p>
+        </div>
+      </div>
+      <div class="text-center md:text-right text-slate-500 text-[11px] space-y-1">
+        <div class="flex items-center justify-center md:justify-end gap-3 text-slate-300">
+          <a href="gupta.html" class="inline-flex items-center gap-1.5 text-amber-400 font-bold hover:underline">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5 inline"></i> Ch. 7: Gupta Age &amp; Harsha
+          </a>
+          <span class="text-slate-600">&bull;</span>
+          <a href="delhi_sultanate.html" class="inline-flex items-center gap-1.5 text-amber-400 font-bold hover:underline">
+            Ch. 9: The Delhi Sultanate <i data-lucide="arrow-right" class="w-3.5 h-3.5 inline"></i>
+          </a>
+        </div>
+        <p>&copy; 2026 Interactive GS Learning Project. Content sourced directly from Lucent's GK.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/early_medieval.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

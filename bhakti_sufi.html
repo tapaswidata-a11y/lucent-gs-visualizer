@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucent GK Illustrated | Medieval India - 13. Religious Movements: Bhakti &amp; Sufi (15th–16th Century AD)</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              bronze: '#CD7F32',
+              terracotta: '#C86446',
+              deepnavy: '#0B1325',
+              carddark: '#141E33',
+              cardborder: '#233354',
+              sand: '#F7F3E9',
+              sandstone: '#E8DCC4'
+            }
+          },
+          fontFamily: {
+            heading: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0B1325] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- TOP BANNER -->
+  <div class="bg-gradient-to-r from-amber-800 via-amber-700 to-amber-900 text-amber-50 text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-md flex items-center justify-center gap-2">
+    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-950/70 text-amber-300 uppercase tracking-wider">APSC &amp; UPSC GS Core</span>
+    <span>Lucent's General Knowledge &bull; Chapter 13: Religious Movements &bull; Bhakti &amp; Sufi Traditions (15th–16th Century AD)</span>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-[#0B1325]/90 backdrop-blur-md border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-900/30 ring-1 ring-amber-400/40 group-hover:scale-105 transition-transform">
+          <i data-lucide="flame" class="w-6 h-6 text-slate-950"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-500 tracking-wider">LUCENT GS</span>
+            <span class="text-xs font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">VISUALIZED</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium">Medieval Indian History &bull; Module 13: Bhakti &amp; Sufi Movements</p>
+        </div>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/70 p-1.5 rounded-full border border-slate-800 text-xs font-semibold">
+        <a href="#overview" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Overview</a>
+        <a href="#philosophies" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Philosophies</a>
+        <a href="#saints" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Bhakti Saints</a>
+        <a href="#maharashtra" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Maharashtra Dharma</a>
+        <a href="#sufism" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Sufi Orders</a>
+        <a href="#quiz" class="px-3.5 py-1.5 rounded-full text-amber-400 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 transition-all flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Quiz Mode
+        </a>
+      </nav>
+
+      <!-- Action Buttons & Chapter Selector -->
+      <div class="flex items-center gap-2.5">
+        <button id="themeToggleBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Toggle Light / Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+
+        <button id="searchBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Search Facts">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <div class="relative">
+          <button id="chapterSelectorBtn" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-xs font-semibold text-slate-200 transition-all">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span>Ch. 13: Bhakti &amp; Sufi</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400"></i>
+          </button>
+          
+          <div id="chapterDropdown" class="hidden absolute right-0 mt-2 w-72 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-2 z-50 text-xs max-h-96 overflow-y-auto">
+            <div class="px-3 py-2 font-bold text-slate-400 uppercase tracking-wider text-[10px] ">Ancient Indian History</div>
+            <a href="index.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>1. Harappan / Indus Valley</span>
+              <span class="text-[10px] text-slate-500">2500–1750 BC</span>
+            </a>
+            <a href="vedic.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>2. Vedic Culture</span>
+              <span class="text-[10px] text-slate-500">1500–600 BC</span>
+            </a>
+            <a href="mahajanapadas.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>3. 16 Mahajanapadas & Magadha</span>
+              <span class="text-[10px] text-slate-500">600–325 BC</span>
+            </a>
+            <a href="religions.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>4. Buddhism & Jainism</span>
+              <span class="text-[10px] text-slate-500">600–400 BC</span>
+            </a>
+            <a href="maurya.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>5. The Mauryan Empire</span>
+              <span class="text-[10px] text-slate-500">322–185 BC</span>
+            </a>
+            <a href="post_maurya.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>6. Post-Maurya & Sangam</span>
+              <span class="text-[10px] text-slate-500">185 BC–319 AD</span>
+            </a>
+            <a href="gupta.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>7. Gupta Age & Harsha</span>
+              <span class="text-[10px] text-slate-500">319–647 AD</span>
+            </a>
+            <div class="px-3 py-2 font-bold text-amber-400 uppercase tracking-wider text-[10px] border-t border-slate-800 mt-1">Medieval Indian History</div>
+            <a href="early_medieval.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>8. Early Medieval (Rajputs & Cholas)</span>
+              <span class="text-[10px] text-slate-500">650–1206 AD</span>
+            </a>
+            <a href="delhi_sultanate.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>9. The Delhi Sultanate</span>
+              <span class="text-[10px] text-slate-500">1206–1526 AD</span>
+            </a>
+            <a href="vijayanagar_bahmani.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>10. Vijayanagar & Bahmani</span>
+              <span class="text-[10px] text-slate-500">1336–1646 AD</span>
+            </a>
+            <a href="mughal_empire.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>11. The Mughal Empire</span>
+              <span class="text-[10px] text-slate-500">1526–1707 AD</span>
+            </a>
+            <a href="marathas.html" class="flex items-center justify-between p-2.5 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span>12. Maratha Empire & Later Mughals</span>
+              <span class="text-[10px] text-slate-500">1674–1818 AD</span>
+            </a>
+            <a href="bhakti_sufi.html" class="flex items-center justify-between p-2.5 rounded-lg bg-amber-500/15 text-amber-300 font-semibold border border-amber-500/20">
+              <span>13. Religious Movements (Bhakti & Sufi)</span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] bg-amber-400 text-slate-950 font-bold">Active</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HERO SECTION -->
+  <section id="overview" class="relative pt-12 pb-20 overflow-hidden border-b border-slate-800/60 bg-gradient-to-b from-slate-950 via-[#0B1325] to-[#0B1325]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex items-center gap-2 text-xs font-semibold text-amber-400/90 tracking-wide uppercase mb-3">
+        <span>Chapter 13</span> &bull; <span>15th – 16th Century AD</span> &bull; <span>The Spiritual &amp; Cultural Renaissance</span>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold">
+            <i data-lucide="heart-handshake" class="w-3.5 h-3.5"></i> Synthesis of Divine Love &amp; Human Equality
+          </div>
+          
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight">
+            Religious Movements: <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-500">Bhakti &amp; Sufi</span> Traditions
+          </h1>
+          
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
+            In medieval India, a profound socio-religious transformation surged across the subcontinent. Rejecting priestly ritualism, orthodox dogma, and rigid caste stratifications, Bhakti and Sufi saints championed direct communion with God through devotional love (<span class="text-amber-300 italic">Prema / Ishq</span>), vernacular poetry, musical ecstasy, and the sublime fraternity of all humankind.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">12 + 63</div>
+              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Alvars &amp; Nayanars</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">5 Schools</div>
+              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Vedantic Darshanas</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">4 Silsilas</div>
+              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Major Sufi Orders</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">Vernacular</div>
+              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Language Boom</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Interactive Visual Showcase -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl bg-slate-900 group cursor-pointer"
+               data-zoomable="true"
+               data-img-src="assets/images/kabir_weaving.jpg"
+               data-img-title="Sant Kabir at the Handloom (Amber Miniature, 18th c.)"
+               data-img-desc="Historical painting depicting Sant Kabir (1440–1510) at his weaving loom in Varanasi. Kabir personified Nirguna Bhakti, embodying the sacred dignity of labor while preaching radical universal brotherhood, rejecting caste hierarchy, ritual sacrifices, and religious divisions.">
+            
+            <img src="assets/images/kabir_weaving.jpg" alt="Sant Kabir Weaving" class="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-105 transition-all duration-500">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-amber-400/40 text-[10px] text-amber-300 font-mono flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom Full Image
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 text-left">
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-slate-950 uppercase tracking-wider mb-1">Nirguna Icon</span>
+              <h3 class="text-base sm:text-lg font-bold text-white leading-snug">Sant Kabir at the Weaving Loom</h3>
+              <p class="text-xs text-slate-300 line-clamp-2 mt-0.5">Varanasi mystic whose Bijak and Sakhi bridged Hindus and Muslims through simple love for the Formless Supreme.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 1: THE PHILOSOPHICAL FOUNDATIONS & 5 VEDANTIC DARSHANAS -->
+  <section id="philosophies" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Philosophical Revival</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">The Great Acharyas &amp; Their Darshanas</p>
+        <p class="text-sm text-slate-400 mt-2">Bhakti originated in Tamil country under the Alvars (12 Vaishnava saints) and Nayanars (63 Shaivite saints). In the 11th century, it was revived philosophically by the Acharyas to provide intellectual ballast against Buddhist and Jain dominance.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        
+        <!-- Shankaracharya -->
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-amber-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30 uppercase">8th Century AD</span>
+              <i data-lucide="sparkle" class="w-4 h-4 text-amber-400"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-1">Adi Shankaracharya</h3>
+            <p class="text-xs font-mono text-amber-300/90 mb-3 font-semibold">Advaita (Non-Dualism / Monism)</p>
+            <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; <strong class="text-slate-100">Brahma Satyam Jagan Mithya:</strong> Brahman alone is real; the empirical world is an illusion (<span class="italic">Maya</span>).</li>
+              <li>&bull; Advocated <strong class="text-slate-100">Jnana Marga</strong> (Path of Knowledge) for liberation (<span class="italic">Moksha</span>).</li>
+              <li>&bull; Established 4 cardinal Mathas: <span class="text-amber-300">Sringeri</span> (South), <span class="text-amber-300">Badrinath</span> (North), <span class="text-amber-300">Dwarka</span> (West), and <span class="text-amber-300">Puri</span> (East).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Ramanujacharya -->
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-amber-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30 uppercase">1017–1137 AD</span>
+              <i data-lucide="flame" class="w-4 h-4 text-amber-400"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-1">Ramanujacharya</h3>
+            <p class="text-xs font-mono text-amber-300/90 mb-3 font-semibold">Vishishtadvaita (Qualified Monism)</p>
+            <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; God is a personal supreme reality (<span class="text-slate-100">Narayana/Vishnu</span>) endowed with infinite auspicious attributes.</li>
+              <li>&bull; Preached that <strong class="text-slate-100">Prabatti</strong> (total surrender) and Bhakti are accessible to all castes, including outcasts.</li>
+              <li>&bull; Disciple <strong class="text-amber-300">Ramananda</strong> later took Bhakti from South to North India.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Madhvacharya -->
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-amber-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30 uppercase">1238–1317 AD</span>
+              <i data-lucide="split" class="w-4 h-4 text-amber-400"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-1">Madhvacharya</h3>
+            <p class="text-xs font-mono text-amber-300/90 mb-3 font-semibold">Dvaita (Absolute Dualism)</p>
+            <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; Maintained complete distinction between <strong class="text-slate-100">Paramatman</strong> (God Vishnu) and <strong class="text-slate-100">Jivatman</strong> (individual souls).</li>
+              <li>&bull; Established the Krishna Mutt at <span class="text-amber-300">Udupi</span> (Karnataka).</li>
+              <li>&bull; Emphasized that salvation is achievable solely through the unmerited grace of Vishnu.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Nimbarkacharya -->
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-amber-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30 uppercase">12th–13th Century</span>
+              <i data-lucide="git-commit" class="w-4 h-4 text-amber-400"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-1">Nimbarkacharya</h3>
+            <p class="text-xs font-mono text-amber-300/90 mb-3 font-semibold">Dvaitadvaita (Dualistic Non-Dualism / Bhedabheda)</p>
+            <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; The soul is both different and non-different from God, like a wave and the ocean.</li>
+              <li>&bull; Propounded worship of <strong class="text-slate-100">Radha-Krishna</strong> at Vrindavan.</li>
+              <li>&bull; Founded the <span class="text-amber-300">Sanakadi Sampradaya</span>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Vallabhacharya -->
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-amber-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30 uppercase">1479–1531 AD</span>
+              <i data-lucide="sun-medium" class="w-4 h-4 text-amber-400"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-1">Vallabhacharya</h3>
+            <p class="text-xs font-mono text-amber-300/90 mb-3 font-semibold">Shuddhadvaita (Pure Non-Dualism) &amp; Pushti Marg</p>
+            <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; God is whole, individual soul is part; world is not an illusion but a real manifestation of God without Maya.</li>
+              <li>&bull; Founded <strong class="text-slate-100">Pushti Marg</strong> (Path of Grace) worshiping Krishna as <span class="text-amber-300">Shri Nathji</span>.</li>
+              <li>&bull; Surdas was his illustrious disciple in Braj.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Ramananda -->
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-amber-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30 uppercase">14th–15th Century</span>
+              <i data-lucide="bridge" class="w-4 h-4 text-amber-400"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-1">Swami Ramananda</h3>
+            <p class="text-xs font-mono text-amber-300/90 mb-3 font-semibold">Bridge from South to North India</p>
+            <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; Disciple of Ramanuja; substituted Krishna with <strong class="text-slate-100">Rama and Sita</strong>.</li>
+              <li>&bull; First to preach Bhakti in <strong class="text-amber-300">Hindi</strong> to make spirituality accessible.</li>
+              <li>&bull; Accepted 12 diverse disciples including <span class="text-slate-100">Kabir</span> (weaver), <span class="text-slate-100">Raidasa</span> (cobbler), <span class="text-slate-100">Sena</span> (barber), <span class="text-slate-100">Dhanna</span> (Jat farmer), <span class="text-slate-100">Pipa</span> (Rajput prince).</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Comparison Table -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden">
+        <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-900">
+          <h3 class="font-bold text-sm text-slate-100 flex items-center gap-2">
+            <i data-lucide="table" class="w-4 h-4 text-amber-400"></i> High-Yield Summary: 5 Vedantic Philosophies for UPSC &amp; APSC
+          </h3>
+          <span class="text-[11px] font-mono text-amber-400/90 font-semibold">Lucent GK Table 10.1</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-slate-950/70 text-amber-300 uppercase tracking-wider text-[11px] font-semibold border-b border-slate-800">
+              <tr>
+                <th class="py-3 px-4">Philosophical School</th>
+                <th class="py-3 px-4">Founder / Acharya</th>
+                <th class="py-3 px-4">Deity &amp; Focus</th>
+                <th class="py-3 px-4">Concept of Soul (Jiva) &amp; God (Brahman)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 font-medium">
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold">Advaita</td>
+                <td class="py-3 px-4 font-semibold text-slate-100">Adi Shankaracharya</td>
+                <td class="py-3 px-4">Nirguna Brahman</td>
+                <td class="py-3 px-4">Absolute identity (<span class="italic">Aham Brahmasmi</span>); world is Maya.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold">Vishishtadvaita</td>
+                <td class="py-3 px-4 font-semibold text-slate-100">Ramanujacharya</td>
+                <td class="py-3 px-4">Saguna Narayana (Vishnu)</td>
+                <td class="py-3 px-4">Soul is an organic attribute/body of Brahman; surrender (Prapatti).</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold">Dvaita</td>
+                <td class="py-3 px-4 font-semibold text-slate-100">Madhvacharya</td>
+                <td class="py-3 px-4">Lord Vishnu</td>
+                <td class="py-3 px-4">Eternal distinctness between soul and God; Pancha-Bheda.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold">Dvaitadvaita / Bhedabheda</td>
+                <td class="py-3 px-4 font-semibold text-slate-100">Nimbarkacharya</td>
+                <td class="py-3 px-4">Radha-Krishna</td>
+                <td class="py-3 px-4">Simultaneously different yet non-different like rays of the sun.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold">Shuddhadvaita</td>
+                <td class="py-3 px-4 font-semibold text-slate-100">Vallabhacharya</td>
+                <td class="py-3 px-4">Krishna (Shri Nathji)</td>
+                <td class="py-3 px-4">Pure non-dualism without Maya; Pushti Marg (Divine Grace).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: NIRGUNA VS SAGUNA BHAKTI SAINTS -->
+  <section id="saints" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Paths of Devotion</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">Nirguna &amp; Saguna Saint-Poets</p>
+        <p class="text-sm text-slate-400 mt-2">Bhakti split into two principal devotional expressions: worship of the formless God without attributes (<span class="text-amber-300">Nirguna</span>) and worship of divine personal manifestations and avatars (<span class="text-amber-300">Saguna</span>).</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Nirguna Saints Card -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+                <i data-lucide="circle-dot" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white">Nirguna Bhakti Cult</h3>
+                <p class="text-xs text-slate-400">Formless, Omnipresent Supreme Reality</p>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase">Social Equality</span>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Kabir -->
+            <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/70">
+              <div class="flex items-center justify-between text-xs font-bold text-amber-300 mb-1">
+                <span>Sant Kabir (1440–1510 AD)</span>
+                <span class="text-slate-400 font-mono text-[10px]">Varanasi (Weaver / Julaha)</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed mb-2">
+                The most radical disciple of Ramananda. Strongly condemned empty rituals, idol worship, caste arrogance, untouchability, and fanaticism in both Hinduism and Islam. Taught that Ram and Rahim are manifestations of the one supreme reality.
+              </p>
+              <div class="text-[11px] text-slate-400 font-mono">
+                <strong class="text-slate-200">Literary Works:</strong> Bijak, Sakhi, Sabad, Rekhtas; 541 verses included in the <span class="text-amber-300">Guru Granth Sahib</span>.
+              </div>
+            </div>
+
+            <!-- Guru Nanak -->
+            <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/70">
+              <div class="flex items-center justify-between text-xs font-bold text-amber-300 mb-1">
+                <span>Guru Nanak Dev (1469–1539 AD)</span>
+                <span class="text-slate-400 font-mono text-[10px]">Talwandi / Nankana Sahib</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed mb-2">
+                First Sikh Guru and founder of Sikhism. Emphasized <span class="text-slate-100">Ek Onkar</span> (One Supreme God), complete equality of gender and caste. Inaugurated communal kitchen (<strong class="text-amber-300">Langar / Pangat</strong>) and holy congregation (<strong class="text-amber-300">Sangat</strong>).
+              </p>
+              <div class="text-[11px] text-slate-400 font-mono">
+                <strong class="text-slate-200">Key Hymns:</strong> Japji Sahib, Asa di Var, Sidh Gosht.
+              </div>
+            </div>
+
+            <!-- Dadu Dayal -->
+            <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/70">
+              <div class="flex items-center justify-between text-xs font-bold text-amber-300 mb-1">
+                <span>Dadu Dayal (1544–1603 AD)</span>
+                <span class="text-slate-400 font-mono text-[10px]">Gujarat &bull; Lived in Rajasthan</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Nirguna saint belonging to the tanner/cotton-carder caste. Spent his life at Naraina (Rajasthan). Founded the <strong class="text-amber-300">Dadu Panth</strong> and established <span class="text-slate-200">Nipakh</span> (non-sectarian) path of devotion. Akbar invited him to the Ibadat Khana at Fatehpur Sikri.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Saguna Saints Card -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+                <i data-lucide="flower2" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white">Saguna Bhakti Cult</h3>
+                <p class="text-xs text-slate-400">Personal Avatars: Krishna &amp; Rama</p>
+              </div>
+            </div>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 uppercase">Devotional Ecstasy</span>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Chaitanya Mahaprabhu -->
+            <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/70">
+              <div class="flex items-center justify-between text-xs font-bold text-amber-300 mb-1">
+                <span>Chaitanya Mahaprabhu (1486–1533 AD)</span>
+                <span class="text-slate-400 font-mono text-[10px]">Nadia, Bengal</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Paramount exponent of Krishna Bhakti in Bengal and founder of <strong class="text-amber-300">Gaudiya Vaishnavism</strong>. Popularized <span class="text-slate-100">Sankirtan</span> (congregational singing of the Hare Krishna Mahamantra) and ecstatic dance. Philosophy known as <span class="italic text-slate-200">Achintya Bhedabheda</span>.
+              </p>
+            </div>
+
+            <!-- Mirabai -->
+            <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/70">
+              <div class="flex items-center justify-between text-xs font-bold text-amber-300 mb-1">
+                <span>Mirabai (1498–1546 AD)</span>
+                <span class="text-slate-400 font-mono text-[10px]">Merta, Rajasthan</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Rathor princess of Merta and daughter-in-law of Rana Sanga of Mewar (married to Prince Bhojraj). Considered Lord Krishna (<span class="italic text-amber-300">Girdhar Gopal</span>) as her eternal spouse. Composed soul-stirring devotional bhajans in Rajasthani and Braj.
+              </p>
+            </div>
+
+            <!-- Surdas & Tulsidas -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-xs">
+                <span class="font-bold text-amber-300 block mb-1">Surdas (1483–1563)</span>
+                <p class="text-slate-300 leading-relaxed">Blind poet of Agra, disciple of Vallabhacharya. Sang Krishna's childhood leelas in Braj. Author of <span class="text-slate-100 font-semibold">Sursagar</span> &amp; <span class="text-slate-100 font-semibold">Sur Saravali</span>.</p>
+              </div>
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-xs">
+                <span class="font-bold text-amber-300 block mb-1">Tulsidas (1532–1623)</span>
+                <p class="text-slate-300 leading-relaxed">Greatest poet of Rama Bhakti. Authored <span class="text-slate-100 font-semibold">Ramcharitmanas</span> (Awadhi), <span class="text-slate-100 font-semibold">Kavitawali</span>, <span class="text-slate-100 font-semibold">Gitawali</span>, &amp; <span class="text-slate-100 font-semibold">Vinaya Patrika</span>.</p>
+              </div>
+            </div>
+
+            <!-- Carnatic Pioneers -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-xs">
+                <span class="font-bold text-amber-300 block mb-1">Purandar Dasa (1484–1564)</span>
+                <p class="text-slate-300 leading-relaxed">Foremost Haridasa of Karnataka. Laid foundations of modern Carnatic music; revered as <span class="text-slate-100 font-semibold">Carnatic Sangeeta Pitamaha</span>.</p>
+              </div>
+              <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-xs">
+                <span class="font-bold text-amber-300 block mb-1">Thyagaraja (1767–1847)</span>
+                <p class="text-slate-300 leading-relaxed">Part of Carnatic Trinity in Thanjavur (Tamil Nadu). Composed devotional Kritis dedicating every breath to Rama in Telugu.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: MAHARASHTRA DHARMA & THE VARKARI SECT -->
+  <section id="maharashtra" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Regional Awakening</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">Maharashtra Dharma &amp; The Varkari Movement</p>
+        <p class="text-sm text-slate-400 mt-2">Centered around the beloved temple of <span class="text-amber-300 font-bold">Lord Vithoba (Vitthala)</span> at Pandharpur on the banks of the Chandrabhaga river, this movement provided spiritual cohesion that later fueled Shivaji's Swarajya.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+        
+        <!-- Jnaneshwar -->
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-amber-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 font-mono">1271–1296 AD</span>
+            <h3 class="text-base font-bold text-white mt-2 mb-1">Sant Jnaneshwar</h3>
+            <p class="text-[11px] text-amber-300 font-medium mb-3">Fountain-head of Marathi Bhakti</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Authored <strong class="text-slate-100">Bhavartha Dipika</strong> (popularly known as <span class="text-amber-300">Jnaneshwari</span>), a pioneering Marathi verse commentary on the Bhagavad Gita at age 15. Also composed the philosophical treatise <span class="italic text-slate-200">Amrutanubhav</span>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Namadeva -->
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-amber-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 font-mono">1270–1350 AD</span>
+            <h3 class="text-base font-bold text-white mt-2 mb-1">Sant Namadeva</h3>
+            <p class="text-[11px] text-amber-300 font-medium mb-3">Founder of Varkari Sect</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              A tailor by caste, disciple of Visoba Khechar. Staunchly opposed caste barriers. Established the biannual pilgrimage (<span class="text-amber-300">Vari</span>) to Pandharpur. 61 of his devotional abhangas are incorporated into the Sikh holy scripture <span class="text-slate-100">Guru Granth Sahib</span>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Eknath -->
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-amber-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 font-mono">1533–1599 AD</span>
+            <h3 class="text-base font-bold text-white mt-2 mb-1">Sant Eknath</h3>
+            <p class="text-[11px] text-amber-300 font-medium mb-3">Scholar-Saint of Paithan</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Synthesized scholarship with grassroots accessibility. Wrote the <strong class="text-slate-100">Bhavartha Ramayana</strong> and a celebrated commentary on the 11th Skandha of Bhagavata Purana (<span class="text-amber-300">Eknathi Bhagavata</span>). Innovated folk-style devotional songs called <span class="italic text-slate-200">Bharuds</span>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tukaram -->
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-amber-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 font-mono">1598–1650 AD</span>
+            <h3 class="text-base font-bold text-white mt-2 mb-1">Sant Tukaram</h3>
+            <p class="text-[11px] text-amber-300 font-medium mb-3">Greatest Bhakti Poet of Deccan</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Shudra grain-trader from Dehu. Composed thousands of immortal devotional poems called <strong class="text-amber-300">Abhangas</strong>. Contemporary of Chhatrapati Shivaji Maharaj, whom he inspired with high moral ethics and spiritual egalitarianism.
+            </p>
+          </div>
+        </div>
+
+        <!-- Ramdas -->
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-amber-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 font-mono">1608–1681 AD</span>
+            <h3 class="text-base font-bold text-white mt-2 mb-1">Samarth Ramdas</h3>
+            <p class="text-[11px] text-amber-300 font-medium mb-3">Spiritual Guru of Shivaji</p>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Founder of the <strong class="text-slate-100">Dharkari</strong> sect, emphasizing practical activism, duty, and physical strength along with spiritual devotion. His monumental compilation of writings and sermons is titled <strong class="text-amber-300">Dasbodha</strong>. Installed Hanuman temples across Maharashtra.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: THE SUFI MOVEMENT & MAJOR SILSILAS -->
+  <section id="sufism" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Mystical Islam in India</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">The Sufi Movement &amp; The Silsilas</p>
+        <p class="text-sm text-slate-400 mt-2">Sufism emphasized inner mystical experience, direct perception of God through love (<span class="italic text-amber-300">Ishq</span>), spiritual music (<span class="italic text-amber-300">Sama</span>), and self-abnegation (<span class="italic text-amber-300">Fana</span>), transcending formal theological barriers.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-12">
+        
+        <!-- Ajmer Dargah Interactive Visual -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl bg-slate-900 group cursor-pointer"
+               data-zoomable="true"
+               data-img-src="assets/images/ajmer_sharif.jpg"
+               data-img-title="Dargah Sharif of Khwaja Muinuddin Chishti at Ajmer"
+               data-img-desc="The revered shrine (Dargah) of Khwaja Muinuddin Chishti (1141–1236 AD) at Ajmer, Rajasthan. Founder of the Chishti Silsila in India, Khwaja Gharib Nawaz preached selfless compassion, non-possession, and direct love of God, making his shrine an enduring beacon of communal syncretism visited by millions of all faiths.">
+            
+            <img src="assets/images/ajmer_sharif.jpg" alt="Ajmer Sharif Dargah" class="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-105 transition-all duration-500">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-amber-400/40 text-[10px] text-amber-300 font-mono flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom Full Image
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 text-left">
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-slate-950 uppercase tracking-wider mb-1">Chishti Sanctum</span>
+              <h3 class="text-base sm:text-lg font-bold text-white leading-snug">Ajmer Sharif &bull; Gharib Nawaz</h3>
+              <p class="text-xs text-slate-300 line-clamp-2 mt-0.5">Spiritual epicenter of the liberal Chishti tradition in India since 1206 AD.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Major Silsilas Grid -->
+        <div class="lg:col-span-7 space-y-4">
+          
+          <!-- Chishti Order -->
+          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+              <span class="text-sm text-white">1. The Chishti Silsila (Most Liberal &amp; Popular)</span>
+              <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Founded in India 1206 AD</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-2">
+              Founded in India by <strong class="text-slate-100">Khwaja Muinuddin Chishti</strong> (Ajmer). Chishtis maintained austere poverty, rejected state appointments/patronage, and actively practiced <span class="italic text-amber-300">Sama</span> (musical audition).
+            </p>
+            <div class="text-[11px] text-slate-400 space-y-1">
+              <div>&bull; <strong class="text-slate-200">Qutubuddin Bakhtiyar Kaki</strong> (Delhi) &mdash; in whose memory Qutb Minar was initiated.</div>
+              <div>&bull; <strong class="text-slate-200">Baba Fariduddin Ganj-i-Shakar</strong> (Ajodan, Punjab) &mdash; pioneer Punjabi poet of Sufism.</div>
+              <div>&bull; <strong class="text-slate-200">Shaikh Nizamuddin Auliya</strong> (<span class="italic text-amber-300">Mehboob-i-Ilahi</span>, Delhi) &mdash; master of Amir Khusrau.</div>
+              <div>&bull; <strong class="text-slate-200">Nasiruddin Mahmud</strong> (<span class="italic text-amber-300">Chirag-i-Delhi</span>) and <strong class="text-slate-200">Syed Muhammad Gesu Daraz</strong> (<span class="italic text-amber-300">Banda Nawaz</span>, Gulbarga).</div>
+            </div>
+          </div>
+
+          <!-- Suhrawardi Order -->
+          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+              <span class="text-sm text-white">2. The Suhrawardi Silsila</span>
+              <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Center: Multan &amp; Sindh</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Founded in India by <strong class="text-slate-100">Shaikh Bahauddin Zakariya</strong> (1182–1262). Unlike the Chishtis, they did not believe in extreme asceticism or total poverty. They accepted state gifts, held government offices (<span class="italic text-slate-200">Shaikh-ul-Islam</span>), and accumulated wealth while engaging in charitable statecraft.
+            </p>
+          </div>
+
+          <!-- Qadiri & Naqshbandi in 2 cols -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Qadiri -->
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-xs">
+              <span class="font-bold text-amber-300 block mb-1">3. Qadiri Silsila</span>
+              <p class="text-slate-300 leading-relaxed mb-2">
+                Introduced in India by <strong class="text-slate-100">Shah Niamatullah</strong> &amp; Nasiruddin Muhammad Jilani (15th c.).
+              </p>
+              <p class="text-[11px] text-slate-400">
+                Famous saint <span class="text-slate-200">Mian Mir</span> of Lahore laid the foundation stone of the Golden Temple (Harmandir Sahib) in Amritsar. Prince Dara Shikoh was an ardent follower.
+              </p>
+            </div>
+
+            <!-- Naqshbandi -->
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-xs">
+              <span class="font-bold text-amber-300 block mb-1">4. Naqshbandi Silsila</span>
+              <p class="text-slate-300 leading-relaxed mb-2">
+                Founded in India by <strong class="text-slate-100">Khwaja Baqi Billah</strong> (1563–1603).
+              </p>
+              <p class="text-[11px] text-slate-400">
+                Most orthodox order. Led by <strong class="text-amber-300">Sheikh Ahmad Sirhindi</strong> (<span class="italic">Mujaddid Alif Sani</span>), who fiercely opposed Akbar's syncretic Din-i-Ilahi and advocated strict adherence to Shariat.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Essential Sufi Vocabulary Table -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden">
+        <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-900">
+          <h3 class="font-bold text-sm text-slate-100 flex items-center gap-2">
+            <i data-lucide="book-open" class="w-4 h-4 text-amber-400"></i> Core Sufi Terminologies &amp; Technical Concepts
+          </h3>
+          <span class="text-[11px] font-mono text-amber-400/90 font-semibold">Lucent GK Table 10.2</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-slate-950/70 text-amber-300 uppercase tracking-wider text-[11px] font-semibold border-b border-slate-800">
+              <tr>
+                <th class="py-3 px-4">Sufi Term</th>
+                <th class="py-3 px-4">Literal Meaning</th>
+                <th class="py-3 px-4">Significance in Medieval Practice</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 font-medium">
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold font-mono">Pir / Murshid / Shaikh</td>
+                <td class="py-3 px-4 font-semibold text-slate-100">Spiritual Preceptor / Guide</td>
+                <td class="py-3 px-4">The master who guides the seeker along the spiritual stages (<span class="italic">Maqamat</span>) toward divine truth.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold font-mono">Murid</td>
+                <td class="py-3 px-4 font-semibold text-slate-100">Disciple / Seeker</td>
+                <td class="py-3 px-4">Initiate who pledges total allegiance and obedience to the Pir.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold font-mono">Khalifah</td>
+                <td class="py-3 px-4 font-semibold text-slate-100">Spiritual Successor</td>
+                <td class="py-3 px-4">Deputy appointed by the Pir to perpetuate the Silsila and lead disciples in a region.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold font-mono">Khanqah / Jama'at Khana</td>
+                <td class="py-3 px-4 font-semibold text-slate-100">Hospice / Monastery</td>
+                <td class="py-3 px-4">Center of community living, spiritual instruction, community meals, and free shelter for travellers.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold font-mono">Sama</td>
+                <td class="py-3 px-4 font-semibold text-slate-100">Musical Gathering</td>
+                <td class="py-3 px-4">Spiritual audition of Qawwali music used by Chishtis to induce ecstatic divine consciousness (<span class="italic">Hal</span>).</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold font-mono">Raks</td>
+                <td class="py-3 px-4 font-semibold text-slate-100">Spiritual Dance</td>
+                <td class="py-3 px-4">Ecstatic movement performed during musical recitation of God's praise.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold font-mono">Fana</td>
+                <td class="py-3 px-4 font-semibold text-slate-100">Self-Annihilation</td>
+                <td class="py-3 px-4">Dissolution of the mortal human ego into the infinite presence of God.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold font-mono">Ziyarat</td>
+                <td class="py-3 px-4 font-semibold text-slate-100">Pilgrimage</td>
+                <td class="py-3 px-4">Pious visit to the tombs (Dargahs) of Sufi saints on death anniversaries (<span class="italic">Urs</span>) to seek blessings.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE STUDY TOOLS: FLASHCARDS & QUIZ -->
+  <section id="quiz" class="py-16 bg-slate-900/60 border-b border-slate-800/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Test Your Mastery</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">Interactive Recall &amp; Examination Drill</p>
+        <p class="text-sm text-slate-400 mt-2">Cement high-yield prelims facts on Bhakti philosophies, saint-poets, texts, and Sufi orders.</p>
+      </div>
+
+      <!-- 3D Flashcard Section -->
+      <div class="mb-16">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-300">3D Interactive Flashcards</span>
+          </div>
+          <span id="flashcardCounter" class="text-xs font-mono text-amber-400 font-bold">1 / 6</span>
+        </div>
+
+        <div id="flashcard" class="flashcard-container cursor-pointer select-none">
+          <div id="flashcardInner" class="flashcard-inner">
+            <!-- Front -->
+            <div class="flashcard-face flashcard-front">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-amber-400/80 mb-2">Question (Click or Tap to Flip)</span>
+              <p id="flashcardQuestion" class="text-base sm:text-lg font-semibold text-slate-100 text-center leading-relaxed px-4">
+                Loading question...
+              </p>
+              <div class="mt-4 flex items-center gap-1.5 text-xs text-slate-400 font-medium">
+                <i data-lucide="rotate-cw" class="w-3.5 h-3.5 text-amber-400"></i> Tap card to reveal answer
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="flashcard-face flashcard-back">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-amber-300 mb-2">Prelims High-Yield Answer</span>
+              <p id="flashcardAnswer" class="text-sm sm:text-base text-slate-200 text-center leading-relaxed px-4">
+                Loading answer...
+              </p>
+              <div class="mt-4 flex items-center gap-1.5 text-xs text-amber-300/80 font-medium">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Verified from Lucent GK
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <button id="prevCardBtn" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-slate-200 transition-all flex items-center gap-1.5">
+            <i data-lucide="chevron-left" class="w-4 h-4"></i> Previous
+          </button>
+          <button id="nextCardBtn" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold transition-all flex items-center gap-1.5 shadow-lg shadow-amber-500/20">
+            Next Card <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mock Quiz Section -->
+      <div>
+        <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
+          <div>
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="clipboard-check" class="w-5 h-5 text-amber-400"></i>
+              Chapter 13 Mock Examination
+            </h3>
+            <p class="text-xs text-slate-400">5 High-Probability Questions for UPSC, APSC &amp; State PSCs</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <span id="quizScoreDisplay" class="text-xs font-mono font-bold text-amber-400 px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20">Score: 0 / 5</span>
+            <button id="resetQuizBtn" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs" title="Reset Quiz">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="quizContainer" class="space-y-4">
+          <!-- Dynamically populated by bhakti_sufi.js -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-start justify-center p-4 sm:p-6 pt-16">
+    <div class="w-full max-w-2xl bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
+      <div class="p-4 border-b border-slate-800 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2.5 flex-1">
+          <i data-lucide="search" class="w-5 h-5 text-amber-400 shrink-0"></i>
+          <input type="text" id="factSearchInput" placeholder="Search saints, philosophies, silsilas, abhangas, dates..." class="w-full bg-transparent text-sm text-slate-100 placeholder-slate-500 outline-none">
+        </div>
+        <button id="closeSearchBtn" class="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-all">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div id="searchResultsContainer" class="p-4 overflow-y-auto space-y-2 flex-1">
+        <!-- Rendered results -->
+      </div>
+      <div class="p-3 bg-slate-950/70 border-t border-slate-800 text-[11px] text-slate-500 flex items-center justify-between">
+        <span>Press <kbd class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">ESC</kbd> to close</span>
+        <span>Lucent GK Real-Time Search</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER -->
+  <div id="fullImageViewerModal" class="full-image-modal">
+    <div class="lightbox-backdrop"></div>
+    <div class="relative w-full h-full flex flex-col p-4 sm:p-6 z-10">
+      
+      <!-- Top controls -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="bg-slate-900/90 backdrop-blur-md px-4 py-2 rounded-xl border border-slate-700/80 text-left">
+          <h4 id="lightboxTitle" class="text-sm sm:text-base font-bold text-white leading-tight">Image Title</h4>
+          <span class="text-[10px] text-amber-400 font-mono">Zoom with wheel &bull; Drag to pan &bull; Click reset</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <div class="flex items-center bg-slate-900/90 backdrop-blur-md rounded-xl border border-slate-700/80 p-1">
+            <button id="zoomOutBtn" class="p-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg" title="Zoom Out">
+              <i data-lucide="zoom-out" class="w-4 h-4"></i>
+            </button>
+            <span id="zoomLevelDisplay" class="px-2 text-xs font-mono font-bold text-amber-400 min-w-[50px] text-center">100%</span>
+            <button id="zoomInBtn" class="p-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg" title="Zoom In">
+              <i data-lucide="zoom-in" class="w-4 h-4"></i>
+            </button>
+            <button id="zoomResetBtn" class="px-2.5 py-1 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg" title="Reset Zoom">
+              Reset
+            </button>
+          </div>
+          
+          <button id="closeLightboxBtn" class="p-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-slate-300 hover:text-white hover:bg-rose-950 transition-all" title="Close Viewer">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Viewport -->
+      <div id="lightboxViewport" class="lightbox-viewport">
+        <img id="lightboxImg" src="" alt="Artifact Detail" class="lightbox-img">
+      </div>
+
+      <!-- Bottom Description -->
+      <div class="mt-2 bg-slate-900/90 backdrop-blur-md p-3.5 rounded-xl border border-slate-700/80 max-w-4xl mx-auto text-center">
+        <p id="lightboxDescription" class="text-xs text-slate-300 leading-relaxed"></p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 border-t border-slate-800/80 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+          <i data-lucide="award" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-bold text-slate-200">Lucent GK Visualized &bull; Complete Reference Edition</span>
+          <p class="text-[11px] text-slate-500">Medieval Indian History Series &bull; Chapters 8–13 Complete</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-4 text-xs font-medium">
+        <a href="marathas.html" class="hover:text-amber-400 flex items-center gap-1">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Ch. 12: Marathas
+        </a>
+        <span class="text-slate-700">&bull;</span>
+        <a href="index.html" class="hover:text-amber-400">Ancient Hub</a>
+        <span class="text-slate-700">&bull;</span>
+        <a href="#overview" class="hover:text-amber-400 flex items-center gap-1">
+          Top <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Page Logic Script -->
+  <script src="assets/js/bhakti_sufi.js"></script>
+</body>
+</html>
