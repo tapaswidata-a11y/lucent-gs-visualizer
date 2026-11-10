@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucent GK Visualized | Master Subject Hub &amp; Interactive Knowledge Encyclopedia</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              bronze: '#CD7F32',
+              terracotta: '#C86446',
+              deepnavy: '#0B1325',
+              carddark: '#141E33',
+              cardborder: '#233354',
+              sand: '#F7F3E9',
+              sandstone: '#E8DCC4'
+            }
+          },
+          fontFamily: {
+            heading: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0B1325] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- TOP BANNER -->
+  <div class="bg-gradient-to-r from-amber-800 via-amber-700 to-amber-900 text-amber-50 text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-md flex items-center justify-center gap-2">
+    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-950/70 text-amber-300 uppercase tracking-wider">APSC &amp; UPSC GS Complete Visualizer</span>
+    <span>Lucent's General Knowledge &bull; The Complete Master Subject Portal &amp; Syllabus Index</span>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-[#0B1325]/90 backdrop-blur-md border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="hub.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-900/30 ring-1 ring-amber-400/40 group-hover:scale-105 transition-transform">
+          <i data-lucide="compass" class="w-6 h-6 text-slate-950"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-500 tracking-wider">LUCENT GS</span>
+            <span class="text-xs font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">MASTER HUB</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium">Full General Knowledge Visual Reference System</p>
+        </div>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/70 p-1.5 rounded-full border border-slate-800 text-xs font-semibold">
+        <a href="#history" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">History (Ch 1–13)</a>
+        <a href="#geography" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Geography</a>
+        <a href="#polity" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Polity</a>
+        <a href="#economy" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Economy</a>
+        <a href="#science" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Science</a>
+        <a href="#misc" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Misc &amp; IT</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-2.5">
+        <button id="themeToggleBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Toggle Light / Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+
+        <a href="index.html" class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold transition-all shadow-md shadow-amber-500/20">
+          <span>Start Reading</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MASTER HERO SECTION -->
+  <section class="relative pt-14 pb-20 overflow-hidden border-b border-slate-800/60 bg-gradient-to-b from-slate-950 via-[#0B1325] to-[#0B1325]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold mb-4">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Complete Illustrated Encyclopedia for Competitive Exams
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight max-w-4xl mx-auto">
+        Lucent's General Knowledge <br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-500">Visualized &amp; Gamified</span>
+      </h1>
+
+      <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-3xl mx-auto mt-4">
+        Converting India's most trusted competitive handbook into an immersive digital atlas. Experience authentic historical relics with interactive 400% zoom, high-yield comparison tables, 3D active-recall flashcards, and chapter-by-chapter mock drills for APSC &amp; UPSC.
+      </p>
+
+      <!-- Overall Syllabus Progress Tracker -->
+      <div class="mt-8 max-w-2xl mx-auto p-4 rounded-2xl bg-slate-900/80 border border-slate-800">
+        <div class="flex items-center justify-between text-xs font-bold text-slate-300 mb-2">
+          <span>Complete Book Progress (650+ Pages)</span>
+          <span class="text-amber-400 font-mono">Ancient &amp; Medieval 100% Deployed</span>
+        </div>
+        <div class="w-full h-3 rounded-full bg-slate-950 overflow-hidden p-0.5 border border-slate-800">
+          <div class="h-full rounded-full bg-gradient-to-r from-amber-500 to-yellow-400" style="width: 42%;"></div>
+        </div>
+        <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 mt-4 text-[10px] font-semibold text-slate-400">
+          <div class="p-1.5 rounded bg-emerald-950/60 text-emerald-300 border border-emerald-500/30">History: 13/20 Ch</div>
+          <div class="p-1.5 rounded bg-slate-950 text-slate-400 border border-slate-800">Geography</div>
+          <div class="p-1.5 rounded bg-slate-950 text-slate-400 border border-slate-800">Polity</div>
+          <div class="p-1.5 rounded bg-slate-950 text-slate-400 border border-slate-800">Economy</div>
+          <div class="p-1.5 rounded bg-slate-950 text-slate-400 border border-slate-800">Gen Science</div>
+          <div class="p-1.5 rounded bg-slate-950 text-slate-400 border border-slate-800">Misc &amp; IT</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 1: INDIAN HISTORY HUB (CHAPTERS 1 TO 13 DEPLOYED) -->
+  <section id="history" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Section I &bull; 100% Prelims Coverage</span>
+          <h2 class="text-2xl sm:text-3xl font-heading font-extrabold text-white mt-1">Indian History Visual Modules</h2>
+          <p class="text-xs sm:text-sm text-slate-400 mt-1">Chronological journey from the Indus civilization to the 18th-century fall of empires.</p>
+        </div>
+        <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-bold w-fit">
+          13 Modules Live &amp; Illustrated
+        </span>
+      </div>
+
+      <!-- Ancient India Grid -->
+      <div class="mb-10">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span> Part A: Ancient Indian History (Prehistory to 647 AD)
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <a href="index.html" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-800/60 transition-all group block">
+            <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
+              <span>Chapter 1</span>
+              <span class="text-[10px] text-slate-500">2500–1750 BC</span>
+            </div>
+            <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">Harappan / Indus Valley</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">Dancing Girl, Great Bath, Lothal dockyard, Pashupati seal, town planning.</p>
+          </a>
+
+          <a href="vedic.html" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-800/60 transition-all group block">
+            <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
+              <span>Chapter 2</span>
+              <span class="text-[10px] text-slate-500">1500–600 BC</span>
+            </div>
+            <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">Vedic Culture &amp; Canon</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">4 Vedas, 108 Upanishads, Boghazkai inscription, Rigvedic Nadisukta rivers.</p>
+          </a>
+
+          <a href="mahajanapadas.html" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-800/60 transition-all group block">
+            <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
+              <span>Chapter 3</span>
+              <span class="text-[10px] text-slate-500">600–325 BC</span>
+            </div>
+            <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">16 Mahajanapadas &amp; Magadha</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">Haryanka, Shishunaga, Nandas, Cyrus &amp; Alexander's Hydaspes campaign.</p>
+          </a>
+
+          <a href="religions.html" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-800/60 transition-all group block">
+            <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
+              <span>Chapter 4</span>
+              <span class="text-[10px] text-slate-500">600–400 BC</span>
+            </div>
+            <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">Buddhism &amp; Jainism</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">Buddha &amp; Mahavira, 4 Buddhist Councils, 2 Jain Councils, Pitakas &amp; Agamas.</p>
+          </a>
+
+          <a href="maurya.html" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-800/60 transition-all group block">
+            <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
+              <span>Chapter 5</span>
+              <span class="text-[10px] text-slate-500">322–185 BC</span>
+            </div>
+            <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">The Mauryan Empire</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">Chandragupta, Chanakya, Ashoka's 14 Rock Edicts, Sanchi, administration.</p>
+          </a>
+
+          <a href="post_maurya.html" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-800/60 transition-all group block">
+            <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
+              <span>Chapter 6</span>
+              <span class="text-[10px] text-slate-500">185 BC–319 AD</span>
+            </div>
+            <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">Post-Maurya &amp; Sangam</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">Shungas, Satavahanas, Kushana Kanishka, Gandhara art, 3 Tamil Sangams.</p>
+          </a>
+
+          <a href="gupta.html" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-800/60 transition-all group block">
+            <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
+              <span>Chapter 7</span>
+              <span class="text-[10px] text-slate-500">319–647 AD</span>
+            </div>
+            <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">Gupta Golden Age &amp; Harsha</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">Samudragupta, Vikramaditya, Aryabhata, Kalidasa, Nalanda, Emperor Harsha.</p>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Medieval India Grid -->
+      <div>
+        <h3 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span> Part B: Medieval Indian History (650 AD – 1818 AD)
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          
+          <a href="early_medieval.html" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-800/60 transition-all group block">
+            <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
+              <span>Chapter 8</span>
+              <span class="text-[10px] text-slate-500">650–1206 AD</span>
+            </div>
+            <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">Early Medieval (Rajputs &amp; Cholas)</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">Tripartite Struggle, Mahmud Ghazni, Tarain battles, Imperial Cholas &amp; Brihadisvara.</p>
+          </a>
+
+          <a href="delhi_sultanate.html" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-800/60 transition-all group block">
+            <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
+              <span>Chapter 9</span>
+              <span class="text-[10px] text-slate-500">1206–1526 AD</span>
+            </div>
+            <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">The Delhi Sultanate</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">Slave, Khalji (Alauddin's market reforms), Tughlaq (capital transfer), Sayyids, Lodis.</p>
+          </a>
+
+          <a href="vijayanagar_bahmani.html" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-800/60 transition-all group block">
+            <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
+              <span>Chapter 10</span>
+              <span class="text-[10px] text-slate-500">1336–1646 AD</span>
+            </div>
+            <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">Vijayanagar &amp; Bahmani</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">Krishnadeva Raya, Hampi stone chariot, Talikota, Gol Gumbaz Whispering Gallery.</p>
+          </a>
+
+          <a href="mughal_empire.html" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-800/60 transition-all group block">
+            <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
+              <span>Chapter 11</span>
+              <span class="text-[10px] text-slate-500">1526–1707 AD</span>
+            </div>
+            <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">The Mughal Empire &amp; Suris</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">Babur, Sher Shah's G.T. Road, Akbar's Mansabdari &amp; Buland Darwaza, Taj Mahal.</p>
+          </a>
+
+          <a href="marathas.html" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-800/60 transition-all group block">
+            <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
+              <span>Chapter 12</span>
+              <span class="text-[10px] text-slate-500">1674–1818 AD</span>
+            </div>
+            <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">Marathas &amp; Later Mughals</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">Shivaji Maharaj, Ashtapradhan, Peshwa Baji Rao, 3rd Panipat 1761, Nadir Shah.</p>
+          </a>
+
+          <a href="bhakti_sufi.html" class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 hover:bg-slate-800/60 transition-all group block">
+            <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
+              <span>Chapter 13</span>
+              <span class="text-[10px] text-slate-500">15th–16th c.</span>
+            </div>
+            <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">Religious Movements: Bhakti &amp; Sufi</h4>
+            <p class="text-xs text-slate-400 mt-1 line-clamp-2">Kabir, Nanak, Mirabai, Tukaram Abhangas, Ajmer Sharif, 4 Sufi Silsilas.</p>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: SUBJECT CURRICULUM OVERVIEW -->
+  <section class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Full Book Coverage Map</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">Remaining Book Sections &amp; Execution Roadmap</p>
+        <p class="text-sm text-slate-400 mt-2">The complete Lucent GK curriculum encompasses 6 core disciplines. Each will receive the same high-detail visual treatment, zoomable artifact lightboxes, and interactive flashcards.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Geography -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold mb-4">
+            <i data-lucide="globe" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-1">Geography (World &amp; India)</h3>
+          <p class="text-xs text-amber-400 font-mono mb-3">Pages 81–160 in Lucent GK</p>
+          <ul class="text-xs text-slate-400 space-y-1.5 leading-relaxed">
+            <li>&bull; Solar system, earth motions, latitudes &amp; longitudes.</li>
+            <li>&bull; Lithosphere, atmosphere layers, ocean currents.</li>
+            <li>&bull; Indian physiography, Himalayan passes, river systems.</li>
+            <li>&bull; Soils, natural vegetation, minerals &amp; national parks.</li>
+          </ul>
+        </div>
+
+        <!-- Polity -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold mb-4">
+            <i data-lucide="scale" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-1">Indian Polity &amp; Constitution</h3>
+          <p class="text-xs text-amber-400 font-mono mb-3">Pages 161–210 in Lucent GK</p>
+          <ul class="text-xs text-slate-400 space-y-1.5 leading-relaxed">
+            <li>&bull; Constitutional framing, Preamble, Schedules.</li>
+            <li>&bull; Fundamental Rights (Art 12–35), DPSP, Duties.</li>
+            <li>&bull; President, Prime Minister, Parliament, Supreme Court.</li>
+            <li>&bull; Emergency provisions &amp; landmark amendments.</li>
+          </ul>
+        </div>
+
+        <!-- Economy -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold mb-4">
+            <i data-lucide="trending-up" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-1">Indian Economy</h3>
+          <p class="text-xs text-amber-400 font-mono mb-3">Pages 211–260 in Lucent GK</p>
+          <ul class="text-xs text-slate-400 space-y-1.5 leading-relaxed">
+            <li>&bull; National Income (GDP, GNP, NNP, Per Capita).</li>
+            <li>&bull; Five Year Plans &amp; NITI Aayog structure.</li>
+            <li>&bull; Reserve Bank of India, Monetary Policy, Banking.</li>
+            <li>&bull; Inflation, Union Budget, GST &amp; Foreign Trade.</li>
+          </ul>
+        </div>
+
+        <!-- General Science -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold mb-4">
+            <i data-lucide="atom" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-1">General Science (Phy, Chem, Bio)</h3>
+          <p class="text-xs text-amber-400 font-mono mb-3">Pages 261–300 in Lucent GK</p>
+          <ul class="text-xs text-slate-400 space-y-1.5 leading-relaxed">
+            <li>&bull; Physics: Gravitation, optics, thermodynamics, units.</li>
+            <li>&bull; Chemistry: Periodic table, metals, acids, bases.</li>
+            <li>&bull; Biology: Cell division, human physiology, vitamins, diseases.</li>
+          </ul>
+        </div>
+
+        <!-- Misc & IT -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div class="w-10 h-10 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center font-bold mb-4">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-white mb-1">Miscellaneous &amp; Computers</h3>
+          <p class="text-xs text-amber-400 font-mono mb-3">Pages 301–326 in Lucent GK</p>
+          <ul class="text-xs text-slate-400 space-y-1.5 leading-relaxed">
+            <li>&bull; First in India &amp; World (Male &amp; Female).</li>
+            <li>&bull; Nobel, Bharat Ratna, Booker, Khel Ratna awards.</li>
+            <li>&bull; UN bodies, headquarters, international treaties.</li>
+            <li>&bull; Computer fundamentals, networking, cybersecurity.</li>
+          </ul>
+        </div>
+
+        <!-- Action Box -->
+        <div class="p-6 rounded-2xl bg-gradient-to-br from-amber-500/10 via-slate-900 to-slate-900 border border-amber-500/30 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold mb-4">
+              <i data-lucide="zap" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base font-bold text-white mb-1">Continuous Execution</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Every chapter is systematically digitized from <code class="text-amber-300">lucent-publications-gk.pdf</code>, enhanced with real historical photography, interactive charts, and verified prelims question banks.
+            </p>
+          </div>
+          <a href="index.html" class="w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold text-center transition-all shadow-lg shadow-amber-500/20">
+            Open Chapter 1: Indus Valley &rarr;
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 border-t border-slate-800/80 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+          <i data-lucide="book-open" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-bold text-slate-200">Lucent GS Visualizer &bull; Open Study Resource</span>
+          <p class="text-[11px] text-slate-500">Live on GitHub Pages &bull; Designed for Civil Services Preparation</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-4 text-xs font-medium">
+        <a href="index.html" class="hover:text-amber-400">Harappan</a>
+        <span class="text-slate-700">&bull;</span>
+        <a href="vedic.html" class="hover:text-amber-400">Vedic</a>
+        <span class="text-slate-700">&bull;</span>
+        <a href="delhi_sultanate.html" class="hover:text-amber-400">Sultanate</a>
+        <span class="text-slate-700">&bull;</span>
+        <a href="mughal_empire.html" class="hover:text-amber-400">Mughals</a>
+        <span class="text-slate-700">&bull;</span>
+        <a href="bhakti_sufi.html" class="hover:text-amber-400">Bhakti &amp; Sufi</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const themeBtn = document.getElementById('themeToggleBtn');
+    function applyTheme(theme) {
+      if (theme === 'light') {
+        document.body.classList.add('light-theme');
+        if (themeBtn) themeBtn.innerHTML = '<i data-lucide="moon" class="w-4 h-4 text-slate-700"></i>';
+        localStorage.setItem('lucent_theme', 'light');
+      } else {
+        document.body.classList.remove('light-theme');
+        if (themeBtn) themeBtn.innerHTML = '<i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>';
+        localStorage.setItem('lucent_theme', 'dark');
+      }
+      lucide.createIcons();
+    }
+    applyTheme(localStorage.getItem('lucent_theme') || 'dark');
+    themeBtn?.addEventListener('click', () => {
+      applyTheme(document.body.classList.contains('light-theme') ? 'dark' : 'light');
+    });
+    lucide.createIcons();
+  </script>
+</body>
+</html>
