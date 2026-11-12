@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucent GK Illustrated | Modern India - 16. Socio-Religious Reform Movements (19th–20th Century)</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              bronze: '#CD7F32',
+              terracotta: '#C86446',
+              deepnavy: '#0B1325',
+              carddark: '#141E33',
+              cardborder: '#233354',
+              sand: '#F7F3E9',
+              sandstone: '#E8DCC4'
+            }
+          },
+          fontFamily: {
+            heading: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0B1325] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- TOP BANNER -->
+  <div class="bg-gradient-to-r from-amber-800 via-amber-700 to-amber-900 text-amber-50 text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-md flex items-center justify-center gap-2">
+    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-950/70 text-amber-300 uppercase tracking-wider">APSC &amp; UPSC GS Core</span>
+    <span>Lucent's General Knowledge &bull; Chapter 16: Socio-Religious Reform Movements (19th–20th Century)</span>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-[#0B1325]/90 backdrop-blur-md border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-900/30 ring-1 ring-amber-400/40 group-hover:scale-105 transition-transform">
+          <i data-lucide="sun-medium" class="w-6 h-6 text-slate-950"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-500 tracking-wider">LUCENT GS</span>
+            <span class="text-xs font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">VISUALIZED</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium">Modern Indian History &bull; Module 16: Indian Renaissance &amp; Reforms</p>
+        </div>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/70 p-1.5 rounded-full border border-slate-800 text-xs font-semibold">
+        <a href="#overview" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Overview</a>
+        <a href="#brahmo" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Brahmo Samaj</a>
+        <a href="#arya" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Arya Samaj</a>
+        <a href="#ramakrishna" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Vivekananda</a>
+        <a href="#anticaste" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Anti-Caste Movements</a>
+        <a href="#quiz" class="px-3.5 py-1.5 rounded-full text-amber-400 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 transition-all flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Quiz Mode
+        </a>
+      </nav>
+
+      <!-- Action Buttons & Chapter Selector -->
+      <div class="flex items-center gap-2.5">
+        <button id="themeToggleBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Toggle Light / Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+
+        <button id="searchBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Search Facts">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <div class="relative">
+          <button id="chapterSelectorBtn" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-xs font-semibold text-slate-200 transition-all">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span>Ch. 16: Reforms</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400"></i>
+          </button>
+          
+                    <div id="chapterDropdown" class="hidden absolute right-0 mt-2 w-80 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-2 z-50 text-xs max-h-96 overflow-y-auto">
+            <div class="px-3 py-1 font-bold text-amber-400 uppercase tracking-wider text-[10px] ">Ancient Indian History</div>
+            <a href="index.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">1. Harappan / Indus Valley</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">2500–1750 BC</span>
+            </a>
+            <a href="vedic.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">2. Vedic Culture</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1500–600 BC</span>
+            </a>
+            <a href="mahajanapadas.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">3. 16 Mahajanapadas & Magadha</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">600–325 BC</span>
+            </a>
+            <a href="religions.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">4. Buddhism & Jainism</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">600–400 BC</span>
+            </a>
+            <a href="maurya.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">5. The Mauryan Empire</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">322–185 BC</span>
+            </a>
+            <a href="post_maurya.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">6. Post-Maurya & Sangam</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">185 BC–319 AD</span>
+            </a>
+            <a href="gupta.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">7. Gupta Age & Harsha</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">319–647 AD</span>
+            </a>
+            <div class="px-3 py-1 font-bold text-amber-400 uppercase tracking-wider text-[10px] border-t border-slate-800 mt-1.5 pt-1.5">Medieval Indian History</div>
+            <a href="early_medieval.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">8. Early Medieval (Rajputs & Cholas)</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">650–1206 AD</span>
+            </a>
+            <a href="delhi_sultanate.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">9. The Delhi Sultanate</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1206–1526 AD</span>
+            </a>
+            <a href="vijayanagar_bahmani.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">10. Vijayanagar & Bahmani</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1336–1646 AD</span>
+            </a>
+            <a href="mughal_empire.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">11. The Mughal Empire</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1526–1707 AD</span>
+            </a>
+            <a href="marathas.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">12. The Maratha Empire & Later Mughals</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1674–1818 AD</span>
+            </a>
+            <a href="bhakti_sufi.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">13. Religious Movements (Bhakti & Sufi)</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">15th–16th c.</span>
+            </a>
+            <div class="px-3 py-1 font-bold text-amber-400 uppercase tracking-wider text-[10px] border-t border-slate-800 mt-1.5 pt-1.5">Modern Indian History</div>
+            <a href="european_expansion.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">14. European Expansion in India</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1498–1856 AD</span>
+            </a>
+            <a href="economic_revolts.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">15. Economic Impact & Tribal Revolts</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1765–1900 AD</span>
+            </a>
+            <a href="reforms.html" class="flex items-center justify-between p-2 rounded-lg bg-amber-500/15 text-amber-300 font-semibold border border-amber-500/20">
+              <span class="truncate">16. Socio-Religious Reform Movements</span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] bg-amber-400 text-slate-950 font-bold shrink-0 ml-1">Active</span>
+            </a>
+            <a href="revolt_1857.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">17. The Great Revolt of 1857</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1857–1858 AD</span>
+            </a>
+            <a href="national_movement_early.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">18. Early National Movement</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1885–1919 AD</span>
+            </a>
+            <a href="gandhian_era.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">19. The Gandhian Era</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1919–1947 AD</span>
+            </a>
+            <a href="viceroys_acts.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">20. British Viceroys & Acts</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1773–1947 AD</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HERO SECTION -->
+  <section id="overview" class="relative pt-12 pb-20 overflow-hidden border-b border-slate-800/60 bg-gradient-to-b from-slate-950 via-[#0B1325] to-[#0B1325]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex items-center gap-2 text-xs font-semibold text-amber-400/90 tracking-wide uppercase mb-3">
+        <span>Chapter 16</span> &bull; <span>19th – 20th Century AD</span> &bull; <span>The Intellectual Awakening of Modern India</span>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold">
+            <i data-lucide="flame" class="w-3.5 h-3.5"></i> Rationalism &bull; Humanitarianism &bull; Social Equality
+          </div>
+          
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight">
+            Socio-Religious <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-500">Reform Movements</span>
+          </h1>
+          
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
+            In the 19th century, the encounter with Western rationalism and humanitarian ideas triggered a monumental intellectual renaissance across India. Reformers rose against decadent social practices—Sati, child marriage, untouchability, female infanticide, and priestly monopoly—seeking to purify indigenous religious traditions and build an enlightened, egalitarian nation.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">1828</div>
+              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Brahmo Samaj</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">1873</div>
+              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Satyashodhak</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">1875</div>
+              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Arya Samaj</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">1897</div>
+              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Ramakrishna Mission</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Interactive Visual Showcase -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl bg-slate-900 group cursor-pointer"
+               data-zoomable="true"
+               data-img-src="assets/images/raja_ram_mohan_roy.jpg"
+               data-img-title="Raja Ram Mohan Roy (1772–1833)"
+               data-img-desc="Official 19th-century portrait of Raja Ram Mohan Roy, universally revered as the 'Father of Modern India' and 'Father of the Indian Renaissance'. A polyglot scholar in Sanskrit, Persian, Arabic, English, Greek, and Hebrew, he pioneered Indian journalism with 'Sambad Kaumudi', founded the Brahmo Samaj in 1828, and spearheaded the successful campaign that led to the legal abolition of Sati in 1829.">
+            
+            <img src="assets/images/raja_ram_mohan_roy.jpg" alt="Raja Ram Mohan Roy" class="w-full h-80 sm:h-96 object-cover object-top group-hover:scale-105 transition-all duration-500">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-amber-400/40 text-[10px] text-amber-300 font-mono flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom Full Image
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 text-left">
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-slate-950 uppercase tracking-wider mb-1">Renaissance Pioneer</span>
+              <h3 class="text-base sm:text-lg font-bold text-white leading-snug">Raja Ram Mohan Roy (1772–1833)</h3>
+              <p class="text-xs text-slate-300 line-clamp-2 mt-0.5">Founder of Brahmo Samaj and crusader against Sati, idol worship, and orthodoxy.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 1: BRAHMO SAMAJ & PRARTHANA SAMAJ -->
+  <section id="brahmo" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">The Bengal Renaissance</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">Brahmo Samaj, Young Bengal &amp; Prarthana Samaj</p>
+        <p class="text-sm text-slate-400 mt-2">Pioneered by English-educated intellectuals in Calcutta and Bombay, these movements advocated monotheism, rational scrutiny of scriptures, and legal protection for women.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        
+        <!-- Ram Mohan Roy Card -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
+              <span class="font-bold">Calcutta, 1828</span>
+              <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20 text-[10px]">Monotheism</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Brahmo Samaj &amp; Ram Mohan Roy</h3>
+            <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; <strong class="text-slate-100">Atmiya Sabha (1815):</strong> Formed to promote monotheistic worship and attack idol worship and caste bigotry.</li>
+              <li>&bull; <strong class="text-slate-100">Abolition of Sati (1829):</strong> Lord William Bentinck enacted Regulation XVII declaring Sati illegal and punishable as homicide.</li>
+              <li>&bull; <strong class="text-slate-100">Publications:</strong> *Tuhfat-ul-Muwahhidin* (1809 in Persian), *Sambad Kaumudi* (Bengali), and *Mirat-ul-Akhbar* (Persian).</li>
+              <li>&bull; Supported Western scientific education; helped found <span class="text-amber-300">Hindu College (1817)</span> and Vedanta College (1825).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Schisms in Brahmo Samaj -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
+              <span class="font-bold">1866 &amp; 1878</span>
+              <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20 text-[10px]">Evolution</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Tagore, Sen &amp; The Two Schisms</h3>
+            <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; <strong class="text-slate-100">Debendranath Tagore:</strong> Founded Tattvabodhini Sabha (1839) and joined Brahmo Samaj in 1842.</li>
+              <li>&bull; <strong class="text-slate-100">First Schism (1866):</strong> Split into conservative <strong class="text-amber-300">Adi Brahmo Samaj</strong> (Tagore) and radical <strong class="text-amber-300">Brahmo Samaj of India</strong> (Keshab Chandra Sen).</li>
+              <li>&bull; <strong class="text-slate-100">Native Marriage Act (1872):</strong> Sen pushed British to enact the Civil Marriage Act fixing marriage age (14 girls, 18 boys).</li>
+              <li>&bull; <strong class="text-slate-100">Second Schism (1878):</strong> Sen married his minor daughter to Cooch Behar Maharaja; outraged disciples founded <strong class="text-amber-300">Sadharan Brahmo Samaj</strong> (Anand Mohan Bose).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Prarthana Samaj & Young Bengal -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-2">
+              <span class="font-bold">Bombay &amp; Calcutta</span>
+              <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20 text-[10px]">Western India</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Prarthana Samaj &amp; Derozians</h3>
+            <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; <strong class="text-slate-100">Young Bengal Movement:</strong> Founded by <strong class="text-amber-300">Henry Vivian Derozio</strong> (1809–31) at Hindu College. Radicals advocating free thought, press liberty, and rights for ryots.</li>
+              <li>&bull; <strong class="text-slate-100">Prarthana Samaj (1867):</strong> Founded in Bombay by <strong class="text-slate-100">Dr. Atmaram Pandurang</strong>; joined by Justice <strong class="text-amber-300">M.G. Ranade</strong> and R.G. Bhandarkar.</li>
+              <li>&bull; Built schools, orphanages, and night schools; focused on widow remarriage and inter-caste dining rather than attacking religion directly.</li>
+              <li>&bull; <strong class="text-slate-100">Ishwar Chandra Vidyasagar:</strong> Crusade led to passage of the historic <span class="text-amber-300">Hindu Widows' Remarriage Act of 1856</span>.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: ARYA SAMAJ & SWAMI DAYANAND SARASWATI -->
+  <section id="arya" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Vedic Revivalism</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">Swami Dayanand Saraswati &amp; The Arya Samaj (1875)</p>
+        <p class="text-sm text-slate-400 mt-2">Rejecting Westernization, Dayanand sought to revive authentic Vedic Hinduism, proclaiming "Go back to the Vedas" and asserting the equality of all human beings under divine law.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-12">
+        
+        <!-- Dayanand Saraswati Portrait Visual -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl bg-slate-900 group cursor-pointer"
+               data-zoomable="true"
+               data-img-src="assets/images/dayanand_saraswati.jpg"
+               data-img-title="Swami Dayanand Saraswati (1824–1883)"
+               data-img-desc="Historical photographic portrait of Swami Dayanand Saraswati (born Mula Shankar in Tankara, Gujarat). A wandering sannyasi and disciple of the blind sage Swami Virjananda of Mathura, he founded the Arya Samaj at Bombay on 10 April 1875. In his landmark Hindi treatise 'Satyarth Prakash' (1875), he declared the Vedas infallible, denounced idol worship, polytheism, child marriage, and priestcraft, and was the first to proclaim 'India for the Indians'.">
+            
+            <img src="assets/images/dayanand_saraswati.jpg" alt="Swami Dayanand Saraswati" class="w-full h-80 sm:h-96 object-cover object-top group-hover:scale-105 transition-all duration-500">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-amber-400/40 text-[10px] text-amber-300 font-mono flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom Full Image
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 text-left">
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-slate-950 uppercase tracking-wider mb-1">Vedic Crusader</span>
+              <h3 class="text-base sm:text-lg font-bold text-white leading-snug">Swami Dayanand Saraswati</h3>
+              <p class="text-xs text-slate-300 line-clamp-2 mt-0.5">Author of 'Satyarth Prakash', founder of Arya Samaj, and pioneer of the Shuddhi movement.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Core Pillars of Arya Samaj -->
+        <div class="lg:col-span-7 space-y-4">
+          
+          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+              <span class="text-sm text-white">Tenets of the Arya Samaj (Founded 1875 at Bombay)</span>
+              <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Headquarters: Lahore (1877)</span>
+            </div>
+            <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; <strong class="text-slate-100">Infallibility of Vedas:</strong> Regarded the four Vedas alone as true knowledge revealed by God; rejected Puranas, idol worship, incarnation (*Avataravada*), and pilgrimage rituals (*Tirthas*).</li>
+              <li>&bull; <strong class="text-slate-100">Social Equality:</strong> Caste should be determined solely by merit, character, and actions (*Guna, Karma, Swabhava*), never by birth. Defended equal Vedic initiation (*Upanayana*) for women and Shudras.</li>
+              <li>&bull; <strong class="text-slate-100">First Call for Swaraj:</strong> First reformer to use the term <span class="text-amber-300 font-bold">"Swaraj"</span>, stating that "good government is no substitute for self-government".</li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+              <span class="text-sm text-white">The Shuddhi Movement &amp; Educational Schism</span>
+              <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">DAV vs. Gurukul</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-2">
+              <strong class="text-slate-100">Shuddhi Movement:</strong> Reconversion ritual to bring former Hindus back into the Vedic faith, aggressively opposing Christian and Islamic proselytization.
+            </p>
+            <p class="text-[11px] text-slate-400">
+              <strong class="text-slate-200">The 1893 Split:</strong> The College faction led by <strong class="text-amber-300">Lala Hansraj</strong> founded the English-medium DAV College at Lahore (1886); the orthodox vegetarian faction led by <strong class="text-amber-300">Swami Shraddhanand</strong> established the ancient-style Gurukul Kangri at Haridwar (1902).
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: RAMAKRISHNA MISSION & SWAMI VIVEKANANDA -->
+  <section id="ramakrishna" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Universal Vedanta</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">Swami Vivekananda &amp; Ramakrishna Mission (1897)</p>
+        <p class="text-sm text-slate-400 mt-2">Bridging ancient spiritual wisdom and modern social activism, Vivekananda took Vedanta to the world and dedicated the Ramakrishna Mission to humanitarian service.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-12">
+        
+        <!-- Vivekananda Chicago Visual -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl bg-slate-900 group cursor-pointer"
+               data-zoomable="true"
+               data-img-src="assets/images/swami_vivekananda.jpg"
+               data-img-title="Swami Vivekananda at Chicago Parliament of Religions (1893)"
+               data-img-desc="The iconic photograph of Swami Vivekananda (1863–1902, born Narendranath Datta) taken by Thomas Harrison in Chicago during the World's Parliament of Religions in September 1893. His opening address beginning with 'Sisters and Brothers of America' earned a two-minute standing ovation from 7,000 listeners, establishing him as a world spiritual leader and elevating India's cultural pride on the global stage.">
+            
+            <img src="assets/images/swami_vivekananda.jpg" alt="Swami Vivekananda Chicago" class="w-full h-80 sm:h-96 object-cover object-top group-hover:scale-105 transition-all duration-500">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-amber-400/40 text-[10px] text-amber-300 font-mono flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom Full Image
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 text-left">
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-slate-950 uppercase tracking-wider mb-1">Chicago 1893</span>
+              <h3 class="text-base sm:text-lg font-bold text-white leading-snug">Swami Vivekananda (1863–1902)</h3>
+              <p class="text-xs text-slate-300 line-clamp-2 mt-0.5">Spiritual father of modern Indian nationalism and founder of the Ramakrishna Mission.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teachings & Belur Math -->
+        <div class="lg:col-span-7 space-y-4">
+          
+          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+              <span class="text-sm text-white">Ramakrishna Paramahamsa (1836–1886)</span>
+              <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Dakshineswar Mystic</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Priest at the Dakshineswar Kali temple who attained spiritual realizations through Hinduism, Islam, and Christianity. Proclaimed <strong class="text-amber-300">"Joto mot, toto poth"</strong> (As many faiths, so many paths), demonstrating the ultimate unity and harmony of all world religions.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+              <span class="text-sm text-white">The Ramakrishna Mission (Founded 1 May 1897)</span>
+              <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Headquarters: Belur Math</span>
+            </div>
+            <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; <strong class="text-slate-100">Service to Man is Service to God:</strong> Coined the concept of <span class="text-amber-300 font-bold">Daridra Narayana</span> (God embodied in the poor and oppressed).</li>
+              <li>&bull; Synthesized spiritual realization with massive humanitarian relief (hospitals, schools, disaster and famine relief).</li>
+              <li>&bull; Preached Neo-Vedanta: Advaita philosophy translated into dynamic, courageous social action.</li>
+              <li>&bull; Subhash Chandra Bose proclaimed: <span class="italic text-slate-200">"Vivekananda is the spiritual father of modern Indian nationalism."</span></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: ANTI-CASTE & LOWER CLASS MOVEMENTS -->
+  <section id="anticaste" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Social Emancipation</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">Anti-Caste, Dalit &amp; Minority Reform Movements</p>
+        <p class="text-sm text-slate-400 mt-2">Grassroots leaders challenged the caste system, untouchability, and Brahmanical hegemony across Western, Southern, and Northern India.</p>
+      </div>
+
+      <!-- 4 Columns Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+        
+        <!-- Jyotiba Phule -->
+        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between text-xs space-y-3">
+          <div>
+            <div class="flex items-center justify-between font-mono text-[10px] text-amber-400 mb-1">
+              <span>1873 &bull; Pune</span>
+              <span class="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300">Maharashtra</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-1">Mahatma Jyotiba Phule</h3>
+            <p class="text-[11px] text-amber-300 font-semibold mb-2">Satyashodhak Samaj</p>
+            <p class="text-slate-300 leading-relaxed">
+              Formed the Truth-Seekers' Society to liberate Shudras and Ati-Shudras. Authored <strong class="text-slate-100">Gulamgiri</strong> (Slavery, 1873). Opened India's first school for girls and untouchables in Pune in 1848 with his wife <strong class="text-slate-100">Savitribai Phule</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Dr. B.R. Ambedkar -->
+        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between text-xs space-y-3">
+          <div>
+            <div class="flex items-center justify-between font-mono text-[10px] text-amber-400 mb-1">
+              <span>1924 &bull; Bombay</span>
+              <span class="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300">Babasaheb</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-1">Dr. B.R. Ambedkar</h3>
+            <p class="text-[11px] text-amber-300 font-semibold mb-2">Bahishkrit Hitkarini Sabha</p>
+            <p class="text-slate-300 leading-relaxed">
+              Launched the <strong class="text-slate-100">Mahad Satyagraha (1927)</strong> for water access and publicly burnt the *Manusmriti*. Founded the Independent Labour Party (1936) and All India Scheduled Castes Federation (1942). Published journals <span class="italic text-amber-300">Mooknayak</span> and <span class="italic text-amber-300">Bahishkrit Bharat</span>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sri Narayana Guru -->
+        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between text-xs space-y-3">
+          <div>
+            <div class="flex items-center justify-between font-mono text-[10px] text-amber-400 mb-1">
+              <span>1903 &bull; Kerala</span>
+              <span class="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300">SNDP Yogam</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-1">Sri Narayana Guru</h3>
+            <p class="text-[11px] text-amber-300 font-semibold mb-2">Aravippuram Movement</p>
+            <p class="text-slate-300 leading-relaxed">
+              Installed a stone Shiva lingam at <strong class="text-slate-100">Aravippuram (1888)</strong>, challenging Brahmin ritual monopoly. Coined the immortal slogan: <strong class="text-amber-300">"One Caste, One Religion, One God for Man"</strong>. Led Ezhavas and backward classes to education and dignity.
+            </p>
+          </div>
+        </div>
+
+        <!-- Periyar E.V.R. -->
+        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col justify-between text-xs space-y-3">
+          <div>
+            <div class="flex items-center justify-between font-mono text-[10px] text-amber-400 mb-1">
+              <span>1925 &bull; Tamil Nadu</span>
+              <span class="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300">Dravidian</span>
+            </div>
+            <h3 class="text-base font-bold text-white mb-1">E.V. Ramaswamy 'Periyar'</h3>
+            <p class="text-[11px] text-amber-300 font-semibold mb-2">Self-Respect Movement</p>
+            <p class="text-slate-300 leading-relaxed">
+              Spearheaded the Vaikom Satyagraha (1924) for temple entry. Launched the <strong class="text-slate-100">Self-Respect Movement</strong> advocating priestless non-Brahmin marriages, gender equality, and rationalism; published <span class="italic text-amber-300">Kudi Arasu</span>.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Islamic, Sikh & Parsi Reforms Matrix -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden">
+        <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-900">
+          <h3 class="font-bold text-sm text-slate-100 flex items-center gap-2">
+            <i data-lucide="book-open" class="w-4 h-4 text-amber-400"></i> Islamic, Sikh &amp; Parsi Reform Movements (Lucent Page 47)
+          </h3>
+          <span class="text-[11px] font-mono text-amber-400/90 font-semibold">High-Yield Prelims Data</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-slate-950/70 text-amber-300 uppercase tracking-wider text-[11px] font-semibold border-b border-slate-800">
+              <tr>
+                <th class="py-3 px-4">Movement / Organization</th>
+                <th class="py-3 px-4">Year &amp; Place</th>
+                <th class="py-3 px-4">Founders / Leaders</th>
+                <th class="py-3 px-4">Core Objective &amp; Impact</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 font-medium">
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold">Aligarh Movement</td>
+                <td class="py-3 px-4 font-mono">1875 &bull; Aligarh (UP)</td>
+                <td class="py-3 px-4 font-semibold text-slate-100">Sir Syed Ahmad Khan</td>
+                <td class="py-3 px-4">Founded MAO College (later AMU); published *Tahzib-ul-Akhlaq*; promoted modern scientific education.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold">Deoband Movement</td>
+                <td class="py-3 px-4 font-mono">1866 &bull; Saharanpur (UP)</td>
+                <td class="py-3 px-4 font-semibold text-slate-100">Qasim Nanautawi &amp; Rashid Gangohi</td>
+                <td class="py-3 px-4">Orthodox revivalist school; backed the Indian National Congress and issued fatwas against British rule.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold">Singh Sabha &amp; Akali Movement</td>
+                <td class="py-3 px-4 font-mono">1873 / 1920 &bull; Amritsar</td>
+                <td class="py-3 px-4 font-semibold text-slate-100">Thakur Singh Sandhawalia, Kartar Singh</td>
+                <td class="py-3 px-4">Liberated Sikh Gurdwaras from corrupt Mahants; enacted Sikh Gurdwaras Act 1925 creating SGPC.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold">Rahnumai Mazdayasnan Sabha</td>
+                <td class="py-3 px-4 font-mono">1851 &bull; Bombay</td>
+                <td class="py-3 px-4 font-semibold text-slate-100">Naoroji Furdonji, Dadabhai Naoroji, S.S. Bengalee</td>
+                <td class="py-3 px-4">Parsi religious reform, removal of purdah, female education; published the journal *Rast Goftar* (Truth-Teller).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE STUDY TOOLS: FLASHCARDS & QUIZ -->
+  <section id="quiz" class="py-16 bg-slate-900/60 border-b border-slate-800/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Test Your Mastery</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">Interactive Recall &amp; Examination Drill</p>
+        <p class="text-sm text-slate-400 mt-2">Cement high-yield prelims facts on the Brahmo Samaj, Arya Samaj, Swami Vivekananda, and anti-caste movements.</p>
+      </div>
+
+      <!-- 3D Flashcard Section -->
+      <div class="mb-16">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-300">3D Interactive Flashcards</span>
+          </div>
+          <span id="flashcardCounter" class="text-xs font-mono text-amber-400 font-bold">1 / 6</span>
+        </div>
+
+        <div id="flashcard" class="flashcard-container cursor-pointer select-none">
+          <div id="flashcardInner" class="flashcard-inner">
+            <!-- Front -->
+            <div class="flashcard-face flashcard-front">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-amber-400/80 mb-2">Question (Click or Tap to Flip)</span>
+              <p id="flashcardQuestion" class="text-base sm:text-lg font-semibold text-slate-100 text-center leading-relaxed px-4">
+                Loading question...
+              </p>
+              <div class="mt-4 flex items-center gap-1.5 text-xs text-slate-400 font-medium">
+                <i data-lucide="rotate-cw" class="w-3.5 h-3.5 text-amber-400"></i> Tap card to reveal answer
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="flashcard-face flashcard-back">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-amber-300 mb-2">Prelims High-Yield Answer</span>
+              <p id="flashcardAnswer" class="text-sm sm:text-base text-slate-200 text-center leading-relaxed px-4">
+                Loading answer...
+              </p>
+              <div class="mt-4 flex items-center gap-1.5 text-xs text-amber-300/80 font-medium">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Verified from Lucent GK
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <button id="prevCardBtn" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-slate-200 transition-all flex items-center gap-1.5">
+            <i data-lucide="chevron-left" class="w-4 h-4"></i> Previous
+          </button>
+          <button id="nextCardBtn" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold transition-all flex items-center gap-1.5 shadow-lg shadow-amber-500/20">
+            Next Card <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mock Quiz Section -->
+      <div>
+        <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
+          <div>
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="clipboard-check" class="w-5 h-5 text-amber-400"></i>
+              Chapter 16 Mock Examination
+            </h3>
+            <p class="text-xs text-slate-400">5 High-Probability Questions for UPSC, APSC &amp; State PSCs</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <span id="quizScoreDisplay" class="text-xs font-mono font-bold text-amber-400 px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20">Score: 0 / 5</span>
+            <button id="resetQuizBtn" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs" title="Reset Quiz">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="quizContainer" class="space-y-4">
+          <!-- Dynamically populated by reforms.js -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-start justify-center p-4 sm:p-6 pt-16">
+    <div class="w-full max-w-2xl bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
+      <div class="p-4 border-b border-slate-800 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2.5 flex-1">
+          <i data-lucide="search" class="w-5 h-5 text-amber-400 shrink-0"></i>
+          <input type="text" id="factSearchInput" placeholder="Search Raja Ram Mohan Roy, Arya Samaj, Vivekananda, Phule, Ambedkar, Sati..." class="w-full bg-transparent text-sm text-slate-100 placeholder-slate-500 outline-none">
+        </div>
+        <button id="closeSearchBtn" class="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-all">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div id="searchResultsContainer" class="p-4 overflow-y-auto space-y-2 flex-1">
+        <!-- Rendered results -->
+      </div>
+      <div class="p-3 bg-slate-950/70 border-t border-slate-800 text-[11px] text-slate-500 flex items-center justify-between">
+        <span>Press <kbd class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">ESC</kbd> to close</span>
+        <span>Lucent GK Real-Time Search</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER -->
+  <div id="fullImageViewerModal" class="full-image-modal">
+    <div class="lightbox-backdrop"></div>
+    <div class="relative w-full h-full flex flex-col p-4 sm:p-6 z-10">
+      
+      <!-- Top controls -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="bg-slate-900/90 backdrop-blur-md px-4 py-2 rounded-xl border border-slate-700/80 text-left">
+          <h4 id="lightboxTitle" class="text-sm sm:text-base font-bold text-white leading-tight">Image Title</h4>
+          <span class="text-[10px] text-amber-400 font-mono">Zoom with wheel &bull; Drag to pan &bull; Click reset</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <div class="flex items-center bg-slate-900/90 backdrop-blur-md rounded-xl border border-slate-700/80 p-1">
+            <button id="zoomOutBtn" class="p-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg" title="Zoom Out">
+              <i data-lucide="zoom-out" class="w-4 h-4"></i>
+            </button>
+            <span id="zoomLevelDisplay" class="px-2 text-xs font-mono font-bold text-amber-400 min-w-[50px] text-center">100%</span>
+            <button id="zoomInBtn" class="p-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg" title="Zoom In">
+              <i data-lucide="zoom-in" class="w-4 h-4"></i>
+            </button>
+            <button id="zoomResetBtn" class="px-2.5 py-1 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg" title="Reset Zoom">
+              Reset
+            </button>
+          </div>
+          
+          <button id="closeLightboxBtn" class="p-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-slate-300 hover:text-white hover:bg-rose-950 transition-all" title="Close Viewer">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Viewport -->
+      <div id="lightboxViewport" class="lightbox-viewport">
+        <img id="lightboxImg" src="" alt="Artifact Detail" class="lightbox-img">
+      </div>
+
+      <!-- Bottom Description -->
+      <div class="mt-2 bg-slate-900/90 backdrop-blur-md p-3.5 rounded-xl border border-slate-700/80 max-w-4xl mx-auto text-center">
+        <p id="lightboxDescription" class="text-xs text-slate-300 leading-relaxed"></p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 border-t border-slate-800/80 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+          <i data-lucide="award" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-bold text-slate-200">Lucent GK Visualized &bull; Complete Reference Edition</span>
+          <p class="text-[11px] text-slate-500">Modern Indian History Series &bull; Module 16</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-4 text-xs font-medium">
+        <a href="economic_revolts.html" class="hover:text-amber-400 flex items-center gap-1">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Ch. 15: Economy &amp; Revolts
+        </a>
+        <span class="text-slate-700">&bull;</span>
+        <a href="hub.html" class="hover:text-amber-400">Master Hub</a>
+        <span class="text-slate-700">&bull;</span>
+        <a href="#overview" class="hover:text-amber-400 flex items-center gap-1">
+          Top <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Page Logic Script -->
+  <script src="assets/js/reforms.js"></script>
+</body>
+</html>

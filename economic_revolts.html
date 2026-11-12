@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucent GK Illustrated | Modern India - 15. Economic Drain, Land Revenue &amp; Popular Revolts (1765–1900 AD)</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              bronze: '#CD7F32',
+              terracotta: '#C86446',
+              deepnavy: '#0B1325',
+              carddark: '#141E33',
+              cardborder: '#233354',
+              sand: '#F7F3E9',
+              sandstone: '#E8DCC4'
+            }
+          },
+          fontFamily: {
+            heading: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0B1325] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- TOP BANNER -->
+  <div class="bg-gradient-to-r from-amber-800 via-amber-700 to-amber-900 text-amber-50 text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-md flex items-center justify-center gap-2">
+    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-950/70 text-amber-300 uppercase tracking-wider">APSC &amp; UPSC GS Core</span>
+    <span>Lucent's General Knowledge &bull; Chapter 15: Economic Impact of British Rule &amp; Popular Uprisings (1765–1900 AD)</span>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-[#0B1325]/90 backdrop-blur-md border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-900/30 ring-1 ring-amber-400/40 group-hover:scale-105 transition-transform">
+          <i data-lucide="trending-down" class="w-6 h-6 text-slate-950"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-500 tracking-wider">LUCENT GS</span>
+            <span class="text-xs font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">VISUALIZED</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium">Modern Indian History &bull; Module 15: Colonial Economy &amp; Revolts</p>
+        </div>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/70 p-1.5 rounded-full border border-slate-800 text-xs font-semibold">
+        <a href="#overview" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Overview</a>
+        <a href="#drain" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Drain of Wealth</a>
+        <a href="#land" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Land Settlements</a>
+        <a href="#tribal" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Tribal Uprisings</a>
+        <a href="#peasant" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Peasant Revolts</a>
+        <a href="#quiz" class="px-3.5 py-1.5 rounded-full text-amber-400 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 transition-all flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Quiz Mode
+        </a>
+      </nav>
+
+      <!-- Action Buttons & Chapter Selector -->
+      <div class="flex items-center gap-2.5">
+        <button id="themeToggleBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Toggle Light / Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+
+        <button id="searchBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Search Facts">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <div class="relative">
+          <button id="chapterSelectorBtn" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-xs font-semibold text-slate-200 transition-all">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span>Ch. 15: Economy &amp; Revolts</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400"></i>
+          </button>
+          
+                    <div id="chapterDropdown" class="hidden absolute right-0 mt-2 w-80 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-2 z-50 text-xs max-h-96 overflow-y-auto">
+            <div class="px-3 py-1 font-bold text-amber-400 uppercase tracking-wider text-[10px] ">Ancient Indian History</div>
+            <a href="index.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">1. Harappan / Indus Valley</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">2500–1750 BC</span>
+            </a>
+            <a href="vedic.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">2. Vedic Culture</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1500–600 BC</span>
+            </a>
+            <a href="mahajanapadas.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">3. 16 Mahajanapadas & Magadha</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">600–325 BC</span>
+            </a>
+            <a href="religions.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">4. Buddhism & Jainism</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">600–400 BC</span>
+            </a>
+            <a href="maurya.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">5. The Mauryan Empire</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">322–185 BC</span>
+            </a>
+            <a href="post_maurya.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">6. Post-Maurya & Sangam</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">185 BC–319 AD</span>
+            </a>
+            <a href="gupta.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">7. Gupta Age & Harsha</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">319–647 AD</span>
+            </a>
+            <div class="px-3 py-1 font-bold text-amber-400 uppercase tracking-wider text-[10px] border-t border-slate-800 mt-1.5 pt-1.5">Medieval Indian History</div>
+            <a href="early_medieval.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">8. Early Medieval (Rajputs & Cholas)</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">650–1206 AD</span>
+            </a>
+            <a href="delhi_sultanate.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">9. The Delhi Sultanate</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1206–1526 AD</span>
+            </a>
+            <a href="vijayanagar_bahmani.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">10. Vijayanagar & Bahmani</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1336–1646 AD</span>
+            </a>
+            <a href="mughal_empire.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">11. The Mughal Empire</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1526–1707 AD</span>
+            </a>
+            <a href="marathas.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">12. The Maratha Empire & Later Mughals</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1674–1818 AD</span>
+            </a>
+            <a href="bhakti_sufi.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">13. Religious Movements (Bhakti & Sufi)</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">15th–16th c.</span>
+            </a>
+            <div class="px-3 py-1 font-bold text-amber-400 uppercase tracking-wider text-[10px] border-t border-slate-800 mt-1.5 pt-1.5">Modern Indian History</div>
+            <a href="european_expansion.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">14. European Expansion in India</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1498–1856 AD</span>
+            </a>
+            <a href="economic_revolts.html" class="flex items-center justify-between p-2 rounded-lg bg-amber-500/15 text-amber-300 font-semibold border border-amber-500/20">
+              <span class="truncate">15. Economic Impact & Tribal Revolts</span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] bg-amber-400 text-slate-950 font-bold shrink-0 ml-1">Active</span>
+            </a>
+            <a href="reforms.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">16. Socio-Religious Reform Movements</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">19th–20th c.</span>
+            </a>
+            <a href="revolt_1857.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">17. The Great Revolt of 1857</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1857–1858 AD</span>
+            </a>
+            <a href="national_movement_early.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">18. Early National Movement</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1885–1919 AD</span>
+            </a>
+            <a href="gandhian_era.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">19. The Gandhian Era</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1919–1947 AD</span>
+            </a>
+            <a href="viceroys_acts.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">20. British Viceroys & Acts</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1773–1947 AD</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HERO SECTION -->
+  <section id="overview" class="relative pt-12 pb-20 overflow-hidden border-b border-slate-800/60 bg-gradient-to-b from-slate-950 via-[#0B1325] to-[#0B1325]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex items-center gap-2 text-xs font-semibold text-amber-400/90 tracking-wide uppercase mb-3">
+        <span>Chapter 15</span> &bull; <span>1765 AD – 1900 AD</span> &bull; <span>Colonial Exploitation &amp; Grassroots Resistance</span>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold">
+            <i data-lucide="coins" class="w-3.5 h-3.5"></i> Drain of Wealth &bull; Agrarian Disruption &bull; Tribal Defiance
+          </div>
+          
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight">
+            Economic Impact &amp; <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-500">Popular Uprisings</span>
+          </h1>
+          
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
+            British colonial hegemony transformed India from a premier exporter of world-class manufactures into an impoverished agrarian colony supplying raw materials for British factories. Unrelenting revenue extraction through the Zamindari, Ryotwari, and Mahalwari systems, combined with uncompensated economic drain, ignited fierce resistance from Santhals, Mundas, Kols, and rebellious peasantry across the subcontinent.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">1793</div>
+              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Permanent Settlement</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">1855–56</div>
+              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Santhal Rebellion</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">1859–60</div>
+              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Indigo Revolt</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">1899–00</div>
+              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Birsa Munda Ulgulan</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Interactive Visual Showcase -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl bg-slate-900 group cursor-pointer"
+               data-zoomable="true"
+               data-img-src="assets/images/santhal_rebellion_1856.jpg"
+               data-img-title="Searching for Rebel Santhals in the Rajmahal Hills (ILN, 1856)"
+               data-img-desc="Original historical engraving published in the Illustrated London News (1856) depicting British military forces hunting armed Santhal insurgents in the dense sal forests of the Rajmahal Hills (Damin-i-Koh). Under brothers Sidhu and Kanhu Murmu, over 10,000 Santhals rose in total rebellion against British revenue oppression, corrupt police Darogas, and usurious Mahajans.">
+            
+            <img src="assets/images/santhal_rebellion_1856.jpg" alt="Santhal Rebellion" class="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-105 transition-all duration-500">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-amber-400/40 text-[10px] text-amber-300 font-mono flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom Full Image
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 text-left">
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-slate-950 uppercase tracking-wider mb-1">Archival Capture 1856</span>
+              <h3 class="text-base sm:text-lg font-bold text-white leading-snug">The Santhal Insurrection (Hul)</h3>
+              <p class="text-xs text-slate-300 line-clamp-2 mt-0.5">Sidhu &amp; Kanhu's fierce uprising in Damin-i-Koh against colonial money-lenders and police extortion.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 1: DRAIN OF WEALTH & DE-INDUSTRIALIZATION -->
+  <section id="drain" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Economic Critique</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">The Drain of Wealth &amp; De-Industrialization</p>
+        <p class="text-sm text-slate-400 mt-2">Indian nationalist economists uncovered the systematic siphon of Indian resources to Great Britain without any equivalent economic or material return.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-12">
+        
+        <!-- Dadabhai Naoroji Portrait Visual -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl bg-slate-900 group cursor-pointer"
+               data-zoomable="true"
+               data-img-src="assets/images/dadabhai_naoroji.jpg"
+               data-img-title="Dadabhai Naoroji &bull; The Grand Old Man of India (1892)"
+               data-img-desc="Official photographic portrait of Dadabhai Naoroji (1825–1917) taken in London in 1892, the historic year he became the first Asian elected to the British House of Commons (representing Central Finsbury). Pioneer of economic nationalism, his monumental work 'Poverty and Un-British Rule in India' (1901) conclusively demonstrated that colonial Britain was bleeding India white through uncompensated fiscal drain.">
+            
+            <img src="assets/images/dadabhai_naoroji.jpg" alt="Dadabhai Naoroji" class="w-full h-80 sm:h-96 object-cover object-top group-hover:scale-105 transition-all duration-500">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-amber-400/40 text-[10px] text-amber-300 font-mono flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom Full Image
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 text-left">
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-slate-950 uppercase tracking-wider mb-1">Economic Pioneer</span>
+              <h3 class="text-base sm:text-lg font-bold text-white leading-snug">Dadabhai Naoroji (1825–1917)</h3>
+              <p class="text-xs text-slate-300 line-clamp-2 mt-0.5">Author of 'Poverty and Un-British Rule in India' and pioneer of the Drain Theory.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drain Mechanisms Cards -->
+        <div class="lg:col-span-7 space-y-4">
+          
+          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+              <span class="text-sm text-white">Constituents of the Economic Drain (Lucent Page 45)</span>
+              <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Home Charges</span>
+            </div>
+            <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; <strong class="text-slate-100">Home Charges:</strong> Annual remittances from Indian revenue to London covering salaries and pensions of India Office officials, British military expenditure, and diplomacy.</li>
+              <li>&bull; <strong class="text-slate-100">Guaranteed Railway Interest:</strong> British private railway investors were guaranteed a 5% risk-free return on their capital paid straight from Indian tax revenues.</li>
+              <li>&bull; <strong class="text-slate-100">Profits of British Capital:</strong> Banking, shipping, insurance, tea, jute, and coal profits repatriated to the UK without local reinvestment.</li>
+              <li>&bull; <strong class="text-slate-100">Purchasing Goods with Bengal Revenue:</strong> The EIC used internal tax revenues to buy Indian silk and spices, effectively exporting goods for free (termed "Investments of Revenue").</li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+              <span class="text-sm text-white">De-Industrialization &amp; Ruralization of India</span>
+              <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Ruin of Artisans</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-2">
+              Before British rule, India produced ~25% of global manufactured goods. One-way free trade allowed machine-made Manchester textiles to enter India duty-free, while exorbitant tariffs (up to 80%) blocked Indian textiles entering Britain.
+            </p>
+            <p class="text-[11px] text-slate-400">
+              Famous artisanal hubs (Dacca muslin, Murshidabad silk, Surat brocade) were ruined. Millions of displaced weavers were forced onto overcrowded land, causing chronic agricultural distress and deadly famines.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: THE 3 LAND REVENUE SETTLEMENTS -->
+  <section id="land" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Agrarian Exploitation</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">The Three British Land Revenue Systems</p>
+        <p class="text-sm text-slate-400 mt-2">To maximize tax extraction from the soil, the British divided India into three rigid fiscal experiments: Zamindari, Ryotwari, and Mahalwari.</p>
+      </div>
+
+      <!-- 3 Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        
+        <!-- Permanent Settlement -->
+        <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-amber-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30 uppercase">1793 &bull; Cornwallis</span>
+              <span class="text-xs font-mono text-slate-400 font-bold">19% of India</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-1">Permanent Settlement (Zamindari)</h3>
+            <p class="text-xs font-mono text-amber-300 mb-3 font-semibold">Bengal, Bihar, Orissa, Varanasi</p>
+            <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; Planned by <strong class="text-slate-100">Sir John Shore</strong>. Zamindars recognized as absolute owners of the land.</li>
+              <li>&bull; <strong class="text-slate-100">Revenue Ratio:</strong> State demand fixed perpetually at <span class="text-amber-300 font-bold">10/11th</span> of collection; Zamindar kept <span class="text-amber-300 font-bold">1/11th</span>.</li>
+              <li>&bull; <strong class="text-rose-400 font-semibold">Sunset Law:</strong> Estate auctioned if tax not deposited by sunset of the specified date.</li>
+              <li>&bull; Cultivators reduced to insecure tenants subject to illegal cesses (*Abwabs*).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Ryotwari Settlement -->
+        <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-amber-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30 uppercase">1820 &bull; Thomas Munro</span>
+              <span class="text-xs font-mono text-slate-400 font-bold">51% of India</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-1">Ryotwari Settlement</h3>
+            <p class="text-xs font-mono text-amber-300 mb-3 font-semibold">Madras, Bombay, Assam, Coorg</p>
+            <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; Devised by <strong class="text-slate-100">Alexander Read</strong> (1792) and implemented by <strong class="text-slate-100">Thomas Munro</strong>.</li>
+              <li>&bull; Direct agreement made with individual cultivator (<span class="text-amber-300 italic">Ryot</span>).</li>
+              <li>&bull; Revenue revised every 20–30 years based on Ricardo's rent theory, taking <span class="text-amber-300 font-bold">45% to 55%</span> of gross produce.</li>
+              <li>&bull; Rigid cash demand drove peasants into clutches of moneylenders; government acted as a giant merciless landlord.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mahalwari Settlement -->
+        <div class="p-6 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-amber-500/40 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30 uppercase">1822 &bull; Holt Mackenzie</span>
+              <span class="text-xs font-mono text-slate-400 font-bold">30% of India</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-1">Mahalwari Settlement</h3>
+            <p class="text-xs font-mono text-amber-300 mb-3 font-semibold">Gangetic Valley, NWFP, Punjab</p>
+            <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+              <li>&bull; Devised by <strong class="text-slate-100">Holt Mackenzie</strong> (Reg. VII 1822) and reformed by <strong class="text-slate-100">Robert Merttins Bird</strong> (1833).</li>
+              <li>&bull; Settlement made jointly with village communities or estates (<span class="text-amber-300 italic">Mahals</span>).</li>
+              <li>&bull; Village headman (<strong class="text-slate-100">Lumberdar</strong>) collected and paid revenue on behalf of the whole village.</li>
+              <li>&bull; Preserved common land ownership system known as <span class="italic text-slate-200">Bhaichara</span> in Western UP.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Comparison Matrix Table -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden">
+        <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-900">
+          <h3 class="font-bold text-sm text-slate-100 flex items-center gap-2">
+            <i data-lucide="table" class="w-4 h-4 text-amber-400"></i> High-Yield Summary: 3 British Land Revenue Systems
+          </h3>
+          <span class="text-[11px] font-mono text-amber-400/90 font-semibold">Lucent GK Page 46</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-slate-950/70 text-amber-300 uppercase tracking-wider text-[11px] font-semibold border-b border-slate-800">
+              <tr>
+                <th class="py-3 px-4">System</th>
+                <th class="py-3 px-4">Introduced By</th>
+                <th class="py-3 px-4">Coverage Area</th>
+                <th class="py-3 px-4">Ownership Recognized</th>
+                <th class="py-3 px-4">State Revenue Demand</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 font-medium">
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold">Zamindari (Permanent)</td>
+                <td class="py-3 px-4">Lord Cornwallis (1793)</td>
+                <td class="py-3 px-4">Bengal, Bihar, Orissa, Varanasi (19%)</td>
+                <td class="py-3 px-4">Zamindars / Landlords</td>
+                <td class="py-3 px-4">Fixed perpetually (10/11th to State)</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold">Ryotwari</td>
+                <td class="py-3 px-4">Thomas Munro &amp; Read (1820)</td>
+                <td class="py-3 px-4">Madras, Bombay, Assam (51%)</td>
+                <td class="py-3 px-4">Individual Ryots (Cultivators)</td>
+                <td class="py-3 px-4">45% to 55% of gross produce (Periodic)</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold">Mahalwari</td>
+                <td class="py-3 px-4">Holt Mackenzie &amp; Bird (1822/33)</td>
+                <td class="py-3 px-4">Gangetic Valley, Punjab, NWFP (30%)</td>
+                <td class="py-3 px-4">Village Community / Mahals</td>
+                <td class="py-3 px-4">50% to 66% of rental value (Periodic)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: TRIBAL UPRISINGS & BIRSA MUNDA -->
+  <section id="tribal" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Adivasi Heroism</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">Tribal Uprisings &amp; The Forest Rebellions</p>
+        <p class="text-sm text-slate-400 mt-2">British forest laws, encroachment of ancestral lands by Dikus (outsiders), forced labour (Beth Begari), and usurious moneylenders provoked violent tribal insurrections across the country.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-12">
+        
+        <!-- Birsa Munda Portrait Visual -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl bg-slate-900 group cursor-pointer"
+               data-zoomable="true"
+               data-img-src="assets/images/birsa_munda.jpg"
+               data-img-title="Bhagwan Birsa Munda &bull; Pioneer of the Ulgulan (c. 1899)"
+               data-img-desc="Original historical photograph of Bhagwan Birsa Munda (1875–1900), the legendary tribal freedom fighter and folk hero of the Chotanagpur plateau. In 1899–1900, he led the apocalyptic Munda Rebellion (Ulgulan / The Great Tumult) to expel British officials, zamindars, and Christian missionaries, proclaiming 'Abua Raj Ete Jana, Maharani Raj Tundu Jana' (Let the kingdom of the queen end and our kingdom begin).">
+            
+            <img src="assets/images/birsa_munda.jpg" alt="Birsa Munda Portrait" class="w-full h-80 sm:h-96 object-cover object-top group-hover:scale-105 transition-all duration-500">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-amber-400/40 text-[10px] text-amber-300 font-mono flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom Full Image
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 text-left">
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-slate-950 uppercase tracking-wider mb-1">Dharati Aba</span>
+              <h3 class="text-base sm:text-lg font-bold text-white leading-snug">Bhagwan Birsa Munda (1875–1900)</h3>
+              <p class="text-xs text-slate-300 line-clamp-2 mt-0.5">Leader of the Great Tumult (Ulgulan) and defender of tribal land rights.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Major Tribal Revolts Grid -->
+        <div class="lg:col-span-7 space-y-3">
+          
+          <!-- Santhal -->
+          <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-xs">
+            <div class="flex items-center justify-between font-bold text-amber-300 mb-1">
+              <span>Santhal Rebellion / Hul (1855–56)</span>
+              <span class="text-slate-400 font-mono text-[10px]">Damin-i-Koh (Rajmahal Hills)</span>
+            </div>
+            <p class="text-slate-300 leading-relaxed">
+              Led by <strong class="text-slate-100">Sidhu and Kanhu Murmu</strong>. Mobilized over 10,000 Santhals against British revenue police, corrupt Darogas, and moneylenders. Enacted Act 37 of 1855 creating the separate <span class="text-amber-400 font-semibold">Santhal Parganas</span> district.
+            </p>
+          </div>
+
+          <!-- Munda -->
+          <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 text-xs">
+            <div class="flex items-center justify-between font-bold text-amber-300 mb-1">
+              <span>Munda Rebellion / Ulgulan (1899–1900)</span>
+              <span class="text-slate-400 font-mono text-[10px]">Ranchi, Chotanagpur</span>
+            </div>
+            <p class="text-slate-300 leading-relaxed">
+              Led by <strong class="text-slate-100">Birsa Munda</strong>. Fought for restoration of <span class="italic text-amber-300">Khuntkatti</span> (ancestral collective landownership). Birsa died in Ranchi jail (9 June 1900). Prompted enactment of the landmark <span class="text-amber-400 font-semibold">Chotanagpur Tenancy Act (1908)</span> banning transfer of tribal lands to non-tribals.
+            </p>
+          </div>
+
+          <!-- Kol & Khasi in 2 cols -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800 text-xs">
+              <span class="font-bold text-amber-300 block mb-1">Kol Mutiny (1831–32)</span>
+              <p class="text-slate-300 leading-relaxed">Led by <strong class="text-slate-100">Buddhu Bhagat</strong> and Madara Mahato in Chotanagpur against British transfer of lands to outsider Sikh and Muslim farmers.</p>
+            </div>
+            <div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800 text-xs">
+              <span class="font-bold text-amber-300 block mb-1">Khasi Revolt (1829–33)</span>
+              <p class="text-slate-300 leading-relaxed">Led by <strong class="text-slate-100">Tirut Singh</strong> in the Meghalaya hills against British military road construction through Khasi territory connecting Brahmaputra to Sylhet.</p>
+            </div>
+          </div>
+
+          <!-- Ahom & Ramosi -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800 text-xs">
+              <span class="font-bold text-amber-300 block mb-1">Ahom Revolt (1828)</span>
+              <p class="text-slate-300 leading-relaxed">Led by <strong class="text-slate-100">Gomdhar Konwar</strong> in Assam against British annexation after First Anglo-Burmese War (Treaty of Yandaboo 1826).</p>
+            </div>
+            <div class="p-3.5 rounded-lg bg-slate-900 border border-slate-800 text-xs">
+              <span class="font-bold text-amber-300 block mb-1">Ramosi Uprising (1822)</span>
+              <p class="text-slate-300 leading-relaxed">Led by <strong class="text-slate-100">Chittur Singh</strong> and Umaji Naik in Western Ghats / Poona against heavy British land assessments.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: PEASANT MOVEMENTS & THE INDIGO REVOLT -->
+  <section id="peasant" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Agrarian Resistance</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">Major Peasant Movements (1763–1875)</p>
+        <p class="text-sm text-slate-400 mt-2">Oppressed by European plantation monopolies, extortionate zamindars, and moneylenders, Indian peasants waged resolute legal and armed battles.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Sanyasi Rebellion -->
+        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 text-xs space-y-2">
+          <div class="flex items-center justify-between text-amber-400 font-bold mb-1">
+            <span class="text-sm text-white">Sanyasi &amp; Fakir Rebellion (1763–1800)</span>
+            <span class="font-mono text-[10px]">Bengal</span>
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            Triggered by the catastrophic Bengal Famine of 1770 and British restrictions on pilgrims. Dispossessed peasants joined Hindu Sanyasis and Muslim Madari Fakirs led by <strong class="text-slate-100">Majnu Shah</strong>, Chirag Ali, Bhawani Pathak, and Devi Chaudhurani.
+          </p>
+          <div class="p-2.5 rounded-lg bg-slate-950 text-slate-400 text-[11px]">
+            Immortally commemorated in <strong class="text-slate-200">Bankim Chandra Chatterjee's</strong> novel <span class="italic text-amber-300">Anandamath</span> (1882), which introduced the national hymn <span class="text-slate-200">"Vande Mataram"</span>.
+          </div>
+        </div>
+
+        <!-- Indigo Revolt -->
+        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 text-xs space-y-2">
+          <div class="flex items-center justify-between text-amber-400 font-bold mb-1">
+            <span class="text-sm text-white">Indigo Revolt / Nil Bidroho (1859–60)</span>
+            <span class="font-mono text-[10px]">Nadia, Bengal</span>
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            Led by brothers <strong class="text-slate-100">Digambar Biswas</strong> and <strong class="text-slate-100">Bishnu Biswas</strong> in Govindpur (Nadia). Peasants refused to plant indigo under the exploitative <span class="italic text-amber-300">Dadni</span> system (fraudulent cash advances) and defended villages against planters' lathiyals.
+          </p>
+          <div class="p-2.5 rounded-lg bg-slate-950 text-slate-400 text-[11px]">
+            Dramatized in <strong class="text-slate-200">Dinabandhu Mitra's</strong> play <span class="italic text-amber-300">Nil Darpan</span> (1860). Led to the Indigo Commission (1860), which declared that ryots could not be coerced to sow indigo.
+          </div>
+        </div>
+
+        <!-- Deccan Riots -->
+        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 text-xs space-y-2">
+          <div class="flex items-center justify-between text-amber-400 font-bold mb-1">
+            <span class="text-sm text-white">Deccan Riots (1875)</span>
+            <span class="font-mono text-[10px]">Poona &amp; Ahmednagar</span>
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            Ryotwari peasants in Maharashtra suffered from exorbitant revenue demands and catastrophic drop in cotton prices after the American Civil War. Maratha farmers rose against Gujarati and Marwari moneylenders (*Sawkars*), publicly burning debt bonds and account books.
+          </p>
+          <div class="p-2.5 rounded-lg bg-slate-950 text-slate-400 text-[11px]">
+            Compelled the British Government to enact the <strong class="text-slate-200">Deccan Agriculturalists Relief Act (1879)</strong> protecting peasants from arrest and land alienation for debt.
+          </div>
+        </div>
+
+        <!-- Moplah -->
+        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 text-xs space-y-2">
+          <div class="flex items-center justify-between text-amber-400 font-bold mb-1">
+            <span class="text-sm text-white">Moplah Uprisings (1836–1854 &amp; 1921)</span>
+            <span class="font-mono text-[10px]">Malabar, Kerala</span>
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            Rebellion of impoverished Muslim cultivators (<span class="italic text-amber-300">Moplahs</span>) against oppressive Hindu landlords (<span class="italic text-slate-200">Jenmis</span>) backed by the British administration. Climaxed in the massive 1921 Malabar rebellion during the Khilafat-Non Cooperation movement.
+          </p>
+        </div>
+
+        <!-- Pagal Panthis -->
+        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 text-xs space-y-2">
+          <div class="flex items-center justify-between text-amber-400 font-bold mb-1">
+            <span class="text-sm text-white">Pagal Panthis Movement (1825–35)</span>
+            <span class="font-mono text-[10px]">Mymensingh, Bengal</span>
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            Semi-religious sect founded by <strong class="text-slate-100">Karam Shah</strong> among the Hajong and Garo tribes. His son <strong class="text-slate-100">Tipu Shah</strong> organized armed resistance against illegal rents levied by local Zamindars, capturing Sherpur in 1825.
+          </p>
+        </div>
+
+        <!-- Faraizi Movement -->
+        <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 text-xs space-y-2">
+          <div class="flex items-center justify-between text-amber-400 font-bold mb-1">
+            <span class="text-sm text-white">Faraizi Movement (1838–57)</span>
+            <span class="font-mono text-[10px]">Faridpur, Bengal</span>
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            Founded by <strong class="text-slate-100">Haji Shariatullah</strong> and led by his son <strong class="text-slate-100">Dudu Mian</strong> (Muhsin-ud-Din Ahmad). Mobilized Muslim peasantry against Hindu zamindars and European indigo planters, declaring that "all land belongs to God and no rent should be levied".
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE STUDY TOOLS: FLASHCARDS & QUIZ -->
+  <section id="quiz" class="py-16 bg-slate-900/60 border-b border-slate-800/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Test Your Mastery</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">Interactive Recall &amp; Examination Drill</p>
+        <p class="text-sm text-slate-400 mt-2">Cement high-yield prelims facts on the Drain of Wealth, British land settlements, Santhal rebellion, and Birsa Munda.</p>
+      </div>
+
+      <!-- 3D Flashcard Section -->
+      <div class="mb-16">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-300">3D Interactive Flashcards</span>
+          </div>
+          <span id="flashcardCounter" class="text-xs font-mono text-amber-400 font-bold">1 / 6</span>
+        </div>
+
+        <div id="flashcard" class="flashcard-container cursor-pointer select-none">
+          <div id="flashcardInner" class="flashcard-inner">
+            <!-- Front -->
+            <div class="flashcard-face flashcard-front">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-amber-400/80 mb-2">Question (Click or Tap to Flip)</span>
+              <p id="flashcardQuestion" class="text-base sm:text-lg font-semibold text-slate-100 text-center leading-relaxed px-4">
+                Loading question...
+              </p>
+              <div class="mt-4 flex items-center gap-1.5 text-xs text-slate-400 font-medium">
+                <i data-lucide="rotate-cw" class="w-3.5 h-3.5 text-amber-400"></i> Tap card to reveal answer
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="flashcard-face flashcard-back">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-amber-300 mb-2">Prelims High-Yield Answer</span>
+              <p id="flashcardAnswer" class="text-sm sm:text-base text-slate-200 text-center leading-relaxed px-4">
+                Loading answer...
+              </p>
+              <div class="mt-4 flex items-center gap-1.5 text-xs text-amber-300/80 font-medium">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Verified from Lucent GK
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <button id="prevCardBtn" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-slate-200 transition-all flex items-center gap-1.5">
+            <i data-lucide="chevron-left" class="w-4 h-4"></i> Previous
+          </button>
+          <button id="nextCardBtn" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold transition-all flex items-center gap-1.5 shadow-lg shadow-amber-500/20">
+            Next Card <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mock Quiz Section -->
+      <div>
+        <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
+          <div>
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="clipboard-check" class="w-5 h-5 text-amber-400"></i>
+              Chapter 15 Mock Examination
+            </h3>
+            <p class="text-xs text-slate-400">5 High-Probability Questions for UPSC, APSC &amp; State PSCs</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <span id="quizScoreDisplay" class="text-xs font-mono font-bold text-amber-400 px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20">Score: 0 / 5</span>
+            <button id="resetQuizBtn" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs" title="Reset Quiz">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="quizContainer" class="space-y-4">
+          <!-- Dynamically populated by economic_revolts.js -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-start justify-center p-4 sm:p-6 pt-16">
+    <div class="w-full max-w-2xl bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
+      <div class="p-4 border-b border-slate-800 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2.5 flex-1">
+          <i data-lucide="search" class="w-5 h-5 text-amber-400 shrink-0"></i>
+          <input type="text" id="factSearchInput" placeholder="Search drain of wealth, Permanent settlement, Santhal, Birsa Munda, Indigo..." class="w-full bg-transparent text-sm text-slate-100 placeholder-slate-500 outline-none">
+        </div>
+        <button id="closeSearchBtn" class="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-all">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div id="searchResultsContainer" class="p-4 overflow-y-auto space-y-2 flex-1">
+        <!-- Rendered results -->
+      </div>
+      <div class="p-3 bg-slate-950/70 border-t border-slate-800 text-[11px] text-slate-500 flex items-center justify-between">
+        <span>Press <kbd class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">ESC</kbd> to close</span>
+        <span>Lucent GK Real-Time Search</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER -->
+  <div id="fullImageViewerModal" class="full-image-modal">
+    <div class="lightbox-backdrop"></div>
+    <div class="relative w-full h-full flex flex-col p-4 sm:p-6 z-10">
+      
+      <!-- Top controls -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="bg-slate-900/90 backdrop-blur-md px-4 py-2 rounded-xl border border-slate-700/80 text-left">
+          <h4 id="lightboxTitle" class="text-sm sm:text-base font-bold text-white leading-tight">Image Title</h4>
+          <span class="text-[10px] text-amber-400 font-mono">Zoom with wheel &bull; Drag to pan &bull; Click reset</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <div class="flex items-center bg-slate-900/90 backdrop-blur-md rounded-xl border border-slate-700/80 p-1">
+            <button id="zoomOutBtn" class="p-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg" title="Zoom Out">
+              <i data-lucide="zoom-out" class="w-4 h-4"></i>
+            </button>
+            <span id="zoomLevelDisplay" class="px-2 text-xs font-mono font-bold text-amber-400 min-w-[50px] text-center">100%</span>
+            <button id="zoomInBtn" class="p-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg" title="Zoom In">
+              <i data-lucide="zoom-in" class="w-4 h-4"></i>
+            </button>
+            <button id="zoomResetBtn" class="px-2.5 py-1 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg" title="Reset Zoom">
+              Reset
+            </button>
+          </div>
+          
+          <button id="closeLightboxBtn" class="p-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-slate-300 hover:text-white hover:bg-rose-950 transition-all" title="Close Viewer">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Viewport -->
+      <div id="lightboxViewport" class="lightbox-viewport">
+        <img id="lightboxImg" src="" alt="Artifact Detail" class="lightbox-img">
+      </div>
+
+      <!-- Bottom Description -->
+      <div class="mt-2 bg-slate-900/90 backdrop-blur-md p-3.5 rounded-xl border border-slate-700/80 max-w-4xl mx-auto text-center">
+        <p id="lightboxDescription" class="text-xs text-slate-300 leading-relaxed"></p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 border-t border-slate-800/80 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+          <i data-lucide="award" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-bold text-slate-200">Lucent GK Visualized &bull; Complete Reference Edition</span>
+          <p class="text-[11px] text-slate-500">Modern Indian History Series &bull; Module 15</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-4 text-xs font-medium">
+        <a href="european_expansion.html" class="hover:text-amber-400 flex items-center gap-1">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Ch. 14: Europeans
+        </a>
+        <span class="text-slate-700">&bull;</span>
+        <a href="hub.html" class="hover:text-amber-400">Master Hub</a>
+        <span class="text-slate-700">&bull;</span>
+        <a href="#overview" class="hover:text-amber-400 flex items-center gap-1">
+          Top <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Page Logic Script -->
+  <script src="assets/js/economic_revolts.js"></script>
+</body>
+</html>

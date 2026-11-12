@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Gandhian Era (1919–1947) | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-amber-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-amber-400 hover:text-amber-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500/20 to-amber-600/10 border border-amber-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="compass" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-amber-300">LUCENT<span class="text-amber-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">Modern History</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <!-- Quick Search Button -->
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-amber-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+                <!-- Chapter Switcher Dropdown -->
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-amber-400 cursor-pointer">
+          <optgroup label="Ancient India">
+            <option value="index.html" >01. Indus Valley Civilization</option>
+            <option value="vedic.html" >02. Vedic Culture</option>
+            <option value="mahajanapadas.html" >03. Mahajanapadas & Magadha</option>
+            <option value="religions.html" >04. Buddhism & Jainism</option>
+            <option value="maurya.html" >05. The Mauryan Empire</option>
+            <option value="post_maurya.html" >06. Post-Maurya & Sangam</option>
+            <option value="gupta.html" >07. Gupta Age & Harsha</option>
+          </optgroup>
+          <optgroup label="Medieval India">
+            <option value="early_medieval.html" >08. Early Medieval & Rajputs</option>
+            <option value="delhi_sultanate.html" >09. The Delhi Sultanate</option>
+            <option value="vijayanagar_bahmani.html" >10. Vijayanagar & Bahmani</option>
+            <option value="mughal_empire.html" >11. The Mughal Empire</option>
+            <option value="marathas.html" >12. The Marathas & Later Mughals</option>
+            <option value="bhakti_sufi.html" >13. Bhakti & Sufi Movements</option>
+          </optgroup>
+          <optgroup label="Modern India">
+            <option value="european_expansion.html" >14. European Expansion in India</option>
+            <option value="economic_revolts.html" >15. Economic Impact & Tribal Revolts</option>
+            <option value="reforms.html" >16. Socio-Religious Reform Movements</option>
+            <option value="revolt_1857.html" >17. The Great Revolt of 1857</option>
+            <option value="national_movement_early.html" >18. Early National Movement (1885–1919)</option>
+            <option value="gandhian_era.html" selected>19. The Gandhian Era (1919–1947)</option>
+            <option value="viceroys_acts.html" >20. British Viceroys & Acts</option>
+          </optgroup>
+        </select>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+    <!-- HERO SECTION -->
+    <section class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-slate-950 p-8 sm:p-12 shadow-2xl">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent pointer-events-none"></div>
+      <div class="relative z-10 max-w-4xl space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold uppercase tracking-wider">
+          <i data-lucide="sun" class="w-3.5 h-3.5"></i>
+          Section 19 • Modern Indian History
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-black tracking-tight text-slate-100">
+          The Gandhian Era: <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">Mass Struggles & Independence (1919–1947)</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+          The transformation of India’s freedom movement into an unstoppable mass upsurge under Mahatma Gandhi, the heroic martyrdom of Bhagat Singh, the march to Dandi, the thunderous war cry of Netaji Subhash Chandra Bose’s INA, and the dawn of freedom in August 1947.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="#non-cooperation" class="px-4 py-2 rounded-xl bg-amber-500 text-slate-950 font-semibold text-xs tracking-wide hover:bg-amber-400 transition-colors">Non-Cooperation (1920)</a>
+          <a href="#dandi-march" class="px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-medium text-xs tracking-wide border border-slate-700 transition-colors">Dandi March (1930)</a>
+          <a href="#quit-india" class="px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-medium text-xs tracking-wide border border-slate-700 transition-colors">Quit India (1942)</a>
+          <a href="#subhash-ina" class="px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-medium text-xs tracking-wide border border-slate-700 transition-colors">Netaji & INA</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: EARLY GANDHIAN SATYAGRAHAS (1915–1918) -->
+    <section id="early-gandhi" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">01</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Early Experiments: Champaran, Ahmedabad & Kheda</h2>
+          <p class="text-xs text-slate-400">Return to India and the First Triad of Non-Violent Agitations</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Champaran -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 text-[11px] font-mono font-bold">1917 • Bihar</div>
+          <h3 class="text-base font-bold text-slate-100">Champaran Satyagraha</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            • <strong>Issue:</strong> European planters forced peasants to cultivate indigo on 3/20th of their land (<strong>Tinkathia System</strong>).
+            <br>• <strong>Invitation:</strong> Raj Kumar Shukla persuaded Gandhi to visit Champaran.
+            <br>• <strong>Milestone:</strong> Gandhi's <strong>First Civil Disobedience</strong> movement in India. An inquiry committee was appointed; planters refunded 25% of illegal exactions and Tinkathia was abolished.
+          </p>
+        </div>
+
+        <!-- Ahmedabad Mill Strike -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 text-[11px] font-mono font-bold">1918 • Gujarat</div>
+          <h3 class="text-base font-bold text-slate-100">Ahmedabad Mill Strike</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            • <strong>Issue:</strong> Mill owners wanted to discontinue the <em>Plague Bonus</em>, while workers demanded a 50% wage hike due to wartime inflation.
+            <br>• <strong>Intervention:</strong> Gandhi supported workers (assisted by Anusuya Sarabhai) and undertook his <strong>First Hunger Strike</strong> in India.
+            <br>• <strong>Outcome:</strong> Mill owners agreed to a <strong>35% wage increase</strong> via a tribunal award.
+          </p>
+        </div>
+
+        <!-- Kheda Satyagraha -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 text-[11px] font-mono font-bold">1918 • Gujarat</div>
+          <h3 class="text-base font-bold text-slate-100">Kheda Satyagraha</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            • <strong>Issue:</strong> Crops failed in Kheda district, but the colonial administration insisted on full land revenue extraction.
+            <br>• <strong>Leadership:</strong> Gandhi along with <strong>Sardar Vallabhbhai Patel</strong> and Indulal Yagnik organized peasants to withhold revenue.
+            <br>• <strong>Milestone:</strong> Gandhi's <strong>First Non-Cooperation</strong> movement in India. Government secretly ordered revenue collected only from those who could pay.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: NON-COOPERATION MOVEMENT (1920–1922) & KHILAFAT -->
+    <section id="non-cooperation" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">02</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Khilafat Movement & Non-Cooperation (1920–1922)</h2>
+          <p class="text-xs text-slate-400">Hindu-Muslim Fraternity, Boycott of British Goods, and Chauri Chaura</p>
+        </div>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 text-sm text-slate-300 leading-relaxed">
+          <div class="space-y-3">
+            <h3 class="text-base font-bold text-amber-300 flex items-center gap-2">
+              <i data-lucide="flame" class="w-4 h-4"></i> The Khilafat Question & Launch
+            </h3>
+            <p>
+              Following World War I, the British dismembered the Ottoman Empire and humiliated the Turkish Sultan (Caliph of Islam). In India, the <strong>Ali Brothers</strong> (Maulana Mohammad Ali and Shaukat Ali), Maulana Azad, and Hasrat Mohani formed the All India Khilafat Committee. Gandhi was elected President of the All India Khilafat Conference (Nov 1919).
+            </p>
+            <p>
+              The <strong>Non-Cooperation Movement</strong> was formally launched on <strong>1 August 1920</strong> (the day Bal Gangadhar Tilak passed away). The Tilak Swaraj Fund was oversubscribed with over ₹1 crore.
+            </p>
+          </div>
+          <div class="space-y-3">
+            <h3 class="text-base font-bold text-amber-300 flex items-center gap-2">
+              <i data-lucide="shield-alert" class="w-4 h-4"></i> Nagpur Session & Chauri Chaura Withdrawal
+            </h3>
+            <p>
+              At the <strong>Nagpur Session (Dec 1920)</strong> chaired by C. Vijayaraghavachariar, Congress endorsed NCM, reorganized Provincial Congress Committees on a <em>linguistic basis</em>, and admitted all adults paying 4 annas yearly membership fee.
+            </p>
+            <p>
+              <strong>Chauri Chaura Incident (4 February 1922):</strong> At Chauri Chaura (Gorakhpur, UP), an angry crowd set fire to a police station, killing 22 policemen. Shocked by the violence, Gandhi unilaterally called off the movement on <strong>12 February 1922</strong> through the <em>Bardoli Resolution</em>, leading to his arrest and 6-year sentence by Judge Broomfield.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: REVOLUTIONARY UPSURGE & SHAHEED BHAGAT SINGH -->
+    <section id="swaraj-revolutionaries" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">03</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Swaraj Party & The Revolutionary Martyrs (1923–1931)</h2>
+          <p class="text-xs text-slate-400">Council Entry, Kakori Action, HSRA, and the Martyrdom of Bhagat Singh</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Archival Photo: Bhagat Singh -->
+        <div class="lg:col-span-4 space-y-3">
+          <div class="expandable-image group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 cursor-zoom-in" data-title="Shaheed Bhagat Singh (1907–1931)" data-caption="Archival photograph of Bhagat Singh taken in 1929 with his trademark fedora hat. Co-founder of the Hindustan Socialist Republican Association (HSRA), he championed socialism and revolutionary anti-imperialism before his martyrdom at age 23 on 23 March 1931.">
+            <img src="assets/images/bhagat_singh.jpg" alt="Shaheed Bhagat Singh" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-xs text-slate-200 flex items-center justify-between">
+              <span class="font-semibold text-rose-300">Shaheed-e-Azam Bhagat Singh</span>
+              <span class="flex items-center gap-1 text-[11px] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700"><i data-lucide="maximize-2" class="w-3 h-3"></i> Zoom</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic text-center">Shaheed Bhagat Singh: "Inquilab Zindabad" (Long Live the Revolution).</p>
+        </div>
+
+        <!-- Revolutionary Milestones -->
+        <div class="lg:col-span-8 space-y-4">
+          <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40">
+            <table class="w-full text-left text-xs sm:text-sm">
+              <thead class="bg-slate-800/80 text-amber-300 border-b border-slate-700 font-semibold uppercase tracking-wider text-[11px]">
+                <tr>
+                  <th class="p-3">Event / Organization</th>
+                  <th class="p-3">Year</th>
+                  <th class="p-3">Key Personalities</th>
+                  <th class="p-3">Lucent Prelims Key Takeaway</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60 text-slate-300">
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="p-3 font-bold text-slate-200">Swaraj Party</td>
+                  <td class="p-3 font-mono text-amber-400">1923</td>
+                  <td class="p-3">C.R. Das & Motilal Nehru</td>
+                  <td class="p-3">Council entry tactic ('Pro-changers'). Vithalbhai Patel elected Assembly President (1925).</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="p-3 font-bold text-slate-200">Kakori Train Action</td>
+                  <td class="p-3 font-mono text-amber-400">1925</td>
+                  <td class="p-3">Ram Prasad Bismil, Ashfaqullah Khan</td>
+                  <td class="p-3">HRA held up 8-Down train near Lucknow. Bismil, Ashfaqullah, Roshan Singh, Rajendra Lahiri hanged.</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="p-3 font-bold text-slate-200">HSRA Formed</td>
+                  <td class="p-3 font-mono text-amber-400">1928</td>
+                  <td class="p-3">Bhagat Singh, Azad, Sukhdev</td>
+                  <td class="p-3">At Feroz Shah Kotla, Delhi. Added 'Socialist' to manifestos; aimed at a socialist republic.</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="p-3 font-bold text-slate-200">Saunders Murder</td>
+                  <td class="p-3 font-mono text-amber-400">1928</td>
+                  <td class="p-3">Bhagat Singh, Rajguru, Azad</td>
+                  <td class="p-3">Assassinated ASP Saunders in Lahore to avenge Lala Lajpat Rai's death from police lathi blows.</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="p-3 font-bold text-slate-200">Central Assembly Bomb</td>
+                  <td class="p-3 font-mono text-amber-400">1929</td>
+                  <td class="p-3">Bhagat Singh & Batukeshwar Dutt</td>
+                  <td class="p-3">Threw harmless bombs against Public Safety Bill & Trade Disputes Bill: <em>'To make the deaf hear'</em>.</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="p-3 font-bold text-slate-200">Chittagong Armoury Raid</td>
+                  <td class="p-3 font-mono text-amber-400">1930</td>
+                  <td class="p-3">Surya Sen ('Masterda')</td>
+                  <td class="p-3">Indian Republican Army raided British armoury. Pritilata Waddedar and Kalpana Datta took part.</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="p-3 font-bold text-slate-200">Lahore Conspiracy Trial</td>
+                  <td class="p-3 font-mono text-rose-400">1931</td>
+                  <td class="p-3">Bhagat Singh, Rajguru, Sukhdev</td>
+                  <td class="p-3">Hanged on <strong>23 March 1931</strong> in Lahore Central Jail (observed as <strong>Shaheed Diwas</strong>).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: SIMON COMMISSION, NEHRU REPORT & LAHORE PURNA SWARAJ -->
+    <section id="lahore-purna-swaraj" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">04</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Simon Commission (1927), Nehru Report & Lahore Purna Swaraj (1929)</h2>
+          <p class="text-xs text-slate-400">The Challenge of Constitution-Making and the Unfurling of the Tricolor on River Ravi</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 text-[11px] font-mono font-bold">1927–1928</div>
+          <h3 class="text-base font-bold text-slate-100">Simon Commission Boycott</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            The British appointed an all-white 7-member <em>Indian Statutory Commission</em> under Sir John Simon without a single Indian member. Met everywhere with black flags and cries of <strong>'Simon Go Back'</strong>. At Lahore, Lala Lajpat Rai was brutally lathi-charged by James A. Scott and died on 17 Nov 1928, declaring: <em>'Every blow on my body will prove a nail in the coffin of the British Empire.'</em>
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 text-[11px] font-mono font-bold">1928</div>
+          <h3 class="text-base font-bold text-slate-100">The Nehru Report</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            In response to Secretary of State Lord Birkenhead’s arrogant challenge, an All Parties Conference appointed a committee under <strong>Motilal Nehru</strong>.
+            <br>• Demanded <strong>Dominion Status</strong>, 19 Fundamental Rights (including adult suffrage & equal rights for women), and a Supreme Court.
+            <br>• Rejected separate electorates in favor of joint electorates with reservation for minorities. Prompted Jinnah’s <strong>14 Points</strong> (1929).
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 text-[11px] font-mono font-bold">Dec 1929</div>
+          <h3 class="text-base font-bold text-slate-100">Lahore Session & Purna Swaraj</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Presided by <strong>Jawaharlal Nehru</strong> on the banks of river Ravi at Lahore.
+            <br>• Passed the historic <strong>Purna Swaraj (Complete Independence)</strong> resolution.
+            <br>• On midnight of 31 December 1929, Nehru unfurled the Tricolor flag.
+            <br>• Declared <strong>26 January 1930</strong> as the <em>First Independence Day</em> to be celebrated every year (commemorated later in 1950 as Republic Day).
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: CIVIL DISOBEDIENCE MOVEMENT & THE DANDI MARCH (1930) -->
+    <section id="dandi-march" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">05</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">The Salt Satyagraha & Civil Disobedience Movement (1930–1934)</h2>
+          <p class="text-xs text-slate-400">The 240-Mile March to Dandi and the Pan-Indian Defiance of Colonial Law</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Archival Image: Dandi March -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="expandable-image group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 cursor-zoom-in" data-title="Mahatma Gandhi on the Salt March (1930)" data-caption="Historic photograph of Mahatma Gandhi arriving at Dandi on 5 April 1930. The next morning (6 April), he picked up a pinch of natural sea salt, defying the British salt monopoly and inaugurating the nationwide Civil Disobedience Movement.">
+            <img src="assets/images/dandi_march_1930.jpg" alt="Mahatma Gandhi leading the Dandi March 1930" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-xs text-slate-200 flex items-center justify-between">
+              <span class="font-semibold text-amber-300">Dandi Beach, Gujarat • April 1930</span>
+              <span class="flex items-center gap-1 text-[11px] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700"><i data-lucide="maximize-2" class="w-3 h-3"></i> Zoom</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic text-center">Mahatma Gandhi at Dandi: Defiance of the British Salt Act.</p>
+        </div>
+
+        <!-- Factual Analysis & Regional Spread -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <h3 class="text-lg font-bold text-amber-300 flex items-center gap-2">
+              <i data-lucide="compass" class="w-5 h-5"></i> The Dandi March & Pan-India Manifestations
+            </h3>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li>
+                <strong>The March:</strong> Gandhi set out from <strong>Sabarmati Ashram</strong> on <strong>12 March 1930</strong> with <strong>78 chosen satyagrahis</strong>. Marched 240 miles (390 km) in 24 days to Dandi. On <strong>6 April 1930</strong>, he picked up a handful of salt, breaking the law.
+              </li>
+              <li>
+                <strong>Tamil Nadu (Coromandel):</strong> <strong>C. Rajagopalachari</strong> led the march from Tiruchirappalli to Vedaranyam.
+              </li>
+              <li>
+                <strong>Malabar (Kerala):</strong> <strong>K. Kelappan</strong> marched from Calicut to Payyanur.
+              </li>
+              <li>
+                <strong>Dharasana Salt Works:</strong> Sarojini Naidu, Imam Saheb, and Manilal Gandhi led 2,500 peaceful marchers. American journalist Webb Miller documented the brutal police beatings that horrified world opinion.
+              </li>
+              <li>
+                <strong>North-West Frontier Province (NWFP):</strong> <strong>Khan Abdul Ghaffar Khan</strong> ('Frontier Gandhi') organized the non-violent <em>Khudai Khidmatgars</em> ('Servants of God', known as Red Shirts). Soldiers of the Garhwal Rifles (led by Chandra Singh Garhwali) refused to fire on unarmed Pathans at Peshawar.
+              </li>
+              <li>
+                <strong>North-East (Nagaland):</strong> 13-year-old <strong>Rani Gaidinliu</strong> raised the banner of revolt against British rule (honored as 'Rani' of the Nagas by Jawaharlal Nehru).
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: ROUND TABLE CONFERENCES & POONA PACT (1931–1932) -->
+    <section id="rtc-poona-pact" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">06</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Round Table Conferences & The Poona Pact (1931–1932)</h2>
+          <p class="text-xs text-slate-400">Gandhi-Irwin Talks, The Communal Award, and the Historic Agreement at Yerwada</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Gandhi-Irwin & 2nd RTC -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+          <h3 class="text-lg font-bold text-amber-400 flex items-center gap-2">
+            <i data-lucide="file-text" class="w-5 h-5"></i> Gandhi-Irwin Pact & 2nd RTC
+          </h3>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <li>• <strong>Gandhi-Irwin Pact (5 March 1931):</strong> Also known as the <em>Delhi Pact</em>. Viceroy Irwin agreed to release non-violent political prisoners and permit peaceful picketing; Congress agreed to suspend Civil Disobedience and participate in the 2nd Round Table Conference.</li>
+            <li>• <strong>Karachi Session (March 1931):</strong> Chaired by Sardar Patel; endorsed the pact despite grief over Bhagat Singh's execution 6 days earlier. Passed landmark resolutions on <strong>Fundamental Rights</strong> and the <strong>National Economic Programme</strong> (drafted by Nehru).</li>
+            <li>• <strong>Second RTC (Sept–Dec 1931, London):</strong> Gandhi attended as the sole representative of Congress (alongside Sarojini Naidu, Malaviya). Talks deadlocked on minority electorates; Winston Churchill mocked Gandhi as a <em>'half-naked seditious fakir'</em>.</li>
+          </ul>
+        </div>
+
+        <!-- Communal Award & Poona Pact -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+          <h3 class="text-lg font-bold text-amber-400 flex items-center gap-2">
+            <i data-lucide="handshake" class="w-5 h-5"></i> Communal Award & Poona Pact (1932)
+          </h3>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <li>• <strong>Communal Award (16 August 1932):</strong> British PM Ramsay MacDonald announced separate electorates for Muslims, Sikhs, Indian Christians, Anglo-Indians, Europeans, and the <em>Depressed Classes</em>.</li>
+            <li>• <strong>Fast Unto Death:</strong> Gandhi saw separate electorates for Dalits as a colonial ploy to vivisect Hindu society and began a fast unto death in Yerwada Jail on 20 Sept 1932.</li>
+            <li>• <strong>Poona Pact (24 September 1932):</strong> Signed between <strong>Dr. B.R. Ambedkar</strong> and <strong>Madan Mohan Malaviya</strong> (on behalf of Gandhi). Separate electorates for Depressed Classes were abandoned in favor of <strong>joint electorates</strong> with reserved seats increased from 71 to <strong>147</strong> in provincial legislatures and 18% in the Central Legislature.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 7: QUIT INDIA MOVEMENT (1942) -->
+    <section id="quit-india" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 font-['Cinzel'] font-bold text-lg">07</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Quit India Movement: The August Kranti (1942)</h2>
+          <p class="text-xs text-slate-400">The 'Do or Die' Mantra, Operation Zero Hour, Underground Radio, and Parallel Governments</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 text-[11px] font-mono font-bold">8 August 1942 • Bombay</div>
+          <h3 class="text-base font-bold text-slate-100">The 'Do or Die' Mantra</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Following the failure of the <strong>Cripps Mission</strong> (March 1942), the AICC met at <strong>Gowalia Tank Maidan</strong> (now August Kranti Maidan) in Bombay. Gandhi proclaimed the resolution demanding immediate British withdrawal from India and declared: <em>'Here is a mantra, a short one, that I give you... The mantra is: Do or Die (Karo ya Maro).'</em>
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-rose-500/10 text-rose-400 text-[11px] font-mono font-bold">9 August 1942 • Nationwide</div>
+          <h3 class="text-base font-bold text-slate-100">Operation Zero Hour & Underground</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Early morning on 9 August, British launched <strong>Operation Zero Hour</strong>, arresting Gandhi (imprisoned at Aga Khan Palace, Pune) and the entire Congress Working Committee (Ahmednagar Fort). <strong>Aruna Asaf Ali</strong> hoisted the Indian flag at Gowalia Tank. <strong>Dr. Usha Mehta</strong> operated the secret underground Congress Radio, while JP Narayan and Ram Manohar Lohia mobilized youth from hiding.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 text-[11px] font-mono font-bold">Parallel Governments</div>
+          <h3 class="text-base font-bold text-slate-100">Prati Sarkars of 1942</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Local patriots ousted British authority and established independent parallel governments:
+            <br>• <strong>Ballia (UP):</strong> Chittu Pandey established the first parallel government.
+            <br>• <strong>Tamluk (Midnapore, Bengal):</strong> <em>Jatiya Sarkar</em> with cyclone relief; 73-year-old <strong>Matangini Hazra</strong> was shot dead holding the Tricolor.
+            <br>• <strong>Satara (Maharashtra):</strong> <em>Prati Sarkar</em> led by Nana Patil and Y.B. Chavan lasted the longest (until 1945).
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 8: NETAJI SUBHASH CHANDRA BOSE & INA -->
+    <section id="subhash-ina" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">08</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Netaji Subhash Chandra Bose & The Azad Hind Fauj (INA)</h2>
+          <p class="text-xs text-slate-400">The Military Offensive Against the Raj and the Great Red Fort Trials</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Archival Image: Netaji INA -->
+        <div class="lg:col-span-4 space-y-3">
+          <div class="expandable-image group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 cursor-zoom-in" data-title="Netaji Subhash Chandra Bose in INA Military Uniform" data-caption="Netaji Subhash Chandra Bose, Supreme Commander of the Indian National Army (Azad Hind Fauj). His immortal slogans 'Jai Hind' and 'Delhi Chalo' inspired millions across India and Southeast Asia.">
+            <img src="assets/images/subhash_chandra_bose_ina.jpg" alt="Netaji Subhash Chandra Bose INA" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-xs text-slate-200 flex items-center justify-between">
+              <span class="font-semibold text-amber-300">Supreme Commander, Azad Hind Fauj</span>
+              <span class="flex items-center gap-1 text-[11px] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700"><i data-lucide="maximize-2" class="w-3 h-3"></i> Zoom</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic text-center">Netaji: "Give me blood and I shall give you freedom!"</p>
+        </div>
+
+        <!-- Factual Analysis -->
+        <div class="lg:col-span-8 space-y-4">
+          <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <h3 class="text-lg font-bold text-amber-300 flex items-center gap-2">
+              <i data-lucide="swords" class="w-5 h-5"></i> The Sword of Indian Independence
+            </h3>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li>
+                <strong>Genesis of INA:</strong> Initially founded in 1942 by <strong>Captain Mohan Singh</strong> with Indian POWs captured by Japan in Malaya. Rash Behari Bose organized the Indian Independence League in Tokyo and handed over leadership to Subhash Chandra Bose in July 1943.
+              </li>
+              <li>
+                <strong>Provisional Government (21 Oct 1943):</strong> Netaji proclaimed the <em>Arzi Hukumat-e-Azad Hind</em> (Provisional Government of Free India) in Singapore. Japan ceded the Andaman and Nicobar Islands, renamed <strong>Shaheed Dweep</strong> and <strong>Swaraj Dweep</strong>.
+              </li>
+              <li>
+                <strong>Regiments & Women's Wing:</strong> Formed Gandhi, Nehru, and Azad Brigades. Created the pioneering all-women <strong>Rani of Jhansi Regiment</strong> commanded by <strong>Captain Lakshmi Sahgal (Swaminathan)</strong>.
+              </li>
+              <li>
+                <strong>The Battle for the Northeast:</strong> INA troops advanced to Kohima and Imphal alongside Japanese forces in 1944, hoisting the Tricolor on Indian soil at Moirang (Manipur) under Colonel Shaukat Malik.
+              </li>
+              <li>
+                <strong>Red Fort Trials (Nov 1945):</strong> British court-martial of three INA officers of different faiths—<strong>Colonel Prem Sahgal (Hindu), Colonel Gurbaksh Singh Dhillon (Sikh), and Major General Shah Nawaz Khan (Muslim)</strong>—at the Red Fort ignited massive public fury. Defended by <strong>Bhulabhai Desai</strong>, Tej Bahadur Sapru, and Jawaharlal Nehru, Commander-in-Chief Auchinleck was forced to remit their sentences.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 9: INDEPENDENCE & PARTITION (1946–1947) -->
+    <section id="independence-partition" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">09</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Towards Independence: Cabinet Mission to August 1947</h2>
+          <p class="text-xs text-slate-400">The RIN Mutiny, Interim Government, Mountbatten Plan, and The Dawn of Freedom</p>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-800/80 text-amber-300 border-b border-slate-700 font-semibold uppercase tracking-wider text-[11px]">
+            <tr>
+              <th class="p-3.5">Mission / Event</th>
+              <th class="p-3.5">Date</th>
+              <th class="p-3.5">Key Personalities</th>
+              <th class="p-3.5">Lucent Prelims Key Takeaway</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 text-slate-300">
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-slate-200">RIN Mutiny</td>
+              <td class="p-3.5 font-mono text-amber-400">18 Feb 1946</td>
+              <td class="p-3.5">Naval ratings of HMIS Talwar (Bombay)</td>
+              <td class="p-3.5">Ratings struck work over racial discrimination and poor food. Surrendered on advice of Sardar Patel.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-slate-200">Cabinet Mission</td>
+              <td class="p-3.5 font-mono text-amber-400">March 1946</td>
+              <td class="p-3.5">Lord Pethick-Lawrence, Sir Stafford Cripps, A.V. Alexander</td>
+              <td class="p-3.5">Rejected separate Pakistan. Proposed 3-tier federation (Groups A, B, C) and elected Constituent Assembly.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-slate-200">Direct Action Day</td>
+              <td class="p-3.5 font-mono text-rose-400">16 Aug 1946</td>
+              <td class="p-3.5">M.A. Jinnah & Muslim League</td>
+              <td class="p-3.5">'Great Calcutta Killings' unleashed by Muslim League government in Bengal to force partition.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-slate-200">Interim Government</td>
+              <td class="p-3.5 font-mono text-amber-400">2 Sept 1946</td>
+              <td class="p-3.5">Jawaharlal Nehru (Vice-President)</td>
+              <td class="p-3.5">Formed without Muslim League initially; League joined in Oct 1946 (Liaquat Ali Khan as Finance Member).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-slate-200">Attlee's Declaration</td>
+              <td class="p-3.5 font-mono text-amber-400">20 Feb 1947</td>
+              <td class="p-3.5">British PM Clement Attlee</td>
+              <td class="p-3.5">Announced British intention to transfer power to Indian hands by June 1948; replaced Wavell with Mountbatten.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-slate-200">Mountbatten Plan</td>
+              <td class="p-3.5 font-mono text-amber-400">3 June 1947</td>
+              <td class="p-3.5">Lord Louis Mountbatten</td>
+              <td class="p-3.5">Plan for the partition of British India into two dominions: India and Pakistan. Accepted by Congress and League.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-emerald-400">Independence of India</td>
+              <td class="p-3.5 font-mono text-emerald-400">15 Aug 1947</td>
+              <td class="p-3.5">Lord Mountbatten (1st GG) & Nehru (1st PM)</td>
+              <td class="p-3.5">Indian Independence Act 1947 (received Royal Assent on 18 July 1947). Sir Cyril Radcliffe drew boundary lines.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 10: 3D FLASHCARDS -->
+    <section class="space-y-6 pt-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+            <i data-lucide="layers" class="w-6 h-6 text-amber-400"></i> Gandhian Era Flashcards
+          </h2>
+          <p class="text-xs text-slate-400">Click card to flip • Master the high-yield Lucent GK facts</p>
+        </div>
+        <span id="cardCounter" class="text-xs font-mono px-3 py-1 rounded-full bg-slate-800 text-amber-400 border border-slate-700">1 / 12</span>
+      </div>
+
+      <div class="max-w-2xl mx-auto perspective-1000 py-6">
+        <div id="flashcard" class="relative w-full h-72 sm:h-80 cursor-pointer transform-style-preserve-3d transition-transform duration-500 rounded-3xl border border-slate-800 shadow-2xl bg-gradient-to-br from-slate-900 to-slate-950 p-8 flex flex-col justify-between select-none">
+          
+          <!-- Front Face -->
+          <div class="face-front flex flex-col justify-between h-full">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono uppercase text-amber-400 font-semibold tracking-wider">Question</span>
+              <span class="text-xs text-slate-400 flex items-center gap-1"><i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i> Tap to flip</span>
+            </div>
+            <div id="cardQuestion" class="text-base sm:text-xl font-medium text-slate-100 leading-snug py-4">Loading question...</div>
+            <div class="text-[11px] text-slate-400">Lucent GK Prelims High-Yield Series</div>
+          </div>
+
+          <!-- Back Face -->
+          <div class="face-back flex flex-col justify-between h-full absolute inset-0 p-8 rounded-3xl bg-slate-900 border border-amber-500/30">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono uppercase text-emerald-400 font-semibold tracking-wider">Answer & Concept</span>
+              <span class="text-xs text-slate-400 flex items-center gap-1"><i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i> Tap to flip</span>
+            </div>
+            <div id="cardAnswer" class="text-xs sm:text-sm text-slate-200 leading-relaxed overflow-y-auto pr-1">Loading answer...</div>
+            <div class="text-[11px] text-amber-400 font-mono">Exam Note: Essential Memorization</div>
+          </div>
+
+        </div>
+
+        <!-- Controls -->
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <button id="prevCard" class="px-5 py-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-2 transition-all">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> Previous
+          </button>
+          <button id="nextCard" class="px-5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-semibold flex items-center gap-2 transition-all">
+            Next <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11: 5-QUESTION MOCK QUIZ -->
+    <section class="space-y-6 pt-4">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+          <i data-lucide="check-square" class="w-6 h-6 text-amber-400"></i> Prelims Self-Assessment Quiz
+        </h2>
+        <p class="text-xs text-slate-400">Test your mastery over the events of the Indian Freedom Struggle (1919–1947)</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-4">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg">
+          Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all">
+          Reset Quiz
+        </button>
+      </div>
+    </section>
+
+    <!-- SECTION NAVIGATION FOOTER -->
+    <footer class="pt-12 border-t border-slate-800">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <a href="national_movement_early.html" class="flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-amber-400 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Chapter 18: Early National Movement (1885–1919)
+        </a>
+        <a href="hub.html" class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 hover:text-amber-400 hover:border-amber-500/40 transition-all">
+          Subject Knowledge Hub
+        </a>
+        <a href="viceroys_acts.html" class="flex items-center gap-2 text-xs font-semibold text-amber-400 hover:text-amber-300 transition-colors">
+          Chapter 20: British Viceroys & Constitutional Acts <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX MODAL -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-amber-400">Historical Image View</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+
+    <!-- Viewer Canvas -->
+    <div class="relative flex-1 flex items-center justify-center overflow-hidden my-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 border-t border-slate-800/80 pt-2">
+      Tip: Use mouse wheel to zoom in/out • Click and drag to pan when zoomed
+    </div>
+  </div>
+
+  <!-- QUICK SEARCH MODAL (ESC TO CLOSE) -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="w-full max-w-lg bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <div class="flex items-center gap-2 text-slate-400 text-xs font-semibold">
+          <i data-lucide="search" class="w-4 h-4 text-amber-400"></i> Search Section Content
+        </div>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-slate-200 text-xs">ESC to exit</button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type topic, leader, date, or event..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-amber-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Type keywords to search sections...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT INCLUSION -->
+  <script src="assets/js/gandhian_era.js"></script>
+</body>
+</html>

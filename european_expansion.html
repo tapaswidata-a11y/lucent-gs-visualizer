@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucent GK Illustrated | Modern India - 14. Arrival of Europeans &amp; British Conquest (1498–1856 AD)</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              bronze: '#CD7F32',
+              terracotta: '#C86446',
+              deepnavy: '#0B1325',
+              carddark: '#141E33',
+              cardborder: '#233354',
+              sand: '#F7F3E9',
+              sandstone: '#E8DCC4'
+            }
+          },
+          fontFamily: {
+            heading: ['Cinzel', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#0B1325] text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- TOP BANNER -->
+  <div class="bg-gradient-to-r from-amber-800 via-amber-700 to-amber-900 text-amber-50 text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-md flex items-center justify-center gap-2">
+    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-amber-950/70 text-amber-300 uppercase tracking-wider">APSC &amp; UPSC GS Core</span>
+    <span>Lucent's General Knowledge &bull; Chapter 14: Arrival of Europeans &amp; British Conquest of India (1498–1856 AD)</span>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-[#0B1325]/90 backdrop-blur-md border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-900/30 ring-1 ring-amber-400/40 group-hover:scale-105 transition-transform">
+          <i data-lucide="anchor" class="w-6 h-6 text-slate-950"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-yellow-300 to-amber-500 tracking-wider">LUCENT GS</span>
+            <span class="text-xs font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">VISUALIZED</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium">Modern Indian History &bull; Module 14: European Arrival &amp; British Expansion</p>
+        </div>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md:flex items-center gap-1 bg-slate-900/70 p-1.5 rounded-full border border-slate-800 text-xs font-semibold">
+        <a href="#overview" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Overview</a>
+        <a href="#europeans" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">The 5 Powers</a>
+        <a href="#bengal" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Bengal &amp; Plassey</a>
+        <a href="#mysore" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Mysore &amp; Marathas</a>
+        <a href="#expansion" class="px-3.5 py-1.5 rounded-full text-slate-300 hover:text-amber-300 hover:bg-slate-800/80 transition-all">Wellesley &amp; Dalhousie</a>
+        <a href="#quiz" class="px-3.5 py-1.5 rounded-full text-amber-400 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 transition-all flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Quiz Mode
+        </a>
+      </nav>
+
+      <!-- Action Buttons & Chapter Selector -->
+      <div class="flex items-center gap-2.5">
+        <button id="themeToggleBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Toggle Light / Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+
+        <button id="searchBtn" class="p-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-slate-300 hover:text-amber-400 transition-all" title="Search Facts">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </button>
+
+        <div class="relative">
+          <button id="chapterSelectorBtn" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700/60 text-xs font-semibold text-slate-200 transition-all">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            <span>Ch. 14: Europeans</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400"></i>
+          </button>
+          
+                    <div id="chapterDropdown" class="hidden absolute right-0 mt-2 w-80 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl p-2 z-50 text-xs max-h-96 overflow-y-auto">
+            <div class="px-3 py-1 font-bold text-amber-400 uppercase tracking-wider text-[10px] ">Ancient Indian History</div>
+            <a href="index.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">1. Harappan / Indus Valley</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">2500–1750 BC</span>
+            </a>
+            <a href="vedic.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">2. Vedic Culture</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1500–600 BC</span>
+            </a>
+            <a href="mahajanapadas.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">3. 16 Mahajanapadas & Magadha</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">600–325 BC</span>
+            </a>
+            <a href="religions.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">4. Buddhism & Jainism</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">600–400 BC</span>
+            </a>
+            <a href="maurya.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">5. The Mauryan Empire</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">322–185 BC</span>
+            </a>
+            <a href="post_maurya.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">6. Post-Maurya & Sangam</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">185 BC–319 AD</span>
+            </a>
+            <a href="gupta.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">7. Gupta Age & Harsha</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">319–647 AD</span>
+            </a>
+            <div class="px-3 py-1 font-bold text-amber-400 uppercase tracking-wider text-[10px] border-t border-slate-800 mt-1.5 pt-1.5">Medieval Indian History</div>
+            <a href="early_medieval.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">8. Early Medieval (Rajputs & Cholas)</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">650–1206 AD</span>
+            </a>
+            <a href="delhi_sultanate.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">9. The Delhi Sultanate</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1206–1526 AD</span>
+            </a>
+            <a href="vijayanagar_bahmani.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">10. Vijayanagar & Bahmani</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1336–1646 AD</span>
+            </a>
+            <a href="mughal_empire.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">11. The Mughal Empire</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1526–1707 AD</span>
+            </a>
+            <a href="marathas.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">12. The Maratha Empire & Later Mughals</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1674–1818 AD</span>
+            </a>
+            <a href="bhakti_sufi.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">13. Religious Movements (Bhakti & Sufi)</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">15th–16th c.</span>
+            </a>
+            <div class="px-3 py-1 font-bold text-amber-400 uppercase tracking-wider text-[10px] border-t border-slate-800 mt-1.5 pt-1.5">Modern Indian History</div>
+            <a href="european_expansion.html" class="flex items-center justify-between p-2 rounded-lg bg-amber-500/15 text-amber-300 font-semibold border border-amber-500/20">
+              <span class="truncate">14. European Expansion in India</span>
+              <span class="px-1.5 py-0.5 rounded text-[10px] bg-amber-400 text-slate-950 font-bold shrink-0 ml-1">Active</span>
+            </a>
+            <a href="economic_revolts.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">15. Economic Impact & Tribal Revolts</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1765–1900 AD</span>
+            </a>
+            <a href="reforms.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">16. Socio-Religious Reform Movements</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">19th–20th c.</span>
+            </a>
+            <a href="revolt_1857.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">17. The Great Revolt of 1857</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1857–1858 AD</span>
+            </a>
+            <a href="national_movement_early.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">18. Early National Movement</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1885–1919 AD</span>
+            </a>
+            <a href="gandhian_era.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">19. The Gandhian Era</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1919–1947 AD</span>
+            </a>
+            <a href="viceroys_acts.html" class="flex items-center justify-between p-2 rounded-lg text-slate-300 hover:bg-slate-800/60 transition-all">
+              <span class="truncate">20. British Viceroys & Acts</span>
+              <span class="text-[10px] text-slate-500 shrink-0 ml-1">1773–1947 AD</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN HERO SECTION -->
+  <section id="overview" class="relative pt-12 pb-20 overflow-hidden border-b border-slate-800/60 bg-gradient-to-b from-slate-950 via-[#0B1325] to-[#0B1325]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex items-center gap-2 text-xs font-semibold text-amber-400/90 tracking-wide uppercase mb-3">
+        <span>Chapter 14</span> &bull; <span>1498 AD – 1856 AD</span> &bull; <span>From Traders to Masters of an Empire</span>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold">
+            <i data-lucide="shield-alert" class="w-3.5 h-3.5"></i> Commercial Rivalry to Colonial Conquest
+          </div>
+          
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight">
+            Arrival of Europeans &amp; <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-500">British Conquest</span> of India
+          </h1>
+          
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
+            Following the Ottoman capture of Constantinople in 1453, European mercantile powers sought direct maritime routes to the fabled spice riches of India. What began as coastal trading posts by the Portuguese, Dutch, English, and French swiftly metastasized into geopolitical rivalry, culminating in the British East India Company's conquest of Bengal (Plassey &amp; Buxar), defeat of Mysore and the Marathas, and aggressive expansion under Wellesley and Dalhousie.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">1498</div>
+              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Vasco da Gama</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">1757</div>
+              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Battle of Plassey</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">1764</div>
+              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Battle of Buxar</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-amber-400 font-mono">1856</div>
+              <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Awadh Annexation</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Interactive Visual Showcase -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl bg-slate-900 group cursor-pointer"
+               data-zoomable="true"
+               data-img-src="assets/images/battle_of_plassey.jpg"
+               data-img-title="Lord Clive Meeting Mir Jafar After the Battle of Plassey (1757)"
+               data-img-desc="Francis Hayman's celebrated historical oil painting (c. 1760) depicting Colonel Robert Clive meeting the conspirator Mir Jafar following the decisive British victory on 23 June 1757. Mir Jafar's betrayal of Nawab Sirajuddaula handed the revenue, riches, and administration of Bengal to the East India Company, laying the cornerstone of the British Indian Empire.">
+            
+            <img src="assets/images/battle_of_plassey.jpg" alt="Battle of Plassey" class="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-105 transition-all duration-500">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-amber-400/40 text-[10px] text-amber-300 font-mono flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom Full Image
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 text-left">
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-slate-950 uppercase tracking-wider mb-1">Watershed Event</span>
+              <h3 class="text-base sm:text-lg font-bold text-white leading-snug">The Plassey Conspiracy (1757)</h3>
+              <p class="text-xs text-slate-300 line-clamp-2 mt-0.5">Clive meets Mir Jafar after Nawab Sirajuddaula's defeat on the banks of the Bhagirathi.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 1: THE 5 EUROPEAN POWERS -->
+  <section id="europeans" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Maritime Commerce</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">Chronology of the 5 European Companies</p>
+        <p class="text-sm text-slate-400 mt-2">European trading powers arrived in sequence: Portuguese (1498), Dutch (1602), English (1600/1608), Danish (1616), and French (1664). Through commercial monopoly, naval power, and political intrigue, the English eliminated all rivals.</p>
+      </div>
+
+      <!-- 2-Col Illustrated Showcase -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-12">
+        
+        <!-- Vasco da Gama Image -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl bg-slate-900 group cursor-pointer"
+               data-zoomable="true"
+               data-img-src="assets/images/vasco_da_gama_calicut.jpg"
+               data-img-title="Vasco da Gama Before the Zamorin of Calicut (1498)"
+               data-img-desc="Historical painting depicting Vasco da Gama's reception by the Zamorin (Samudri) of Calicut in May 1498. This momentous encounter opened direct sea trade between Europe and Asia around the Cape of Good Hope, breaking the Arab-Venetian spice monopoly and initiating four centuries of European colonial presence in India.">
+            
+            <img src="assets/images/vasco_da_gama_calicut.jpg" alt="Vasco da Gama at Calicut" class="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-105 transition-all duration-500">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-amber-400/40 text-[10px] text-amber-300 font-mono flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom Full Image
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 text-left">
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-slate-950 uppercase tracking-wider mb-1">May 17, 1498</span>
+              <h3 class="text-base sm:text-lg font-bold text-white leading-snug">Vasco da Gama at Calicut</h3>
+              <p class="text-xs text-slate-300 line-clamp-2 mt-0.5">The direct European maritime voyage to India that altered the course of global history.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Detailed Company Cards -->
+        <div class="lg:col-span-7 space-y-4">
+          
+          <!-- Portuguese -->
+          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+              <span class="text-sm text-white">1. The Portuguese (Estado da India &bull; 1498–1961)</span>
+              <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">First to Arrive, Last to Leave</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed mb-2">
+              <strong class="text-slate-100">Francisco de Almeida</strong> (1505–09) initiated the <span class="italic text-amber-300">Blue Water Policy</span> (naval Cartaze monopoly). <strong class="text-slate-100">Alfonso de Albuquerque</strong> (1509–15) captured <span class="text-amber-300">Goa</span> from Bijapur Sultan in 1510 and abolished Sati. Capital shifted from Cochin to Goa in 1530 by Nino de Cunha.
+            </p>
+            <div class="text-[11px] text-slate-400">
+              <span class="font-semibold text-slate-200">Decline &amp; Legacy:</span> Lost Hugli to Shah Jahan (1632), lost Bassein to Marathas (1739). Retained Goa, Daman, and Diu until liberated by the Indian Armed Forces in December 1961 (Operation Vijay). Introduced tobacco, tomato, potato, pineapple, and printing press (Goa, 1556).
+            </div>
+          </div>
+
+          <!-- Dutch -->
+          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+              <span class="text-sm text-white">2. The Dutch (United East India Co. &bull; VOC 1602)</span>
+              <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Center: Pulicat &amp; Chinsurah</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Established first factory at <strong class="text-slate-100">Masulipatnam</strong> (1605), then Pulicat (1610, minted gold Pagodas), Surat (1616), Chinsurah (1653, Fort Gustavus), Patna, and Nagapatam. Focused on silk, cotton, indigo, and opium trade. Decisively crushed by Robert Clive in the <strong class="text-amber-300">Battle of Bedara / Chinsurah (1759)</strong>, after which the Dutch withdrew to the Indonesian archipelago.
+            </p>
+          </div>
+
+          <!-- English -->
+          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+              <span class="text-sm text-white">3. The English East India Company (EIC &bull; 1600)</span>
+              <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Three Presidencies</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Chartered on 31 Dec 1600 by Queen Elizabeth I. <strong class="text-slate-100">Captain William Hawkins</strong> (ship *Hector*, 1608) and <strong class="text-slate-100">Sir Thomas Roe</strong> (1615) secured Mughal farmans from Jahangir. Established factories at Surat (1613), Madras (<strong class="text-amber-300">Fort St. George</strong>, 1639 by Francis Day), Bombay (dowry gift to Charles II, 1661), and Calcutta (<strong class="text-amber-300">Fort William</strong>, 1700 by Job Charnock).
+            </p>
+          </div>
+
+          <!-- French -->
+          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+              <span class="text-sm text-white">4. The French (Compagnie des Indes Orientales &bull; 1664)</span>
+              <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Center: Pondicherry</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Formed by Finance Minister Colbert under Louis XIV. First factory at Surat (1668) by Francois Caron. <strong class="text-slate-100">Francois Martin</strong> founded Pondicherry (1674). Clashed with British in 3 Carnatic Wars (1746–63). French General Dupleix excelled in diplomacy, but British General Eyre Coote smashed French power at the <strong class="text-amber-300">Battle of Wandiwash (1760)</strong>; reduced to trade outposts by the Treaty of Paris (1763).
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- High Yield Comparison Table -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden">
+        <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-900">
+          <h3 class="font-bold text-sm text-slate-100 flex items-center gap-2">
+            <i data-lucide="table" class="w-4 h-4 text-amber-400"></i> Lucent GK Matrix: European Companies &amp; Early Settlements
+          </h3>
+          <span class="text-[11px] font-mono text-amber-400/90 font-semibold">Lucent GK Page 43</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-slate-300">
+            <thead class="bg-slate-950/70 text-amber-300 uppercase tracking-wider text-[11px] font-semibold border-b border-slate-800">
+              <tr>
+                <th class="py-3 px-4">Company Name</th>
+                <th class="py-3 px-4">Charter / Formation</th>
+                <th class="py-3 px-4">First Factory in India</th>
+                <th class="py-3 px-4">Headquarters in India</th>
+                <th class="py-3 px-4">Decisive Defeat / Exit</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 font-medium">
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold">Portuguese (Estado da India)</td>
+                <td class="py-3 px-4 font-mono">1498 AD</td>
+                <td class="py-3 px-4">Calicut (1500) / Cochin (1503)</td>
+                <td class="py-3 px-4">Cochin (1503–30), Goa (1530–1961)</td>
+                <td class="py-3 px-4 text-slate-400">Liberated by India (1961)</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold">English East India Company</td>
+                <td class="py-3 px-4 font-mono">1600 AD</td>
+                <td class="py-3 px-4">Masulipatnam (1611) / Surat (1613)</td>
+                <td class="py-3 px-4">Calcutta (Fort William, 1700)</td>
+                <td class="py-3 px-4 text-emerald-400 font-semibold">Became Sovereign Ruler</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold">Dutch East India Company (VOC)</td>
+                <td class="py-3 px-4 font-mono">1602 AD</td>
+                <td class="py-3 px-4">Masulipatnam (1605)</td>
+                <td class="py-3 px-4">Pulicat (1610–90), Nagapatam (1690)</td>
+                <td class="py-3 px-4 text-rose-400">Battle of Bedara (1759)</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold">Danish East India Company</td>
+                <td class="py-3 px-4 font-mono">1616 AD</td>
+                <td class="py-3 px-4">Tranquebar (1620, TN)</td>
+                <td class="py-3 px-4">Serampore (1676, Bengal)</td>
+                <td class="py-3 px-4 text-slate-400">Sold factories to British (1845)</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40">
+                <td class="py-3 px-4 text-amber-300 font-bold">French East India Company</td>
+                <td class="py-3 px-4 font-mono">1664 AD</td>
+                <td class="py-3 px-4">Surat (1668)</td>
+                <td class="py-3 px-4">Pondicherry (Fort Louis, 1674)</td>
+                <td class="py-3 px-4 text-rose-400">Battle of Wandiwash (1760)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 2: CONQUEST OF BENGAL (PLASSEY & BUXAR) -->
+  <section id="bengal" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">The Pivot of Empire</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">Conquest of Bengal &amp; The Diwani (1757–1772)</p>
+        <p class="text-sm text-slate-400 mt-2">Bengal was the richest province of the Mughal Empire. In two military engagements—Plassey (1757) and Buxar (1764)—the British gained unhindered commercial exploitation and territorial sovereignty.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        
+        <!-- Plassey Card -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div>
+              <span class="text-[10px] font-bold text-amber-400 font-mono uppercase">23 June 1757</span>
+              <h3 class="text-lg font-bold text-white">Battle of Plassey (Palashi)</h3>
+            </div>
+            <span class="text-xs px-2.5 py-1 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/30 font-bold">Political Victory</span>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Fought on the banks of the Bhagirathi river in Nadia district between <strong class="text-slate-100">Robert Clive</strong> and young Nawab <strong class="text-slate-100">Sirajuddaula</strong>. Preceded by the dispute over the abuse of the British <span class="italic text-amber-300">Dastak</span> (tax-free trade passes) and illegal fortification of Calcutta without Nawab's consent.
+          </p>
+
+          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-xs space-y-2">
+            <div class="font-bold text-amber-300 flex items-center gap-1.5">
+              <i data-lucide="users" class="w-3.5 h-3.5"></i> The Five Traitors of Bengal:
+            </div>
+            <ul class="text-slate-300 space-y-1 text-[11px] list-disc list-inside">
+              <li><strong class="text-slate-200">Mir Jafar:</strong> Commander-in-Chief (<span class="italic">Mir Bakshi</span>) who kept the main army immobile.</li>
+              <li><strong class="text-slate-200">Manikchand:</strong> Officer in charge of Calcutta who surrendered Fort William.</li>
+              <li><strong class="text-slate-200">Omichand (Amir Chand):</strong> Wealthy Sikh merchant and intermediary.</li>
+              <li><strong class="text-slate-200">Jagat Seth (Mehtab Chand):</strong> Richest banker of Bengal who financed the coup.</li>
+              <li><strong class="text-slate-200">Khadim Khan:</strong> Commanded a major contingent that deserted.</li>
+            </ul>
+          </div>
+
+          <p class="text-xs text-slate-400">
+            <strong class="text-slate-200">Loyal Martyrs:</strong> Only <span class="text-amber-300">Mir Madan</span> and <span class="text-amber-300">Mohan Lal</span> fought heroically for the Nawab. Mir Jafar was installed as the puppet Nawab and ceded the revenue of the <strong class="text-slate-200">24 Parganas</strong> to the EIC.
+          </p>
+        </div>
+
+        <!-- Buxar Card -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div>
+              <span class="text-[10px] font-bold text-amber-400 font-mono uppercase">22 October 1764</span>
+              <h3 class="text-lg font-bold text-white">Battle of Buxar</h3>
+            </div>
+            <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 font-bold">Decisive Military Victory</span>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Nawab <strong class="text-slate-100">Mir Qasim</strong> shifted his capital to Munger (modern firearms factory) and abolished all internal trade transit duties to create a level playing field. The Company ousted him, triggering war. Mir Qasim formed a triple alliance with Nawab of Awadh <strong class="text-slate-100">Shuja-ud-Daula</strong> and fugitive Mughal Emperor <strong class="text-slate-100">Shah Alam II</strong>.
+          </p>
+
+          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-xs space-y-2">
+            <div class="font-bold text-amber-300 flex items-center gap-1.5">
+              <i data-lucide="swords" class="w-3.5 h-3.5"></i> The Confrontation &amp; Outcome:
+            </div>
+            <p class="text-[11px] text-slate-300 leading-relaxed">
+              British forces led by <strong class="text-slate-100">Major Hector Munro</strong> decisively routed the joint confederate army. Buxar proved far more significant than Plassey because it demonstrated British military superiority over the Mughal Emperor and the Premier Prince of India.
+            </p>
+          </div>
+
+          <p class="text-xs text-slate-400">
+            <strong class="text-slate-200">Treaty of Allahabad (Aug 1765):</strong> Clive secured the <strong class="text-amber-300">Diwani of Bengal, Bihar, and Orissa</strong> for an annual payment of Rs 26 lakh. Clive introduced the ruinous <strong class="text-slate-200">Dual System</strong> (1765–1772), abolished only by Warren Hastings in 1772.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 3: MYSORE, MARATHAS & SIKHS -->
+  <section id="mysore" class="py-16 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Regional Resistance</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">The Subjugation of Mysore, Marathas &amp; Sikhs</p>
+        <p class="text-sm text-slate-400 mt-2">Between 1767 and 1849, the British systematically dismantled the three most powerful martial kingdoms of India using divide-and-rule diplomacy, European artillery, and naval pressure.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-12">
+        
+        <!-- Tipu Sultan Portrait Visual -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl bg-slate-900 group cursor-pointer"
+               data-zoomable="true"
+               data-img-src="assets/images/tipu_sultan.jpg"
+               data-img-title="Portrait of Tipu Sultan (Deccani Miniature, c. 1790)"
+               data-img-desc="Contemporary Deccani portrait of Tipu Sultan (1750–1799), the 'Tiger of Mysore'. A brilliant innovator who pioneered iron-cased Mysorean rockets, established state trading syndicates, planted a Tree of Liberty at Seringapatam as a member of the French Jacobin Club, and chose death in battle on 4 May 1799 rather than submission to British subjugation.">
+            
+            <img src="assets/images/tipu_sultan.jpg" alt="Tipu Sultan Portrait" class="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-105 transition-all duration-500">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            
+            <div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-amber-400/40 text-[10px] text-amber-300 font-mono flex items-center gap-1.5 shadow-lg">
+              <i data-lucide="zoom-in" class="w-3.5 h-3.5 text-amber-400"></i> Click to Zoom Full Image
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 text-left">
+              <span class="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-slate-950 uppercase tracking-wider mb-1">Tiger of Mysore</span>
+              <h3 class="text-base sm:text-lg font-bold text-white leading-snug">Tipu Sultan (1782–1799 AD)</h3>
+              <p class="text-xs text-slate-300 line-clamp-2 mt-0.5">Rocket pioneer and relentless adversary of British imperial expansion.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Conquest Theatres Grid -->
+        <div class="lg:col-span-7 space-y-4">
+          
+          <!-- Mysore -->
+          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+              <span class="text-sm text-white">Anglo-Mysore Wars (4 Wars &bull; 1767–1799)</span>
+              <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Haidar &amp; Tipu</span>
+            </div>
+            <ul class="text-xs text-slate-300 space-y-1.5 leading-relaxed">
+              <li>&bull; <strong class="text-slate-100">1st War (1767–69):</strong> Haidar Ali defeated British; Treaty of Madras (1769).</li>
+              <li>&bull; <strong class="text-slate-100">2nd War (1780–84):</strong> Eyre Coote defeated Haidar at Porto Novo (1781). Haidar died (1782); Tipu signed Treaty of Mangalore (1784).</li>
+              <li>&bull; <strong class="text-slate-100">3rd War (1790–92):</strong> Cornwallis allied with Nizam &amp; Marathas. Treaty of Seringapatam (1792): Tipu surrendered 50% territory and Rs 3.3 crore.</li>
+              <li>&bull; <strong class="text-slate-100">4th War (1799):</strong> Lord Wellesley stormed Seringapatam. Tipu died fighting (4 May 1799). Mysore restored to Hindu Wodeyar prince under Subsidiary Alliance.</li>
+            </ul>
+          </div>
+
+          <!-- Marathas -->
+          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+              <span class="text-sm text-white">Anglo-Maratha Wars (3 Wars &bull; 1775–1818)</span>
+              <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Peshwaship Abolished</span>
+            </div>
+            <ul class="text-xs text-slate-300 space-y-1.5 leading-relaxed">
+              <li>&bull; <strong class="text-slate-100">1st War (1775–82):</strong> Treaty of Salbai (1782) secured 20 years of peace with Warren Hastings.</li>
+              <li>&bull; <strong class="text-slate-100">2nd War (1803–05):</strong> Peshwa Baji Rao II signed Treaty of Bassein (1802) accepting Wellesley's Subsidiary Alliance. Scindia &amp; Bhonsle defeated.</li>
+              <li>&bull; <strong class="text-slate-100">3rd War (1817–18):</strong> Lord Hastings crushed Maratha confederacy. Peshwa abolished; Baji Rao II exiled to Bithur (Kanpur) on British pension.</li>
+            </ul>
+          </div>
+
+          <!-- Sikhs -->
+          <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800">
+            <div class="flex items-center justify-between text-xs font-bold text-amber-400 mb-1">
+              <span class="text-sm text-white">Conquest of Punjab &amp; Anglo-Sikh Wars (1845–1849)</span>
+              <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">Dalhousie Annexation</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              After <strong class="text-slate-100">Maharaja Ranjit Singh</strong>'s death in 1839, the British fought the 1st Anglo-Sikh War (1845–46, Battles of Mudki, Aliwal, Sobraon; Treaty of Lahore). Following the 2nd Anglo-Sikh War (1848–49, Battle of Gujarat), <strong class="text-amber-300">Lord Dalhousie</strong> annexed Punjab in March 1849. The minor Maharaja Dalip Singh was pensioned off to England, and the famous <strong class="text-amber-300">Koh-i-Noor</strong> diamond was presented to Queen Victoria.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: WELLESLEY & DALHOUSIE'S EXPANSION POLICIES -->
+  <section id="expansion" class="py-16 border-b border-slate-800/80 bg-slate-950/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Instruments of Empire</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">Subsidiary Alliance vs. Doctrine of Lapse</p>
+        <p class="text-sm text-slate-400 mt-2">Two master doctrines transformed the map of India: Lord Wellesley's military protectorate system and Lord Dalhousie's aggressive dynastic annexations.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Subsidiary Alliance -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div>
+              <span class="text-[10px] font-bold text-amber-400 font-mono uppercase">Lord Wellesley (1798–1805)</span>
+              <h3 class="text-lg font-bold text-white">The Subsidiary Alliance System</h3>
+            </div>
+            <i data-lucide="shield" class="w-5 h-5 text-amber-400"></i>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-relaxed">
+            A system of military vassalage pioneered by French Dupleix but perfected by Wellesley. The Indian ruler had to:
+          </p>
+
+          <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+            <li>Surrender all independent foreign policy and conduct no diplomacy without British consent.</li>
+            <li>Maintain a permanent British military detachment at his own financial expense or cede territory.</li>
+            <li>Dismiss all other European officers (especially French) from military service.</li>
+            <li>Accept a permanent <strong class="text-slate-100">British Resident</strong> at his royal court.</li>
+          </ul>
+
+          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-xs">
+            <span class="font-bold text-amber-300 block mb-1">Chronology of Annexations (Lucent Page 44):</span>
+            <div class="grid grid-cols-2 gap-1 text-[11px] font-mono text-slate-300">
+              <div>&bull; Hyderabad (1798)</div>
+              <div>&bull; Mysore (1799)</div>
+              <div>&bull; Tanjore (1799)</div>
+              <div>&bull; Awadh (1801)</div>
+              <div>&bull; Peshwa (1802)</div>
+              <div>&bull; Bhonsle (1803)</div>
+              <div>&bull; Scindia (1804)</div>
+              <div>&bull; Holkar (1818)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctrine of Lapse -->
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <div>
+              <span class="text-[10px] font-bold text-amber-400 font-mono uppercase">Lord Dalhousie (1848–1856)</span>
+              <h3 class="text-lg font-bold text-white">The Doctrine of Lapse</h3>
+            </div>
+            <i data-lucide="crown" class="w-5 h-5 text-amber-400"></i>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Dalhousie's annexation weapon targeting dependent Indian princely states without a natural male heir:
+          </p>
+
+          <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+            <li>Indian rulers could adopt a son for personal property inheritance, but the adopted son could <strong class="text-rose-400">NOT</strong> inherit political sovereignty without British sanction.</li>
+            <li>Princely states 'lapsed' directly to the British Crown upon the ruler's death.</li>
+            <li>Overturned centuries-old Hindu customary adoption laws, causing intense anti-British resentment.</li>
+          </ul>
+
+          <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-xs">
+            <span class="font-bold text-amber-300 block mb-1">Chronology of Lapsed States (Lucent Page 45):</span>
+            <div class="grid grid-cols-2 gap-1 text-[11px] font-mono text-slate-300">
+              <div>&bull; Satara (1848)</div>
+              <div>&bull; Jaitpur &amp; Sambalpur (1849)</div>
+              <div>&bull; Baghat (1850)</div>
+              <div>&bull; Udaipur (1852)</div>
+              <div>&bull; Jhansi (1853)</div>
+              <div>&bull; Nagpur (1854)</div>
+            </div>
+            <div class="mt-2 text-[10px] text-amber-400 font-sans">
+              <strong>Special Case:</strong> <span class="text-slate-200">Awadh</span> was annexed in <strong>1856</strong> on the pretext of "mal-administration" (Outram's Report), directly triggering the 1857 Revolt.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE STUDY TOOLS: FLASHCARDS & QUIZ -->
+  <section id="quiz" class="py-16 bg-slate-900/60 border-b border-slate-800/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-amber-400 mb-2">Test Your Mastery</h2>
+        <p class="text-2xl sm:text-3xl font-heading font-extrabold text-white">Interactive Recall &amp; Examination Drill</p>
+        <p class="text-sm text-slate-400 mt-2">Cement high-yield prelims facts on European arrivals, the battles of Plassey and Buxar, Mysore wars, and annexation policies.</p>
+      </div>
+
+      <!-- 3D Flashcard Section -->
+      <div class="mb-16">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-300">3D Interactive Flashcards</span>
+          </div>
+          <span id="flashcardCounter" class="text-xs font-mono text-amber-400 font-bold">1 / 6</span>
+        </div>
+
+        <div id="flashcard" class="flashcard-container cursor-pointer select-none">
+          <div id="flashcardInner" class="flashcard-inner">
+            <!-- Front -->
+            <div class="flashcard-face flashcard-front">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-amber-400/80 mb-2">Question (Click or Tap to Flip)</span>
+              <p id="flashcardQuestion" class="text-base sm:text-lg font-semibold text-slate-100 text-center leading-relaxed px-4">
+                Loading question...
+              </p>
+              <div class="mt-4 flex items-center gap-1.5 text-xs text-slate-400 font-medium">
+                <i data-lucide="rotate-cw" class="w-3.5 h-3.5 text-amber-400"></i> Tap card to reveal answer
+              </div>
+            </div>
+            <!-- Back -->
+            <div class="flashcard-face flashcard-back">
+              <span class="text-[10px] font-bold uppercase tracking-widest text-amber-300 mb-2">Prelims High-Yield Answer</span>
+              <p id="flashcardAnswer" class="text-sm sm:text-base text-slate-200 text-center leading-relaxed px-4">
+                Loading answer...
+              </p>
+              <div class="mt-4 flex items-center gap-1.5 text-xs text-amber-300/80 font-medium">
+                <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Verified from Lucent GK
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <button id="prevCardBtn" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-slate-200 transition-all flex items-center gap-1.5">
+            <i data-lucide="chevron-left" class="w-4 h-4"></i> Previous
+          </button>
+          <button id="nextCardBtn" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold transition-all flex items-center gap-1.5 shadow-lg shadow-amber-500/20">
+            Next Card <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mock Quiz Section -->
+      <div>
+        <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-800">
+          <div>
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <i data-lucide="clipboard-check" class="w-5 h-5 text-amber-400"></i>
+              Chapter 14 Mock Examination
+            </h3>
+            <p class="text-xs text-slate-400">5 High-Probability Questions for UPSC, APSC &amp; State PSCs</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <span id="quizScoreDisplay" class="text-xs font-mono font-bold text-amber-400 px-3 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20">Score: 0 / 5</span>
+            <button id="resetQuizBtn" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs" title="Reset Quiz">
+              <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="quizContainer" class="space-y-4">
+          <!-- Dynamically populated by european_expansion.js -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-start justify-center p-4 sm:p-6 pt-16">
+    <div class="w-full max-w-2xl bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
+      <div class="p-4 border-b border-slate-800 flex items-center justify-between gap-3">
+        <div class="flex items-center gap-2.5 flex-1">
+          <i data-lucide="search" class="w-5 h-5 text-amber-400 shrink-0"></i>
+          <input type="text" id="factSearchInput" placeholder="Search Europeans, battles, Plassey, Tipu Sultan, Wellesley, treaties..." class="w-full bg-transparent text-sm text-slate-100 placeholder-slate-500 outline-none">
+        </div>
+        <button id="closeSearchBtn" class="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-all">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div id="searchResultsContainer" class="p-4 overflow-y-auto space-y-2 flex-1">
+        <!-- Rendered results -->
+      </div>
+      <div class="p-3 bg-slate-950/70 border-t border-slate-800 text-[11px] text-slate-500 flex items-center justify-between">
+        <span>Press <kbd class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 font-mono text-[10px]">ESC</kbd> to close</span>
+        <span>Lucent GK Real-Time Search</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER -->
+  <div id="fullImageViewerModal" class="full-image-modal">
+    <div class="lightbox-backdrop"></div>
+    <div class="relative w-full h-full flex flex-col p-4 sm:p-6 z-10">
+      
+      <!-- Top controls -->
+      <div class="flex items-center justify-between mb-2">
+        <div class="bg-slate-900/90 backdrop-blur-md px-4 py-2 rounded-xl border border-slate-700/80 text-left">
+          <h4 id="lightboxTitle" class="text-sm sm:text-base font-bold text-white leading-tight">Image Title</h4>
+          <span class="text-[10px] text-amber-400 font-mono">Zoom with wheel &bull; Drag to pan &bull; Click reset</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <div class="flex items-center bg-slate-900/90 backdrop-blur-md rounded-xl border border-slate-700/80 p-1">
+            <button id="zoomOutBtn" class="p-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg" title="Zoom Out">
+              <i data-lucide="zoom-out" class="w-4 h-4"></i>
+            </button>
+            <span id="zoomLevelDisplay" class="px-2 text-xs font-mono font-bold text-amber-400 min-w-[50px] text-center">100%</span>
+            <button id="zoomInBtn" class="p-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg" title="Zoom In">
+              <i data-lucide="zoom-in" class="w-4 h-4"></i>
+            </button>
+            <button id="zoomResetBtn" class="px-2.5 py-1 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800 rounded-lg" title="Reset Zoom">
+              Reset
+            </button>
+          </div>
+          
+          <button id="closeLightboxBtn" class="p-2.5 rounded-xl bg-slate-900/90 border border-slate-700/80 text-slate-300 hover:text-white hover:bg-rose-950 transition-all" title="Close Viewer">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Viewport -->
+      <div id="lightboxViewport" class="lightbox-viewport">
+        <img id="lightboxImg" src="" alt="Artifact Detail" class="lightbox-img">
+      </div>
+
+      <!-- Bottom Description -->
+      <div class="mt-2 bg-slate-900/90 backdrop-blur-md p-3.5 rounded-xl border border-slate-700/80 max-w-4xl mx-auto text-center">
+        <p id="lightboxDescription" class="text-xs text-slate-300 leading-relaxed"></p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 border-t border-slate-800/80 py-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+          <i data-lucide="award" class="w-4 h-4"></i>
+        </div>
+        <div>
+          <span class="font-bold text-slate-200">Lucent GK Visualized &bull; Complete Reference Edition</span>
+          <p class="text-[11px] text-slate-500">Modern Indian History Series &bull; Module 14</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-4 text-xs font-medium">
+        <a href="bhakti_sufi.html" class="hover:text-amber-400 flex items-center gap-1">
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Ch. 13: Bhakti &amp; Sufi
+        </a>
+        <span class="text-slate-700">&bull;</span>
+        <a href="hub.html" class="hover:text-amber-400">Master Hub</a>
+        <span class="text-slate-700">&bull;</span>
+        <a href="#overview" class="hover:text-amber-400 flex items-center gap-1">
+          Top <i data-lucide="arrow-up" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Page Logic Script -->
+  <script src="assets/js/european_expansion.js"></script>
+</body>
+</html>

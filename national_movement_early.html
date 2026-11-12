@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian National Movement: Early Phase (1885–1919) | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-amber-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-amber-400 hover:text-amber-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500/20 to-amber-600/10 border border-amber-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="compass" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-amber-300">LUCENT<span class="text-amber-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">Modern History</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <!-- Quick Search Button -->
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-amber-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+                <!-- Chapter Switcher Dropdown -->
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-amber-400 cursor-pointer">
+          <optgroup label="Ancient India">
+            <option value="index.html" >01. Indus Valley Civilization</option>
+            <option value="vedic.html" >02. Vedic Culture</option>
+            <option value="mahajanapadas.html" >03. Mahajanapadas & Magadha</option>
+            <option value="religions.html" >04. Buddhism & Jainism</option>
+            <option value="maurya.html" >05. The Mauryan Empire</option>
+            <option value="post_maurya.html" >06. Post-Maurya & Sangam</option>
+            <option value="gupta.html" >07. Gupta Age & Harsha</option>
+          </optgroup>
+          <optgroup label="Medieval India">
+            <option value="early_medieval.html" >08. Early Medieval & Rajputs</option>
+            <option value="delhi_sultanate.html" >09. The Delhi Sultanate</option>
+            <option value="vijayanagar_bahmani.html" >10. Vijayanagar & Bahmani</option>
+            <option value="mughal_empire.html" >11. The Mughal Empire</option>
+            <option value="marathas.html" >12. The Marathas & Later Mughals</option>
+            <option value="bhakti_sufi.html" >13. Bhakti & Sufi Movements</option>
+          </optgroup>
+          <optgroup label="Modern India">
+            <option value="european_expansion.html" >14. European Expansion in India</option>
+            <option value="economic_revolts.html" >15. Economic Impact & Tribal Revolts</option>
+            <option value="reforms.html" >16. Socio-Religious Reform Movements</option>
+            <option value="revolt_1857.html" >17. The Great Revolt of 1857</option>
+            <option value="national_movement_early.html" selected>18. Early National Movement (1885–1919)</option>
+            <option value="gandhian_era.html" >19. The Gandhian Era (1919–1947)</option>
+            <option value="viceroys_acts.html" >20. British Viceroys & Acts</option>
+          </optgroup>
+        </select>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+    <!-- HERO SECTION -->
+    <section class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-slate-950 p-8 sm:p-12 shadow-2xl">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent pointer-events-none"></div>
+      <div class="relative z-10 max-w-4xl space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold uppercase tracking-wider">
+          <i data-lucide="flame" class="w-3.5 h-3.5"></i>
+          Section 18 • Modern Indian History
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-black tracking-tight text-slate-100">
+          The Indian National Movement: <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">Early Phase (1885–1919)</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+          From the assembly of 72 pioneers at Gokuldas Tejpal College in 1885 to the thunderous echo of Tilak’s call for <em>Swaraj</em>, the stormy Swadeshi boycott of 1905, the revolutionary underground societies, and the somber turning point of the Jallianwala Bagh massacre of 1919.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="#foundation-inc" class="px-4 py-2 rounded-xl bg-amber-500 text-slate-950 font-semibold text-xs tracking-wide hover:bg-amber-400 transition-colors">Start Reading</a>
+          <a href="#moderates-extremists" class="px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-medium text-xs tracking-wide border border-slate-700 transition-colors">Moderates vs Extremists</a>
+          <a href="#rowlatt-jallianwala" class="px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-medium text-xs tracking-wide border border-slate-700 transition-colors">Jallianwala Bagh 1919</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: FOUNDATION OF INDIAN NATIONAL CONGRESS (1885) -->
+    <section id="foundation-inc" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">01</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Foundation of the Indian National Congress (1885)</h2>
+          <p class="text-xs text-slate-400">Genesis, Pioneers, Theories of Origin, and Milestone Annual Sessions</p>
+        </div>
+      </div>
+
+      <!-- Main Visual Showcase & History Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Archival Image Container -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="expandable-image group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 cursor-zoom-in" data-title="First Session of the Indian National Congress (1885)" data-caption="Archival photograph of the historic first meeting of the Indian National Congress held on 28 December 1885 at Gokuldas Tejpal Sanskrit College, Bombay, attended by 72 delegates from across India.">
+            <img src="assets/images/first_inc_session_1885.jpg" alt="First Session of the Indian National Congress 1885" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-xs text-slate-200 flex items-center justify-between">
+              <span class="font-semibold text-amber-300">Gokuldas Tejpal Sanskrit College, Bombay</span>
+              <span class="flex items-center gap-1 text-[11px] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700"><i data-lucide="maximize-2" class="w-3 h-3"></i> Zoom</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic text-center">First Session of the Indian National Congress (28 December 1885). Presided by Womesh Chandra Bonnerjee.</p>
+        </div>
+
+        <!-- Facts & Conceptual Points -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <h3 class="text-lg font-bold text-amber-300 flex items-center gap-2">
+              <i data-lucide="award" class="w-5 h-5"></i> Genesis and Early Modalities
+            </h3>
+            <ul class="space-y-3 text-sm text-slate-300 leading-relaxed">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                <span><strong>Originator:</strong> Allan Octavian Hume (A.O. Hume), a retired Scottish civil servant, organized the initial gathering with the blessings of Viceroy Lord Dufferin.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                <span><strong>Date & Venue:</strong> Originally planned in Pune, but shifted to <strong>Bombay</strong> due to a cholera outbreak. Convened on <strong>28 December 1885</strong> at <strong>Gokuldas Tejpal Sanskrit College</strong> with <strong>72 delegates</strong>.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                <span><strong>First President:</strong> <strong>Womesh Chandra Bonnerjee (W.C. Bonnerjee)</strong>, a prominent barrister from Calcutta.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                <span><strong>Safety Valve Theory vs. Lightning Conductor:</strong> Lala Lajpat Rai (*Young India*) advanced the <em>'Safety Valve Theory'</em> claiming Hume formed Congress to release brewing anti-British discontent. Modern historians (like Bipan Chandra) describe Hume as a <em>'Lightning Conductor'</em> utilized by Indian nationalists to build an all-India political platform without immediate colonial suppression.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- High-Yield Prelims Table: Landmark INC Sessions (1885-1919) -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-['Cinzel'] font-bold text-slate-200 flex items-center gap-2">
+          <i data-lucide="calendar" class="w-5 h-5 text-amber-400"></i> Landmark INC Annual Sessions (1885–1919)
+        </h3>
+        <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-slate-800/80 text-amber-300 border-b border-slate-700 font-semibold uppercase tracking-wider text-[11px]">
+              <tr>
+                <th class="p-3.5">Year</th>
+                <th class="p-3.5">Venue</th>
+                <th class="p-3.5">President</th>
+                <th class="p-3.5">Historic Significance & Lucent Prelims Highlight</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-300">
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-mono text-amber-400 font-semibold">1885</td>
+                <td class="p-3.5 font-medium text-slate-200">Bombay</td>
+                <td class="p-3.5">W.C. Bonnerjee</td>
+                <td class="p-3.5">1st session; 72 delegates attended at Gokuldas Tejpal Sanskrit College.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-mono text-amber-400 font-semibold">1886</td>
+                <td class="p-3.5 font-medium text-slate-200">Calcutta</td>
+                <td class="p-3.5">Dadabhai Naoroji</td>
+                <td class="p-3.5">436 delegates. Merger with National Conference (Surendranath Banerjee).</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-mono text-amber-400 font-semibold">1887</td>
+                <td class="p-3.5 font-medium text-slate-200">Madras</td>
+                <td class="p-3.5 font-semibold text-slate-100">Badruddin Tyabji</td>
+                <td class="p-3.5"><strong>First Muslim President</strong> of the Indian National Congress.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-mono text-amber-400 font-semibold">1888</td>
+                <td class="p-3.5 font-medium text-slate-200">Allahabad</td>
+                <td class="p-3.5 font-semibold text-slate-100">George Yule</td>
+                <td class="p-3.5"><strong>First British/European President</strong> of the INC.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-mono text-amber-400 font-semibold">1896</td>
+                <td class="p-3.5 font-medium text-slate-200">Calcutta</td>
+                <td class="p-3.5">Rahimtulla M. Sayani</td>
+                <td class="p-3.5">National Song <strong>'Vande Mataram'</strong> sung for the first time by Rabindranath Tagore.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-mono text-amber-400 font-semibold">1905</td>
+                <td class="p-3.5 font-medium text-slate-200">Banaras</td>
+                <td class="p-3.5">Gopal Krishna Gokhale</td>
+                <td class="p-3.5">Formal proclamation of <strong>Swadeshi Movement</strong> against Bengal Partition.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-mono text-amber-400 font-semibold">1906</td>
+                <td class="p-3.5 font-medium text-slate-200">Calcutta</td>
+                <td class="p-3.5">Dadabhai Naoroji</td>
+                <td class="p-3.5">Word <strong>'Swaraj'</strong> (Self-Government) used for the first time from the INC platform.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-mono text-amber-400 font-semibold">1907</td>
+                <td class="p-3.5 font-medium text-slate-200">Surat</td>
+                <td class="p-3.5">Rash Behari Ghosh</td>
+                <td class="p-3.5"><strong>Surat Split:</strong> Violent rupture between Moderates and Extremists on the Tapti river.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-mono text-amber-400 font-semibold">1911</td>
+                <td class="p-3.5 font-medium text-slate-200">Calcutta</td>
+                <td class="p-3.5">Bishan Narayan Dar</td>
+                <td class="p-3.5">National Anthem <strong>'Jana Gana Mana'</strong> sung for the first time.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-mono text-amber-400 font-semibold">1916</td>
+                <td class="p-3.5 font-medium text-slate-200">Lucknow</td>
+                <td class="p-3.5">Ambica Charan Mazumdar</td>
+                <td class="p-3.5"><strong>Lucknow Pact:</strong> Reunion of Moderates & Extremists; Congress-Muslim League joint pact.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-mono text-amber-400 font-semibold">1917</td>
+                <td class="p-3.5 font-medium text-slate-200">Calcutta</td>
+                <td class="p-3.5 font-semibold text-slate-100">Annie Besant</td>
+                <td class="p-3.5"><strong>First Woman President</strong> of the Indian National Congress.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: MODERATES VS EXTREMISTS (1885-1919) -->
+    <section id="moderates-extremists" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">02</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">The Ideological Divide: Moderates vs. Extremists</h2>
+          <p class="text-xs text-slate-400">Evolution from Constitutional Mendicancy to Militant Nationalism</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Archival Image of Bal Gangadhar Tilak -->
+        <div class="lg:col-span-4 space-y-3">
+          <div class="expandable-image group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 cursor-zoom-in" data-title="Lokmanya Bal Gangadhar Tilak (1856–1920)" data-caption="Bal Gangadhar Tilak, venerated as the 'Father of Indian Unrest' by Valentine Chirol. He initiated the Shivaji and Ganpati festivals to arouse public consciousness and proclaimed 'Swaraj is my birthright and I shall have it'.">
+            <img src="assets/images/bal_gangadhar_tilak.jpg" alt="Lokmanya Bal Gangadhar Tilak" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-xs text-slate-200 flex items-center justify-between">
+              <span class="font-semibold text-amber-300">Lokmanya Bal Gangadhar Tilak</span>
+              <span class="flex items-center gap-1 text-[11px] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700"><i data-lucide="maximize-2" class="w-3 h-3"></i> Zoom</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic text-center">Bal Gangadhar Tilak: "Swaraj is my birthright and I shall have it."</p>
+        </div>
+
+        <!-- Comparative Analysis Matrix -->
+        <div class="lg:col-span-8 space-y-4">
+          <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40">
+            <table class="w-full text-left text-xs sm:text-sm">
+              <thead class="bg-slate-800/80 text-amber-300 border-b border-slate-700 font-semibold uppercase tracking-wider text-[11px]">
+                <tr>
+                  <th class="p-3.5">Parameter</th>
+                  <th class="p-3.5 text-sky-400">Moderate Phase (1885–1905)</th>
+                  <th class="p-3.5 text-rose-400">Extremist Phase (1905–1919)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60 text-slate-300">
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="p-3.5 font-bold text-slate-200">Prominent Leaders</td>
+                  <td class="p-3.5">Dadabhai Naoroji, G.K. Gokhale, Pherozeshah Mehta, S.N. Banerjee, Dinshaw Wacha.</td>
+                  <td class="p-3.5 font-medium text-slate-100">Lal-Bal-Pal (Lala Lajpat Rai, B.G. Tilak, B.C. Pal) & Sri Aurobindo Ghosh.</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="p-3.5 font-bold text-slate-200">Ultimate Goal</td>
+                  <td class="p-3.5">Self-government within the British Empire (Dominion status) & administrative reforms.</td>
+                  <td class="p-3.5 font-medium text-rose-300">Complete Independence / Swaraj without foreign control.</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="p-3.5 font-bold text-slate-200">Methodology</td>
+                  <td class="p-3.5"><strong>'3 Ps':</strong> Prayer, Petition, and Peaceful Protest within British law.</td>
+                  <td class="p-3.5"><strong>Direct Action:</strong> Swadeshi, Boycott, National Education, Passive Resistance.</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="p-3.5 font-bold text-slate-200">Belief in British Justice</td>
+                  <td class="p-3.5">Total faith in British sense of fair play and providential rule.</td>
+                  <td class="p-3.5">Rejected British benevolent rule; believed self-sacrifice alone brings liberty.</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="p-3.5 font-bold text-slate-200">Social Base</td>
+                  <td class="p-3.5">Narrow base: English-educated urban elite, lawyers, doctors, zamindars.</td>
+                  <td class="p-3.5">Broader base: Educated youth, urban middle class, lower-middle class, and workers.</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40 transition-colors">
+                  <td class="p-3.5 font-bold text-slate-200">Cultural Inspiration</td>
+                  <td class="p-3.5">Western liberal thought (Mill, Burke, Spencer, Gladstone).</td>
+                  <td class="p-3.5">Indian cultural heritage, Gita, Shivaji, and Vedic glory.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: PARTITION OF BENGAL (1905) & SWADESHI MOVEMENT -->
+    <section id="partition-bengal" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">03</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Partition of Bengal (1905) & Swadeshi Movement</h2>
+          <p class="text-xs text-slate-400">Curzon's Imperial Strike and the Spark of Nationwide Boycott</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">1</div>
+          <h3 class="text-base font-bold text-slate-100">The Partition Scheme</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Announced by <strong>Lord Curzon</strong> on 20 July 1905; came into effect on <strong>16 October 1905</strong>. Bengal was divided into:
+            <br>• <strong>Bengal:</strong> West Bengal, Bihar, and Orissa (Capital: Calcutta).
+            <br>• <strong>Eastern Bengal & Assam:</strong> Capital at Dacca (Lieutenant Governor: Bampfylde Fuller).
+            <br>Real objective: To crush the nerve center of Indian nationalism and create a Muslim-majority province to foster communal divide.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">2</div>
+          <h3 class="text-base font-bold text-slate-100">Resistance & Day of Mourning</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            16 October 1905 was observed throughout Bengal as a <strong>Day of Mourning</strong>. People fasted, tied <em>Rakhi</em> on each other’s wrists as a symbol of brotherhood, and marched barefoot to the Ganges singing <em>Vande Mataram</em>. Rabindranath Tagore composed the anthem <em>'Amar Sonar Bangla'</em> (later national anthem of Bangladesh).
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold">3</div>
+          <h3 class="text-base font-bold text-slate-100">Swadeshi Institutions</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            The movement fostered self-reliance (<em>Atmashakti</em>):
+            <br>• <strong>National Council of Education</strong> established on 15 August 1906; Bengal National College opened with Aurobindo Ghosh as principal.
+            <br>• P.C. Ray founded the famous <strong>Bengal Chemical Swadeshi Stores</strong>.
+            <br>• Swadesh Bandhab Samiti founded by Ashwini Kumar Dutt mobilized thousands in Barisal.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: MUSLIM LEAGUE, SURAT SPLIT & MORLEY-MINTO -->
+    <section id="muslim-league" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">04</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Muslim League (1906), Surat Split (1907) & Morley-Minto (1909)</h2>
+          <p class="text-xs text-slate-400">Communal Electorates, Internal Ruptures, and Imperial Concessions</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Muslim League Card -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 text-[11px] font-mono font-bold">1906 • Dacca</div>
+          <h3 class="text-base font-bold text-slate-100">Foundation of Muslim League</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Following the <strong>Shimla Deputation</strong> led by the Aga Khan meeting Lord Minto in October 1906, the All India Muslim League was formally founded at Dacca on <strong>30 December 1906</strong>.
+            <br>• <strong>Founders:</strong> Nawab Salimullah of Dacca, Nawab Mohsin-ul-Mulk, Nawab Waqar-ul-Mulk.
+            <br>• <strong>First President:</strong> Aga Khan.
+            <br>• Supported Bengal partition and demanded separate electorates.
+          </p>
+        </div>
+
+        <!-- Surat Split Card -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-rose-500/10 text-rose-400 text-[11px] font-mono font-bold">1907 • Surat</div>
+          <h3 class="text-base font-bold text-slate-100">The Surat Split</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            The INC session held on the banks of Tapti river at Surat in December 1907 witnessed open physical violence.
+            <br>• Presided over by <strong>Rash Behari Ghosh</strong>.
+            <br>• Dispute over extending boycott to all British institutions and electing Tilak or Lajpat Rai as president.
+            <br>• Extremists were expelled from Congress; Tilak was imprisoned in Mandalay (Burma) for 6 years (1908–1914) where he wrote <em>Gita Rahasya</em>.
+          </p>
+        </div>
+
+        <!-- Morley-Minto Card -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-sky-500/10 text-sky-400 text-[11px] font-mono font-bold">1909 • London/Delhi</div>
+          <h3 class="text-base font-bold text-slate-100">Morley-Minto Reforms</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Officially the <strong>Indian Councils Act 1909</strong>:
+            <br>• Introduced <strong>Separate Electorates for Muslims</strong>, sowing institutional seeds of communalism. Lord Minto was named <em>'Father of Communal Electorate'</em>.
+            <br>• Expanded Imperial Legislative Council seats from 16 to 60.
+            <br>• <strong>Satyendra Prasad Sinha (S.P. Sinha)</strong> became the first Indian appointed to the Viceroy's Executive Council (as Law Member).
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: REVOLUTIONARY ORGANIZATIONS IN INDIA & ABROAD -->
+    <section id="revolutionary-societies" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">05</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Revolutionary Movements in India and Abroad</h2>
+          <p class="text-xs text-slate-400">Secret Societies, Assassinations, and the Global Fight for Indian Freedom</p>
+        </div>
+      </div>
+
+      <!-- Master Table: Revolutionary Societies -->
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-800/80 text-amber-300 border-b border-slate-700 font-semibold uppercase tracking-wider text-[11px]">
+            <tr>
+              <th class="p-3.5">Organization</th>
+              <th class="p-3.5">Year</th>
+              <th class="p-3.5">Center</th>
+              <th class="p-3.5">Founders & Key Leaders</th>
+              <th class="p-3.5">Lucent Prelims Key Fact</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 text-slate-300">
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">Mitra Mela / Abhinav Bharat</td>
+              <td class="p-3.5 font-mono">1899 / 1904</td>
+              <td class="p-3.5">Nasik / Maharashtra</td>
+              <td class="p-3.5">Vinayak Damodar Savarkar & Ganesh Savarkar</td>
+              <td class="p-3.5">Secret revolutionary society modeled on Mazzini's Young Italy. A.T. Jackson assassination (1909).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">Anushilan Samiti</td>
+              <td class="p-3.5 font-mono">1902</td>
+              <td class="p-3.5">Midnapore & Calcutta</td>
+              <td class="p-3.5">Pramatha Mitra, Barindra Ghosh, Bhupendranath Dutta</td>
+              <td class="p-3.5">Published journal <em>Yugantar</em>. Alipore Bomb Case (1908) involving Khudiram Bose & Prafulla Chaki.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">India House & Indian Home Rule Society</td>
+              <td class="p-3.5 font-mono">1905</td>
+              <td class="p-3.5">London (UK)</td>
+              <td class="p-3.5">Shyamji Krishna Varma, V.D. Savarkar, Madan Lal Dhingra</td>
+              <td class="p-3.5">Published <em>The Indian Sociologist</em>. Madan Lal Dhingra assassinated Curzon Wyllie in London (1909).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">Paris Indian Society</td>
+              <td class="p-3.5 font-mono">1905</td>
+              <td class="p-3.5">Paris (France)</td>
+              <td class="p-3.5">Madam Bhikaji Cama, S.R. Rana</td>
+              <td class="p-3.5">Madam Cama unfurled the <strong>first Indian National Flag</strong> at Stuttgart, Germany (1907). Published <em>Bande Mataram</em>.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">Ghadar Party</td>
+              <td class="p-3.5 font-mono">1913</td>
+              <td class="p-3.5">San Francisco (USA)</td>
+              <td class="p-3.5">Lala Har Dayal, Sohan Singh Bhakna, Kartar Singh Sarabha</td>
+              <td class="p-3.5">HQ at 'Yugantar Ashram'. Published weekly paper <em>Ghadar</em> (Angrezi Raj ka Dushman).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">Berlin Committee / Indian Independence Committee</td>
+              <td class="p-3.5 font-mono">1915</td>
+              <td class="p-3.5">Berlin (Germany)</td>
+              <td class="p-3.5">Virendranath Chattopadhyaya, Bhupendranath Dutta</td>
+              <td class="p-3.5">Formed under the 'Zimmermann Plan' during WWI to mobilize German aid and incite mutiny in India.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">Komagata Maru Incident</td>
+              <td class="p-3.5 font-mono">1914</td>
+              <td class="p-3.5">Vancouver / Budge Budge</td>
+              <td class="p-3.5">Baba Gurdit Singh (Japanese ship charterer)</td>
+              <td class="p-3.5">Ship carrying 376 Indian passengers turned back by Canadian authorities; fired upon at Budge Budge (Calcutta).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 6: HOME RULE LEAGUE & LUCKNOW PACT (1916) -->
+    <section id="home-rule" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">06</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Home Rule Movement & The Lucknow Pact (1916)</h2>
+          <p class="text-xs text-slate-400">The Twin Leagues of Tilak and Besant & The Triumph of Nationalist Unity</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Tilak's League -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-bold text-amber-400">Tilak’s Home Rule League</h3>
+            <span class="text-xs font-mono px-2.5 py-1 rounded bg-amber-500/10 text-amber-300">April 1916 • Poona</span>
+          </div>
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <li>• <strong>Headquarters:</strong> Poona (Belgaum conference).</li>
+            <li>• <strong>Jurisdiction:</strong> Maharashtra (excluding Bombay city), Karnataka, Central Provinces, and Berar (6 branches total).</li>
+            <li>• <strong>Organs:</strong> <em>Kesari</em> (Marathi) and <em>The Mahratta</em> (English).</li>
+            <li>• <strong>Demands:</strong> Swarajya, formation of linguistic states, and education in the vernacular tongue.</li>
+          </ul>
+        </div>
+
+        <!-- Besant's League -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-lg font-bold text-amber-400">Annie Besant’s Home Rule League</h3>
+            <span class="text-xs font-mono px-2.5 py-1 rounded bg-amber-500/10 text-amber-300">Sept 1916 • Madras</span>
+          </div>
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <li>• <strong>Headquarters:</strong> Adyar (near Madras). Key associate: George Arundale (Organizing Secretary).</li>
+            <li>• <strong>Jurisdiction:</strong> Bombay city and the rest of India (around 200 branches).</li>
+            <li>• <strong>Organs:</strong> <em>New India</em> and <em>Commonweal</em>.</li>
+            <li>• <strong>Milestone:</strong> Besant was arrested in June 1917, triggering nationwide protests; Sir S. Subramania Aiyar renounced his knighthood. Besant was elected INC President in December 1917.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- The Lucknow Pact Box -->
+      <div id="lucknow-pact" class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4 scroll-mt-24">
+        <h3 class="text-lg font-bold text-amber-300 flex items-center gap-2">
+          <i data-lucide="handshake" class="w-5 h-5"></i> The Historic Lucknow Session (December 1916)
+        </h3>
+        <p class="text-sm text-slate-300 leading-relaxed">
+          Presided over by <strong>Ambica Charan Mazumdar</strong>, the 1916 Lucknow Session marked two decisive breakthroughs in Indian history:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+          <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/60 space-y-2">
+            <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider">1. Moderate–Extremist Reunion</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              After 9 years of bitter estrangement since the 1907 Surat split, Tilak and Annie Besant successfully negotiated the readmission of the Extremists into the Congress fold.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/60 space-y-2">
+            <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider">2. Congress–League Lucknow Pact</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Congress and Muslim League presented joint demands to the British government. Congress made the momentous concession of <strong>accepting separate communal electorates for Muslims</strong> in provincial legislatures.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: ROWLATT ACT & JALLIANWALA BAGH (1919) -->
+    <section id="rowlatt-jallianwala" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 font-['Cinzel'] font-bold text-lg">07</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">The Rowlatt Act & Jallianwala Bagh Massacre (1919)</h2>
+          <p class="text-xs text-slate-400">The Infamous 'Black Act', Amritsar's Bloody Baisakhi, and the Hunter Commission</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Archival Image of Jallianwala Bagh Memorial -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="expandable-image group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 cursor-zoom-in" data-title="Jallianwala Bagh Memorial, Amritsar" data-caption="The Flame of Liberty memorial at Jallianwala Bagh, Amritsar. On 13 April 1919 (Baisakhi day), troops commanded by Brigadier-General Reginald Dyer opened fire on a peaceful, unarmed assembly trapped inside the walled garden, killing hundreds.">
+            <img src="assets/images/jallianwala_bagh.jpg" alt="Jallianwala Bagh Memorial Amritsar" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-xs text-slate-200 flex items-center justify-between">
+              <span class="font-semibold text-rose-300">Flame of Liberty Memorial, Amritsar</span>
+              <span class="flex items-center gap-1 text-[11px] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700"><i data-lucide="maximize-2" class="w-3 h-3"></i> Zoom</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic text-center">Jallianwala Bagh Memorial, Amritsar: 13 April 1919 tragedy that alienated India forever.</p>
+        </div>
+
+        <!-- Factual Analysis -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <h3 class="text-lg font-bold text-rose-300 flex items-center gap-2">
+              <i data-lucide="shield-alert" class="w-5 h-5"></i> The Sequence of Imperial Terror
+            </h3>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li class="flex items-start gap-2">
+                <i data-lucide="alert-circle" class="w-4 h-4 text-rose-400 shrink-0 mt-0.5"></i>
+                <span><strong>The Rowlatt Act (March 1919):</strong> Recommended by Sir Sidney Rowlatt (Sedition Committee). Empowered the British government to imprison any person suspected of terrorism for up to 2 years without trial. Condemned across India as <em>'No Dalil, No Vakil, No Appeal'</em>. Gandhi founded the <em>Satyagraha Sabha</em> to protest.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="alert-circle" class="w-4 h-4 text-rose-400 shrink-0 mt-0.5"></i>
+                <span><strong>Arrest of Popular Leaders:</strong> On 9 April 1919, two beloved nationalist leaders of Punjab, <strong>Dr. Saifuddin Kitchlew</strong> and <strong>Dr. Satyapal</strong>, were arrested in Amritsar.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="alert-circle" class="w-4 h-4 text-rose-400 shrink-0 mt-0.5"></i>
+                <span><strong>The Massacre (13 April 1919):</strong> On Baisakhi day, thousands of villagers, women, and children gathered peacefully in Jallianwala Bagh. <strong>Brigadier-General Reginald Dyer</strong> sealed the single narrow exit with British and Gurkha troops and ordered firing without warning until ammunition was exhausted (1,650 rounds fired).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="alert-circle" class="w-4 h-4 text-rose-400 shrink-0 mt-0.5"></i>
+                <span><strong>National Renunciations & Retribution:</strong>
+                  <br>• <strong>Rabindranath Tagore</strong> surrendered his British <strong>Knighthood</strong>.
+                  <br>• <strong>Mahatma Gandhi</strong> returned his <strong>Kaiser-i-Hind</strong> gold medal.
+                  <br>• <strong>Hunter Committee</strong> (Disorders Inquiry Committee) was appointed to whitewash the incident.
+                  <br>• On 13 March 1940, revolutionary <strong>Sardar Udham Singh</strong> assassinated Sir Michael O'Dwyer (then Lieutenant Governor of Punjab who endorsed the shooting) at Caxton Hall, London.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 8: 3D FLASHCARDS -->
+    <section class="space-y-6 pt-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+            <i data-lucide="layers" class="w-6 h-6 text-amber-400"></i> Early National Movement Flashcards
+          </h2>
+          <p class="text-xs text-slate-400">Click card to flip • Master high-yield Lucent GK points</p>
+        </div>
+        <span id="cardCounter" class="text-xs font-mono px-3 py-1 rounded-full bg-slate-800 text-amber-400 border border-slate-700">1 / 12</span>
+      </div>
+
+      <div class="max-w-2xl mx-auto perspective-1000 py-6">
+        <div id="flashcard" class="relative w-full h-72 sm:h-80 cursor-pointer transform-style-preserve-3d transition-transform duration-500 rounded-3xl border border-slate-800 shadow-2xl bg-gradient-to-br from-slate-900 to-slate-950 p-8 flex flex-col justify-between select-none">
+          
+          <!-- Front Face -->
+          <div class="face-front flex flex-col justify-between h-full">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono uppercase text-amber-400 font-semibold tracking-wider">Question</span>
+              <span class="text-xs text-slate-400 flex items-center gap-1"><i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i> Tap to flip</span>
+            </div>
+            <div id="cardQuestion" class="text-base sm:text-xl font-medium text-slate-100 leading-snug py-4">Loading question...</div>
+            <div class="text-[11px] text-slate-400">Lucent GK Prelims High-Yield Series</div>
+          </div>
+
+          <!-- Back Face -->
+          <div class="face-back flex flex-col justify-between h-full absolute inset-0 p-8 rounded-3xl bg-slate-900 border border-amber-500/30">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono uppercase text-emerald-400 font-semibold tracking-wider">Answer & Concept</span>
+              <span class="text-xs text-slate-400 flex items-center gap-1"><i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i> Tap to flip</span>
+            </div>
+            <div id="cardAnswer" class="text-xs sm:text-sm text-slate-200 leading-relaxed overflow-y-auto pr-1">Loading answer...</div>
+            <div class="text-[11px] text-amber-400 font-mono">Exam Note: Essential Memorization</div>
+          </div>
+
+        </div>
+
+        <!-- Controls -->
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <button id="prevCard" class="px-5 py-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-2 transition-all">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> Previous
+          </button>
+          <button id="nextCard" class="px-5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-semibold flex items-center gap-2 transition-all">
+            Next <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: 5-QUESTION MOCK QUIZ -->
+    <section class="space-y-6 pt-4">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+          <i data-lucide="check-square" class="w-6 h-6 text-amber-400"></i> Prelims Self-Assessment Quiz
+        </h2>
+        <p class="text-xs text-slate-400">Test your command over Early Nationalist facts, dates, and organizations</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-4">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg">
+          Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all">
+          Reset Quiz
+        </button>
+      </div>
+    </section>
+
+    <!-- SECTION NAVIGATION FOOTER -->
+    <footer class="pt-12 border-t border-slate-800">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <a href="revolt_1857.html" class="flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-amber-400 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Chapter 17: The Great Revolt of 1857
+        </a>
+        <a href="hub.html" class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 hover:text-amber-400 hover:border-amber-500/40 transition-all">
+          Subject Knowledge Hub
+        </a>
+        <a href="gandhian_era.html" class="flex items-center gap-2 text-xs font-semibold text-amber-400 hover:text-amber-300 transition-colors">
+          Chapter 19: The Gandhian Era (1919–1947) <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX MODAL -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-amber-400">Historical Image View</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+
+    <!-- Viewer Canvas -->
+    <div class="relative flex-1 flex items-center justify-center overflow-hidden my-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 border-t border-slate-800/80 pt-2">
+      Tip: Use mouse wheel to zoom in/out • Click and drag to pan when zoomed
+    </div>
+  </div>
+
+  <!-- QUICK SEARCH MODAL (ESC TO CLOSE) -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="w-full max-w-lg bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <div class="flex items-center gap-2 text-slate-400 text-xs font-semibold">
+          <i data-lucide="search" class="w-4 h-4 text-amber-400"></i> Search Section Content
+        </div>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-slate-200 text-xs">ESC to exit</button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type topic, leader, date, or event..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-amber-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Type keywords to search sections...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT INCLUSION -->
+  <script src="assets/js/national_movement_early.js"></script>
+</body>
+</html>

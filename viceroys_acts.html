@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>British Viceroys & Constitutional Acts (1773–1947) | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-amber-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-amber-400 hover:text-amber-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500/20 to-amber-600/10 border border-amber-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="compass" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-amber-300">LUCENT<span class="text-amber-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">Modern History</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <!-- Quick Search Button -->
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-amber-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+                <!-- Chapter Switcher Dropdown -->
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-amber-400 cursor-pointer">
+          <optgroup label="Ancient India">
+            <option value="index.html" >01. Indus Valley Civilization</option>
+            <option value="vedic.html" >02. Vedic Culture</option>
+            <option value="mahajanapadas.html" >03. Mahajanapadas & Magadha</option>
+            <option value="religions.html" >04. Buddhism & Jainism</option>
+            <option value="maurya.html" >05. The Mauryan Empire</option>
+            <option value="post_maurya.html" >06. Post-Maurya & Sangam</option>
+            <option value="gupta.html" >07. Gupta Age & Harsha</option>
+          </optgroup>
+          <optgroup label="Medieval India">
+            <option value="early_medieval.html" >08. Early Medieval & Rajputs</option>
+            <option value="delhi_sultanate.html" >09. The Delhi Sultanate</option>
+            <option value="vijayanagar_bahmani.html" >10. Vijayanagar & Bahmani</option>
+            <option value="mughal_empire.html" >11. The Mughal Empire</option>
+            <option value="marathas.html" >12. The Marathas & Later Mughals</option>
+            <option value="bhakti_sufi.html" >13. Bhakti & Sufi Movements</option>
+          </optgroup>
+          <optgroup label="Modern India">
+            <option value="european_expansion.html" >14. European Expansion in India</option>
+            <option value="economic_revolts.html" >15. Economic Impact & Tribal Revolts</option>
+            <option value="reforms.html" >16. Socio-Religious Reform Movements</option>
+            <option value="revolt_1857.html" >17. The Great Revolt of 1857</option>
+            <option value="national_movement_early.html" >18. Early National Movement (1885–1919)</option>
+            <option value="gandhian_era.html" >19. The Gandhian Era (1919–1947)</option>
+            <option value="viceroys_acts.html" selected>20. British Viceroys & Acts</option>
+          </optgroup>
+        </select>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+    <!-- HERO SECTION -->
+    <section class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-slate-950 p-8 sm:p-12 shadow-2xl">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent pointer-events-none"></div>
+      <div class="relative z-10 max-w-4xl space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold uppercase tracking-wider">
+          <i data-lucide="crown" class="w-3.5 h-3.5"></i>
+          Section 20 • Modern Indian History
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-black tracking-tight text-slate-100">
+          British Viceroys & <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">Constitutional Acts (1773–1947)</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+          The complete master matrix of British administrative apparatus: all Regulating and Charter Acts, Crown enactments, and the chronological tenure, policies, and landmark reforms of every Governor-General and Viceroy from Warren Hastings to Mountbatten.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="#constitutional-acts" class="px-4 py-2 rounded-xl bg-amber-500 text-slate-950 font-semibold text-xs tracking-wide hover:bg-amber-400 transition-colors">Company Acts (1773–1853)</a>
+          <a href="#crown-rule-acts" class="px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-medium text-xs tracking-wide border border-slate-700 transition-colors">Crown Acts (1858–1947)</a>
+          <a href="#viceroys-india" class="px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-medium text-xs tracking-wide border border-slate-700 transition-colors">Master Viceroys Table</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: CONSTITUTIONAL ACTS UNDER EAST INDIA COMPANY (1773–1853) -->
+    <section id="constitutional-acts" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">01</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Constitutional Acts Under East India Company (1773–1853)</h2>
+          <p class="text-xs text-slate-400">The Progressive Subjection of Company Rule to Parliamentary Supervision</p>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-800/80 text-amber-300 border-b border-slate-700 font-semibold uppercase tracking-wider text-[11px]">
+            <tr>
+              <th class="p-3.5">Act</th>
+              <th class="p-3.5">Key Constitutional Provisions</th>
+              <th class="p-3.5">Administrative & Legal Impact</th>
+              <th class="p-3.5">Lucent Prelims Key Fact</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 text-slate-300">
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">Regulating Act of 1773</td>
+              <td class="p-3.5">Governor of Bengal elevated to <strong>Governor-General of Bengal</strong> (Warren Hastings). 4-member council created.</td>
+              <td class="p-3.5">Madras and Bombay presidencies subordinated to Bengal in foreign and war matters.</td>
+              <td class="p-3.5 font-semibold text-slate-100">Established <strong>Supreme Court at Calcutta (1774)</strong>; Sir Elijah Impey first Chief Justice.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">Pitt's India Act of 1784</td>
+              <td class="p-3.5">Introduced <strong>System of Dual Control</strong>: Court of Directors (commercial) and 6-member <strong>Board of Control</strong> (political/civil/military).</td>
+              <td class="p-3.5">Governor-General's Council reduced from 4 to 3 members.</td>
+              <td class="p-3.5 font-semibold text-slate-100">Company's territories named <strong>'British possessions in India'</strong> for the first time.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">Charter Act of 1793</td>
+              <td class="p-3.5">Company's trade monopoly renewed for 20 years. Home government members paid out of Indian revenues.</td>
+              <td class="p-3.5">Overriding powers of Governor-General over his council codified.</td>
+              <td class="p-3.5">Began the financial burden on Indian exchequer that Naoroji analyzed as 'Drain'.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">Charter Act of 1813</td>
+              <td class="p-3.5">Abolished Company's trade monopoly in India; preserved monopoly only in <strong>tea trade</strong> and <strong>trade with China</strong>.</td>
+              <td class="p-3.5">Christian missionaries permitted to preach in India.</td>
+              <td class="p-3.5 font-semibold text-slate-100">Allotted <strong>₹1 Lakh annually</strong> for education and science promotion in India.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">Charter Act of 1833</td>
+              <td class="p-3.5">Governor-General of Bengal redesignated as <strong>Governor-General of India</strong> (Lord William Bentinck). Completely ended commercial role of EIC.</td>
+              <td class="p-3.5">Stripped Bombay and Madras of law-making powers; centralized all legislation.</td>
+              <td class="p-3.5 font-semibold text-slate-100">Added 4th member (<strong>Law Member: Lord Macaulay</strong>) and established 1st Law Commission.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">Charter Act of 1853</td>
+              <td class="p-3.5">Separated for the first time the <strong>legislative and executive functions</strong> of the Governor-General’s Council (6 legislative councilors added).</td>
+              <td class="p-3.5">Local representation introduced in the Central Legislative Council.</td>
+              <td class="p-3.5 font-semibold text-slate-100">Introduced <strong>open competitive examination for Civil Services (ICS)</strong> (Macaulay Committee 1854).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CONSTITUTIONAL ACTS UNDER THE CROWN (1858–1947) -->
+    <section id="crown-rule-acts" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">02</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Constitutional Acts Under The British Crown (1858–1947)</h2>
+          <p class="text-xs text-slate-400">Direct Imperial Governance, Communal Electorates, Dyarchy, and Provincial Autonomy</p>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-800/80 text-amber-300 border-b border-slate-700 font-semibold uppercase tracking-wider text-[11px]">
+            <tr>
+              <th class="p-3.5">Act</th>
+              <th class="p-3.5">Key Constitutional Provisions</th>
+              <th class="p-3.5">Representative & Legislative Changes</th>
+              <th class="p-3.5">Lucent Prelims Key Fact</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 text-slate-300">
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">GoI Act 1858 (Good Government Act)</td>
+              <td class="p-3.5">Dissolved East India Company; power transferred to <strong>British Crown</strong>. Abolished Board of Control and Court of Directors.</td>
+              <td class="p-3.5">Created <strong>Secretary of State for India</strong> (Cabinet minister) assisted by 15-member <em>Council of India</em>.</td>
+              <td class="p-3.5 font-semibold text-slate-100">Governor-General given title of <strong>Viceroy of India</strong> (Lord Canning first).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">Indian Councils Act 1861</td>
+              <td class="p-3.5">Introduced <strong>Portfolio System</strong> (Canning). Restored legislative powers to Bombay & Madras (decentralization).</td>
+              <td class="p-3.5">Viceroy nominated non-official Indians: Raja of Banaras, Maharaja of Patiala, Sir Dinkar Rao.</td>
+              <td class="p-3.5 font-semibold text-slate-100">Viceroy empowered to issue <strong>Ordinances</strong> valid for 6 months without council assent.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">Indian Councils Act 1892</td>
+              <td class="p-3.5">Introduced principle of <strong>indirect election</strong> (recommendation by universities, district boards, chambers of commerce).</td>
+              <td class="p-3.5">Legislative council members given right to <strong>discuss annual budget</strong> and ask questions on public interest (6 days notice).</td>
+              <td class="p-3.5 font-semibold text-slate-100">No power to vote on budget or ask supplementary questions.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">Indian Councils Act 1909 (Morley-Minto)</td>
+              <td class="p-3.5">Introduced <strong>Separate Communal Electorates for Muslims</strong>. Lord Minto called <em>'Father of Communal Electorate'</em>.</td>
+              <td class="p-3.5">Non-official majority allowed in provincial councils. Right to ask supplementary questions and move budget resolutions.</td>
+              <td class="p-3.5 font-semibold text-slate-100"><strong>S.P. Sinha</strong> became 1st Indian member in Viceroy's Executive Council (Law Member).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">GoI Act 1919 (Montagu-Chelmsford)</td>
+              <td class="p-3.5">Introduced <strong>Dyarchy in Provinces</strong> (Reserved Subjects under Governor; Transferred Subjects under Ministers).</td>
+              <td class="p-3.5">Introduced <strong>Bicameralism</strong> and <strong>direct elections</strong> at the Centre. Extended separate electorates to Sikhs, Christians, Anglo-Indians.</td>
+              <td class="p-3.5 font-semibold text-slate-100">Provided for establishment of a <strong>Public Service Commission</strong> (set up in 1926).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">GoI Act 1935</td>
+              <td class="p-3.5">Proposed <strong>All-India Federation</strong> (provinces + princely states). Abolished Dyarchy in provinces and granted <strong>Provincial Autonomy</strong>.</td>
+              <td class="p-3.5">Dyarchy introduced at Centre (Foreign Affairs, Defence). Created 3 Lists: Federal, Provincial, Concurrent.</td>
+              <td class="p-3.5 font-semibold text-slate-100">Established <strong>Federal Court (1937)</strong> and <strong>Reserve Bank of India (1935)</strong>. Burma separated.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-emerald-400">Indian Independence Act 1947</td>
+              <td class="p-3.5">Ended British rule; declared India an independent sovereign state from <strong>15 August 1947</strong>.</td>
+              <td class="p-3.5">Created two independent dominions: <strong>India and Pakistan</strong>. Lapsed British paramountcy over princely states.</td>
+              <td class="p-3.5 font-semibold text-emerald-300">Constituent Assemblies of both dominions empowered to frame constitutions and repeal British acts.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 3 & 4: VISUAL SHOWCASE: BENTINCK & DALHOUSIE -->
+    <section id="gg-india" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">03</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Key Governors-General: Bentinck & Dalhousie</h2>
+          <p class="text-xs text-slate-400">The Social Reformer and the Imperial Architect of Modern Indian Infrastructure</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Bentinck Card -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+          <div class="expandable-image group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 cursor-zoom-in" data-title="Lord William Bentinck (1828–1835)" data-caption="Lord William Bentinck, first Governor-General of India under the Charter Act of 1833. Renowned for humanitarian reforms including the abolition of Sati (1829), suppression of Thuggee, and introduction of English education (1835).">
+            <img src="assets/images/lord_william_bentinck.jpg" alt="Lord William Bentinck" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-xs text-slate-200 flex items-center justify-between">
+              <span class="font-semibold text-amber-300">Lord William Bentinck (1828–1835)</span>
+              <span class="flex items-center gap-1 text-[11px] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700"><i data-lucide="maximize-2" class="w-3 h-3"></i> Zoom</span>
+            </div>
+          </div>
+          <h3 class="text-lg font-bold text-amber-400">Bentinck’s Historic Legacy</h3>
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <li>• <strong>Abolition of Sati (1829):</strong> Enacted Regulation XVII declaring Sati illegal and punishable as culpable homicide (collaborated with Raja Ram Mohan Roy).</li>
+            <li>• <strong>Suppression of Thuggee (1830):</strong> Appointed Captain William Sleeman who eradicated the criminal cult of Thugs across central India.</li>
+            <li>• <strong>English Education Act (1835):</strong> Adopted Macaulay’s Minute; made English the official medium of higher education and administration.</li>
+            <li>• <strong>Calcutta Medical College (1835):</strong> Founded the first Western medical institution in Asia.</li>
+          </ul>
+        </div>
+
+        <!-- Dalhousie Card -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+          <div class="expandable-image group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 cursor-zoom-in" data-title="Lord Dalhousie (1848–1856)" data-caption="Lord Dalhousie, Governor-General from 1848 to 1856. Famous for his aggressive Doctrine of Lapse annexations as well as introducing Railways (1853), Telegraph, Postal system, and Public Works Department in India.">
+            <img src="assets/images/lord_dalhousie.jpg" alt="Lord Dalhousie" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-xs text-slate-200 flex items-center justify-between">
+              <span class="font-semibold text-amber-300">Lord Dalhousie (1848–1856)</span>
+              <span class="flex items-center gap-1 text-[11px] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700"><i data-lucide="maximize-2" class="w-3 h-3"></i> Zoom</span>
+            </div>
+          </div>
+          <h3 class="text-lg font-bold text-amber-400">Dalhousie’s Double-Edged Sword</h3>
+          <ul class="space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <li>• <strong>Doctrine of Lapse:</strong> Annexed Satara (1848), Jaitpur & Sambalpur (1849), Baghat (1850), Udaipur (1852), Jhansi (1853), and Nagpur (1854).</li>
+            <li>• <strong>Annexation of Awadh (1856):</strong> Deposed Nawab Wajid Ali Shah on pretext of 'misgovernance' based on Outram's report (primary cause of 1857 revolt).</li>
+            <li>• <strong>Indian Railways (1853):</strong> 1st passenger train ran from Bombay (Bori Bunder) to Thane on 16 April 1853 (34 km).</li>
+            <li>• <strong>Telegraph & Post:</strong> 1st telegraph line between Calcutta and Diamond Harbour / Agra (1853); modern Postal Act of 1854 with uniform 2-paisa postage.</li>
+            <li>• <strong>Wood’s Despatch (1854):</strong> Known as the <em>'Magna Carta of English Education in India'</em>; Hindu Widows' Remarriage Act (1856).</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: COMPLETE MASTER VICEROYS TABLE (1858–1947) -->
+    <section id="viceroys-india" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-['Cinzel'] font-bold text-lg">04</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Master Chronological Table: British Viceroys of India (1858–1947)</h2>
+          <p class="text-xs text-slate-400">Complete Reference Matrix for APSC, UPSC, and State Civil Services Prelims</p>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-800/80 text-amber-300 border-b border-slate-700 font-semibold uppercase tracking-wider text-[11px]">
+            <tr>
+              <th class="p-3">Viceroy</th>
+              <th class="p-3">Tenure</th>
+              <th class="p-3">Major Historic Events & Administrative Highlights</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 text-slate-300">
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Canning</td>
+              <td class="p-3 font-mono">1856–1862</td>
+              <td class="p-3">1857 Revolt; Queen Victoria's Proclamation (1858); GoI Act 1858; Indian Penal Code (1860); Indian Councils Act 1861; High Courts at Calcutta, Bombay, Madras (1862).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Elgin I</td>
+              <td class="p-3 font-mono">1862–1863</td>
+              <td class="p-3">Wahabi Movement suppressed. Died in Dharamshala, Himachal Pradesh.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Lawrence</td>
+              <td class="p-3 font-mono">1864–1869</td>
+              <td class="p-3">Bhutan War (1865); Policy of 'Masterly Inactivity' towards Afghanistan; Telegraphic communication opened with Europe (1865).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Mayo</td>
+              <td class="p-3 font-mono">1869–1872</td>
+              <td class="p-3">Financial decentralization (1870); Department of Agriculture created; Mayo College at Ajmer; <strong>First Census of India (1872)</strong>; <strong>Assassinated in Andamans by Sher Ali</strong>.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Northbrook</td>
+              <td class="p-3 font-mono">1872–1876</td>
+              <td class="p-3">Kuka Movement in Punjab led by Ram Singh; Prince of Wales (later Edward VII) visited India (1875); Bihar famine (1873–74).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Lytton</td>
+              <td class="p-3 font-mono">1876–1880</td>
+              <td class="p-3"><em>'Viceroy of Reverse Genius'</em>; Grand Delhi Durbar 1877 (Queen Victoria as Kaiser-i-Hind amidst Great Famine); <strong>Vernacular Press Act (1878)</strong>; Arms Act (1878); Lowered ICS age limit from 21 to 19; 2nd Anglo-Afghan War.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Ripon</td>
+              <td class="p-3 font-mono">1880–1884</td>
+              <td class="p-3"><em>'Father of Local Self-Government'</em> (1882); Repealed Vernacular Press Act (1882); <strong>1st Synchronous Census (1881)</strong>; 1st Factory Act (1881); Hunter Commission on Education (1882); <strong>Ilbert Bill controversy (1883)</strong>.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Dufferin</td>
+              <td class="p-3 font-mono">1884–1888</td>
+              <td class="p-3"><strong>Foundation of Indian National Congress (1885)</strong>; 3rd Anglo-Burmese War (annexation of Upper Burma, 1885); Bengal Tenancy Act (1885).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Lansdowne</td>
+              <td class="p-3 font-mono">1888–1894</td>
+              <td class="p-3">2nd Factory Act (1891); Indian Councils Act 1892 (indirect election introduced); <strong>Durand Line</strong> demarcated between British India and Afghanistan (1893).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Elgin II</td>
+              <td class="p-3 font-mono">1894–1899</td>
+              <td class="p-3">Chapekar brothers assassinated plague commissioner Rand in Poona (1897); Great Famine (Lyall Commission); Birsa Munda revolt.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Curzon</td>
+              <td class="p-3 font-mono">1899–1905</td>
+              <td class="p-3">Police Commission (Andrew Frazer); Indian Universities Act (1904); Ancient Monuments Preservation Act (1904); Younghusband Expedition to Tibet (1904); <strong>Partition of Bengal (1905)</strong>.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Minto II</td>
+              <td class="p-3 font-mono">1905–1910</td>
+              <td class="p-3">Foundation of Muslim League (1906); Surat Split in INC (1907); <strong>Morley-Minto Reforms (1909)</strong> with separate communal electorates for Muslims.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Hardinge II</td>
+              <td class="p-3 font-mono">1910–1916</td>
+              <td class="p-3">Delhi Durbar 1911 (Bengal partition annulled, capital transferred to Delhi); Bomb thrown at him by Rash Behari Bose (1912); Gandhi returned to India (1915); Hindu Mahasabha founded (1915).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Chelmsford</td>
+              <td class="p-3 font-mono">1916–1921</td>
+              <td class="p-3">Lucknow Pact (1916); Home Rule Leagues (1916); August Declaration (1917); <strong>Rowlatt Act (1919)</strong>; <strong>Jallianwala Bagh Massacre (1919)</strong>; GoI Act 1919; Non-Cooperation Movement launched (1920).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Reading</td>
+              <td class="p-3 font-mono">1921–1926</td>
+              <td class="p-3">Chauri Chaura incident (1922); Swaraj Party founded (1923); Kakori Train Dacoity (1925); RSS founded (1925); Moplah Rebellion in Kerala (1921). Only Jewish Viceroy of India.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Irwin</td>
+              <td class="p-3 font-mono">1926–1931</td>
+              <td class="p-3">Simon Commission (1927); Nehru Report (1928); Lahore Session Purna Swaraj (1929); <strong>Dandi March & Civil Disobedience (1930)</strong>; 1st RTC (1930); <strong>Gandhi-Irwin Pact (1931)</strong>.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Willingdon</td>
+              <td class="p-3 font-mono">1931–1936</td>
+              <td class="p-3">2nd RTC (1931) & 3rd RTC (1932); <strong>Communal Award (1932)</strong>; <strong>Poona Pact (1932)</strong>; <strong>Government of India Act 1935</strong>; Reserve Bank of India established (1935).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Linlithgow</td>
+              <td class="p-3 font-mono">1936–1944</td>
+              <td class="p-3">1937 Provincial elections; World War II broke out (1939); August Offer (1940); Cripps Mission (1942); <strong>Quit India Movement (1942)</strong>; Great Bengal Famine (1943). Longest tenure as Viceroy.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-400">Lord Wavell</td>
+              <td class="p-3 font-mono">1944–1947</td>
+              <td class="p-3">Wavell Plan & Shimla Conference (1945); INA Trials (1945); RIN Mutiny (1946); <strong>Cabinet Mission Plan (1946)</strong>; Interim Government formed; Direct Action Day (1946).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-emerald-400">Lord Mountbatten</td>
+              <td class="p-3 font-mono">1947–1948</td>
+              <td class="p-3">Last Viceroy of British India and <strong>First Governor-General of Free India</strong>; June 3rd Plan (Mountbatten Plan); Indian Independence Act 1947; Partition into India & Pakistan.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3 font-bold text-amber-300">C. Rajagopalachari</td>
+              <td class="p-3 font-mono">1948–1950</td>
+              <td class="p-3">The <strong>first and only Indian Governor-General of India</strong> until the Constitution came into effect on 26 January 1950 and the office was abolished.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 6: 3D FLASHCARDS -->
+    <section class="space-y-6 pt-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+            <i data-lucide="layers" class="w-6 h-6 text-amber-400"></i> Viceroys & Acts Flashcards
+          </h2>
+          <p class="text-xs text-slate-400">Click card to flip • Master the high-yield Lucent GK facts</p>
+        </div>
+        <span id="cardCounter" class="text-xs font-mono px-3 py-1 rounded-full bg-slate-800 text-amber-400 border border-slate-700">1 / 12</span>
+      </div>
+
+      <div class="max-w-2xl mx-auto perspective-1000 py-6">
+        <div id="flashcard" class="relative w-full h-72 sm:h-80 cursor-pointer transform-style-preserve-3d transition-transform duration-500 rounded-3xl border border-slate-800 shadow-2xl bg-gradient-to-br from-slate-900 to-slate-950 p-8 flex flex-col justify-between select-none">
+          
+          <!-- Front Face -->
+          <div class="face-front flex flex-col justify-between h-full">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono uppercase text-amber-400 font-semibold tracking-wider">Question</span>
+              <span class="text-xs text-slate-400 flex items-center gap-1"><i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i> Tap to flip</span>
+            </div>
+            <div id="cardQuestion" class="text-base sm:text-xl font-medium text-slate-100 leading-snug py-4">Loading question...</div>
+            <div class="text-[11px] text-slate-400">Lucent GK Prelims High-Yield Series</div>
+          </div>
+
+          <!-- Back Face -->
+          <div class="face-back flex flex-col justify-between h-full absolute inset-0 p-8 rounded-3xl bg-slate-900 border border-amber-500/30">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono uppercase text-emerald-400 font-semibold tracking-wider">Answer & Concept</span>
+              <span class="text-xs text-slate-400 flex items-center gap-1"><i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i> Tap to flip</span>
+            </div>
+            <div id="cardAnswer" class="text-xs sm:text-sm text-slate-200 leading-relaxed overflow-y-auto pr-1">Loading answer...</div>
+            <div class="text-[11px] text-amber-400 font-mono">Exam Note: Essential Memorization</div>
+          </div>
+
+        </div>
+
+        <!-- Controls -->
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <button id="prevCard" class="px-5 py-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-2 transition-all">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> Previous
+          </button>
+          <button id="nextCard" class="px-5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-semibold flex items-center gap-2 transition-all">
+            Next <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: 5-QUESTION MOCK QUIZ -->
+    <section class="space-y-6 pt-4">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+          <i data-lucide="check-square" class="w-6 h-6 text-amber-400"></i> Prelims Self-Assessment Quiz
+        </h2>
+        <p class="text-xs text-slate-400">Test your mastery over British Acts, Governors-General, and Viceroys</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-4">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg">
+          Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all">
+          Reset Quiz
+        </button>
+      </div>
+    </section>
+
+    <!-- SECTION NAVIGATION FOOTER -->
+    <footer class="pt-12 border-t border-slate-800">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <a href="gandhian_era.html" class="flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-amber-400 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Chapter 19: The Gandhian Era (1919–1947)
+        </a>
+        <a href="hub.html" class="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold tracking-wide transition-all shadow-lg">
+          Explore Master Subject Hub <i data-lucide="arrow-right" class="w-4 h-4 inline ml-1"></i>
+        </a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX MODAL -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-amber-400">Historical Image View</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+
+    <!-- Viewer Canvas -->
+    <div class="relative flex-1 flex items-center justify-center overflow-hidden my-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 border-t border-slate-800/80 pt-2">
+      Tip: Use mouse wheel to zoom in/out • Click and drag to pan when zoomed
+    </div>
+  </div>
+
+  <!-- QUICK SEARCH MODAL (ESC TO CLOSE) -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="w-full max-w-lg bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <div class="flex items-center gap-2 text-slate-400 text-xs font-semibold">
+          <i data-lucide="search" class="w-4 h-4 text-amber-400"></i> Search Section Content
+        </div>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-slate-200 text-xs">ESC to exit</button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type act, viceroy, reform, or date..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-amber-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Type keywords to search sections...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT INCLUSION -->
+  <script src="assets/js/viceroys_acts.js"></script>
+</body>
+</html>
