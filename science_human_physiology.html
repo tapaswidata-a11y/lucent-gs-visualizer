@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biology: Human Physiology & Health | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-rose-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-rose-400 hover:text-rose-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-rose-500/20 to-pink-600/10 border border-rose-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="heart-pulse" class="w-5 h-5 text-rose-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-rose-300">LUCENT<span class="text-rose-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">Human Physiology</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-rose-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-rose-400 cursor-pointer">
+          <optgroup label="Section V: General Science">
+            <option value="science_physics.html">36. General Science: Physics</option>
+            <option value="science_chemistry.html">37. General Science: Chemistry</option>
+            <option value="science_botany_ecology.html">38. Biology: Botany & Ecology</option>
+            <option value="science_human_physiology.html" selected>39. Biology: Human Physiology</option>
+          </optgroup>
+          <optgroup label="Section IV: Indian Economy">
+            <option value="economy_national_income_planning.html">31. National Income & Planning</option>
+            <option value="economy_money_banking_rbi.html">32. Money, Banking & RBI</option>
+            <option value="economy_budget_taxation_fiscal.html">33. Union Budget & Taxation</option>
+            <option value="economy_poverty_unemployment_schemes.html">34. Poverty & Schemes</option>
+            <option value="economy_foreign_trade_bop_organizations.html">35. Foreign Trade & WTO</option>
+          </optgroup>
+        </select>
+
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <!-- HERO SECTION -->
+    <div class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900/90 to-rose-950/40 p-6 sm:p-10 shadow-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 text-xs font-semibold uppercase tracking-widest">
+            <i data-lucide="activity" class="w-3.5 h-3.5"></i> Section 39 • Human Organ Systems & Clinical Health
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-extrabold text-white tracking-tight leading-tight">
+            Human <span class="bg-gradient-to-r from-rose-400 to-pink-300 bg-clip-text text-transparent">Physiology</span>, Genetics & Pathology
+          </h1>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+            Comprehensive synthesis of Lucent GK Human Physiology: Organelle functions (mitochondria, lysosomes), DNA double helix genetics, digestion enzymes, Landsteiner blood groups (O− universal donor), SA node cardiac pacing, endocrine glands (Insulin vs ADH), vitamins, and major pathogen classifications.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-2 text-xs font-medium">
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-rose-300 border border-slate-700/60">Universal Donor (O−)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-rose-300 border border-slate-700/60">SA Node Pacemaker</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-rose-300 border border-slate-700/60">Cobalt in Vitamin B12</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-rose-300 border border-slate-700/60">Diabetes Mellitus vs Insipidus</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-rose-300 border border-slate-700/60">Widal Test (Typhoid)</span>
+          </div>
+        </div>
+
+        <!-- Hero Zoomable Image -->
+        <div class="lg:col-span-5 relative group cursor-pointer" onclick="openLightbox('assets/images/science_human_dna.jpg', 'DNA Molecular Double Helix Structure', 'The molecular blueprint of heredity: Watson and Crick double-helical structure of deoxyribonucleic acid (DNA), showing antiparallel sugar-phosphate backbones and complementary nitrogenous base pairs.')">
+          <div class="relative rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl aspect-[4/3] bg-slate-900">
+            <img src="assets/images/science_human_dna.jpg" alt="DNA Double Helix" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-slate-200">
+              <span class="font-medium flex items-center gap-1.5"><i data-lucide="dna" class="w-3.5 h-3.5 text-rose-400"></i> DNA Molecular Double Helix</span>
+              <span class="bg-slate-900/80 px-2 py-0.5 rounded text-[10px] text-rose-300 border border-slate-700 flex items-center gap-1"><i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Zoom</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- QUICK NAV TABS -->
+    <nav class="flex overflow-x-auto gap-2 p-1.5 bg-slate-900/60 border border-slate-800/80 rounded-2xl backdrop-blur-md text-xs font-medium">
+      <a href="#cell-genetics" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="dna" class="w-3.5 h-3.5 text-rose-400"></i> Cell & DNA</a>
+      <a href="#digestive-excretory" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="utensils" class="w-3.5 h-3.5 text-rose-400"></i> Digestion & Kidney</a>
+      <a href="#circulatory-respiratory" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="heart" class="w-3.5 h-3.5 text-rose-400"></i> Blood & Heart</a>
+      <a href="#nervous-endocrine" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="brain" class="w-3.5 h-3.5 text-rose-400"></i> Brain & Hormones</a>
+      <a href="#vitamins-diseases" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="shield-alert" class="w-3.5 h-3.5 text-rose-400"></i> Vitamins & Pathology</a>
+      <a href="#flashcards" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-rose-400"></i> Flashcards</a>
+      <a href="#quiz" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="help-circle" class="w-3.5 h-3.5 text-rose-400"></i> Prelims Quiz</a>
+    </nav>
+
+    <!-- SECTION 1: CELL BIOLOGY & GENETICS -->
+    <section id="cell-genetics" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-400">
+          <i data-lucide="dna" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Cell Organelles & Molecular Genetics</h2>
+          <p class="text-xs text-slate-400 font-light">Eukaryotic subcellular architecture, ATP synthesis, and DNA double helix</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+        
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono font-bold text-rose-400 uppercase">Mitochondria</div>
+          <div class="p-2 rounded-lg bg-slate-950 font-mono text-[11px] text-rose-300 border border-slate-800">
+            "Powerhouse of the Cell"
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">
+            Site of aerobic ATP synthesis via Krebs cycle and oxidative phosphorylation. Uniquely possesses its own circular DNA and 70S ribosomes (semi-autonomous endosymbiont).
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono font-bold text-pink-400 uppercase">Lysosomes</div>
+          <div class="p-2 rounded-lg bg-slate-950 font-mono text-[11px] text-pink-300 border border-slate-800">
+            "Suicidal Bags of the Cell"
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">
+            Discovered by Christian de Duve; packed with acid hydrolase digestive enzymes. In injured or necrotic cells, lysosomes rupture to self-digest and clear cellular waste.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono font-bold text-purple-400 uppercase">Ribosomes</div>
+          <div class="p-2 rounded-lg bg-slate-950 font-mono text-[11px] text-purple-300 border border-slate-800">
+            "Protein Factories"
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">
+            Smallest organelle, non-membrane bound ribonucleoprotein granules (Palade particles). Translates mRNA into polypeptide proteins (80S in eukaryotes, 70S in prokaryotes).
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono font-bold text-cyan-400 uppercase">DNA Double Helix</div>
+          <div class="p-2 rounded-lg bg-slate-950 font-mono text-[11px] text-cyan-300 border border-slate-800">
+            Watson & Crick Model (1953)
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">
+            Antiparallel double helix. Purines pair with pyrimidines: <strong>Adenine = Thymine (2 H-bonds)</strong>; <strong>Guanine ≡ Cytosine (3 H-bonds)</strong>. In RNA, Uracil (U) replaces Thymine.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: DIGESTIVE & EXCRETORY SYSTEMS -->
+    <section id="digestive-excretory" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-400">
+          <i data-lucide="utensils" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Human Digestion & Renal Excretion Architecture</h2>
+          <p class="text-xs text-slate-400 font-light">Enzymatic hydrolysis, liver functions, and nephron urine formation</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-rose-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="activity" class="w-4 h-4"></i> Digestive Glands & Enzymes
+          </h3>
+          <div class="space-y-2 text-slate-300 leading-relaxed">
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Salivary Amylase (Ptyalin):</strong> In mouth; hydrolyzes starch into maltose disaccharide (optimal pH 6.8).
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Stomach (Gastric Juice):</strong> Secretes <strong>HCl</strong> (kills pathogens, creates acidic pH 1.5–2.0) and <strong>Pepsin</strong> (cleaves proteins into peptones/proteoses). In infants, <em>Rennin</em> curdles milk protein casein.
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-emerald-400">The Liver (Largest Gland ~1.5 kg):</strong> Synthesizes <strong>Bile</strong> (stored in gallbladder). Bile contains no digestive enzymes but contains bile salts that emulsify dietary fats.
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Pancreas:</strong> Complete digestive juice containing <strong>Trypsin</strong> (proteins), <strong>Amylase</strong> (starches), and <strong>Lipase</strong> (emulsified lipids).
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-pink-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="filter" class="w-4 h-4"></i> Renal Excretion & The Nephron
+          </h3>
+          <ul class="text-slate-300 space-y-2 leading-relaxed">
+            <li><strong>Nephron:</strong> Structural and functional microscopic filtration unit of the kidney (~1 million per kidney). Consists of Bowman's capsule, Glomerulus, Proximal & Distal tubules, and Loop of Henle.</li>
+            <li><strong>Ultrafiltration:</strong> Blood filtered under high pressure across glomerular capillaries; produces ~180 Litres of glomerular filtrate daily, of which 99% is reabsorbed.</li>
+            <li><strong>Urine Characteristics:</strong> Pale yellow coloration is caused by the pigment <strong>Urochrome</strong> (end-product of hemoglobin breakdown). Slightly acidic (average pH ~6.0).</li>
+            <li><strong>Kidney Stones (Renal Calculi):</strong> Chemically crystallized <strong>Calcium Oxalate (CaC₂O₄)</strong>.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: CIRCULATORY DYNAMICS & BLOOD GROUPS -->
+    <section id="circulatory-respiratory" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-400">
+          <i data-lucide="heart" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Circulatory Dynamics, Blood Groups & Heart Architecture</h2>
+          <p class="text-xs text-slate-400 font-light">Erythrocyte lifespan, ABO & Rh compatibility, and cardiac pacemaker mechanics</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-rose-300 uppercase tracking-wider">Formed Blood Elements</h3>
+          <ul class="text-slate-300 space-y-1.5 leading-relaxed">
+            <li><strong>RBCs (Erythrocytes):</strong> Biconcave, enucleated (no nucleus in mature human RBCs; camel & llama have nucleated RBCs). Lifespan ~120 days. Destroyed in the <strong>Spleen</strong> ("graveyard of RBCs"). Packed with iron-rich Hemoglobin.</li>
+            <li><strong>WBCs (Leukocytes):</strong> Nucleated immune sentinels. Granulocytes (Neutrophils - phagocytic) and Agranulocytes (Lymphocytes - T & B cells producing antibodies; Monocytes - largest WBC).</li>
+            <li><strong>Platelets (Thrombocytes):</strong> Formed from megakaryocytes in bone marrow; initiate coagulation. Require <strong>Vitamin K and Ca²⁺</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-rose-300 uppercase tracking-wider">ABO & Rh Blood Groups</h3>
+          <p class="text-slate-300 leading-relaxed">
+            Discovered by <strong>Karl Landsteiner</strong> (1900). Governed by antigens on RBCs and antibodies in plasma:
+          </p>
+          <div class="space-y-1.5 text-slate-300">
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-emerald-400">Universal Donor: O Rh-negative (O−)</strong>
+              <p class="text-[11px] text-slate-400">RBCs possess neither A, B, nor Rh antigens; cannot trigger recipient antibody attack.</p>
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-purple-400">Universal Recipient: AB Rh-positive (AB+)</strong>
+              <p class="text-[11px] text-slate-400">Plasma has no anti-A, anti-B, or anti-Rh antibodies.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-rose-300 uppercase tracking-wider">Cardiac Cycle & Pressure</h3>
+          <ul class="text-slate-300 space-y-2 leading-relaxed">
+            <li><strong>Cardiac Pacemaker:</strong> The <strong>Sinoatrial (SA) Node</strong> in right atrium generates spontaneous rhythmic impulses (72 beats/minute).</li>
+            <li><strong>Atrioventricular (AV) Node:</strong> Relays impulses down the Bundle of His and Purkinje fibers.</li>
+            <li><strong>Blood Pressure:</strong> Measured using a <strong>Sphygmomanometer</strong> on brachial artery. Normal value is <strong>120 / 80 mmHg</strong> (Systolic / Diastolic).</li>
+            <li><strong>Heart Valves:</strong> Tricuspid (right atrium-ventricle), Bicuspid/Mitral (left atrium-ventricle), Semilunar (aorta and pulmonary artery).</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: NERVOUS SYSTEM & ENDOCRINE ARCHITECTURE -->
+    <section id="nervous-endocrine" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-400">
+          <i data-lucide="brain" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Nervous Coordination & Endocrine Hormone Architecture</h2>
+          <p class="text-xs text-slate-400 font-light">Cerebral functional zones, Pituitary master control, and Pancreatic insulin</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-rose-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="brain-circuit" class="w-4 h-4"></i> Brain Anatomy & Control Centers
+          </h3>
+          <div class="space-y-2 text-slate-300">
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Cerebrum (Forebrain):</strong> Largest portion of human brain (~80%); center of intelligence, memory, reasoning, language, and voluntary motor activities.
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Cerebellum (Hindbrain):</strong> Coordinates voluntary muscular contractions and maintains body balance, posture, and equilibrium. Directly impaired by alcohol intoxication.
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Medulla Oblongata:</strong> Controls involuntary autonomic functions: heartbeat, arterial blood pressure, respiratory rhythm, swallowing, coughing, and vomiting reflexes.
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Hypothalamus:</strong> Regulates body temperature (thermostat of body), hunger, thirst, sleep, and endocrine master control via pituitary.
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-pink-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="syringe" class="w-4 h-4"></i> Endocrine Glands & Major Hormones
+          </h3>
+          <div class="space-y-1.5 text-slate-300">
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Pituitary ("Master Gland"):</strong> Growth hormone (GH), Oxytocin (milk ejection, labor contractions), ADH / Vasopressin (water reabsorption).
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-rose-400">Diabetes Mellitus vs Insipidus:</strong>
+              <p class="text-slate-400 mt-0.5">• <em>Diabetes Mellitus:</em> Insulin deficiency from Pancreatic β-cells (high blood glucose).<br>• <em>Diabetes Insipidus:</em> ADH/Vasopressin deficiency from Pituitary (excess diluted urine without glucose).</p>
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Thyroid Gland:</strong> Secretes Thyroxine (regulates basal metabolic rate BMR; requires Iodine; deficiency causes Goiter).
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Adrenal Glands:</strong> Medulla secretes <strong>Adrenaline (Epinephrine)</strong>, the "Emergency / 3F (Fight, Flight, Fright) Hormone".
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: VITAMINS & HUMAN PATHOLOGY -->
+    <section id="vitamins-diseases" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-400">
+          <i data-lucide="shield-alert" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Vitamins, Deficiency Syndromes & Clinical Pathology</h2>
+          <p class="text-xs text-slate-400 font-light">Fat vs water-soluble vitamins, cobalt in B12, and bacterial vs viral pathogens</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+        
+        <!-- Vitamins Table -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-rose-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="pill" class="w-4 h-4"></i> Vitamin Classification & Deficiency Syndromes
+          </h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-slate-800 text-rose-400 font-mono">
+                  <th class="py-1.5 px-3">Vitamin</th>
+                  <th class="py-1.5 px-3">Chemical Name</th>
+                  <th class="py-1.5 px-3">Deficiency Disorder</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60 text-slate-300 font-light">
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Vitamin A</td><td class="py-1.5 px-3">Retinol</td><td class="py-1.5 px-3 text-slate-400">Night Blindness (Nyctalopia), Xerophthalmia</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Vitamin B1</td><td class="py-1.5 px-3">Thiamine</td><td class="py-1.5 px-3 text-slate-400">Beriberi (peripheral neuropathy)</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Vitamin B3</td><td class="py-1.5 px-3">Niacin</td><td class="py-1.5 px-3 text-slate-400">Pellagra (4Ds: Dermatitis, Diarrhea, Dementia)</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Vitamin B12</td><td class="py-1.5 px-3 text-rose-300 font-bold">Cyanocobalamin (Cobalt)</td><td class="py-1.5 px-3 text-rose-400 font-medium">Pernicious Anemia</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Vitamin C</td><td class="py-1.5 px-3">Ascorbic Acid (heat-labile)</td><td class="py-1.5 px-3 text-slate-400">Scurvy (bleeding gums)</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Vitamin D</td><td class="py-1.5 px-3">Calciferol ("Sunshine")</td><td class="py-1.5 px-3 text-slate-400">Rickets (children), Osteomalacia (adults)</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Vitamin E</td><td class="py-1.5 px-3">Tocopherol ("Beauty")</td><td class="py-1.5 px-3 text-slate-400">Sterility, muscular weakness</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Vitamin K</td><td class="py-1.5 px-3">Phylloquinone</td><td class="py-1.5 px-3 text-slate-400">Impaired clotting, hemorrhage</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-[11px] text-slate-400 italic">
+            *Fat Soluble: A, D, E, K (stored in liver). Water Soluble: B-complex, C (excreted in urine).
+          </p>
+        </div>
+
+        <!-- Pathology & Diagnostic Tests -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-pink-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="microscope" class="w-4 h-4"></i> Human Diseases & Diagnostic Tests
+          </h3>
+          <div class="space-y-2 text-slate-300">
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Bacterial Infections:</strong> Tuberculosis (BCG vaccine), Cholera (Vibrio cholerae), Typhoid (Salmonella; diagnosed via <strong>Widal Test</strong>), Tetanus, Diphtheria, Pertussis (DPT triple antigen vaccine).
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Viral Infections:</strong> Polio (Salk injectable, Sabin oral), Rabies (Hydrophobia), Dengue & Chikungunya (Aedes aegypti vector), AIDS (HIV retrovirus; diagnosed via <strong>ELISA</strong> and <strong>Western Blot</strong>).
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Protozoan Infections:</strong>
+              <p class="text-slate-400 mt-0.5">• <em>Malaria:</em> Plasmodium vivax / falciparum transmitted by female Anopheles mosquito (treated with Quinine from Cinchona bark).<br>• <em>Kala-Azar (Leishmaniasis):</em> Transmitted by Phlebotomus sandfly vector.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: FLASHCARDS -->
+    <section id="flashcards" class="space-y-6 pt-4 border-t border-slate-800">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center gap-2.5">
+            <i data-lucide="sparkles" class="w-5 h-5 text-rose-400"></i> Active Recall Flashcards
+          </h2>
+          <p class="text-xs text-slate-400 font-light">Interactive 3D flip cards covering organelle genetics, blood groups, endocrine disorders, and vitamins</p>
+        </div>
+        <span class="text-xs font-mono text-rose-400 bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20">12 Cards</span>
+      </div>
+
+      <div id="flashcardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- SECTION 7: PRELIMS PRACTICE QUIZ -->
+    <section id="quiz" class="space-y-6 pt-6 border-t border-slate-800">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center justify-center gap-2">
+          <i data-lucide="check-circle" class="w-5 h-5 text-rose-400"></i> High-Yield Prelims Exam Simulator
+        </h2>
+        <p class="text-xs text-slate-400 font-light">Five standard multiple-choice questions on universal blood donor, cobalt in B12, lysosomes, and Widal test</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-2">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-rose-500 hover:bg-rose-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg shadow-rose-500/20 flex items-center gap-2">
+          <i data-lucide="award" class="w-4 h-4"></i> Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all flex items-center gap-2">
+          <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Reset Quiz
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 mt-16 py-8 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>Lucent General Knowledge Interactive Encyclopedia • Section V: General Science (100% Complete)</p>
+      <div class="flex items-center gap-4">
+        <a href="science_botany_ecology.html" class="hover:text-rose-400 flex items-center gap-1"><i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Prev: Ch 38</a>
+        <a href="hub.html" class="hover:text-rose-400">Master Index</a>
+        <a href="misc_first_in_india_symbols.html" class="hover:text-rose-400 flex items-center gap-1">Next: Section VI (Misc & IT) <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-rose-400">Human Biology</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+    
+    <div class="flex-1 overflow-hidden relative flex items-center justify-center p-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 pt-2 border-t border-slate-800">
+      Use Mouse Wheel to Zoom in/out • Click and Drag to Pan • Press Esc to Close
+    </div>
+  </div>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+        <span class="text-xs font-semibold uppercase tracking-wider text-rose-400 flex items-center gap-1.5">
+          <i data-lucide="search" class="w-3.5 h-3.5"></i> Search Human Physiology Topics
+        </span>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type Mitochondria, SA Node, Insulin, Vitamin B12, or Widal Test..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-rose-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Search over 40+ physiological terms in Chapter 39...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/science_human_physiology.js"></script>
+</body>
+</html>

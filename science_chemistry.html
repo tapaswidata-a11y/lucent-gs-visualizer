@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General Science: Chemistry | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-purple-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-purple-400 hover:text-purple-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-600/10 border border-purple-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="flask-conical" class="w-5 h-5 text-purple-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-purple-300">LUCENT<span class="text-purple-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">Science: Chemistry</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-purple-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-purple-400 cursor-pointer">
+          <optgroup label="Section V: General Science">
+            <option value="science_physics.html">36. General Science: Physics</option>
+            <option value="science_chemistry.html" selected>37. General Science: Chemistry</option>
+            <option value="science_botany_ecology.html">38. Biology: Botany & Ecology</option>
+            <option value="science_human_physiology.html">39. Biology: Human Physiology</option>
+          </optgroup>
+          <optgroup label="Section IV: Indian Economy">
+            <option value="economy_national_income_planning.html">31. National Income & Planning</option>
+            <option value="economy_money_banking_rbi.html">32. Money, Banking & RBI</option>
+            <option value="economy_budget_taxation_fiscal.html">33. Union Budget & Taxation</option>
+            <option value="economy_poverty_unemployment_schemes.html">34. Poverty & Schemes</option>
+            <option value="economy_foreign_trade_bop_organizations.html">35. Foreign Trade & WTO</option>
+          </optgroup>
+        </select>
+
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <!-- HERO SECTION -->
+    <div class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900/90 to-purple-950/40 p-6 sm:p-10 shadow-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-semibold uppercase tracking-widest">
+            <i data-lucide="test-tube" class="w-3.5 h-3.5"></i> Section 37 • General Science: Chemical Systems
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-extrabold text-white tracking-tight leading-tight">
+            Fundamental <span class="bg-gradient-to-r from-purple-400 to-pink-300 bg-clip-text text-transparent">Chemistry</span> & Materials
+          </h1>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+            Comprehensive synthesis of Lucent GK Chemistry: Atomic theory and quantum numbers, Moseley's Modern Periodic Table and trends, acids, bases and the pH scale, salts and Aqua Regia, metallurgy and essential alloys (Brass, Bronze, German Silver), carbon allotropes, and industrial polymers.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-2 text-xs font-medium">
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-purple-300 border border-slate-700/60">Modern Periodic Law (Z)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-purple-300 border border-slate-700/60">Aqua Regia (1:3)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-purple-300 border border-slate-700/60">Plaster of Paris</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-purple-300 border border-slate-700/60">German Silver (0% Ag)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-purple-300 border border-slate-700/60">Vulcanization of Rubber</span>
+          </div>
+        </div>
+
+        <!-- Hero Zoomable Image -->
+        <div class="lg:col-span-5 relative group cursor-pointer" onclick="openLightbox('assets/images/science_chemistry_elements.png', 'Modern Periodic Table of Chemical Elements', 'Standard long form of the Periodic Table: 118 confirmed chemical elements organized across 7 periods and 18 groups by ascending atomic number (Z), following Moseley’s periodic law.')">
+          <div class="relative rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl aspect-[4/3] bg-slate-900">
+            <img src="assets/images/science_chemistry_elements.png" alt="Periodic Table" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-slate-200">
+              <span class="font-medium flex items-center gap-1.5"><i data-lucide="grid" class="w-3.5 h-3.5 text-purple-400"></i> Modern Periodic Table</span>
+              <span class="bg-slate-900/80 px-2 py-0.5 rounded text-[10px] text-purple-300 border border-slate-700 flex items-center gap-1"><i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Zoom</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- QUICK NAV TABS -->
+    <nav class="flex overflow-x-auto gap-2 p-1.5 bg-slate-900/60 border border-slate-800/80 rounded-2xl backdrop-blur-md text-xs font-medium">
+      <a href="#atomic-structure" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="disc" class="w-3.5 h-3.5 text-purple-400"></i> Atomic Structure</a>
+      <a href="#periodic-table" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="table" class="w-3.5 h-3.5 text-purple-400"></i> Periodic Trends</a>
+      <a href="#acids-salts" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="droplet" class="w-3.5 h-3.5 text-purple-400"></i> Acids, Bases & Salts</a>
+      <a href="#metallurgy-alloys" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="hammer" class="w-3.5 h-3.5 text-purple-400"></i> Metallurgy & Alloys</a>
+      <a href="#carbon-polymers" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="layers" class="w-3.5 h-3.5 text-purple-400"></i> Carbon & Polymers</a>
+      <a href="#flashcards" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-purple-400"></i> Flashcards</a>
+      <a href="#quiz" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="help-circle" class="w-3.5 h-3.5 text-purple-400"></i> Prelims Quiz</a>
+    </nav>
+
+    <!-- SECTION 1: ATOMIC STRUCTURE & ISOTOPES -->
+    <section id="atomic-structure" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400">
+          <i data-lucide="disc" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Matter, Atomic Structure & Medical Radioisotopes</h2>
+          <p class="text-xs text-slate-400 font-light">Fundamental particles, states of matter, isotopes, and diagnostic applications</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-purple-300 uppercase tracking-wider">Five States of Matter</h3>
+          <ul class="text-slate-300 space-y-2 leading-relaxed">
+            <li><strong>Solid, Liquid & Gas:</strong> Governed by intermolecular forces and thermal kinetic energy.</li>
+            <li><strong>Plasma (4th State):</strong> Super-heated ionized gas composed of free electrons and positive ions (stars, lightning, neon sign tubes).</li>
+            <li><strong>Bose-Einstein Condensate (5th State):</strong> Formed by cooling dilute gas of bosons to near absolute zero (0 K). Predicted by S.N. Bose and Albert Einstein in 1924; created experimentally by Cornell & Wieman in 1995.</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-purple-300 uppercase tracking-wider">Subatomic Particles & Discovery</h3>
+          <div class="space-y-2 text-slate-300">
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 flex justify-between items-center">
+              <div>
+                <span class="font-bold text-white">Electron (e⁻):</span> −1.6 × 10⁻¹⁹ C charge
+                <p class="text-[11px] text-slate-400">Discovered by J.J. Thomson (1897) in Cathode Ray experiment.</p>
+              </div>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 flex justify-between items-center">
+              <div>
+                <span class="font-bold text-white">Proton (p⁺):</span> +1.6 × 10⁻¹⁹ C charge
+                <p class="text-[11px] text-slate-400">Observed by Goldstein (Canal Rays 1886); identified by Rutherford.</p>
+              </div>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 flex justify-between items-center">
+              <div>
+                <span class="font-bold text-white">Neutron (n⁰):</span> Neutral charge (0 C)
+                <p class="text-[11px] text-slate-400">Discovered by James Chadwick (1932) by bombarding Beryllium.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-purple-300 uppercase tracking-wider">Isotopes, Isobars & Medicine</h3>
+          <ul class="text-slate-300 space-y-2 leading-relaxed">
+            <li><strong>Isotopes:</strong> Same atomic number (Z), different mass number (A). E.g. Protium (¹H), Deuterium (²H - heavy water D₂O), Tritium (³H - radioactive).</li>
+            <li><strong>Isobars:</strong> Same mass number (A), different Z (e.g. ⁴⁰Ar and ⁴⁰Ca).</li>
+            <li><strong>Diagnostic Radioisotopes:</strong>
+              <ul class="list-disc list-inside mt-1 text-slate-400 space-y-0.5">
+                <li><span class="text-purple-300 font-semibold">Cobalt-60:</span> Cancer radiation therapy (gamma rays).</li>
+                <li><span class="text-purple-300 font-semibold">Iodine-131:</span> Thyroid disorders and goiter therapy.</li>
+                <li><span class="text-purple-300 font-semibold">Carbon-14:</span> Radiocarbon dating of fossils.</li>
+                <li><span class="text-purple-300 font-semibold">Sodium-24:</span> Blood circulation clots detection.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE MODERN PERIODIC TABLE & TRENDS -->
+    <section id="periodic-table" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400">
+          <i data-lucide="table" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Modern Periodic Law & Periodic Trends</h2>
+          <p class="text-xs text-slate-400 font-light">Structure of 7 Periods and 18 Groups, atomic radii, and ionization metrics</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 text-xs">
+        
+        <div class="lg:col-span-4 p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-purple-300 uppercase tracking-wider">Evolution of Periodic Law</h3>
+          <ul class="text-slate-300 space-y-2 leading-relaxed">
+            <li><strong>Mendeleev's Periodic Table (1869):</strong> Arranged by increasing atomic weight. Predicted missing elements: <em>Eka-aluminium (Gallium)</em>, <em>Eka-boron (Scandium)</em>, <em>Eka-silicon (Germanium)</em>.</li>
+            <li><strong>Modern Periodic Law (Henry Moseley 1913):</strong> Physical and chemical properties of elements are periodic functions of their <strong>Atomic Number (Z)</strong>.</li>
+            <li><strong>Structure:</strong> 7 Horizontal Periods and 18 Vertical Groups. Group 1: Alkali metals; Group 2: Alkaline earth metals; Group 17: Halogens; Group 18: Noble / Inert gases.</li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-8 p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-purple-300 uppercase tracking-wider">High-Yield Periodic Trends Summary Table</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-slate-800 text-purple-400 font-mono">
+                  <th class="py-2 px-3">Periodic Property</th>
+                  <th class="py-2 px-3">Across a Period (Left to Right)</th>
+                  <th class="py-2 px-3">Down a Group (Top to Bottom)</th>
+                  <th class="py-2 px-3">Key Exam Exception / Extreme</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60 text-slate-300 font-light">
+                <tr>
+                  <td class="py-2 px-3 font-semibold text-white">Atomic Radius</td>
+                  <td class="py-2 px-3 text-rose-400 font-medium">Decreases</td>
+                  <td class="py-2 px-3 text-emerald-400 font-medium">Increases</td>
+                  <td class="py-2 px-3 text-slate-400">Francium (Fr) is largest; Helium (He) is smallest.</td>
+                </tr>
+                <tr>
+                  <td class="py-2 px-3 font-semibold text-white">Ionization Energy</td>
+                  <td class="py-2 px-3 text-emerald-400 font-medium">Increases</td>
+                  <td class="py-2 px-3 text-rose-400 font-medium">Decreases</td>
+                  <td class="py-2 px-3 text-slate-400">Helium (He) has highest; Francium (Fr) has lowest.</td>
+                </tr>
+                <tr>
+                  <td class="py-2 px-3 font-semibold text-white">Electron Affinity</td>
+                  <td class="py-2 px-3 text-emerald-400 font-medium">Increases</td>
+                  <td class="py-2 px-3 text-rose-400 font-medium">Decreases</td>
+                  <td class="py-2 px-3 text-purple-300 font-bold">Chlorine (Cl) has HIGHER affinity than Fluorine (F).</td>
+                </tr>
+                <tr>
+                  <td class="py-2 px-3 font-semibold text-white">Electronegativity</td>
+                  <td class="py-2 px-3 text-emerald-400 font-medium">Increases</td>
+                  <td class="py-2 px-3 text-rose-400 font-medium">Decreases</td>
+                  <td class="py-2 px-3 text-purple-300 font-bold">Fluorine (F = 4.0) is the most electronegative element.</td>
+                </tr>
+                <tr>
+                  <td class="py-2 px-3 font-semibold text-white">Metallic Character</td>
+                  <td class="py-2 px-3 text-rose-400 font-medium">Decreases</td>
+                  <td class="py-2 px-3 text-emerald-400 font-medium">Increases</td>
+                  <td class="py-2 px-3 text-slate-400">Metals occupy left; non-metals occupy upper right.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: ACIDS, BASES & COMMON SALTS -->
+    <section id="acids-salts" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400">
+          <i data-lucide="droplet" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Acids, Bases, the pH Scale & Everyday Chemical Salts</h2>
+          <p class="text-xs text-slate-400 font-light">Natural organic acids, Aqua Regia chemistry, and household commercial salts</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-purple-300 uppercase tracking-wider">Natural Acids & Sources</h3>
+          <ul class="text-slate-300 space-y-1.5 leading-relaxed">
+            <li><strong>Acetic Acid (CH₃COOH):</strong> Vinegar (4–8% solution).</li>
+            <li><strong>Citric Acid:</strong> Lemons, oranges, citrus fruits.</li>
+            <li><strong>Lactic Acid:</strong> Sour milk, yogurt / curd.</li>
+            <li><strong>Tartaric Acid:</strong> Tamarind, grapes, unripe mangoes.</li>
+            <li><strong>Formic Acid (Methanoic Acid):</strong> Ant and bee stings (causes burning sensation; neutralized by baking soda).</li>
+            <li><strong>Oxalic Acid:</strong> Tomatoes, spinach; used to remove rust ink stains.</li>
+            <li><strong>Aqua Regia:</strong> Conc. HNO₃ + Conc. HCl in <strong>1 : 3 ratio</strong> (dissolves gold & platinum).</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-purple-300 uppercase tracking-wider">The pH Scale & Indicators</h3>
+          <p class="text-slate-300 leading-relaxed">
+            Formulated by S.P.L. Sørensen (1909): pH = −log₁₀[H⁺].
+          </p>
+          <div class="space-y-1 text-slate-400">
+            <div>• pH < 7: Acidic | pH = 7: Neutral | pH > 7: Basic</div>
+            <div>• <strong class="text-white">Human Blood:</strong> 7.35 to 7.45 (slightly alkaline buffer)</div>
+            <div>• <strong class="text-white">Pure Rainwater:</strong> ~5.6 (Acid rain: pH < 5.6 due to SO₂ and NO₂)</div>
+            <div>• <strong class="text-white">Gastric Juice (HCl):</strong> 1.5 to 2.0 (highly acidic)</div>
+          </div>
+          <p class="text-slate-300 leading-relaxed pt-1">
+            <strong>Indicators:</strong> Litmus turns red in acid, blue in base; Phenolphthalein turns pink in base, colorless in acid; Methyl orange turns red in acid, yellow in base.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-purple-300 uppercase tracking-wider">Everyday Salts & Formulas</h3>
+          <div class="space-y-1.5 text-slate-300">
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Plaster of Paris:</strong> CaSO₄·½H₂O (Made by heating Gypsum CaSO₄·2H₂O at 373 K).
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Baking Soda:</strong> Sodium Bicarbonate (NaHCO₃); effervesces CO₂.
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Washing Soda:</strong> Sodium Carbonate Decahydrate (Na₂CO₃·10H₂O).
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Bleaching Powder:</strong> Calcium Oxychloride (CaOCl₂).
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Blue Vitriol:</strong> Copper Sulfate Pentahydrate (CuSO₄·5H₂O).
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: METALLURGY, ORES & ALLOYS -->
+    <section id="metallurgy-alloys" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400">
+          <i data-lucide="hammer" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Metallurgy, Important Ores & Major Alloys</h2>
+          <p class="text-xs text-slate-400 font-light">Abundances in Earth's crust, key metal extractions, and non-ferrous alloys</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+        
+        <!-- Ores Table -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-purple-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="gem" class="w-4 h-4"></i> Principal Ores of Important Metals
+          </h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-slate-800 text-purple-400 font-mono">
+                  <th class="py-1.5 px-3">Metal</th>
+                  <th class="py-1.5 px-3">Principal Ores</th>
+                  <th class="py-1.5 px-3">Chemical Formula</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60 text-slate-300 font-light">
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Aluminium</td><td class="py-1.5 px-3">Bauxite, Cryolite</td><td class="py-1.5 px-3 font-mono text-purple-300">Al₂O₃·2H₂O</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Iron</td><td class="py-1.5 px-3">Haematite, Magnetite</td><td class="py-1.5 px-3 font-mono text-purple-300">Fe₂O₃, Fe₃O₄</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Copper</td><td class="py-1.5 px-3">Copper Pyrites, Malachite</td><td class="py-1.5 px-3 font-mono text-purple-300">CuFeS₂</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Lead</td><td class="py-1.5 px-3">Galena</td><td class="py-1.5 px-3 font-mono text-purple-300">PbS</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Mercury</td><td class="py-1.5 px-3">Cinnabar</td><td class="py-1.5 px-3 font-mono text-purple-300">HgS</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Uranium</td><td class="py-1.5 px-3">Pitchblende</td><td class="py-1.5 px-3 font-mono text-purple-300">U₃O₈</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Thorium</td><td class="py-1.5 px-3">Monazite Sand</td><td class="py-1.5 px-3 font-mono text-purple-300">ThO₂</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-[11px] text-slate-400 italic">
+            *Abundance: Oxygen (46.6%) > Silicon (27.7%) > Aluminium (8.1% - most abundant metal) > Iron (5.0%).
+          </p>
+        </div>
+
+        <!-- Alloys Table -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-purple-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="shield" class="w-4 h-4"></i> Major Commercial Alloys
+          </h3>
+          <div class="space-y-2 text-slate-300">
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Brass:</strong> Copper (70%) + Zinc (30%). Used in utensils, musical instruments, cartridge cases.
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Bronze:</strong> Copper (90%) + Tin (10%). Used in statues, medals, coins.
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-purple-300">German Silver:</strong> Copper (60%) + Zinc (20%) + Nickel (20%). <span class="text-rose-400 font-bold">Contains 0% Silver!</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Stainless Steel:</strong> Iron (Fe) + Chromium (18%) + Nickel (8%) + Carbon. Rust-resistant due to protective Cr₂O₃ film.
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Solder:</strong> Lead (50%) + Tin (50%). Low melting point alloy for electrical soldering.
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Amalgams:</strong> Alloy of Mercury with any metal. <em>Iron (Fe) does not form amalgam</em>.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: CARBON & POLYMERS -->
+    <section id="carbon-polymers" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400">
+          <i data-lucide="layers" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Carbon Allotropes, Fuels & Industrial Polymers</h2>
+          <p class="text-xs text-slate-400 font-light">Diamond, graphite, LPG/CNG composition, rubber vulcanization, and synthetic polymers</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-purple-300 uppercase tracking-wider">Carbon Allotropes</h3>
+          <ul class="text-slate-300 space-y-2 leading-relaxed">
+            <li><strong>Diamond:</strong> sp³ hybridized carbon tetrahedral network; hardest known natural substance; high refractive index (2.42); non-conductor of electricity.</li>
+            <li><strong>Graphite:</strong> sp² hybridized hexagonal layered sheets with free delocalized electrons; good conductor of electricity; soft and slippery solid lubricant; used in pencil leads and nuclear moderators.</li>
+            <li><strong>Fullerenes (C₆₀):</strong> Buckminsterfullerene; soccer ball cage structure.</li>
+            <li><strong>Graphene:</strong> Single two-dimensional atomic layer of graphite with extraordinary electrical and tensile properties.</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-purple-300 uppercase tracking-wider">Industrial Fuels & Gases</h3>
+          <div class="space-y-2 text-slate-300">
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">LPG (Liquefied Petroleum Gas):</strong> Chiefly <strong>Butane + Propane</strong>. Liquefied under pressure. <em>Ethyl Mercaptan (C₂H₅SH)</em> added as odorant.
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">CNG & Biogas:</strong> Chiefly <strong>Methane (CH₄)</strong> (>85% in CNG, 55–70% in Biogas/Gobar gas). Clean burning.
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Water Gas:</strong> CO + H₂ (carbon monoxide and hydrogen).
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Producer Gas:</strong> CO + N₂ (carbon monoxide and nitrogen).
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-purple-300 uppercase tracking-wider">Polymers & Synthetic Materials</h3>
+          <ul class="text-slate-300 space-y-2 leading-relaxed">
+            <li><strong>Vulcanization of Rubber:</strong> Heating natural isoprene rubber with <strong>Sulfur</strong> (forming disulfide crosslinks) to eliminate stickiness and increase elasticity (Goodyear 1839).</li>
+            <li><strong>Teflon (PTFE):</strong> Polytetrafluoroethylene; heat-resistant, chemically inert non-stick coating for cookware.</li>
+            <li><strong>Bakelite:</strong> Phenol-formaldehyde thermosetting resin; excellent electrical insulator used in switches and plugs.</li>
+            <li><strong>Rayon:</strong> Artificial silk made by chemical processing of natural cellulose pulp.</li>
+            <li><strong>Nylon-6,6:</strong> First fully synthetic fiber made from adipic acid and hexamethylenediamine.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: FLASHCARDS -->
+    <section id="flashcards" class="space-y-6 pt-4 border-t border-slate-800">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center gap-2.5">
+            <i data-lucide="sparkles" class="w-5 h-5 text-purple-400"></i> Active Recall Flashcards
+          </h2>
+          <p class="text-xs text-slate-400 font-light">Interactive 3D flip cards covering periodic trends, chemical formulas, ores, and polymer chemistry</p>
+        </div>
+        <span class="text-xs font-mono text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">12 Cards</span>
+      </div>
+
+      <div id="flashcardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- SECTION 7: PRELIMS PRACTICE QUIZ -->
+    <section id="quiz" class="space-y-6 pt-6 border-t border-slate-800">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center justify-center gap-2">
+          <i data-lucide="check-circle" class="w-5 h-5 text-purple-400"></i> High-Yield Prelims Exam Simulator
+        </h2>
+        <p class="text-xs text-slate-400 font-light">Five standard multiple-choice questions on Plaster of Paris, electron affinity, German silver, and Aqua Regia</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-2">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-purple-500 hover:bg-purple-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg shadow-purple-500/20 flex items-center gap-2">
+          <i data-lucide="award" class="w-4 h-4"></i> Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all flex items-center gap-2">
+          <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Reset Quiz
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 mt-16 py-8 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>Lucent General Knowledge Interactive Encyclopedia • Section V: General Science (Chemistry)</p>
+      <div class="flex items-center gap-4">
+        <a href="science_physics.html" class="hover:text-purple-400 flex items-center gap-1"><i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Prev: Ch 36</a>
+        <a href="hub.html" class="hover:text-purple-400">Master Index</a>
+        <a href="science_botany_ecology.html" class="hover:text-purple-400 flex items-center gap-1">Next: Ch 38 (Botany) <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-purple-400">Chemistry Laboratory</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+    
+    <div class="flex-1 overflow-hidden relative flex items-center justify-center p-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 pt-2 border-t border-slate-800">
+      Use Mouse Wheel to Zoom in/out • Click and Drag to Pan • Press Esc to Close
+    </div>
+  </div>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+        <span class="text-xs font-semibold uppercase tracking-wider text-purple-400 flex items-center gap-1.5">
+          <i data-lucide="search" class="w-3.5 h-3.5"></i> Search Chemistry Concepts
+        </span>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type Moseley, Aqua Regia, German Silver, Teflon, or Plaster of Paris..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-purple-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Search over 40+ chemical terms in Chapter 37...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/science_chemistry.js"></script>
+</body>
+</html>

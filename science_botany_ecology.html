@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biology: Botany & Ecology | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-emerald-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-emerald-400 hover:text-emerald-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-600/10 border border-emerald-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="leaf" class="w-5 h-5 text-emerald-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-emerald-300">LUCENT<span class="text-emerald-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">Botany & Ecology</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-emerald-400 cursor-pointer">
+          <optgroup label="Section V: General Science">
+            <option value="science_physics.html">36. General Science: Physics</option>
+            <option value="science_chemistry.html">37. General Science: Chemistry</option>
+            <option value="science_botany_ecology.html" selected>38. Biology: Botany & Ecology</option>
+            <option value="science_human_physiology.html">39. Biology: Human Physiology</option>
+          </optgroup>
+          <optgroup label="Section IV: Indian Economy">
+            <option value="economy_national_income_planning.html">31. National Income & Planning</option>
+            <option value="economy_money_banking_rbi.html">32. Money, Banking & RBI</option>
+            <option value="economy_budget_taxation_fiscal.html">33. Union Budget & Taxation</option>
+            <option value="economy_poverty_unemployment_schemes.html">34. Poverty & Schemes</option>
+            <option value="economy_foreign_trade_bop_organizations.html">35. Foreign Trade & WTO</option>
+          </optgroup>
+        </select>
+
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <!-- HERO SECTION -->
+    <div class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900/90 to-emerald-950/40 p-6 sm:p-10 shadow-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-widest">
+            <i data-lucide="sprout" class="w-3.5 h-3.5"></i> Section 38 • Plant Sciences & Ecosystem Ecology
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-extrabold text-white tracking-tight leading-tight">
+            Botany, Plant Physiology & <span class="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">Ecosystem Dynamics</span>
+          </h1>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+            Comprehensive synthesis of plant classification (Thallophyta to Angiosperms), xylem/phloem transport, photosynthesis biochemistry, plant hormones (Auxins, Ethylene, ABA), Lindeman's 10% ecological energy transfer, and inverted marine biomass pyramids.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-2 text-xs font-medium">
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">Water Photolysis (O₂)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">Chlorophyll (Mg²⁺)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">Ethylene Fruit Ripening</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">Lindeman's 10% Law</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">Inverted Aquatic Pyramid</span>
+          </div>
+        </div>
+
+        <!-- Hero Zoomable Image -->
+        <div class="lg:col-span-5 relative group cursor-pointer" onclick="openLightbox('assets/images/science_botany_plant.jpg', 'Cellular Chloroplasts in Plant Leaf Tissue', 'Microscopic view of living plant cells packed with green chloroplast organelles: site of solar photophosphorylation and Calvin cycle carbon fixation.')">
+          <div class="relative rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl aspect-[4/3] bg-slate-900">
+            <img src="assets/images/science_botany_plant.jpg" alt="Plant Chloroplasts" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-slate-200">
+              <span class="font-medium flex items-center gap-1.5"><i data-lucide="microscope" class="w-3.5 h-3.5 text-emerald-400"></i> Plant Cell Chloroplasts</span>
+              <span class="bg-slate-900/80 px-2 py-0.5 rounded text-[10px] text-emerald-300 border border-slate-700 flex items-center gap-1"><i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Zoom</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- QUICK NAV TABS -->
+    <nav class="flex overflow-x-auto gap-2 p-1.5 bg-slate-900/60 border border-slate-800/80 rounded-2xl backdrop-blur-md text-xs font-medium">
+      <a href="#plant-kingdom" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="tree-pine" class="w-3.5 h-3.5 text-emerald-400"></i> Plant Kingdom</a>
+      <a href="#morphology-tissues" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="network" class="w-3.5 h-3.5 text-emerald-400"></i> Morphology & Tissues</a>
+      <a href="#photosynthesis-hormones" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="sun" class="w-3.5 h-3.5 text-emerald-400"></i> Photosynthesis & Hormones</a>
+      <a href="#ecosystem-pyramids" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="triangle" class="w-3.5 h-3.5 text-emerald-400"></i> Pyramids & 10% Law</a>
+      <a href="#environmental-ecology" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="biohazard" class="w-3.5 h-3.5 text-emerald-400"></i> Biomagnification</a>
+      <a href="#flashcards" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-400"></i> Flashcards</a>
+      <a href="#quiz" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="help-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Prelims Quiz</a>
+    </nav>
+
+    <!-- SECTION 1: PLANT KINGDOM CLASSIFICATION -->
+    <section id="plant-kingdom" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="tree-pine" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Classification of the Plant Kingdom</h2>
+          <p class="text-xs text-slate-400 font-light">From non-vascular Cryptogams to seed-bearing Angiosperms</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+        
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono font-bold text-emerald-400 uppercase">1. Thallophyta (Algae)</div>
+          <p class="text-slate-300 leading-relaxed">
+            Undifferentiated plant body (thallus); lack true roots, stems, leaves, and vascular tissue. Includes green (Chlorophyceae), brown (Phaeophyceae - Kelps), and red algae (Rhodophyceae - Agar-agar).
+          </p>
+          <div class="p-2 rounded-lg bg-slate-950 border border-slate-800 text-[11px] text-slate-400">
+            <strong>Lichens:</strong> Alga + Fungus symbiotic mutualism; sensitive bio-indicators of SO₂ pollution.
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono font-bold text-teal-400 uppercase">2. Bryophyta (Amphibians)</div>
+          <p class="text-slate-300 leading-relaxed">
+            Called the <strong>"Amphibians of the Plant Kingdom"</strong> because they inhabit moist soils but require water for flagellated antherozoid fertilization. Non-vascular (lack xylem/phloem).
+          </p>
+          <div class="p-2 rounded-lg bg-slate-950 border border-slate-800 text-[11px] text-slate-400">
+            <strong>Examples:</strong> Mosses (Funaria), Liverworts (Marchantia), Peat moss (Sphagnum).
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono font-bold text-cyan-400 uppercase">3. Pteridophyta (Ferns)</div>
+          <p class="text-slate-300 leading-relaxed">
+            First terrestrial plants to evolve <strong>vascular tissues (Xylem & Phloem)</strong>. Body differentiated into true roots, stem, and leaves (fronds). Reproduce via spores, seedless.
+          </p>
+          <div class="p-2 rounded-lg bg-slate-950 border border-slate-800 text-[11px] text-slate-400">
+            <strong>Examples:</strong> Ferns (Dryopteris, Pteris), Horsetails (Equisetum).
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono font-bold text-blue-400 uppercase">4. Phanerogams (Seeds)</div>
+          <p class="text-slate-300 leading-relaxed">
+            Seed-bearing plants divided into:
+            <br>• <strong>Gymnosperms:</strong> Naked seeds, non-flowering (Cycas, Pinus, Ginkgo).
+            <br>• <strong>Angiosperms:</strong> Enclosed seeds inside fruit (Monocots like wheat vs Dicots like pea).
+          </p>
+          <div class="p-2 rounded-lg bg-slate-950 border border-slate-800 text-[11px] text-slate-400">
+            <strong>Sequoia:</strong> Tallest tree; <strong>Wolffia:</strong> Smallest flowering plant.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: MORPHOLOGY & PLANT TISSUES -->
+    <section id="morphology-tissues" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="network" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Plant Morphology, Fruits & Vascular Tissues</h2>
+          <p class="text-xs text-slate-400 font-light">Specialized root/stem modifications, true vs false fruits, and vascular transport</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-emerald-300 uppercase tracking-wider">Root & Stem Modifications</h3>
+          <ul class="text-slate-300 space-y-1.5 leading-relaxed">
+            <li><strong>Pneumatophores:</strong> Specialized respiratory roots in halophytic mangroves (Rhizophora) that project upward out of water/mud to breathe.</li>
+            <li><strong>Prop Roots:</strong> Aerial pillar-like roots providing mechanical support (Banyan tree).</li>
+            <li><strong>Rhizome:</strong> Fleshy underground horizontal stem (Ginger, Turmeric).</li>
+            <li><strong>Tuber:</strong> Swollen underground stem with vegetative eye buds (Potato).</li>
+            <li><strong>Bulb:</strong> Highly condensed stem surrounded by fleshy scale leaves (Onion, Garlic).</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-teal-300 uppercase tracking-wider">Fruits: True vs False (Pseudocarps)</h3>
+          <div class="space-y-2 text-slate-300">
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">True Fruit:</strong> Develops exclusively from the fertilized ovary of a flower (e.g., Mango, Tomato, Pea).
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-emerald-400">False Fruit (Pseudocarp):</strong> Develops from other floral structures, especially the enlarged fleshy <strong>Thalamus (receptacle)</strong>.
+              <p class="text-slate-400 mt-1">Classic exam examples: <strong>Apple, Pear, Strawberry, Cashew nut</strong>.</p>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Parthenocarpic Fruit:</strong> Seedless fruit produced without fertilization (e.g., Banana, seedless grapes).
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-cyan-300 uppercase tracking-wider">Vascular Tissues: Xylem vs Phloem</h3>
+          <div class="space-y-2 text-slate-300">
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Xylem (Water & Minerals):</strong>
+              <p class="text-slate-400 mt-0.5">Unidirectional upward transport from root hairs to foliage driven by transpiration pull. Composed of Tracheids, Vessels, Xylem Fibres (dead), and Xylem Parenchyma (living).</p>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Phloem (Photosynthates):</strong>
+              <p class="text-slate-400 mt-0.5">Bidirectional translocation of soluble sucrose from photosynthetic source leaves to metabolic sinks (roots, buds, seeds). Composed of Sieve Tubes, Companion Cells, Phloem Fibres, and Phloem Parenchyma.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: PHOTOSYNTHESIS & PHYTOHORMONES -->
+    <section id="photosynthesis-hormones" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="sun" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Photosynthesis Biochemistry & Plant Hormones</h2>
+          <p class="text-xs text-slate-400 font-light">Photolysis of water, chlorophyll magnesium, and physiological regulation</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 text-xs">
+        
+        <!-- Photosynthesis Mechanics -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-emerald-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="sparkle" class="w-4 h-4"></i> Photosynthesis: Light & Dark Reactions
+          </h3>
+          <div class="p-2.5 rounded-xl bg-slate-950 font-mono text-[11px] text-emerald-300 border border-slate-800 text-center">
+            6CO₂ + 12H₂O ──[Light + Chlorophyll]──> C₆H₁₂O₆ + 6H₂O + 6O₂
+          </div>
+          <ul class="text-slate-300 space-y-2 leading-relaxed">
+            <li><strong class="text-white">Origin of Oxygen:</strong> O₂ released originates entirely from the <strong>Photolysis of Water (H₂O)</strong>, NOT carbon dioxide.</li>
+            <li><strong class="text-white">Central Mineral:</strong> The chlorophyll pigment contains a <strong>Magnesium (Mg²⁺)</strong> ion in its central porphyrin ring.</li>
+            <li><strong class="text-white">Action Spectrum:</strong> Photosynthetic rate is <strong>highest in Red light</strong>, second highest in Blue light, and negligible/zero in Green light.</li>
+            <li><strong class="text-white">Light vs Dark Reaction:</strong> Light reaction occurs in the <em>Grana</em> of chloroplasts (synthesizes ATP & NADPH); Dark reaction (Calvin cycle) occurs in the <em>Stroma</em> (fixes CO₂ into glucose).</li>
+          </ul>
+        </div>
+
+        <!-- Phytohormones -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-teal-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="flask-round" class="w-4 h-4"></i> Major Plant Hormones (Phytohormones)
+          </h3>
+          <div class="space-y-1.5 text-slate-300">
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-emerald-400">Auxins (IAA):</strong> Promotes apical dominance, shoot cell elongation, and phototropism. 2,4-D is used as a selective broadleaf weedicide.
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-teal-400">Gibberellins (GA):</strong> Promotes internodal stem elongation, breaks seed dormancy, induces bolting in rosette plants.
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-cyan-400">Cytokinins:</strong> Stimulates active cell division (cytokinesis); delays leaf senescence (Richmond-Lang effect).
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-amber-400">Ethylene:</strong> Gaseous hormone; triggers natural fruit ripening, flowering in pineapple, and leaf abscission.
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-rose-400">Abscisic Acid (ABA):</strong> Stress hormone; closes stomata during drought, inhibits seed germination, promotes dormancy.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: ECOSYSTEMS & ECOLOGICAL PYRAMIDS -->
+    <section id="ecosystem-pyramids" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="triangle" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Ecosystem Structure, Pyramids & Lindeman's 10% Law</h2>
+          <p class="text-xs text-slate-400 font-light">Trophic energy attenuation, upright vs inverted biomass pyramids</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-emerald-300 uppercase tracking-wider">Lindeman's 10% Law (1942)</h3>
+          <p class="text-slate-300 leading-relaxed">
+            Formulated by Raymond Lindeman: During the transfer of organic energy from one trophic level to the next, <strong>only ~10% of energy is stored as biomass</strong>; approximately 90% is lost as metabolic heat, respiration, and excretion.
+          </p>
+          <div class="p-2 rounded-xl bg-slate-950 border border-slate-800 font-mono text-[11px] text-center text-emerald-300">
+            Sunlight (1,000,000 J) → Plants (10,000 J) → Deer (1,000 J) → Tiger (100 J)
+          </div>
+          <p class="text-slate-400">
+            This energetic constraint restricts food chains to 4 or 5 trophic levels.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-teal-300 uppercase tracking-wider">Pyramids of Energy & Numbers</h3>
+          <ul class="text-slate-300 space-y-2 leading-relaxed">
+            <li><strong class="text-white">Pyramid of Energy:</strong> <span class="text-emerald-400 font-bold">ALWAYS UPRIGHT</span> in all ecosystems without exception, governed by the Second Law of Thermodynamics.</li>
+            <li><strong class="text-white">Pyramid of Numbers:</strong>
+              <ul class="list-disc list-inside mt-1 text-slate-400 space-y-0.5">
+                <li>Upright in grassland / cropland ecosystems.</li>
+                <li><strong>Inverted in a single tree ecosystem:</strong> 1 large producer tree supports numerous herbivorous birds, which host thousands of parasitic insects.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-cyan-300 uppercase tracking-wider">Pyramid of Biomass</h3>
+          <div class="space-y-2 text-slate-300">
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Terrestrial Ecosystem (Forest/Grassland):</strong>
+              <p class="text-slate-400 mt-0.5">Strictly Upright. Heavy biomass of trees and grasses outweighs primary and secondary consumers.</p>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-amber-400">Aquatic Ecosystem (Sea/Pond):</strong>
+              <p class="text-slate-400 mt-0.5"><span class="text-rose-400 font-bold">INVERTED!</span> Phytoplankton have tiny standing biomass but rapid turnover, while consumer fish are large and live for years.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: ENVIRONMENTAL ECOLOGY & BIOMAGNIFICATION -->
+    <section id="environmental-ecology" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="biohazard" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Environmental Toxicology & Global Ecological Treaties</h2>
+          <p class="text-xs text-slate-400 font-light">Bioaccumulation, biomagnification, eutrophication, and the ozone shield</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-rose-300 uppercase tracking-wider">Biomagnification</h3>
+          <p class="text-slate-300 leading-relaxed">
+            The progressive increase in concentration of persistent, fat-soluble, non-biodegradable toxins at each successive trophic tier of a food chain.
+          </p>
+          <ul class="text-slate-400 space-y-1 list-disc list-inside">
+            <li><strong>DDT in Birds:</strong> Causes thinning of eggshells and premature breakage, crashing raptor populations.</li>
+            <li><strong>Methylmercury:</strong> Bioaccumulates in fish; responsible for <em>Minamata Disease</em> in Japan.</li>
+            <li><strong>Cadmium:</strong> Causes <em>Itai-Itai Disease</em> (severe bone and joint softening).</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-amber-300 uppercase tracking-wider">Eutrophication</h3>
+          <p class="text-slate-300 leading-relaxed">
+            Accelerated aging of water bodies caused by nutrient enrichment (agricultural runoff containing Nitrogen and Phosphorus).
+          </p>
+          <ul class="text-slate-400 space-y-1 list-disc list-inside">
+            <li>Triggers explosive <strong>Algal Blooms</strong> on water surface.</li>
+            <li>Decomposers consume dissolved oxygen (DO) to break down dead algae.</li>
+            <li><strong>Biological Oxygen Demand (BOD)</strong> spikes sharply; Dissolved Oxygen (DO) crashes, causing massive fish mortality.</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-teal-300 uppercase tracking-wider">Stratospheric Ozone Shield</h3>
+          <p class="text-slate-300 leading-relaxed">
+            Ozone (O₃) layer concentrated in the <strong>Stratosphere (20–30 km)</strong> absorbs harmful ultraviolet UV-B and UV-C rays.
+          </p>
+          <ul class="text-slate-400 space-y-1 list-disc list-inside">
+            <li>Thickness measured in <strong>Dobson Units (DU)</strong> (1 DU = 0.01 mm of pure ozone at STP).</li>
+            <li>Depleted by anthropogenic Chlorofluorocarbons (CFCs), halons, and carbon tetrachloride.</li>
+            <li>Protected internationally by the landmark <strong>Montreal Protocol (1987)</strong>.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: FLASHCARDS -->
+    <section id="flashcards" class="space-y-6 pt-4 border-t border-slate-800">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center gap-2.5">
+            <i data-lucide="sparkles" class="w-5 h-5 text-emerald-400"></i> Active Recall Flashcards
+          </h2>
+          <p class="text-xs text-slate-400 font-light">Interactive 3D flip cards covering plant physiology, hormones, and ecological concepts</p>
+        </div>
+        <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">12 Cards</span>
+      </div>
+
+      <div id="flashcardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- SECTION 7: PRELIMS PRACTICE QUIZ -->
+    <section id="quiz" class="space-y-6 pt-6 border-t border-slate-800">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center justify-center gap-2">
+          <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i> High-Yield Prelims Exam Simulator
+        </h2>
+        <p class="text-xs text-slate-400 font-light">Five standard multiple-choice questions on water photolysis, ethylene gas, aquatic biomass pyramid, and false fruits</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-2">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg shadow-emerald-500/20 flex items-center gap-2">
+          <i data-lucide="award" class="w-4 h-4"></i> Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all flex items-center gap-2">
+          <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Reset Quiz
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 mt-16 py-8 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>Lucent General Knowledge Interactive Encyclopedia • Section V: General Science (Botany & Ecology)</p>
+      <div class="flex items-center gap-4">
+        <a href="science_chemistry.html" class="hover:text-emerald-400 flex items-center gap-1"><i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Prev: Ch 37</a>
+        <a href="hub.html" class="hover:text-emerald-400">Master Index</a>
+        <a href="science_human_physiology.html" class="hover:text-emerald-400 flex items-center gap-1">Next: Ch 39 (Human Physiology) <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-emerald-400">Botanical Microstructure</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+    
+    <div class="flex-1 overflow-hidden relative flex items-center justify-center p-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 pt-2 border-t border-slate-800">
+      Use Mouse Wheel to Zoom in/out • Click and Drag to Pan • Press Esc to Close
+    </div>
+  </div>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
+          <i data-lucide="search" class="w-3.5 h-3.5"></i> Search Botany & Ecology Topics
+        </span>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type Photosynthesis, Ethylene, Lichen, Xylem, or Lindeman..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-emerald-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Search over 40+ biological terms in Chapter 38...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/science_botany_ecology.js"></script>
+</body>
+</html>
