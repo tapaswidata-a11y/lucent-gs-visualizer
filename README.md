@@ -7,20 +7,42 @@
 
 ---
 
-## 🌟 Modules Complete (Ancient &amp; Medieval History 100% Covered)
+## 🌟 Modules Complete (Ancient, Medieval & Modern Indian History 100% Covered)
 
 ### Part I: Ancient Indian History (Chapters 1–7)
-1. **Module 1: Harappan / Indus Valley Civilization (2500–1750 BC)** &bull; `index.html`
-2. **Module 2: Vedic Culture (1500–600 BC)** &bull; `vedic.html`
-3. **Module 3: 16 Mahajanapadas &amp; Magadha Empire (600–325 BC)** &bull; `mahajanapadas.html`
-4. **Module 4: Religious Movements: Buddhism &amp; Jainism (600–400 BC)** &bull; `religions.html`
-5. **Module 5: The Mauryan Empire (322–185 BC)** &bull; `maurya.html`
-6. **Module 6: Post-Mauryan &amp; Sangam Age (185 BC–319 AD)** &bull; `post_maurya.html`
-7. **Module 7: The Gupta Golden Age &amp; Harshavardhana (319–647 AD)** &bull; `gupta.html`
+1. **Module 1: Harappan / Indus Valley Civilization (2500–1750 BC)** &bull; [`index.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/index.html)
+2. **Module 2: Vedic Culture (1500–600 BC)** &bull; [`vedic.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/vedic.html)
+3. **Module 3: 16 Mahajanapadas &amp; Magadha Empire (600–325 BC)** &bull; [`mahajanapadas.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/mahajanapadas.html)
+4. **Module 4: Religious Movements: Buddhism &amp; Jainism (600–400 BC)** &bull; [`religions.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/religions.html)
+5. **Module 5: The Mauryan Empire (322–185 BC)** &bull; [`maurya.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/maurya.html)
+6. **Module 6: Post-Mauryan &amp; Sangam Age (185 BC–319 AD)** &bull; [`post_maurya.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/post_maurya.html)
+7. **Module 7: The Gupta Golden Age &amp; Harshavardhana (319–647 AD)** &bull; [`gupta.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/gupta.html)
 
 ---
 
 ### Part II: Medieval Indian History (Chapters 8–13)
+8. **Module 8: Early Medieval India (650–1206 AD)** &bull; [`early_medieval.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/early_medieval.html)
+9. **Module 9: The Delhi Sultanate (1206–1526 AD)** &bull; [`delhi_sultanate.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/delhi_sultanate.html)
+10. **Module 10: Vijayanagar &amp; Bahmani Kingdoms (1336–1646 AD)** &bull; [`vijayanagar_bahmani.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/vijayanagar_bahmani.html)
+11. **Module 11: The Mughal Empire (1526–1707 AD)** &bull; [`mughal_empire.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/mughal_empire.html)
+12. **Module 12: The Maratha Empire &amp; Later Mughals (1674–1818 AD)** &bull; [`marathas.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/marathas.html)
+13. **Module 13: Religious Movements: Bhakti &amp; Sufi (15th–16th Century)** &bull; [`bhakti_sufi.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/bhakti_sufi.html)
+
+---
+
+### Part III: Modern Indian History (Chapters 14–20)
+14. **Module 14: Arrival of Europeans &amp; British Conquest (1498–1856 AD)** &bull; [`european_expansion.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/european_expansion.html)
+15. **Module 15: Economic Impact of British Rule &amp; Tribal Revolts (1765–1900 AD)** &bull; [`economic_revolts.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/economic_revolts.html)
+16. **Module 16: Socio-Religious Reform Movements (19th–20th Century)** &bull; [`reforms.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/reforms.html)
+17. **Module 17: The Great Revolt of 1857** &bull; [`revolt_1857.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/revolt_1857.html)
+18. **Module 18: Indian National Movement: Early Phase (1885–1919 AD)** &bull; [`national_movement_early.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/national_movement_early.html)
+19. **Module 19: The Gandhian Era: Mass Struggles &amp; Freedom (1919–1947 AD)** &bull; [`gandhian_era.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/gandhian_era.html)
+20. **Module 20: British Viceroys &amp; Constitutional Acts (1773–1947 AD)** &bull; [`viceroys_acts.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/viceroys_acts.html)
+
+---
+
+### Master Knowledge Hub
+- **Visual Curriculum Command Center:** [`hub.html`](file:///home/tapaswi/Mines_Geology/APSC_GS_collection/Lucent_GS/website/hub.html)
 
 ### Module 8: Early Medieval India (650 AD – 1206 AD) &bull; `early_medieval.html`
 - **Tripartite Struggle for Kannauj:** Gurjara-Pratiharas (Nagabhata, Mihir Bhoja), Palas of Bengal (Dharmapala - Vikramashila University), and Rashtrakutas of Deccan (Dantidurga, Krishna I - Kailasa rock temple at Ellora, Amoghavarsha - *Kavirajamarga*).
