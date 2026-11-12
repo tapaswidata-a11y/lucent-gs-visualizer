@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Union Budget, Public Finance & Taxation | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-emerald-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-emerald-400 hover:text-emerald-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-600/10 border border-emerald-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="receipt" class="w-5 h-5 text-emerald-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-emerald-300">LUCENT<span class="text-emerald-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">Budget & Taxation</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-emerald-400 cursor-pointer">
+          <optgroup label="Section IV: Indian Economy">
+            <option value="economy_national_income_planning.html">31. National Income & Planning</option>
+            <option value="economy_money_banking_rbi.html">32. Money, Banking & RBI</option>
+            <option value="economy_budget_taxation_fiscal.html" selected>33. Union Budget, Taxation & FC</option>
+            <option value="economy_poverty_unemployment_schemes.html">34. Poverty, Employment & Schemes</option>
+            <option value="economy_foreign_trade_bop_organizations.html">35. Foreign Trade, BoP & WTO</option>
+          </optgroup>
+          <optgroup label="Section III: Indian Polity">
+            <option value="polity_framework_preamble.html">26. Constitutional Framework</option>
+            <option value="polity_rights_dpsp_duties.html">27. Fundamental Rights & DPSP</option>
+            <option value="polity_union_parliament.html">28. Union Executive & Parliament</option>
+            <option value="polity_judiciary.html">29. Judiciary & Legal System</option>
+            <option value="polity_state_panchayat_amendments.html">30. State Govt, PRIs & Amendments</option>
+          </optgroup>
+        </select>
+
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <!-- HERO SECTION -->
+    <div class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900/90 to-emerald-950/40 p-6 sm:p-10 shadow-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-widest">
+            <i data-lucide="calculator" class="w-3.5 h-3.5"></i> Section 33 • Public Finance & Fiscal Architecture
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-extrabold text-white tracking-tight leading-tight">
+            Union Budget, <span class="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">Taxation</span> & Fiscal Devolution
+          </h1>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+            An exhaustive examination of Article 112 (Annual Financial Statement), Revenue vs Capital budgeting, Fiscal Deficit mechanics, direct vs indirect taxation, the 101st Constitutional Amendment (GST), and horizontal resource devolution under the Finance Commission.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-2 text-xs font-medium">
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">Article 112 (AFS)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">Fiscal Deficit</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">GST (101st CAA)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">Finance Commission (Art 280)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">FRBM Act 2003</span>
+          </div>
+        </div>
+
+        <!-- Hero Zoomable Image -->
+        <div class="lg:col-span-5 relative group cursor-pointer" onclick="openLightbox('assets/images/parliament_sansad.jpg', 'Sansad Bhavan (New Delhi)', 'Parliament of India where the Annual Financial Statement (Union Budget) is presented and voted upon under Articles 112-114 of the Constitution.')">
+          <div class="relative rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl aspect-[4/3] bg-slate-900">
+            <img src="assets/images/parliament_sansad.jpg" alt="Sansad Bhavan" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-slate-200">
+              <span class="font-medium flex items-center gap-1.5"><i data-lucide="building" class="w-3.5 h-3.5 text-emerald-400"></i> Sansad Bhavan (Union Budget)</span>
+              <span class="bg-slate-900/80 px-2 py-0.5 rounded text-[10px] text-emerald-300 border border-slate-700 flex items-center gap-1"><i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Zoom</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- QUICK NAV TABS -->
+    <nav class="flex overflow-x-auto gap-2 p-1.5 bg-slate-900/60 border border-slate-800/80 rounded-2xl backdrop-blur-md text-xs font-medium">
+      <a href="#budget-framework" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="file-text" class="w-3.5 h-3.5 text-emerald-400"></i> Budget Framework</a>
+      <a href="#budget-components" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="pie-chart" class="w-3.5 h-3.5 text-emerald-400"></i> Revenue vs Capital</a>
+      <a href="#deficit-metrics" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="trending-down" class="w-3.5 h-3.5 text-emerald-400"></i> Deficit Formulas</a>
+      <a href="#taxation-gst" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-400"></i> Taxation & GST</a>
+      <a href="#finance-commission" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="scale" class="w-3.5 h-3.5 text-emerald-400"></i> Finance Commission</a>
+      <a href="#flashcards" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-400"></i> Flashcards</a>
+      <a href="#quiz" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="help-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Prelims Quiz</a>
+    </nav>
+
+    <!-- SECTION 1: CONSTITUTIONAL FRAMEWORK OF BUDGET -->
+    <section id="budget-framework" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="file-text" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Constitutional Framework & Budgetary Passage</h2>
+          <p class="text-xs text-slate-400 font-light">Articles 112 to 117 governing parliamentary financial procedures</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="flex items-center gap-2 text-emerald-400 font-semibold text-sm">
+            <i data-lucide="bookmark" class="w-4 h-4"></i> Article 112: Annual Financial Statement
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            The word <span class="text-rose-400 font-mono font-bold">"Budget"</span> is nowhere mentioned in the Constitution of India. Article 112 mandates the President to cause to be laid before both Houses of Parliament an "Annual Financial Statement" showing estimated receipts and expenditures for the financial year (1st April to 31st March).
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="flex items-center gap-2 text-emerald-400 font-semibold text-sm">
+            <i data-lucide="vault" class="w-4 h-4"></i> Article 266: Government Funds
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            <strong>Consolidated Fund of India (Art 266(1)):</strong> All revenues received, loans raised, and loan recoveries flow here. No money can be withdrawn without parliamentary appropriation.<br>
+            <strong>Public Account of India (Art 266(2)):</strong> Bank deposits, provident funds, judicial deposits held in trust. No parliamentary sanction needed for payments.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="flex items-center gap-2 text-emerald-400 font-semibold text-sm">
+            <i data-lucide="shield-alert" class="w-4 h-4"></i> Article 267: Contingency Fund
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            An imprest placed at the disposal of the President of India to meet urgent, unforeseen expenditures pending parliamentary authorization. Administered by the Finance Secretary on behalf of the President (corpus enhanced to ₹30,000 Crore in Finance Act 2021).
+          </p>
+        </div>
+      </div>
+
+      <!-- 6 Stages of Budget in Parliament -->
+      <div class="p-5 rounded-2xl bg-slate-900/40 border border-slate-800 space-y-4">
+        <h3 class="text-sm font-bold text-emerald-300 uppercase tracking-wider flex items-center gap-2">
+          <i data-lucide="git-commit" class="w-4 h-4"></i> Six Sequential Stages of Budget Passage in Parliament
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3 text-xs">
+          <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+            <span class="text-[10px] text-emerald-400 font-mono font-bold">STAGE 01</span>
+            <div class="font-semibold text-white">Presentation</div>
+            <p class="text-[11px] text-slate-400">Budget Speech on 1st February by Finance Minister; no discussion occurs on presentation day.</p>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+            <span class="text-[10px] text-emerald-400 font-mono font-bold">STAGE 02</span>
+            <div class="font-semibold text-white">General Discussion</div>
+            <p class="text-[11px] text-slate-400">General principles discussed in both Houses for 3-4 days; no cut motions or voting occurs.</p>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+            <span class="text-[10px] text-emerald-400 font-mono font-bold">STAGE 03</span>
+            <div class="font-semibold text-white">Scrutiny by DRSCs</div>
+            <p class="text-[11px] text-slate-400">Houses adjourn for 3-4 weeks. 24 Departmentally Related Standing Committees examine demands.</p>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+            <span class="text-[10px] text-emerald-400 font-mono font-bold">STAGE 04</span>
+            <div class="font-semibold text-white">Voting on Demands</div>
+            <p class="text-[11px] text-slate-400">Exclusive to Lok Sabha (Art 113). Cut Motions (Policy, Economy, Token) moved. Ends with Guillotine.</p>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+            <span class="text-[10px] text-emerald-400 font-mono font-bold">STAGE 05</span>
+            <div class="font-semibold text-white">Appropriation Bill</div>
+            <p class="text-[11px] text-slate-400">Article 114: Authorizes withdrawal of funds from Consolidated Fund of India for voted + charged expenditures.</p>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+            <span class="text-[10px] text-emerald-400 font-mono font-bold">STAGE 06</span>
+            <div class="font-semibold text-white">Finance Bill</div>
+            <p class="text-[11px] text-slate-400">Enacts legal taxation proposals. Governed by Provisional Collection of Taxes Act 1931 (passed in 75 days).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: STRUCTURE OF GOVERNMENT ACCOUNTS & BUDGET COMPONENTS -->
+    <section id="budget-components" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="pie-chart" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Revenue vs Capital Budget Architecture</h2>
+          <p class="text-xs text-slate-400 font-light">Classification of receipts and disbursements based on liability and asset impact</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Revenue Budget -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-base font-bold text-emerald-300 flex items-center gap-2">
+              <i data-lucide="arrow-down-left" class="w-4 h-4 text-emerald-400"></i> Revenue Account (No Asset/Liability Impact)
+            </h3>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Operational Flow</span>
+          </div>
+
+          <div class="space-y-3 text-xs">
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="font-semibold text-emerald-400">1. Revenue Receipts:</span> Receipts that neither create liability nor reduce government assets.
+              <ul class="list-disc list-inside mt-1.5 space-y-1 text-slate-300">
+                <li><strong>Tax Revenue:</strong> Direct Taxes (Income Tax, Corporation Tax) and Indirect Taxes (GST, Customs, Central Excise on Petroleum).</li>
+                <li><strong>Non-Tax Revenue:</strong> Dividends & profits from PSUs/RBI, Interest receipts from states, Fees, Fines, Spectrum auction proceeds.</li>
+              </ul>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="font-semibold text-rose-400">2. Revenue Expenditure:</span> Consumptive spending that neither creates physical/financial assets nor reduces liabilities.
+              <ul class="list-disc list-inside mt-1.5 space-y-1 text-slate-300">
+                <li>Interest payments on sovereign debts (single largest component ~20% of budget).</li>
+                <li>Defense revenue expenditure (salaries, pensions, operations).</li>
+                <li>Subsidies (Food, Fertilizer, Petroleum), administrative salaries, and pensions.</li>
+                <li>Grants given to State Governments (even if states use them for asset creation!).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Capital Budget -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-base font-bold text-teal-300 flex items-center gap-2">
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-teal-400"></i> Capital Account (Asset/Liability Impacting)
+            </h3>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-teal-500/10 text-teal-400 border border-teal-500/20">Asset Creation / Debt</span>
+          </div>
+
+          <div class="space-y-3 text-xs">
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="font-semibold text-emerald-400">1. Capital Receipts:</span> Receipts that either create a sovereign liability or reduce government assets.
+              <ul class="list-disc list-inside mt-1.5 space-y-1 text-slate-300">
+                <li><strong>Debt Receipts:</strong> Market borrowings (G-Secs, T-Bills), External commercial loans, Sovereign bonds (creates future repayment liability).</li>
+                <li><strong>Non-Debt Capital Receipts (NDCR):</strong> Recovery of loans from State governments, Disinvestment / privatization proceeds (DIPAM).</li>
+              </ul>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="font-semibold text-blue-400">2. Capital Expenditure (Capex):</span> Productive outlay resulting in physical/financial asset creation or debt reduction.
+              <ul class="list-disc list-inside mt-1.5 space-y-1 text-slate-300">
+                <li>Construction of national highways, railways, ports, power stations.</li>
+                <li>Capital defense acquisitions (fighter jets, naval warships, weaponry).</li>
+                <li>Loans and advances given to State Governments & Union Territories.</li>
+                <li>Repayment of past sovereign debt borrowings.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: DEFICIT METRICS & FORMULAS -->
+    <section id="deficit-metrics" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="trending-down" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Government Deficits & Quantitative Formulas</h2>
+          <p class="text-xs text-slate-400 font-light">Critical mathematical formulations frequently examined in Prelims & Mains</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2.5">
+          <div class="text-xs font-mono font-bold text-rose-400 uppercase">Revenue Deficit (RD)</div>
+          <div class="p-2.5 rounded-lg bg-slate-950 font-mono text-[11px] text-emerald-300 border border-slate-800">
+            RD = Revenue Exp − Revenue Receipts
+          </div>
+          <p class="text-[11px] text-slate-400 leading-normal">
+            Reflects government's inability to finance ordinary day-to-day governance through its routine tax and non-tax revenues. Results in dissavings.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2.5">
+          <div class="text-xs font-mono font-bold text-amber-400 uppercase">Effective Revenue Deficit</div>
+          <div class="p-2.5 rounded-lg bg-slate-950 font-mono text-[11px] text-emerald-300 border border-slate-800">
+            ERD = RD − Grants for Capital Assets
+          </div>
+          <p class="text-[11px] text-slate-400 leading-normal">
+            Introduced in Union Budget 2011-12. Deducts grants given to states for capital asset creation (e.g. PMGSY roads) from Revenue Deficit.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2.5">
+          <div class="text-xs font-mono font-bold text-emerald-400 uppercase">Fiscal Deficit (FD)</div>
+          <div class="p-2.5 rounded-lg bg-slate-950 font-mono text-[11px] text-emerald-300 border border-slate-800">
+            FD = Total Exp − (Rev Rec + Non-Debt Cap Rec)
+          </div>
+          <p class="text-[11px] text-slate-400 leading-normal">
+            Exact measure of government's total borrowing requirements from domestic and external sources. Equals <strong>Total Net Borrowings</strong>.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2.5">
+          <div class="text-xs font-mono font-bold text-cyan-400 uppercase">Primary Deficit (PD)</div>
+          <div class="p-2.5 rounded-lg bg-slate-950 font-mono text-[11px] text-emerald-300 border border-slate-800">
+            PD = Fiscal Deficit − Interest Payments
+          </div>
+          <p class="text-[11px] text-slate-400 leading-normal">
+            Reflects borrowing requirement exclusively to finance current expenditures, excluding obligations inherited from past loans.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FRBM Act 2003 Box -->
+      <div class="p-4 rounded-2xl bg-slate-900/50 border border-slate-800 flex flex-col md:flex-row gap-4 items-start text-xs">
+        <div class="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 shrink-0">
+          <i data-lucide="scale" class="w-5 h-5"></i>
+        </div>
+        <div class="space-y-1.5">
+          <h4 class="font-bold text-white text-sm">FRBM Act 2003 & N.K. Singh Review Committee</h4>
+          <p class="text-slate-300 leading-relaxed">
+            Enacted under the Vajpayee Government to institutionalize financial discipline. Mandated eliminating Revenue Deficit and restricting Fiscal Deficit to 3% of GDP. In 2016, the <strong>N.K. Singh Committee</strong> recommended targeting Debt-to-GDP ratio as the primary fiscal anchor (60% combined: 40% Centre, 20% States) with an "escape clause" of 0.5% during national security, war, or calamity triggers.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: INDIAN TAXATION & GST -->
+    <section id="taxation-gst" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="layers" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Indian Taxation Architecture & Goods and Services Tax (GST)</h2>
+          <p class="text-xs text-slate-400 font-light">Direct vs Indirect Taxes, 101st Constitutional Amendment Act & the GST Council</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-emerald-300 flex items-center gap-2">
+            <i data-lucide="user-check" class="w-4 h-4"></i> Direct Taxes (CBDT)
+          </h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Taxes where incidence and impact fall on the same entity (cannot be shifted). Progressive in nature.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-1 list-disc list-inside">
+            <li><strong>Corporation Tax:</strong> Tax on net income/profit of companies.</li>
+            <li><strong>Personal Income Tax:</strong> Progressive rates on individual earnings.</li>
+            <li><strong>Securities Transaction Tax (STT):</strong> Tax on equity trading transactions.</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-teal-300 flex items-center gap-2">
+            <i data-lucide="shopping-bag" class="w-4 h-4"></i> Indirect Taxes (CBIC)
+          </h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Taxes where incidence is on consumer but collected by seller (burden shifted). Regressive in nature.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-1 list-disc list-inside">
+            <li><strong>GST:</strong> Unified destination-based consumption tax.</li>
+            <li><strong>Customs Duty:</strong> Tax on cross-border imports/exports.</li>
+            <li><strong>Excise on Non-GST items:</strong> Petroleum, crude, ATF, natural gas, alcohol for human consumption.</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-amber-300 flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4"></i> Cess vs Surcharge Distinction
+          </h3>
+          <div class="text-xs text-slate-300 space-y-2">
+            <p><strong>Cess:</strong> Tax on tax levied for a specific earmarked purpose (e.g. Health & Education Cess 4%). Proceeds cannot be diverted and are NOT shared with states under the divisible pool.</p>
+            <p><strong>Surcharge:</strong> Additional tax on tax levied without an earmarked purpose (flows directly into Consolidated Fund, not shared with states).</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- GST Deep Dive -->
+      <div class="p-5 rounded-2xl bg-slate-900/40 border border-slate-800 space-y-4">
+        <h3 class="text-sm font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-2">
+          <i data-lucide="check-circle-2" class="w-4 h-4"></i> The Goods & Services Tax (GST) Architecture
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+          <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5">
+            <div class="font-bold text-white">Constitutional Amendments</div>
+            <p class="text-slate-400 leading-relaxed">
+              <strong>101st Amendment Act 2016:</strong> Inserted <strong>Art 246A</strong> (concurrent power to tax goods & services), <strong>Art 269A</strong> (IGST collection by Centre & apportioned), and <strong>Art 279A</strong> (GST Council).
+            </p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5">
+            <div class="font-bold text-white">Structure of GST</div>
+            <p class="text-slate-400 leading-relaxed">
+              Dual GST Model (inspired by Canada). Intra-state sales attract equal <strong>CGST + SGST</strong>. Inter-state sales attract <strong>IGST</strong> (Integrated GST). Four standard slabs: 5%, 12%, 18%, 28%.
+            </p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5">
+            <div class="font-bold text-white">GST Council Voting Power</div>
+            <p class="text-slate-400 leading-relaxed">
+              Chaired by Union Finance Minister. Union Govt has <strong>1/3rd (33.3%)</strong> voting weight; all State Finance Ministers combined hold <strong>2/3rds (66.7%)</strong>. Decision requires <strong>3/4th (75%) majority</strong>.
+            </p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5">
+            <div class="font-bold text-white">Goods Outside GST</div>
+            <p class="text-slate-400 leading-relaxed">
+              Alcohol for human consumption (State Excise + VAT). Five petroleum products (petrol, diesel, crude, natural gas, ATF) deferred until recommended by GST Council. Electricity & stamp duty stay under states.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: FINANCE COMMISSION OF INDIA -->
+    <section id="finance-commission" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="scale" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Finance Commission of India (Article 280)</h2>
+          <p class="text-xs text-slate-400 font-light">Quasi-judicial constitutional balancing wheel of fiscal federalism</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <div class="lg:col-span-5 p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+          <h3 class="text-sm font-bold text-emerald-300 uppercase tracking-wider">Mandate & Composition</h3>
+          <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+            <li><strong>Constitutional Basis:</strong> Article 280 mandates President to constitute a Finance Commission every 5th year or earlier.</li>
+            <li><strong>Composition:</strong> Chairman + 4 other members appointed by the President. Qualifications determined by Parliament under Finance Commission Act 1951.</li>
+            <li><strong>Core Recommendations:</strong>
+              <ul class="list-disc list-inside mt-1 space-y-1 text-slate-400">
+                <li>Vertical Devolution: Division of divisible net proceeds between Union and States.</li>
+                <li>Horizontal Devolution: Allocation between states based on equity and efficiency criteria.</li>
+                <li>Grants-in-aid to States out of Consolidated Fund under Article 275.</li>
+                <li>Measures to augment State Consolidated Funds to supplement PRIs and ULBs.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-7 p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+          <h3 class="text-sm font-bold text-emerald-300 uppercase tracking-wider">15th Finance Commission (N.K. Singh) Devolution Weights</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="border-b border-slate-800 text-emerald-400 font-mono">
+                  <th class="py-2 px-3">Criteria</th>
+                  <th class="py-2 px-3">Weight (%)</th>
+                  <th class="py-2 px-3">Rationale & Measurement</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60 text-slate-300 font-light">
+                <tr>
+                  <td class="py-2 px-3 font-semibold text-white">Income Distance</td>
+                  <td class="py-2 px-3 text-emerald-400 font-mono font-bold">45.0%</td>
+                  <td class="py-2 px-3 text-slate-400">Distance from highest GSDP per capita state (Haryana); ensures fiscal equalization.</td>
+                </tr>
+                <tr>
+                  <td class="py-2 px-3 font-semibold text-white">Population (2011 Census)</td>
+                  <td class="py-2 px-3 text-emerald-400 font-mono font-bold">15.0%</td>
+                  <td class="py-2 px-3 text-slate-400">Entirely based on 2011 census, replacing the dual 1971/2011 formula of 14th FC.</td>
+                </tr>
+                <tr>
+                  <td class="py-2 px-3 font-semibold text-white">Area</td>
+                  <td class="py-2 px-3 text-emerald-400 font-mono font-bold">15.0%</td>
+                  <td class="py-2 px-3 text-slate-400">Compensates larger geographical states for higher administration and infrastructure costs.</td>
+                </tr>
+                <tr>
+                  <td class="py-2 px-3 font-semibold text-white">Forest & Ecology</td>
+                  <td class="py-2 px-3 text-emerald-400 font-mono font-bold">10.0%</td>
+                  <td class="py-2 px-3 text-slate-400">Dense and moderately dense forest cover; incentivizes environmental conservation.</td>
+                </tr>
+                <tr>
+                  <td class="py-2 px-3 font-semibold text-white">Demographic Performance</td>
+                  <td class="py-2 px-3 text-emerald-400 font-mono font-bold">12.5%</td>
+                  <td class="py-2 px-3 text-slate-400">Rewards states with lower Total Fertility Rates (TFR) to address southern state concerns.</td>
+                </tr>
+                <tr>
+                  <td class="py-2 px-3 font-semibold text-white">Tax & Fiscal Effort</td>
+                  <td class="py-2 px-3 text-emerald-400 font-mono font-bold">2.5%</td>
+                  <td class="py-2 px-3 text-slate-400">Rewards higher tax collection efficiency relative to GSDP capacity.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="text-[11px] text-slate-400 italic">
+            *Vertical Share: 15th FC recommended 41% vertical devolution to States (down from 42% in 14th FC due to 1% adjustment for newly created UTs of J&K and Ladakh). In Dec 2023, the <strong>16th Finance Commission</strong> was constituted under Dr. Arvind Panagariya for 2026-31.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: FLASHCARDS -->
+    <section id="flashcards" class="space-y-6 pt-4 border-t border-slate-800">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center gap-2.5">
+            <i data-lucide="sparkles" class="w-5 h-5 text-emerald-400"></i> Active Recall Flashcards
+          </h2>
+          <p class="text-xs text-slate-400 font-light">Interactive 3D flip cards covering high-yield fiscal terms and constitutional provisions</p>
+        </div>
+        <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">12 Cards</span>
+      </div>
+
+      <div id="flashcardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- SECTION 7: PRELIMS PRACTICE QUIZ -->
+    <section id="quiz" class="space-y-6 pt-6 border-t border-slate-800">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center justify-center gap-2">
+          <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i> High-Yield Prelims Exam Simulator
+        </h2>
+        <p class="text-xs text-slate-400 font-light">Five standard APSC/UPSC multiple-choice questions on fiscal deficit, budget stages, and GST</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-2">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg shadow-emerald-500/20 flex items-center gap-2">
+          <i data-lucide="award" class="w-4 h-4"></i> Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all flex items-center gap-2">
+          <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Reset Quiz
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 mt-16 py-8 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>Lucent General Knowledge Interactive Encyclopedia • Section IV: Indian Economy</p>
+      <div class="flex items-center gap-4">
+        <a href="economy_money_banking_rbi.html" class="hover:text-emerald-400 flex items-center gap-1"><i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Prev: Ch 32</a>
+        <a href="hub.html" class="hover:text-emerald-400">Master Index</a>
+        <a href="economy_poverty_unemployment_schemes.html" class="hover:text-emerald-400 flex items-center gap-1">Next: Ch 34 <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-emerald-400">Fiscal Architecture</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+    
+    <div class="flex-1 overflow-hidden relative flex items-center justify-center p-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 pt-2 border-t border-slate-800">
+      Use Mouse Wheel to Zoom in/out • Click and Drag to Pan • Press Esc to Close
+    </div>
+  </div>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
+          <i data-lucide="search" class="w-3.5 h-3.5"></i> Search Budget & Taxation Topics
+        </span>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type Article 112, Fiscal Deficit, GST, FRBM, or N.K. Singh..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-emerald-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Search over 30+ keywords in Chapter 33...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/economy_budget_taxation_fiscal.js"></script>
+</body>
+</html>

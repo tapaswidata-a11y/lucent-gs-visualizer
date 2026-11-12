@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poverty, Unemployment & Flagship Schemes | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-emerald-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-emerald-400 hover:text-emerald-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-600/10 border border-emerald-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="users" class="w-5 h-5 text-emerald-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-emerald-300">LUCENT<span class="text-emerald-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">Poverty & Schemes</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-emerald-400 cursor-pointer">
+          <optgroup label="Section IV: Indian Economy">
+            <option value="economy_national_income_planning.html">31. National Income & Planning</option>
+            <option value="economy_money_banking_rbi.html">32. Money, Banking & RBI</option>
+            <option value="economy_budget_taxation_fiscal.html">33. Union Budget, Taxation & FC</option>
+            <option value="economy_poverty_unemployment_schemes.html" selected>34. Poverty, Employment & Schemes</option>
+            <option value="economy_foreign_trade_bop_organizations.html">35. Foreign Trade, BoP & WTO</option>
+          </optgroup>
+          <optgroup label="Section III: Indian Polity">
+            <option value="polity_framework_preamble.html">26. Constitutional Framework</option>
+            <option value="polity_rights_dpsp_duties.html">27. Fundamental Rights & DPSP</option>
+            <option value="polity_union_parliament.html">28. Union Executive & Parliament</option>
+            <option value="polity_judiciary.html">29. Judiciary & Legal System</option>
+            <option value="polity_state_panchayat_amendments.html">30. State Govt, PRIs & Amendments</option>
+          </optgroup>
+        </select>
+
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <!-- HERO SECTION -->
+    <div class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900/90 to-emerald-950/40 p-6 sm:p-10 shadow-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-widest">
+            <i data-lucide="briefcase" class="w-3.5 h-3.5"></i> Section 34 • Human Development & Welfare Architecture
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-extrabold text-white tracking-tight leading-tight">
+            Poverty, <span class="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">Employment</span> & Flagship Welfare Schemes
+          </h1>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+            Comprehensive synthesis of poverty estimation methodologies from Dadabhai Naoroji to Tendulkar, Rangarajan, and NITI Aayog's MPI; forms of unemployment (disguised, structural, CWS/UPSS); and major flagship welfare initiatives like MGNREGA, PM-KISAN, Ayushman Bharat, and MUDRA.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-2 text-xs font-medium">
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">Tendulkar ₹27/₹33</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">NITI Aayog MPI</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">Disguised Unemployment (MPL=0)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">MGNREGA 2005 (100 Days)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">PM MUDRA Yojana</span>
+          </div>
+        </div>
+
+        <!-- Hero Zoomable Image -->
+        <div class="lg:col-span-5 relative group cursor-pointer" onclick="openLightbox('assets/images/rural_agriculture_mgnrega.jpg', 'Rural Agricultural Employment in India', 'Agricultural labor and public works: rural employment guarantees under MGNREGA and income support under PM-KISAN form the backbone of rural social safety nets.')">
+          <div class="relative rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl aspect-[4/3] bg-slate-900">
+            <img src="assets/images/rural_agriculture_mgnrega.jpg" alt="Rural Employment" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-slate-200">
+              <span class="font-medium flex items-center gap-1.5"><i data-lucide="sprout" class="w-3.5 h-3.5 text-emerald-400"></i> Rural Employment & Agriculture</span>
+              <span class="bg-slate-900/80 px-2 py-0.5 rounded text-[10px] text-emerald-300 border border-slate-700 flex items-center gap-1"><i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Zoom</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- QUICK NAV TABS -->
+    <nav class="flex overflow-x-auto gap-2 p-1.5 bg-slate-900/60 border border-slate-800/80 rounded-2xl backdrop-blur-md text-xs font-medium">
+      <a href="#poverty-estimation" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="activity" class="w-3.5 h-3.5 text-emerald-400"></i> Poverty Lines</a>
+      <a href="#unemployment-concepts" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="user-minus" class="w-3.5 h-3.5 text-emerald-400"></i> Unemployment</a>
+      <a href="#flagship-schemes" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="award" class="w-3.5 h-3.5 text-emerald-400"></i> Flagship Schemes</a>
+      <a href="#inequality-metrics" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="pie-chart" class="w-3.5 h-3.5 text-emerald-400"></i> Lorenz & Gini</a>
+      <a href="#flashcards" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-400"></i> Flashcards</a>
+      <a href="#quiz" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="help-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Prelims Quiz</a>
+    </nav>
+
+    <!-- SECTION 1: POVERTY ESTIMATION IN INDIA -->
+    <section id="poverty-estimation" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="activity" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Poverty Estimation Methodologies in India</h2>
+          <p class="text-xs text-slate-400 font-light">From historical subsistence measures to multidimensional deprivation indices</p>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/60 shadow-xl">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead>
+            <tr class="border-b border-slate-800 bg-slate-950/80 text-emerald-400 font-mono">
+              <th class="py-3 px-4">Committee / Expert Group</th>
+              <th class="py-3 px-4">Year</th>
+              <th class="py-3 px-4">Methodology & Poverty Basket</th>
+              <th class="py-3 px-4">Poverty Line / Benchmark</th>
+              <th class="py-3 px-4">Estimated Poverty %</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 text-slate-300 font-light">
+            <tr class="hover:bg-slate-800/30 transition-colors">
+              <td class="py-3 px-4 font-semibold text-white">Dadabhai Naoroji</td>
+              <td class="py-3 px-4 font-mono text-emerald-400">1867-68</td>
+              <td class="py-3 px-4 text-slate-400">Jail Cost of Living (rice, dal, mutton, ghee, salt required for basic adult prisoner subsistence).</td>
+              <td class="py-3 px-4 font-mono">₹16 to ₹35 / year</td>
+              <td class="py-3 px-4 text-slate-400">Pioneering historical estimate</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 transition-colors">
+              <td class="py-3 px-4 font-semibold text-white">Y.K. Alagh Task Force</td>
+              <td class="py-3 px-4 font-mono text-emerald-400">1979</td>
+              <td class="py-3 px-4 text-slate-400">Nutritional Caloric Intake based on NSSO consumption expenditure.</td>
+              <td class="py-3 px-4 font-mono">2,400 kcal (Rural) / 2,100 kcal (Urban)</td>
+              <td class="py-3 px-4 font-mono text-emerald-400">~50% (1977-78)</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 transition-colors">
+              <td class="py-3 px-4 font-semibold text-white">D.T. Lakdawala Committee</td>
+              <td class="py-3 px-4 font-mono text-emerald-400">1993</td>
+              <td class="py-3 px-4 text-slate-400">Retained Alagh calorie norms; disaggregated across states using CPI-AL (Agricultural Labourers) and CPI-IW (Industrial Workers).</td>
+              <td class="py-3 px-4 font-mono">State-specific CPI basket updates</td>
+              <td class="py-3 px-4 font-mono text-emerald-400">36.0% (1993-94)</td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 transition-colors">
+              <td class="py-3 px-4 font-semibold text-white">Suresh Tendulkar Committee</td>
+              <td class="py-3 px-4 font-mono text-emerald-400">2009</td>
+              <td class="py-3 px-4 text-slate-400">Moved away from calorie anchors to Mixed Reference Period (MRP) expenditure across Health, Education, clothing, and food.</td>
+              <td class="py-3 px-4 font-mono text-emerald-300">₹816/mo (₹27/day) Rural<br>₹1,000/mo (₹33/day) Urban</td>
+              <td class="py-3 px-4 font-mono text-emerald-400 font-bold">21.9% (2011-12)<br><span class="text-[10px] text-slate-400">(Rural: 25.7%, Urban: 13.7%)</span></td>
+            </tr>
+            <tr class="hover:bg-slate-800/30 transition-colors">
+              <td class="py-3 px-4 font-semibold text-white">C. Rangarajan Committee</td>
+              <td class="py-3 px-4 font-mono text-emerald-400">2014</td>
+              <td class="py-3 px-4 text-slate-400">Modified Mixed Reference Period (MMRP). Independent calorie, fat, protein, and non-food norms.</td>
+              <td class="py-3 px-4 font-mono text-emerald-300">₹972/mo (₹32/day) Rural<br>₹1,407/mo (₹47/day) Urban</td>
+              <td class="py-3 px-4 font-mono text-emerald-400 font-bold">29.5% (2011-12)<br><span class="text-[10px] text-slate-400">(Rural: 30.9%, Urban: 26.4%)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- NITI Aayog Multidimensional Poverty Index Box -->
+      <div class="p-5 rounded-2xl bg-slate-900/40 border border-slate-800 space-y-3">
+        <div class="flex items-center justify-between">
+          <h3 class="text-sm font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="layers" class="w-4 h-4"></i> NITI Aayog National Multidimensional Poverty Index (MPI)
+          </h3>
+          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Alkire-Foster Method</span>
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed font-light">
+          Unlike one-dimensional income/consumption lines, NITI Aayog's MPI assesses simultaneous deprivations across <strong>3 equally-weighted dimensions</strong> (Health, Education, Standard of Living) spanning <strong>12 indicators</strong> (Nutrition, Child-Adolescent Mortality, Maternal Health, Years of Schooling, School Attendance, Cooking Fuel, Sanitation, Drinking Water, Electricity, Housing, Assets, and Bank Accounts). According to NITI Aayog's 2024 report, India's multidimensional poverty plummeted from <strong>29.17% in 2013-14 to 11.28% in 2022-23</strong>, lifting ~24.8 crore individuals out of multidimensional poverty.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CONCEPTS & MEASUREMENT OF UNEMPLOYMENT -->
+    <section id="unemployment-concepts" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="user-minus" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Forms & Measurement Approaches of Unemployment</h2>
+          <p class="text-xs text-slate-400 font-light">Structural classification and NSSO / MoSPI measurement indicators</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono font-bold text-emerald-400 uppercase">Disguised Unemployment</div>
+          <div class="p-2 rounded-lg bg-slate-950 font-mono text-[11px] text-emerald-300 border border-slate-800">
+            Marginal Productivity = 0 (MPL = 0)
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">
+            More people are engaged in work than required. If excess workers are withdrawn, total output remains identical. Highly prevalent in Indian agriculture.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono font-bold text-amber-400 uppercase">Structural Unemployment</div>
+          <div class="p-2 rounded-lg bg-slate-950 font-mono text-[11px] text-amber-300 border border-slate-800">
+            Skills Mismatch & Tech Change
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">
+            Arises from mismatch between skills supplied by the workforce and skills demanded by industries due to economic structural transformations.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono font-bold text-cyan-400 uppercase">Frictional Unemployment</div>
+          <div class="p-2 rounded-lg bg-slate-950 font-mono text-[11px] text-cyan-300 border border-slate-800">
+            Search / Transition Time
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">
+            Temporary voluntary unemployment while an individual is transitioning between jobs or entering the labor market in search of a better role.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono font-bold text-rose-400 uppercase">Cyclical Unemployment</div>
+          <div class="p-2 rounded-lg bg-slate-950 font-mono text-[11px] text-rose-300 border border-slate-800">
+            Demand-Deficient Recession
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">
+            Directly correlated with business cycle recessions; during economic slowdowns, aggregate demand contracts and companies lay off workforce.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- NSO Measurement Approaches -->
+      <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+        <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+          <i data-lucide="clipboard-list" class="w-4 h-4 text-emerald-400"></i> NSO (NSSO) Measurement Approaches & PLFS
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+          <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5">
+            <div class="font-bold text-emerald-400">1. Usual Status (UPSS)</div>
+            <p class="text-slate-300 leading-relaxed">
+              <strong>Reference Period: 365 Days.</strong> Measures chronic, long-term unemployment. A person is considered employed if engaged in an economic activity for a major part of the preceding 365 days (Principal) or subsidiary status (at least 30 days).
+            </p>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5">
+            <div class="font-bold text-teal-400">2. Current Weekly Status (CWS)</div>
+            <p class="text-slate-300 leading-relaxed">
+              <strong>Reference Period: 7 Days.</strong> A person is considered unemployed if they did not work even for 1 hour on any day during the reference week, despite being available and seeking work.
+            </p>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5">
+            <div class="font-bold text-cyan-400">3. Current Daily Status (CDS)</div>
+            <p class="text-slate-300 leading-relaxed">
+              <strong>Reference Period: Each Day of the Week.</strong> Records activity status for each half-day (4 hours) or full day (8 hours). Considered the most comprehensive and accurate measure of total unemployment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: FLAGSHIP WELFARE & EMPLOYMENT SCHEMES -->
+    <section id="flagship-schemes" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="award" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Flagship Social Welfare & Empowerment Schemes</h2>
+          <p class="text-xs text-slate-400 font-light">Major welfare initiatives examined repeatedly across Prelims and Mains</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        
+        <!-- MGNREGA -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="text-sm font-bold text-emerald-300 flex items-center gap-2">
+              <i data-lucide="pickaxe" class="w-4 h-4 text-emerald-400"></i> MGNREGA 2005
+            </div>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Legal Right</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Statutory legal entitlement providing at least <strong>100 days of guaranteed wage employment</strong> per financial year to every rural household whose adult members volunteer for unskilled manual work.
+          </p>
+          <ul class="text-[11px] text-slate-400 space-y-1 list-disc list-inside">
+            <li>Mandatory 1/3rd participation reserved for women.</li>
+            <li>Unemployment allowance paid if work not provided within 15 days.</li>
+            <li>Strict 60:40 wage to material expenditure ratio.</li>
+            <li>Social Audits conducted by Gram Sabha.</li>
+          </ul>
+        </div>
+
+        <!-- PM-KISAN -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="text-sm font-bold text-teal-300 flex items-center gap-2">
+              <i data-lucide="sprout" class="w-4 h-4 text-teal-400"></i> PM-KISAN (2019)
+            </div>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-teal-500/10 text-teal-400 border border-teal-500/20">DBT Income</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Pradhan Mantri Kisan Samman Nidhi: Central sector scheme offering direct income support of <strong>₹6,000 per year</strong> in 3 equal installments of ₹2,000 every 4 months directly into bank accounts of landholding farmer families.
+          </p>
+          <ul class="text-[11px] text-slate-400 space-y-1 list-disc list-inside">
+            <li>Originally for small/marginal farmers; later expanded to all farmers.</li>
+            <li>Aadhaar-seeded Direct Benefit Transfer (DBT).</li>
+          </ul>
+        </div>
+
+        <!-- Ayushman Bharat PM-JAY -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="text-sm font-bold text-emerald-300 flex items-center gap-2">
+              <i data-lucide="heart-pulse" class="w-4 h-4 text-emerald-400"></i> Ayushman Bharat (PM-JAY)
+            </div>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Health Cover</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            World's largest government-funded health assurance initiative launched in 2018. Provides <strong>₹5 Lakh annual cover per family</strong> for secondary and tertiary care hospitalization to over 12 crore poor and vulnerable families (bottom 40% based on SECC 2011).
+          </p>
+          <ul class="text-[11px] text-slate-400 space-y-1 list-disc list-inside">
+            <li>Completely cashless and paperless access.</li>
+            <li>Includes pre and post-hospitalization costs.</li>
+          </ul>
+        </div>
+
+        <!-- PM Jan Dhan Yojana -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="text-sm font-bold text-cyan-300 flex items-center gap-2">
+              <i data-lucide="credit-card" class="w-4 h-4 text-cyan-400"></i> PM Jan Dhan Yojana (2014)
+            </div>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Financial Inclusion</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            National Mission for Financial Inclusion providing universal access to banking facilities with zero minimum balance ("Basic Savings Bank Deposit Account" - BSBDA).
+          </p>
+          <ul class="text-[11px] text-slate-400 space-y-1 list-disc list-inside">
+            <li>RuPay Debit card with ₹2 Lakh inbuilt accident insurance.</li>
+            <li>Overdraft facility of up to ₹10,000 for account holders.</li>
+            <li>JAM Trinity backbone (Jan Dhan, Aadhaar, Mobile).</li>
+          </ul>
+        </div>
+
+        <!-- PM MUDRA Yojana -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="text-sm font-bold text-amber-300 flex items-center gap-2">
+              <i data-lucide="coins" class="w-4 h-4 text-amber-400"></i> PM MUDRA Yojana (2015)
+            </div>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">Micro Credit</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Micro Units Development & Refinance Agency providing collateral-free institutional credit to non-corporate, non-farm small/micro enterprises across 3 stages:
+          </p>
+          <ul class="text-[11px] text-slate-400 space-y-1 list-disc list-inside">
+            <li><strong>Shishu:</strong> Loans up to ₹50,000.</li>
+            <li><strong>Kishore:</strong> Loans from ₹50,000 to ₹5,00,000.</li>
+            <li><strong>Tarun:</strong> Loans from ₹5,00,000 to ₹10,00,000 (raised to ₹20L in Budget 2024).</li>
+          </ul>
+        </div>
+
+        <!-- Jal Jeevan Mission -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <div class="text-sm font-bold text-blue-300 flex items-center gap-2">
+              <i data-lucide="droplet" class="w-4 h-4 text-blue-400"></i> Jal Jeevan Mission (2019)
+            </div>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Har Ghar Jal</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Executed by Ministry of Jal Shakti to provide <strong>Functional Household Tap Connection (FHTC)</strong> to every rural home, delivering 55 litres per capita per day (lpcd) of potable drinking water on a regular and long-term basis.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: INCOME INEQUALITY & SOCIAL SECURITY -->
+    <section id="inequality-metrics" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="pie-chart" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Income Inequality Measurement & Social Security Nets</h2>
+          <p class="text-xs text-slate-400 font-light">Lorenz curve geometry, Gini coefficient dynamics, and micro-insurance programs</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-emerald-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="trending-up" class="w-4 h-4"></i> The Lorenz Curve & Gini Coefficient
+          </h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            <strong>Lorenz Curve:</strong> Developed by Max O. Lorenz (1905). A graphical representation of income or wealth distribution where the horizontal axis plots the cumulative percentage of population and the vertical axis plots the cumulative percentage of national income received.
+          </p>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            <strong>Gini Coefficient:</strong> Formulated by Corrado Gini (1912). Measures the ratio of the area between the line of perfect equality (45-degree diagonal) and the Lorenz curve to the total area under the line of equality:
+          </p>
+          <div class="p-2.5 rounded-lg bg-slate-950 font-mono text-[11px] text-emerald-400 border border-slate-800 text-center">
+            Gini Coefficient = Area A / (Area A + Area B)
+          </div>
+          <p class="text-[11px] text-slate-400">
+            A Gini value of <strong>0</strong> represents perfect equality (everyone has identical income); a value of <strong>1</strong> denotes absolute inequality (one single individual possesses all national income).
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-teal-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="shield" class="w-4 h-4"></i> Social Security Architecture
+          </h3>
+          <div class="space-y-2.5 text-xs">
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="font-bold text-white">Atal Pension Yojana (APY):</span> Guaranteed monthly pension of ₹1,000 to ₹5,000 after age 60 for unorganized workers (entry age 18-40 years; administered by PFRDA).
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="font-bold text-white">PM Jeevan Jyoti Bima Yojana (PMJJBY):</span> Term life insurance cover of ₹2 Lakh for death due to any reason (premium ₹436/year for ages 18-50).
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="font-bold text-white">PM Suraksha Bima Yojana (PMSBY):</span> Accidental death and disability cover of ₹2 Lakh (premium ₹20/year for ages 18-70).
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="font-bold text-white">PM SVANidhi:</span> Microcredit working capital facility of ₹10k, ₹20k, and ₹50k for urban street vendors with 7% interest subsidy.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: FLASHCARDS -->
+    <section id="flashcards" class="space-y-6 pt-4 border-t border-slate-800">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center gap-2.5">
+            <i data-lucide="sparkles" class="w-5 h-5 text-emerald-400"></i> Active Recall Flashcards
+          </h2>
+          <p class="text-xs text-slate-400 font-light">Interactive 3D flip cards covering poverty committees, unemployment definitions, and welfare numbers</p>
+        </div>
+        <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">12 Cards</span>
+      </div>
+
+      <div id="flashcardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- SECTION 6: PRELIMS PRACTICE QUIZ -->
+    <section id="quiz" class="space-y-6 pt-6 border-t border-slate-800">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center justify-center gap-2">
+          <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i> High-Yield Prelims Exam Simulator
+        </h2>
+        <p class="text-xs text-slate-400 font-light">Five standard multiple-choice questions on Tendulkar line, disguised unemployment, and welfare provisions</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-2">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg shadow-emerald-500/20 flex items-center gap-2">
+          <i data-lucide="award" class="w-4 h-4"></i> Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all flex items-center gap-2">
+          <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Reset Quiz
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 mt-16 py-8 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>Lucent General Knowledge Interactive Encyclopedia • Section IV: Indian Economy</p>
+      <div class="flex items-center gap-4">
+        <a href="economy_budget_taxation_fiscal.html" class="hover:text-emerald-400 flex items-center gap-1"><i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Prev: Ch 33</a>
+        <a href="hub.html" class="hover:text-emerald-400">Master Index</a>
+        <a href="economy_foreign_trade_bop_organizations.html" class="hover:text-emerald-400 flex items-center gap-1">Next: Ch 35 <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-emerald-400">Rural Development</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+    
+    <div class="flex-1 overflow-hidden relative flex items-center justify-center p-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 pt-2 border-t border-slate-800">
+      Use Mouse Wheel to Zoom in/out • Click and Drag to Pan • Press Esc to Close
+    </div>
+  </div>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
+          <i data-lucide="search" class="w-3.5 h-3.5"></i> Search Poverty & Schemes Topics
+        </span>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type Tendulkar, Disguised Unemployment, MGNREGA, or MUDRA..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-emerald-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Search over 30+ keywords in Chapter 34...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/economy_poverty_unemployment_schemes.js"></script>
+</body>
+</html>

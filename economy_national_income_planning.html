@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>National Income & Economic Planning | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-emerald-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-emerald-400 hover:text-emerald-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-600/10 border border-emerald-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="trending-up" class="w-5 h-5 text-emerald-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-emerald-300">LUCENT<span class="text-emerald-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">National Income & Planning</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <!-- Quick Search Button -->
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+        <!-- Chapter Switcher Dropdown -->
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-emerald-400 cursor-pointer">
+          <optgroup label="Ancient India">
+            <option value="index.html">01. Indus Valley Civilization</option>
+            <option value="vedic.html">02. Vedic Culture</option>
+            <option value="mahajanapadas.html">03. Mahajanapadas & Magadha</option>
+            <option value="religions.html">04. Buddhism & Jainism</option>
+            <option value="maurya.html">05. The Mauryan Empire</option>
+            <option value="post_maurya.html">06. Post-Maurya & Sangam</option>
+            <option value="gupta.html">07. Gupta Age & Harsha</option>
+          </optgroup>
+          <optgroup label="Medieval India">
+            <option value="early_medieval.html">08. Early Medieval & Rajputs</option>
+            <option value="delhi_sultanate.html">09. The Delhi Sultanate</option>
+            <option value="vijayanagar_bahmani.html">10. Vijayanagar & Bahmani</option>
+            <option value="mughal_empire.html">11. The Mughal Empire</option>
+            <option value="marathas.html">12. The Marathas & Later Mughals</option>
+            <option value="bhakti_sufi.html">13. Bhakti & Sufi Movements</option>
+          </optgroup>
+          <optgroup label="Modern India">
+            <option value="european_expansion.html">14. European Expansion in India</option>
+            <option value="economic_revolts.html">15. Economic Impact & Tribal Revolts</option>
+            <option value="reforms.html">16. Socio-Religious Reform Movements</option>
+            <option value="revolt_1857.html">17. The Great Revolt of 1857</option>
+            <option value="national_movement_early.html">18. Early National Movement (1885–1919)</option>
+            <option value="gandhian_era.html">19. The Gandhian Era (1919–1947)</option>
+            <option value="viceroys_acts.html">20. British Viceroys & Acts</option>
+          </optgroup>
+          <optgroup label="Geography">
+            <option value="geo_universe_earth.html">21. Universe, Solar System & Earth</option>
+            <option value="geo_geomorphology_climatology.html">22. Geomorphology, Atmosphere & Oceans</option>
+            <option value="geo_indian_physiography.html">23. Indian Physiography & Passes</option>
+            <option value="geo_indian_drainage.html">24. Indian Drainage & River Basins</option>
+            <option value="geo_climate_soils_agriculture.html">25. Climate, Soils, Agriculture & Minerals</option>
+          </optgroup>
+          <optgroup label="Indian Polity">
+            <option value="polity_framework_preamble.html">26. Constitutional Framework & Preamble</option>
+            <option value="polity_rights_dpsp_duties.html">27. Fundamental Rights, DPSP & Duties</option>
+            <option value="polity_union_parliament.html">28. Union Executive & Parliament</option>
+            <option value="polity_judiciary.html">29. Supreme Court & High Courts</option>
+            <option value="polity_state_panchayat_amendments.html">30. State Executive, Panchayats & Amendments</option>
+          </optgroup>
+          <optgroup label="Indian Economy">
+            <option value="economy_national_income_planning.html" selected>31. National Income & Economic Planning</option>
+            <option value="economy_money_banking_rbi.html">32. Money, Banking & RBI Monetary Policy</option>
+            <option value="economy_budget_taxation_fiscal.html">33. Union Budget, Taxation & Finance Commission</option>
+            <option value="economy_poverty_unemployment_schemes.html">34. Poverty, Unemployment & Welfare Schemes</option>
+            <option value="economy_foreign_trade_bop_organizations.html">35. Foreign Trade, Balance of Payments & WTO</option>
+          </optgroup>
+        </select>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+    <!-- HERO SECTION -->
+    <section class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-slate-950 p-8 sm:p-12 shadow-2xl">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-500/10 via-teal-500/5 to-transparent pointer-events-none"></div>
+      <div class="relative z-10 max-w-4xl space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-semibold uppercase tracking-wider">
+          <i data-lucide="bar-chart-3" class="w-3.5 h-3.5"></i>
+          Section 31 • Indian Economy: Macro Aggregates & Planning
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-black tracking-tight text-slate-100">
+          National Income Aggregates & <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-200">Economic Planning of India</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+          An exhaustive, high-yield guide to India's macroeconomic architecture: GDP, GNP, NNP at Factor Cost, per capita income formulas, Dadabhai Naoroji's first estimates, the 12 Five-Year Plans (1951–2017) matrix, and the NITI Aayog paradigm shift for UPSC, APSC & State PSCs.
+        </p>
+
+        <!-- Quick Jump Filter Badges -->
+        <div class="flex flex-wrap gap-2 pt-2">
+          <a href="#national-income" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-emerald-300 transition-colors">1. National Income Aggregates</a>
+          <a href="#planning-history" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-teal-300 transition-colors">2. Pre-Independence Plans</a>
+          <a href="#five-year-plans" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-amber-300 transition-colors">3. 12 Five-Year Plans Matrix</a>
+          <a href="#niti-aayog" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-cyan-300 transition-colors">4. NITI Aayog Structure</a>
+          <a href="#flashcards" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-indigo-300 transition-colors">Flashcards</a>
+          <a href="#quiz" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-rose-300 transition-colors">Prelims Quiz</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: NATIONAL INCOME AGGREGATES -->
+    <section id="national-income" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2.5">
+            <i data-lucide="line-chart" class="w-6 h-6 text-emerald-400"></i>
+            1. National Income Concepts & Macroeconomic Aggregates
+          </h2>
+          <p class="text-xs text-slate-400">Measurement of economic output, value added, factor costs, and inflation adjustments</p>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono">Lucent GK pp. 211–217</span>
+      </div>
+
+      <!-- Hero Gallery Card: BSE Dalal Street -->
+      <div class="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 group cursor-pointer" onclick="openLightbox('assets/images/bombay_stock_exchange.jpg', 'Bombay Stock Exchange (BSE, Dalal Street, Mumbai)', 'Phiroze Jeejeebhoy Towers on Dalal Street, Mumbai. Established in 1875 as the Native Share & Stock Brokers\' Association, BSE is Asia\'s oldest stock exchange, symbolizing capital formation and economic output.')">
+        <img src="assets/images/bombay_stock_exchange.jpg" alt="Bombay Stock Exchange" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex items-end p-6">
+          <div class="space-y-1">
+            <span class="text-xs font-mono uppercase text-emerald-400 bg-emerald-500/20 px-2 py-0.5 rounded border border-emerald-500/30">Click to Zoom (Full Detail)</span>
+            <h3 class="text-lg font-bold text-white">Capital Formation & Economic Growth (Dalal Street, Mumbai)</h3>
+            <p class="text-xs text-slate-300 max-w-2xl">National Income aggregates measure the monetary value of goods and services produced, reflecting capital accumulation, per capita welfare, and productivity.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Macro Aggregates 4-Card Formula Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- GDP -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-mono text-xs font-bold">GDP</span>
+          <h4 class="text-sm font-bold text-slate-100">Gross Domestic Product</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Total monetary value of all final goods and services produced <strong class="text-slate-200">within the domestic geographical territory</strong> of a country during a year, regardless of whether produced by citizens or foreign residents.
+          </p>
+          <div class="text-[11px] font-mono text-emerald-300 pt-2 border-t border-slate-800">
+            GDP = C + I + G + (X - M)
+          </div>
+        </div>
+
+        <!-- GNP -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <span class="px-2 py-0.5 rounded bg-teal-500/10 text-teal-400 font-mono text-xs font-bold">GNP</span>
+          <h4 class="text-sm font-bold text-slate-100">Gross National Product</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Total value of goods and services produced by the <strong class="text-slate-200">normal residents of a country</strong>, regardless of where they are located. Includes net income from abroad.
+          </p>
+          <div class="text-[11px] font-mono text-teal-300 pt-2 border-t border-slate-800">
+            GNP = GDP + NFIA
+          </div>
+        </div>
+
+        <!-- NNP / National Income -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <span class="px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 font-mono text-xs font-bold">NNP at FC</span>
+          <h4 class="text-sm font-bold text-slate-100">National Income (True Measure)</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Net National Product at Factor Cost. Deducts wear and tear (depreciation) and net indirect taxes (Indirect taxes minus subsidies) from GNP.
+          </p>
+          <div class="text-[11px] font-mono text-cyan-300 pt-2 border-t border-slate-800">
+            NI = GNP - Depreciation - NIT
+          </div>
+        </div>
+
+        <!-- Per Capita Income -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 font-mono text-xs font-bold">PCI</span>
+          <h4 class="text-sm font-bold text-slate-100">Per Capita Income</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Average income earned per person in a given country in a specified year. Evaluates the standard of living and economic well-being of the population.
+          </p>
+          <div class="text-[11px] font-mono text-amber-300 pt-2 border-t border-slate-800">
+            PCI = National Income / Total Population
+          </div>
+        </div>
+      </div>
+
+      <!-- History of National Income Estimates Table -->
+      <div class="p-5 rounded-2xl bg-slate-900/40 border border-slate-800 space-y-3">
+        <h4 class="text-sm font-bold text-slate-200 flex items-center gap-2">
+          <i data-lucide="history" class="w-4 h-4 text-emerald-400"></i> Milestones in India's National Income Estimation
+        </h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-slate-300 leading-relaxed">
+          <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
+            <strong class="text-amber-400 block text-xs mb-1">1. Dadabhai Naoroji (1867–68)</strong>
+            First attempt in India. Published in <em>'Poverty and Un-British Rule in India'</em>. Estimated per capita income as <strong class="text-white">₹20 per annum</strong>.
+          </div>
+          <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
+            <strong class="text-teal-400 block text-xs mb-1">2. Prof. V.K.R.V. Rao (1931–32)</strong>
+            First <strong class="text-white">scientific estimate</strong> combining census of output for agriculture and income tax data for industry. Estimated per capita income as <strong class="text-white">₹62</strong>.
+          </div>
+          <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
+            <strong class="text-cyan-400 block text-xs mb-1">3. National Income Committee (1949)</strong>
+            Headed by <strong class="text-white">Prof. P.C. Mahalanobis</strong> with Prof. D.R. Gadgil and Dr. V.K.R.V. Rao. Paved way for the Central Statistics Office (CSO / NSO under MoSPI). Current base year: <strong class="text-white">2011–12</strong>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: PRE-INDEPENDENCE PLANNING INITIATIVES -->
+    <section id="planning-history" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2.5">
+            <i data-lucide="compass" class="w-6 h-6 text-teal-400"></i>
+            2. Genesis of Economic Planning in India (Pre-Independence)
+          </h2>
+          <p class="text-xs text-slate-400">From Sir M. Visvesvaraya's 1934 vision to the Sarvodaya Plan of 1950</p>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-teal-500/10 border border-teal-500/30 text-teal-300 text-xs font-mono">Pre-1950 Blueprints</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800 space-y-1">
+          <span class="text-xs font-mono text-amber-400 font-bold">1934</span>
+          <h5 class="text-xs font-bold text-slate-100">Visvesvaraya Plan</h5>
+          <p class="text-[11px] text-slate-400 leading-snug">Authored by Sir M. Visvesvaraya in book <em>'Planned Economy for India'</em>. Proposed a 10-year plan to double national income.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800 space-y-1">
+          <span class="text-xs font-mono text-emerald-400 font-bold">1938</span>
+          <h5 class="text-xs font-bold text-slate-100">National Planning Committee</h5>
+          <p class="text-[11px] text-slate-400 leading-snug">Set up by INC President <strong class="text-slate-200">Netaji Subhas Chandra Bose</strong> at Haripura; chaired by <strong class="text-slate-200">Jawaharlal Nehru</strong>.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800 space-y-1">
+          <span class="text-xs font-mono text-cyan-400 font-bold">1944</span>
+          <h5 class="text-xs font-bold text-slate-100">The Bombay Plan</h5>
+          <p class="text-[11px] text-slate-400 leading-snug">Formulated by 8 top industrialists (J.R.D. Tata, G.D. Birla, Purshotamdas Thakurdas). Emphasized state-led heavy industry.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800 space-y-1">
+          <span class="text-xs font-mono text-yellow-400 font-bold">1944–45</span>
+          <h5 class="text-xs font-bold text-slate-100">Gandhian & People's Plans</h5>
+          <p class="text-[11px] text-slate-400 leading-snug">Gandhian Plan by <strong class="text-slate-200">S.N. Agarwal</strong> (cottage & village focus); People's Plan (1945) by <strong class="text-slate-200">M.N. Roy</strong> (Marxist/socialist agricultural priority).</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800 space-y-1">
+          <span class="text-xs font-mono text-purple-400 font-bold">1950</span>
+          <h5 class="text-xs font-bold text-slate-100">The Sarvodaya Plan</h5>
+          <p class="text-[11px] text-slate-400 leading-snug">Drafted by <strong class="text-slate-200">Jayaprakash Narayan (JP)</strong> inspired by Vinoba Bhave. Advocated decentralization and self-sufficient village communities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: THE TWELVE FIVE-YEAR PLANS (1951–2017) -->
+    <section id="five-year-plans" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2.5">
+            <i data-lucide="layers" class="w-6 h-6 text-amber-400"></i>
+            3. Master Matrix of the 12 Five-Year Plans (1951–2017)
+          </h2>
+          <p class="text-xs text-slate-400">Chronological comparative record of economic models, growth targets, and landmark events</p>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">12 FYPs</span>
+      </div>
+
+      <!-- Five Year Plans Master Table -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/40 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left">
+            <thead class="bg-slate-950/80 text-slate-400 uppercase font-mono border-b border-slate-800">
+              <tr>
+                <th class="p-3">Plan & Period</th>
+                <th class="p-3">Economic Model / Architect</th>
+                <th class="p-3">Target vs Actual Growth</th>
+                <th class="p-3">Primary Focus & Historic Milestones</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-300">
+              <tr class="hover:bg-slate-800/30 bg-emerald-500/5">
+                <td class="p-3 font-bold text-emerald-400">1st Plan (1951–56)</td>
+                <td class="p-3">Harrod-Domar Model</td>
+                <td class="p-3 font-mono text-emerald-300">Target: 2.1% | Actual: <strong class="text-white">3.6%</strong> (Success)</td>
+                <td class="p-3">Focus on agriculture, price stability, and irrigation. Launched Bhakra Nangal, Hirakud, Damodar Valley (DVC) projects; five IITs established.</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30 bg-blue-500/5">
+                <td class="p-3 font-bold text-cyan-400">2nd Plan (1956–61)</td>
+                <td class="p-3">Nehru-Mahalanobis Model</td>
+                <td class="p-3 font-mono text-cyan-300">Target: 4.5% | Actual: <strong class="text-white">4.3%</strong></td>
+                <td class="p-3">Focus on rapid industrialization and heavy capital goods. Established <strong class="text-white">Bhilai, Durgapur, Rourkela</strong> steel plants, Atomic Energy Commission, TIFR.</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30 bg-rose-500/5">
+                <td class="p-3 font-bold text-rose-400">3rd Plan (1961–66)</td>
+                <td class="p-3">Gadgil Yojana (D.R. Gadgil)</td>
+                <td class="p-3 font-mono text-rose-300">Target: 5.6% | Actual: <strong class="text-white">2.8%</strong> (Failure)</td>
+                <td class="p-3">Aimed at self-reliant economy. Failed due to <strong class="text-rose-400">1962 Sino-Indian War, 1965 Indo-Pak War</strong>, and severe drought. Led to devaluation of Rupee (1966).</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-amber-300">Plan Holidays (1966–69)</td>
+                <td class="p-3">Three Annual Plans</td>
+                <td class="p-3 font-mono text-slate-400">Annual targets</td>
+                <td class="p-3"><strong class="text-emerald-400">Green Revolution launched</strong> with HYV Mexican dwarf seeds, chemical fertilizers, and tubewell irrigation.</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-emerald-400">4th Plan (1969–74)</td>
+                <td class="p-3">Ashok Rudra & A.S. Manne</td>
+                <td class="p-3 font-mono text-amber-300">Target: 5.7% | Actual: <strong class="text-white">3.3%</strong></td>
+                <td class="p-3">"Growth with stability and progressive achievement of self-reliance". <strong class="text-white">14 major commercial banks nationalized</strong> (July 19, 1969); 1971 Bangladesh War; Pokhran-I nuclear test (1974).</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30 bg-amber-500/5">
+                <td class="p-3 font-bold text-amber-400">5th Plan (1974–79)</td>
+                <td class="p-3">D.D. Dhar Model</td>
+                <td class="p-3 font-mono text-emerald-300">Target: 4.4% | Actual: <strong class="text-white">4.8%</strong> (Success)</td>
+                <td class="p-3"><strong class="text-amber-300">"Garibi Hatao" (Removal of Poverty)</strong> and self-reliance; 20-Point Programme. Terminated in 1978 (1 year early) by Janata Party government.</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-yellow-300">Rolling Plan (1978–80)</td>
+                <td class="p-3">Gunnar Myrdal framework</td>
+                <td class="p-3 font-mono text-slate-400">Annual revisions</td>
+                <td class="p-3">Introduced by Janata Party; rejected when Congress returned to power in 1980.</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30 bg-emerald-500/5">
+                <td class="p-3 font-bold text-emerald-400">6th Plan (1980–85)</td>
+                <td class="p-3">Investment Yojana</td>
+                <td class="p-3 font-mono text-emerald-300">Target: 5.2% | Actual: <strong class="text-white">5.7%</strong> (Success)</td>
+                <td class="p-3">Direct attack on poverty (IRDP, NREP, TRYSEM). Established <strong class="text-white">NABARD (1982)</strong> and EXIM Bank (1982). 6 more banks nationalized (1980). Marked end of Nehruvian socialism.</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30 bg-emerald-500/5">
+                <td class="p-3 font-bold text-teal-400">7th Plan (1985–90)</td>
+                <td class="p-3">Pranab Mukherjee Model</td>
+                <td class="p-3 font-mono text-emerald-300">Target: 5.0% | Actual: <strong class="text-white">6.0%</strong> (Success)</td>
+                <td class="p-3">"Food, Work and Productivity"; first time private sector given priority over public sector. Launched Jawahar Rozgar Yojana (JRY 1989); Blue Revolution in fisheries.</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-rose-300">Annual Plans (1990–92)</td>
+                <td class="p-3">Crisis Management</td>
+                <td class="p-3 font-mono text-slate-400">BOP Crisis</td>
+                <td class="p-3">Severe Balance of Payments crisis (foreign reserves down to 2 weeks). India pledged gold to Bank of England. <strong class="text-amber-300">LPG Reforms (1991)</strong> initiated under P.V. Narasimha Rao & Manmohan Singh.</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30 bg-emerald-500/5">
+                <td class="p-3 font-bold text-emerald-400">8th Plan (1992–97)</td>
+                <td class="p-3">John W. Miller Model</td>
+                <td class="p-3 font-mono text-emerald-300">Target: 5.6% | Actual: <strong class="text-white">6.8%</strong> (Success)</td>
+                <td class="p-3">Focus on human resource development, employment, education. India joined WTO on <strong class="text-white">Jan 1, 1995</strong>. High growth achieved post-liberalization.</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-cyan-400">9th Plan (1997–2002)</td>
+                <td class="p-3">Social Justice Model</td>
+                <td class="p-3 font-mono text-amber-300">Target: 6.5% | Actual: <strong class="text-white">5.4%</strong></td>
+                <td class="p-3">"Growth with Social Justice and Equity". Coincided with 50th year of Independence; impacted by East Asian financial crisis and Kargil War (1999).</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30 bg-emerald-500/5">
+                <td class="p-3 font-bold text-emerald-400">10th Plan (2002–07)</td>
+                <td class="p-3">Human Development Target</td>
+                <td class="p-3 font-mono text-emerald-300">Target: 8.0% | Actual: <strong class="text-white">7.6%</strong></td>
+                <td class="p-3">Aim to double per capita income in 10 years, reduce poverty ratio by 5 percentage points, universal primary education by 2007.</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30 bg-emerald-500/5">
+                <td class="p-3 font-bold text-teal-400">11th Plan (2007–12)</td>
+                <td class="p-3">Prof. C. Rangarajan</td>
+                <td class="p-3 font-mono text-emerald-300">Target: 9.0% | Actual: <strong class="text-white">8.0%</strong></td>
+                <td class="p-3"><strong class="text-white">"Towards Faster and More Inclusive Growth"</strong>. Highest recorded average GDP growth despite 2008 Global Financial Crisis.</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-amber-400">12th Plan (2012–17)</td>
+                <td class="p-3">Planning Commission</td>
+                <td class="p-3 font-mono text-slate-300">Target: 8.0% | Final Plan</td>
+                <td class="p-3"><strong class="text-white">"Faster, Sustainable, and More Inclusive Growth"</strong>. Last Five-Year Plan of India. Replaced in 2015 by NITI Aayog.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: NITI AAYOG -->
+    <section id="niti-aayog" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2.5">
+            <i data-lucide="zap" class="w-6 h-6 text-cyan-400"></i>
+            4. NITI Aayog: The National Institution for Transforming India
+          </h2>
+          <p class="text-xs text-slate-400">Established January 1, 2015 • Fostering Cooperative & Competitive Federalism</p>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono">Think Tank</span>
+      </div>
+
+      <!-- Planning Commission vs NITI Aayog Comparison -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-0.5 rounded bg-rose-500/10 text-rose-300 font-mono text-xs font-bold">Planning Commission (1950–2014)</span>
+            <span class="text-xs text-slate-500">Old Top-Down Model</span>
+          </div>
+          <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+            <li>• Imposed centralized "one-size-fits-all" Five-Year Plans on States.</li>
+            <li>• Possessed direct powers to allocate plan funds to Central ministries and State governments.</li>
+            <li>• States had passive participation via the National Development Council (NDC).</li>
+            <li>• Relied on bureaucratic control and command economy directives.</li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-emerald-500/30 space-y-3 bg-emerald-500/5">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-xs font-bold">NITI Aayog (Jan 1, 2015 – Present)</span>
+            <span class="text-xs text-emerald-400 font-semibold">New Bottom-Up Model</span>
+          </div>
+          <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+            <li>• Policy think-tank embodying <strong class="text-white">Cooperative and Competitive Federalism</strong>.</li>
+            <li>• <strong class="text-rose-400">NO fund allocation powers</strong> (financial devolution rests with Ministry of Finance).</li>
+            <li>• <strong class="text-emerald-300">Governing Council:</strong> Prime Minister (Chairperson), Chief Ministers of all States, CMs of UTs with assemblies, Lt. Governors of UTs.</li>
+            <li>• Publishes benchmark indices: SDG India Index, Multidimensional Poverty Index (MPI), School Education Quality Index (SEQI), Innovation Index.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE 3D FLASHCARDS -->
+    <section id="flashcards" class="space-y-6 pt-4 border-t border-slate-800">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+            <i data-lucide="layers-3" class="w-6 h-6 text-emerald-400"></i> Active Recall Flashcards (3D Flip)
+          </h2>
+          <p class="text-xs text-slate-400">Click any card to flip between Question and Prelims Answer</p>
+        </div>
+        <span class="text-xs font-mono text-slate-400">12 High-Yield Cards</span>
+      </div>
+
+      <div id="flashcardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- PRELIMS SELF-ASSESSMENT QUIZ -->
+    <section id="quiz" class="space-y-6 pt-6 border-t border-slate-800">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+          <i data-lucide="check-square" class="w-6 h-6 text-emerald-400"></i> Prelims Self-Assessment Quiz
+        </h2>
+        <p class="text-xs text-slate-400">Test your mastery over National Income aggregates, Five-Year Plans, and NITI Aayog</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-4">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg">
+          Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all">
+          Reset Quiz
+        </button>
+      </div>
+    </section>
+
+    <!-- SECTION NAVIGATION FOOTER -->
+    <footer class="pt-12 border-t border-slate-800">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <a href="polity_state_panchayat_amendments.html" class="flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-emerald-400 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Chapter 30: State Executive & Panchayati Raj
+        </a>
+        <a href="hub.html" class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 hover:text-emerald-400 hover:border-emerald-500/40 transition-all">
+          Subject Knowledge Hub
+        </a>
+        <a href="economy_money_banking_rbi.html" class="flex items-center gap-2 text-xs font-semibold text-emerald-400 hover:text-emerald-300 transition-colors">
+          Chapter 32: Money, Banking & RBI Monetary Policy <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX MODAL -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-emerald-400">Economic Landmark</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+
+    <!-- Viewer Canvas -->
+    <div class="relative flex-1 flex items-center justify-center overflow-hidden my-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 border-t border-slate-800/80 pt-2">
+      Tip: Use mouse wheel to zoom in/out • Click and drag to pan when zoomed
+    </div>
+  </div>
+
+  <!-- QUICK SEARCH MODAL (ESC TO CLOSE) -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="w-full max-w-lg bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <div class="flex items-center gap-2 text-slate-400 text-xs font-semibold">
+          <i data-lucide="search" class="w-4 h-4 text-emerald-400"></i> Search National Income & Planning
+        </div>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-slate-200 text-xs">ESC to exit</button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type GDP, plan number, Mahalanobis, or NITI Aayog..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-emerald-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Type keywords to search sections...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT INCLUSION -->
+  <script src="assets/js/economy_national_income_planning.js"></script>
+</body>
+</html>

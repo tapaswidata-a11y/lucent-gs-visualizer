@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foreign Trade, BoP & International Organizations | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-emerald-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-emerald-400 hover:text-emerald-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-600/10 border border-emerald-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="globe" class="w-5 h-5 text-emerald-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-emerald-300">LUCENT<span class="text-emerald-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">Foreign Trade & BoP</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-emerald-400 cursor-pointer">
+          <optgroup label="Section IV: Indian Economy">
+            <option value="economy_national_income_planning.html">31. National Income & Planning</option>
+            <option value="economy_money_banking_rbi.html">32. Money, Banking & RBI</option>
+            <option value="economy_budget_taxation_fiscal.html">33. Union Budget, Taxation & FC</option>
+            <option value="economy_poverty_unemployment_schemes.html">34. Poverty, Employment & Schemes</option>
+            <option value="economy_foreign_trade_bop_organizations.html" selected>35. Foreign Trade, BoP & WTO</option>
+          </optgroup>
+          <optgroup label="Section III: Indian Polity">
+            <option value="polity_framework_preamble.html">26. Constitutional Framework</option>
+            <option value="polity_rights_dpsp_duties.html">27. Fundamental Rights & DPSP</option>
+            <option value="polity_union_parliament.html">28. Union Executive & Parliament</option>
+            <option value="polity_judiciary.html">29. Judiciary & Legal System</option>
+            <option value="polity_state_panchayat_amendments.html">30. State Govt, PRIs & Amendments</option>
+          </optgroup>
+        </select>
+
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <!-- HERO SECTION -->
+    <div class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900/90 to-emerald-950/40 p-6 sm:p-10 shadow-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-widest">
+            <i data-lucide="ship" class="w-3.5 h-3.5"></i> Section 35 • External Sector & Global Economic Architecture
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-extrabold text-white tracking-tight leading-tight">
+            Foreign Trade, <span class="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">Balance of Payments</span> & WTO
+          </h1>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+            An in-depth guide to India's external economic architecture: Current vs Capital Accounts in the Balance of Payments, full current account convertibility, Tarapore roadmaps, the 4 components of Forex reserves, the Bretton Woods twins (IMF & World Bank), and the World Trade Organization (TRIPS, TRIMS & AoA).
+          </p>
+          <div class="flex flex-wrap gap-3 pt-2 text-xs font-medium">
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">Balance of Payments (BoP)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">CAD vs BoT</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">Tarapore Committee (FCAC)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">IMF & SDR Basket</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-emerald-300 border border-slate-700/60">WTO (TRIPS / AoA Boxes)</span>
+          </div>
+        </div>
+
+        <!-- Hero Zoomable Image -->
+        <div class="lg:col-span-5 relative group cursor-pointer" onclick="openLightbox('assets/images/trade_container_port.jpg', 'Maritime Container Terminal Port', 'Modern containerized maritime trade: maritime logistics handles over 95% of India’s foreign merchandise trade by volume, linking domestic supply chains to global markets.')">
+          <div class="relative rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl aspect-[4/3] bg-slate-900">
+            <img src="assets/images/trade_container_port.jpg" alt="Container Port" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-slate-200">
+              <span class="font-medium flex items-center gap-1.5"><i data-lucide="anchor" class="w-3.5 h-3.5 text-emerald-400"></i> International Trade & Ports</span>
+              <span class="bg-slate-900/80 px-2 py-0.5 rounded text-[10px] text-emerald-300 border border-slate-700 flex items-center gap-1"><i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Zoom</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- QUICK NAV TABS -->
+    <nav class="flex overflow-x-auto gap-2 p-1.5 bg-slate-900/60 border border-slate-800/80 rounded-2xl backdrop-blur-md text-xs font-medium">
+      <a href="#bop-structure" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="scale" class="w-3.5 h-3.5 text-emerald-400"></i> BoP Structure</a>
+      <a href="#rupee-convertibility" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="coins" class="w-3.5 h-3.5 text-emerald-400"></i> Convertibility & Forex</a>
+      <a href="#bretton-woods" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="landmark" class="w-3.5 h-3.5 text-emerald-400"></i> IMF & World Bank</a>
+      <a href="#wto-framework" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="globe-2" class="w-3.5 h-3.5 text-emerald-400"></i> WTO & Trade Rules</a>
+      <a href="#regional-banks" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="building" class="w-3.5 h-3.5 text-emerald-400"></i> ADB / NDB / AIIB</a>
+      <a href="#flashcards" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-400"></i> Flashcards</a>
+      <a href="#quiz" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="help-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Prelims Quiz</a>
+    </nav>
+
+    <!-- SECTION 1: BALANCE OF PAYMENTS (BOP) STRUCTURE -->
+    <section id="bop-structure" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="scale" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Structure of the Balance of Payments (BoP)</h2>
+          <p class="text-xs text-slate-400 font-light">Double-entry accounting of all cross-border transactions of an economy</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Current Account -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-base font-bold text-emerald-300 flex items-center gap-2">
+              <i data-lucide="arrow-down-left" class="w-4 h-4 text-emerald-400"></i> 1. Current Account
+            </h3>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Operational Trade</span>
+          </div>
+
+          <div class="space-y-3 text-xs">
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="font-semibold text-emerald-400">A. Merchandise Trade (Visible Trade):</span>
+              <p class="text-slate-300 mt-1">
+                Export and import of physical goods (crude oil, precious stones, electronics, chemicals).<br>
+                <span class="text-rose-400 font-mono font-medium">Balance of Trade (BoT) = Visible Exports − Visible Imports</span> (Historically in deficit for India due to crude oil import reliance).
+              </p>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="font-semibold text-teal-400">B. Invisibles:</span>
+              <ul class="list-disc list-inside mt-1 space-y-1 text-slate-300">
+                <li><strong>Services (Non-factor services):</strong> Software/IT services, business outsourcing, tourism, transport, finance (Consistently runs large surplus).</li>
+                <li><strong>Transfers (Unilateral transfers):</strong> Remittances sent home by NRI diaspora, foreign grants, gifts (India is the world's largest recipient of inward remittances >$120 Billion).</li>
+                <li><strong>Income (Factor income):</strong> Net investment income, profits, dividends, and interest on external debt.</li>
+              </ul>
+            </div>
+            
+            <p class="text-[11px] text-slate-400 italic">
+              *Current Account Deficit (CAD) occurs when value of imported goods and services exceeds exports + net transfers. CAD is financed through capital inflows.
+            </p>
+          </div>
+        </div>
+
+        <!-- Capital Account -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-base font-bold text-teal-300 flex items-center gap-2">
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-teal-400"></i> 2. Capital Account
+            </h3>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-teal-500/10 text-teal-400 border border-teal-500/20">Assets & Liabilities</span>
+          </div>
+
+          <div class="space-y-3 text-xs">
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="font-semibold text-emerald-400">A. Foreign Investments:</span>
+              <ul class="list-disc list-inside mt-1 space-y-1 text-slate-300">
+                <li><strong>Foreign Direct Investment (FDI):</strong> Long-term investment with active management stake (>10% equity). Non-volatile, brings technology and jobs.</li>
+                <li><strong>Foreign Portfolio Investment (FPI / FII):</strong> Short-term investment in domestic stocks/bonds (<10% equity). Highly volatile ("hot money").</li>
+              </ul>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <span class="font-semibold text-blue-400">B. External Borrowings & Banking Capital:</span>
+              <ul class="list-disc list-inside mt-1 space-y-1 text-slate-300">
+                <li><strong>External Commercial Borrowings (ECBs):</strong> Commercial loans raised by Indian corporates from non-resident lenders.</li>
+                <li><strong>External Assistance:</strong> Sovereign concessional loans from World Bank, ADB, or bilateral partners (e.g. JICA).</li>
+                <li><strong>Banking Capital:</strong> Non-Resident Indian (NRI) deposits held in Indian banks (FCNR, NRE, NRO accounts).</li>
+              </ul>
+            </div>
+
+            <p class="text-[11px] text-slate-400 italic">
+              *BoP Accounting Identity: Current Account + Capital Account + Errors & Omissions = Change in RBI Foreign Exchange Reserves (ΔForex).
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: RUPEE CONVERTIBILITY & FOREX RESERVES -->
+    <section id="rupee-convertibility" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="coins" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Currency Convertibility & Foreign Exchange Architecture</h2>
+          <p class="text-xs text-slate-400 font-light">From LERMS to Article VIII status, Tarapore recommendations, and Forex constituents</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-emerald-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="repeat" class="w-4 h-4"></i> Evolution of Rupee Convertibility
+          </h3>
+          <ul class="text-xs text-slate-300 space-y-2.5 leading-relaxed">
+            <li><strong>Dual Exchange Rate (LERMS 1992):</strong> Liberalized Exchange Rate Management System introduced a 40:60 dual rate (40% surrendered at official rate, 60% at market rate). Unified into unified market rate in March 1993.</li>
+            <li><strong>Current Account Convertibility (1994):</strong> India accepted <strong>Article VIII obligations of IMF</strong> in August 1994, granting complete freedom to convert rupees for trade, travel, education, and medical expenditures.</li>
+            <li><strong>Capital Account Convertibility (Tarapore Committees):</strong> Full Capital Account Convertibility (FCAC) remains partial. Two committees chaired by S.S. Tarapore (1997 & 2006) laid down strict preconditions:
+              <ul class="list-disc list-inside mt-1 text-slate-400 space-y-0.5">
+                <li>Fiscal deficit brought down to 3.5% of GDP.</li>
+                <li>Gross NPAs of banking system reduced below 5%.</li>
+                <li>Inflation rate maintained within a 3–5% band.</li>
+                <li>Adequate foreign exchange cover for at least 6 months of imports.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-teal-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="vault" class="w-4 h-4"></i> India's Foreign Exchange Reserves (Forex)
+          </h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Custodied and managed by the Reserve Bank of India (RBI) under the RBI Act 1934 and FEMA 1999. India's reserves exceed $650 Billion, structured across 4 constituents:
+          </p>
+          <div class="space-y-2 text-xs">
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 flex justify-between items-center">
+              <div>
+                <span class="font-bold text-white">1. Foreign Currency Assets (FCA)</span>
+                <p class="text-[11px] text-slate-400">US Dollars, Euros, British Pounds, Japanese Yen invested in overseas sovereign securities.</p>
+              </div>
+              <span class="text-emerald-400 font-mono text-xs font-bold">~85-88%</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 flex justify-between items-center">
+              <div>
+                <span class="font-bold text-white">2. Gold Holdings</span>
+                <p class="text-[11px] text-slate-400">Physical bullion held in RBI vaults in Nagpur and Bank of England vaults.</p>
+              </div>
+              <span class="text-amber-400 font-mono text-xs font-bold">~8-10%</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 flex justify-between items-center">
+              <div>
+                <span class="font-bold text-white">3. Special Drawing Rights (SDR)</span>
+                <p class="text-[11px] text-slate-400">Supplementary foreign exchange reserve assets allocated by the IMF.</p>
+              </div>
+              <span class="text-cyan-400 font-mono text-xs font-bold">~2-3%</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 flex justify-between items-center">
+              <div>
+                <span class="font-bold text-white">4. Reserve Tranche Position (RTP)</span>
+                <p class="text-[11px] text-slate-400">The portion of quota paid in reserve assets to IMF; callable on demand without fee.</p>
+              </div>
+              <span class="text-teal-400 font-mono text-xs font-bold">~0.7%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: BRETTON WOODS TWINS (IMF & WORLD BANK) -->
+    <section id="bretton-woods" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="landmark" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">The Bretton Woods Twins: IMF & World Bank Group</h2>
+          <p class="text-xs text-slate-400 font-light">Established at the July 1944 United Nations Monetary and Financial Conference in Bretton Woods, USA</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- IMF Box -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-base font-bold text-emerald-300 flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> International Monetary Fund (IMF)
+            </h3>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Washington D.C.</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed font-light">
+            Founded to ensure the stability of the international monetary system, exchange rates, and international payments. Acts as a short-to-medium term lender of last resort to countries encountering Balance of Payments crises.
+          </p>
+          <div class="space-y-2 text-xs">
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Quota System:</strong> Each member is assigned a quota based on GDP, openness, economic variability, and reserves. Quota determines voting power and borrowing capacity.
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Special Drawing Rights (SDR):</strong> Created in 1969. Valued based on a basket of 5 freely usable currencies: <strong>US Dollar (43.38%), Euro (29.31%), Chinese Renminbi (12.28% - added 2016), Japanese Yen (7.59%), and British Pound (7.44%)</strong>.
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Flagship Publications:</strong> <em>World Economic Outlook (WEO)</em> and <em>Global Financial Stability Report (GFSR)</em>.
+            </div>
+          </div>
+        </div>
+
+        <!-- World Bank Group -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-base font-bold text-teal-300 flex items-center gap-2">
+              <i data-lucide="building-2" class="w-4 h-4 text-teal-400"></i> World Bank Group (5 Institutions)
+            </h3>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-teal-500/10 text-teal-400 border border-teal-500/20">Washington D.C.</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed font-light">
+            Focuses on long-term economic development, infrastructure financing, and global poverty alleviation. Comprises 5 distinct institutions:
+          </p>
+          <div class="space-y-1.5 text-xs">
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">1. IBRD (est. 1944):</strong> Lends to middle-income and creditworthy poorer governments.
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">2. IDA (est. 1960):</strong> The "Soft Loan Window" providing interest-free loans (credits) and grants to the poorest countries.
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">3. IFC (est. 1956):</strong> Private-sector financing arm offering loans and equity to private companies in developing nations.
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">4. MIGA (est. 1988):</strong> Multilateral Investment Guarantee Agency providing political risk insurance to foreign investors.
+            </div>
+            <div class="p-2 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-rose-400">5. ICSID (est. 1966):</strong> International Centre for Settlement of Investment Disputes. <span class="text-amber-300 font-bold">India is NOT a member of ICSID</span> (due to concerns over national judicial sovereignty).
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: WORLD TRADE ORGANIZATION (WTO) -->
+    <section id="wto-framework" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="globe-2" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">World Trade Organization (WTO) Framework</h2>
+          <p class="text-xs text-slate-400 font-light">From GATT 1947 to Marrakesh 1995, core principles, TRIPS, TRIMS, and Agricultural Subsidies</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-emerald-300 flex items-center gap-2">
+            <i data-lucide="check-square" class="w-4 h-4"></i> Core WTO Principles
+          </h3>
+          <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+            <li><strong>Most Favoured Nation (MFN - Art 1 GATT):</strong> Treating other member nations equally. If a special tariff favor is granted to one nation, it must immediately be granted to all WTO members.</li>
+            <li><strong>National Treatment (Art 3 GATT):</strong> Imported and locally-produced goods must be treated equally once the imported goods have entered the domestic market (no discriminatory domestic taxes or regulations).</li>
+            <li><strong>Predictability through Binding:</strong> Ceilings placed on tariff rates; tariffs cannot be arbitrarily raised.</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-teal-300 flex items-center gap-2">
+            <i data-lucide="lock" class="w-4 h-4"></i> TRIPS, TRIMS & GATS
+          </h3>
+          <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+            <li><strong>TRIPS:</strong> Trade-Related Aspects of Intellectual Property Rights. Standardizes international IP protections across Patents (20 years), Copyrights (50+ years), Trademarks, Industrial Designs, and Geographical Indications (GI).</li>
+            <li><strong>TRIMS:</strong> Trade-Related Investment Measures. Prohibits host countries from applying domestic content requirements (e.g. mandating local component sourcing on foreign investors).</li>
+            <li><strong>GATS:</strong> General Agreement on Trade in Services across 4 modes: Cross-border supply, Consumption abroad, Commercial presence, and Movement of natural persons.</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-amber-300 flex items-center gap-2">
+            <i data-lucide="sprout" class="w-4 h-4"></i> Agreement on Agriculture (AoA)
+          </h3>
+          <div class="space-y-2 text-xs text-slate-300">
+            <p><strong class="text-emerald-400">Green Box:</strong> Non-trade distorting government supports allowed without limits (agricultural R&D, environmental programs, pest control, disaster relief).</p>
+            <p><strong class="text-blue-400">Blue Box:</strong> Direct payments under production-limiting programs (amber box with conditions, exempt from reduction).</p>
+            <p><strong class="text-rose-400">Amber Box:</strong> Direct price support and input subsidies (MSP, fertilizer/power subsidies) that distort trade. Capped at 10% de minimis limit of agricultural production value for developing countries (guarded by the <em>Bali Peace Clause</em>).</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: REGIONAL MULTILATERAL INSTITUTIONS -->
+    <section id="regional-banks" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+          <i data-lucide="building" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Regional Multilateral Development Banks</h2>
+          <p class="text-xs text-slate-400 font-light">Key facts, headquarters, and Indian voting shares across regional development institutions</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-bold text-white">Asian Development Bank (ADB)</h3>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Est. 1966</span>
+          </div>
+          <p class="text-xs text-slate-300">
+            <strong>Headquarters:</strong> Mandaluyong, Metro Manila, Philippines.<br>
+            <strong>Ownership:</strong> 68 member countries. Japan and the United States are the two largest shareholders (15.6% each). India is the 4th largest shareholder.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-bold text-white">New Development Bank (NDB)</h3>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-teal-500/10 text-teal-400 border border-teal-500/20">Est. 2014</span>
+          </div>
+          <p class="text-xs text-slate-300">
+            <strong>Headquarters:</strong> Shanghai, China.<br>
+            <strong>Origin:</strong> Established by BRICS nations at the 6th BRICS Summit in Fortaleza, Brazil. Initial authorized capital of $100 Billion equally shared (20% each) among the five founding BRICS members. First President was K.V. Kamath.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-bold text-white">AIIB</h3>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Est. 2016</span>
+          </div>
+          <p class="text-xs text-slate-300">
+            <strong>Headquarters:</strong> Beijing, China.<br>
+            <strong>Asian Infrastructure Investment Bank:</strong> Multilateral bank financing sustainable infrastructure. China is the largest shareholder (26.6% voting power), followed by <strong>India as the 2nd largest shareholder (~7.6% voting power)</strong> and largest recipient of project financing.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: FLASHCARDS -->
+    <section id="flashcards" class="space-y-6 pt-4 border-t border-slate-800">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center gap-2.5">
+            <i data-lucide="sparkles" class="w-5 h-5 text-emerald-400"></i> Active Recall Flashcards
+          </h2>
+          <p class="text-xs text-slate-400 font-light">Interactive 3D flip cards covering BoP classification, Forex constituents, and global financial organizations</p>
+        </div>
+        <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">12 Cards</span>
+      </div>
+
+      <div id="flashcardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- SECTION 7: PRELIMS PRACTICE QUIZ -->
+    <section id="quiz" class="space-y-6 pt-6 border-t border-slate-800">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center justify-center gap-2">
+          <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i> High-Yield Prelims Exam Simulator
+        </h2>
+        <p class="text-xs text-slate-400 font-light">Five standard multiple-choice questions on ICSID membership, remittances in BoP, Tarapore roadmaps, and WTO boxes</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-2">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg shadow-emerald-500/20 flex items-center gap-2">
+          <i data-lucide="award" class="w-4 h-4"></i> Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all flex items-center gap-2">
+          <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Reset Quiz
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 mt-16 py-8 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>Lucent General Knowledge Interactive Encyclopedia • Section IV: Indian Economy (100% Complete)</p>
+      <div class="flex items-center gap-4">
+        <a href="economy_poverty_unemployment_schemes.html" class="hover:text-emerald-400 flex items-center gap-1"><i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Prev: Ch 34</a>
+        <a href="hub.html" class="hover:text-emerald-400">Master Index</a>
+        <a href="science_physics.html" class="hover:text-emerald-400 flex items-center gap-1">Next: Section V (Science) <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-emerald-400">Global Trade</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+    
+    <div class="flex-1 overflow-hidden relative flex items-center justify-center p-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 pt-2 border-t border-slate-800">
+      Use Mouse Wheel to Zoom in/out • Click and Drag to Pan • Press Esc to Close
+    </div>
+  </div>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
+          <i data-lucide="search" class="w-3.5 h-3.5"></i> Search Foreign Trade & BoP Topics
+        </span>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type Balance of Payments, IMF, WTO, TRIPS, or SDR..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-emerald-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Search over 30+ keywords in Chapter 35...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/economy_foreign_trade_bop_organizations.js"></script>
+</body>
+</html>
