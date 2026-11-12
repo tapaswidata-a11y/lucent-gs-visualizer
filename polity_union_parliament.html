@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Union Executive & Parliament of India | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-amber-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-amber-400 hover:text-amber-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500/20 to-yellow-600/10 border border-amber-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="building-2" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-amber-300">LUCENT<span class="text-amber-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">Union Executive & Parliament</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <!-- Quick Search Button -->
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-amber-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+        <!-- Chapter Switcher Dropdown -->
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-amber-400 cursor-pointer">
+          <optgroup label="Ancient India">
+            <option value="index.html">01. Indus Valley Civilization</option>
+            <option value="vedic.html">02. Vedic Culture</option>
+            <option value="mahajanapadas.html">03. Mahajanapadas & Magadha</option>
+            <option value="religions.html">04. Buddhism & Jainism</option>
+            <option value="maurya.html">05. The Mauryan Empire</option>
+            <option value="post_maurya.html">06. Post-Maurya & Sangam</option>
+            <option value="gupta.html">07. Gupta Age & Harsha</option>
+          </optgroup>
+          <optgroup label="Medieval India">
+            <option value="early_medieval.html">08. Early Medieval & Rajputs</option>
+            <option value="delhi_sultanate.html">09. The Delhi Sultanate</option>
+            <option value="vijayanagar_bahmani.html">10. Vijayanagar & Bahmani</option>
+            <option value="mughal_empire.html">11. The Mughal Empire</option>
+            <option value="marathas.html">12. The Marathas & Later Mughals</option>
+            <option value="bhakti_sufi.html">13. Bhakti & Sufi Movements</option>
+          </optgroup>
+          <optgroup label="Modern India">
+            <option value="european_expansion.html">14. European Expansion in India</option>
+            <option value="economic_revolts.html">15. Economic Impact & Tribal Revolts</option>
+            <option value="reforms.html">16. Socio-Religious Reform Movements</option>
+            <option value="revolt_1857.html">17. The Great Revolt of 1857</option>
+            <option value="national_movement_early.html">18. Early National Movement (1885–1919)</option>
+            <option value="gandhian_era.html">19. The Gandhian Era (1919–1947)</option>
+            <option value="viceroys_acts.html">20. British Viceroys & Acts</option>
+          </optgroup>
+          <optgroup label="Geography">
+            <option value="geo_universe_earth.html">21. Universe, Solar System & Earth</option>
+            <option value="geo_geomorphology_climatology.html">22. Geomorphology, Atmosphere & Oceans</option>
+            <option value="geo_indian_physiography.html">23. Indian Physiography & Passes</option>
+            <option value="geo_indian_drainage.html">24. Indian Drainage & River Basins</option>
+            <option value="geo_climate_soils_agriculture.html">25. Climate, Soils, Agriculture & Minerals</option>
+          </optgroup>
+          <optgroup label="Indian Polity">
+            <option value="polity_framework_preamble.html">26. Constitutional Framework & Preamble</option>
+            <option value="polity_rights_dpsp_duties.html">27. Fundamental Rights, DPSP & Duties</option>
+            <option value="polity_union_parliament.html" selected>28. Union Executive & Parliament</option>
+            <option value="polity_judiciary.html">29. Supreme Court & High Courts</option>
+            <option value="polity_state_panchayat_amendments.html">30. State Executive, Panchayats & Amendments</option>
+          </optgroup>
+        </select>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+    <!-- HERO SECTION -->
+    <section class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-slate-950 p-8 sm:p-12 shadow-2xl">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-yellow-500/5 to-transparent pointer-events-none"></div>
+      <div class="relative z-10 max-w-4xl space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold uppercase tracking-wider">
+          <i data-lucide="crown" class="w-3.5 h-3.5"></i>
+          Section 28 • Part V (The Union) of the Constitution
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-black tracking-tight text-slate-100">
+          Union Executive & <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-200">The Parliament of India</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+          A definitive, high-yield guide to the Union Government: President of India (election, impeachment, veto, ordinances), Vice-President, Prime Minister & Council of Ministers (collective responsibility, 15% ceiling), Lok Sabha vs. Rajya Sabha powers, Money Bills, and Parliamentary Financial Committees.
+        </p>
+
+        <!-- Quick Jump Filter Badges -->
+        <div class="flex flex-wrap gap-2 pt-2">
+          <a href="#president-india" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-amber-300 transition-colors">1. President of India</a>
+          <a href="#pm-council" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-yellow-300 transition-colors">2. PM & Council of Ministers</a>
+          <a href="#parliament-structure" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-emerald-300 transition-colors">3. Parliament (LS vs RS)</a>
+          <a href="#legislative-procedures" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-cyan-300 transition-colors">4. Bills, Motions & PAC</a>
+          <a href="#flashcards" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-indigo-300 transition-colors">Flashcards</a>
+          <a href="#quiz" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-rose-300 transition-colors">Prelims Quiz</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: PRESIDENT & VICE-PRESIDENT OF INDIA -->
+    <section id="president-india" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2.5">
+            <i data-lucide="crown" class="w-6 h-6 text-amber-400"></i>
+            1. The President & Vice-President of India (Articles 52–73)
+          </h2>
+          <p class="text-xs text-slate-400">De jure Head of State, Supreme Commander of Armed Forces, and First Citizen of India</p>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">Lucent GK pp. 177–185</span>
+      </div>
+
+      <!-- Hero Gallery Card: Parliament House / Sansad Bhavan -->
+      <div class="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 group cursor-pointer" onclick="openLightbox('assets/images/parliament_sansad.jpg', 'The Historic Parliament House of India (Samvidhan Sadan, New Delhi)', 'The iconic colonnaded circular Parliament House designed by Edwin Lutyens and Herbert Baker, where the Constituent Assembly sat and enacted the Indian Constitution.')">
+        <img src="assets/images/parliament_sansad.jpg" alt="Sansad Bhavan Parliament" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex items-end p-6">
+          <div class="space-y-1">
+            <span class="text-xs font-mono uppercase text-amber-400 bg-amber-500/20 px-2 py-0.5 rounded border border-amber-500/30">Click to Zoom (Full Detail)</span>
+            <h3 class="text-lg font-bold text-white">Samvidhan Sadan (The Historic Parliament of India, New Delhi)</h3>
+            <p class="text-xs text-slate-300 max-w-2xl">Under Article 79, Parliament consists of the President of India and the two Houses: the Council of States (Rajya Sabha) and the House of the People (Lok Sabha).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- President 4-Card Analysis Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- 1. Election -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+            <i data-lucide="vote" class="w-4 h-4"></i>
+          </div>
+          <h4 class="text-sm font-bold text-slate-100">Electoral College (Art 54 & 55)</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Elected by proportional representation (Single Transferable Vote). College consists of: <br>
+            • <strong class="text-slate-200">Elected MPs</strong> of Lok Sabha & Rajya Sabha.<br>
+            • <strong class="text-slate-200">Elected MLAs</strong> of all State Assemblies.<br>
+            • <strong class="text-slate-200">Elected MLAs</strong> of Delhi & Puducherry (70th Amend).<br>
+            <span class="text-rose-400 font-semibold">Nominated MPs/MLAs and State MLCs DO NOT vote!</span>
+          </p>
+        </div>
+
+        <!-- 2. Impeachment -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400">
+            <i data-lucide="shield-x" class="w-4 h-4"></i>
+          </div>
+          <h4 class="text-sm font-bold text-slate-100">Impeachment (Art 61)</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Sole ground: <strong class="text-rose-300">"Violation of the Constitution"</strong>. Quasi-judicial process:<br>
+            • 14 days notice signed by 1/4th members.<br>
+            • Passed by <strong class="text-white">not less than 2/3rd of TOTAL membership</strong> of that House.<br>
+            • Passed by 2/3rd total membership of the other House.<br>
+            <span class="text-emerald-400 font-semibold">Nominated MPs CAN vote in impeachment!</span>
+          </p>
+        </div>
+
+        <!-- 3. Ordinances -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+            <i data-lucide="file-check-2" class="w-4 h-4"></i>
+          </div>
+          <h4 class="text-sm font-bold text-slate-100">Ordinances (Art 123)</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Promulgated when either or both Houses are not in session and circumstances require immediate action. Same legal force as an Act of Parliament. Must be laid before Parliament and expires <strong class="text-cyan-300">6 weeks from reassembly</strong>. Max lifespan is <strong class="text-white">6 months + 6 weeks</strong>. Subject to judicial review (D.C. Wadhwa case).
+          </p>
+        </div>
+
+        <!-- 4. Pardoning Powers -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+            <i data-lucide="scale" class="w-4 h-4"></i>
+          </div>
+          <h4 class="text-sm font-bold text-slate-100">Pardoning Powers (Art 72)</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            • <strong class="text-slate-200">Pardon:</strong> Completely absolves guilt & punishment.<br>
+            • <strong class="text-slate-200">Commutation:</strong> Substitution to a lighter punishment.<br>
+            • <strong class="text-slate-200">Remission:</strong> Reducing period without changing character.<br>
+            • <strong class="text-slate-200">Respite:</strong> Lesser sentence due to special fact (pregnancy).<br>
+            • <strong class="text-slate-200">Reprieve:</strong> Temporary stay of execution (death penalty).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: PRIME MINISTER & COUNCIL OF MINISTERS -->
+    <section id="pm-council" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2.5">
+            <i data-lucide="users" class="w-6 h-6 text-yellow-400"></i>
+            2. The Prime Minister & Council of Ministers (Articles 74, 75, 78)
+          </h2>
+          <p class="text-xs text-slate-400">De facto real executive, 'primus inter pares' (first among equals), and keystone of the Cabinet arch</p>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-yellow-500/10 border border-yellow-500/30 text-yellow-300 text-xs font-mono">Executive Realities</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="w-8 h-8 rounded-lg bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400">
+            <i data-lucide="briefcase" class="w-4 h-4"></i>
+          </div>
+          <h4 class="text-sm font-bold text-white">Aid & Advice of Cabinet (Art 74)</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            There shall be a Council of Ministers with the Prime Minister at the head to aid and advise the President. The <strong class="text-amber-300">42nd Amendment (1976)</strong> made the advice binding. The <strong class="text-amber-300">44th Amendment (1978)</strong> gave the President the power to return the advice once for reconsideration; but if sent back, the President MUST accept it.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+            <i data-lucide="shield-check" class="w-4 h-4"></i>
+          </div>
+          <h4 class="text-sm font-bold text-white">Collective Responsibility (Art 75(3))</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            The Council of Ministers is <strong class="text-emerald-400">collectively responsible to the Lok Sabha</strong>. They sink or swim together. If a No-Confidence Motion is passed in the Lok Sabha, all ministers, including those from Rajya Sabha, must resign. Ministers are also individually responsible to the President (pleasure of President per Art 75(2)).
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+            <i data-lucide="pie-chart" class="w-4 h-4"></i>
+          </div>
+          <h4 class="text-sm font-bold text-white">15% Cabinet Size Ceiling (91st Amend)</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            To stop jumbo cabinets and opportunistic defections, the <strong class="text-cyan-300">91st Constitutional Amendment Act 2003</strong> enacted Article 75(1A): The total number of Ministers, including the Prime Minister, in the Union Council of Ministers <strong class="text-white">shall NOT exceed 15% of the total strength of the Lok Sabha</strong>. In States (Art 164(1A)), max 15%, min 12 ministers.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PARLIAMENT OF INDIA (LOK SABHA VS RAJYA SABHA) -->
+    <section id="parliament-structure" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2.5">
+            <i data-lucide="landmark" class="w-6 h-6 text-emerald-400"></i>
+            3. The Parliament: Lok Sabha vs. Rajya Sabha Powers
+          </h2>
+          <p class="text-xs text-slate-400">Bicameral legislature under Article 79: Composition, tenure, special powers, and qualifications</p>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono">Bicameralism</span>
+      </div>
+
+      <!-- Comparative Table: Lok Sabha vs Rajya Sabha -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/40 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left">
+            <thead class="bg-slate-950/80 text-slate-400 uppercase font-mono border-b border-slate-800">
+              <tr>
+                <th class="p-3.5">Feature</th>
+                <th class="p-3.5 text-emerald-400">Lok Sabha (House of the People - Art 81)</th>
+                <th class="p-3.5 text-cyan-400">Rajya Sabha (Council of States - Art 80)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-300">
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-semibold text-slate-100">Chamber Status</td>
+                <td class="p-3">Lower House / Popular Chamber (directly elected by citizens)</td>
+                <td class="p-3">Upper House / House of Elders (indirectly elected by State MLAs)</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-semibold text-slate-100">Maximum Strength</td>
+                <td class="p-3"><strong class="text-white">550 Members</strong> (530 from States + 20 from UTs). 104th Amend 2019 ended 2 Anglo-Indian nominations.</td>
+                <td class="p-3"><strong class="text-white">250 Members</strong> (238 elected from States/UTs + 12 nominated by President in Literature, Science, Art, Social Service).</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-semibold text-slate-100">Tenure & Dissolution</td>
+                <td class="p-3">Normal term: <strong class="text-amber-400">5 years</strong>. Subject to dissolution at any time by President. Can be extended by 1 year during National Emergency.</td>
+                <td class="p-3"><strong class="text-emerald-400">Permanent body; NOT subject to dissolution</strong>. 1/3rd of members retire every 2nd year. Individual member term is <strong class="text-amber-400">6 years</strong>.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-semibold text-slate-100">Minimum Age</td>
+                <td class="p-3 font-bold text-amber-300">25 Years</td>
+                <td class="p-3 font-bold text-cyan-300">30 Years</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-semibold text-slate-100">Presiding Officer</td>
+                <td class="p-3">Speaker (elected from amongst Lok Sabha members) and Deputy Speaker</td>
+                <td class="p-3">Vice-President of India (<strong class="text-white">Ex-officio Chairman</strong> per Art 64) and Deputy Chairman (elected from RS members)</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30 bg-amber-500/5">
+                <td class="p-3 font-semibold text-slate-100">Special Exclusive Powers</td>
+                <td class="p-3 text-emerald-300 leading-relaxed">
+                  • Money Bills can originate <strong class="text-white">ONLY in Lok Sabha</strong> (Art 109).<br>
+                  • Speaker presides over Joint Sittings (Art 108).<br>
+                  • Only Lok Sabha can pass a <strong class="text-white">No-Confidence Motion</strong> to dismiss the Government.
+                </td>
+                <td class="p-3 text-cyan-300 leading-relaxed">
+                  • <strong class="text-white">Article 249:</strong> Authorize Parliament to legislate on State List for 1 year in national interest (2/3rd vote).<br>
+                  • <strong class="text-white">Article 312:</strong> Create new All-India Services (2/3rd vote).<br>
+                  • Removal of Vice-President originates ONLY in RS.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: BILLS, PARLIAMENTARY MOTIONS & COMMITTEES -->
+    <section id="legislative-procedures" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2.5">
+            <i data-lucide="layers" class="w-6 h-6 text-cyan-400"></i>
+            4. Legislative Procedures, Parliamentary Devices & Standing Committees
+          </h2>
+          <p class="text-xs text-slate-400">Money Bills (Art 110), Joint Sittings (Art 108), Question Hour, Zero Hour, and the Public Accounts Committee</p>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono">Procedures</span>
+      </div>
+
+      <!-- 3 Parliamentary Committees Master Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- PAC -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-300 font-mono text-xs font-bold">22 Members</span>
+            <span class="text-xs text-slate-400">15 LS + 7 RS</span>
+          </div>
+          <h4 class="text-base font-bold text-white">Public Accounts Committee (PAC)</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Oldest financial committee (set up 1921). Examines the annual audit reports of the <strong class="text-amber-400">Comptroller & Auditor General of India (CAG)</strong>. The CAG acts as its "guide, philosopher, and friend". By convention since 1967, its Chairman is appointed by the Speaker <strong class="text-white font-bold">from the Opposition party</strong>.
+          </p>
+        </div>
+
+        <!-- Estimates -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-0.5 rounded bg-cyan-500/10 text-cyan-300 font-mono text-xs font-bold">30 Members</span>
+            <span class="text-xs text-slate-400">100% Lok Sabha</span>
+          </div>
+          <h4 class="text-base font-bold text-white">Estimates Committee</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            <strong class="text-cyan-400">Largest Parliamentary Committee</strong> (established 1950 on John Mathai's suggestion). Examines budget estimates to suggest "economies, organizational improvements, and administrative reforms". Known as the 'Continuous Economy Committee'. <span class="text-amber-300 font-semibold">Rajya Sabha has zero representation!</span>
+          </p>
+        </div>
+
+        <!-- COPU -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-0.5 rounded bg-purple-500/10 text-purple-300 font-mono text-xs font-bold">22 Members</span>
+            <span class="text-xs text-slate-400">15 LS + 7 RS</span>
+          </div>
+          <h4 class="text-base font-bold text-white">Committee on Public Undertakings</h4>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Created in 1964 on the recommendation of the <strong class="text-purple-300">Krishna Menon Committee</strong>. Examines the reports, accounts, and commercial efficiency of Public Sector Undertakings (PSUs) like ONGC, SAIL, IOCL, and CAG commercial audit reports. Chairman is appointed by Speaker from Lok Sabha members only.
+          </p>
+        </div>
+      </div>
+
+      <!-- Money Bill vs Ordinary Bill Comparison -->
+      <div class="p-5 rounded-2xl bg-slate-900/40 border border-slate-800 space-y-3">
+        <h4 class="text-sm font-bold text-amber-400 flex items-center gap-2">
+          <i data-lucide="banknote" class="w-4 h-4"></i> Money Bill (Article 110) Specific Provisions
+        </h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-300 leading-relaxed">
+          <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
+            • Contains exclusively matters listed in Art 110: Imposition, abolition, remission, alteration or regulation of any tax; borrowing of money; custody of Consolidated Fund of India.<br>
+            • Introduced <strong class="text-white font-bold">ONLY in Lok Sabha</strong> with the prior recommendation of the President.
+          </div>
+          <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800">
+            • Speaker's endorsement as Money Bill is <strong class="text-white font-bold">final and non-justiciable</strong>.<br>
+            • Rajya Sabha has only <strong class="text-amber-300 font-bold">14 days</strong> to return it with or without recommendations. Cannot amend or reject.<br>
+            • <strong class="text-rose-400 font-bold">NO Joint Sitting is permitted under Article 108 for a Money Bill!</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE 3D FLASHCARDS -->
+    <section id="flashcards" class="space-y-6 pt-4 border-t border-slate-800">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+            <i data-lucide="layers-3" class="w-6 h-6 text-amber-400"></i> Active Recall Flashcards (3D Flip)
+          </h2>
+          <p class="text-xs text-slate-400">Click any card to flip between Question and Prelims Answer</p>
+        </div>
+        <span class="text-xs font-mono text-slate-400">12 High-Yield Cards</span>
+      </div>
+
+      <div id="flashcardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- PRELIMS SELF-ASSESSMENT QUIZ -->
+    <section id="quiz" class="space-y-6 pt-6 border-t border-slate-800">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+          <i data-lucide="check-square" class="w-6 h-6 text-amber-400"></i> Prelims Self-Assessment Quiz
+        </h2>
+        <p class="text-xs text-slate-400">Test your command over President powers, Parliament procedures, Money Bills, and Financial Committees</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-4">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg">
+          Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all">
+          Reset Quiz
+        </button>
+      </div>
+    </section>
+
+    <!-- SECTION NAVIGATION FOOTER -->
+    <footer class="pt-12 border-t border-slate-800">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <a href="polity_rights_dpsp_duties.html" class="flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-amber-400 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Chapter 27: Fundamental Rights & DPSP
+        </a>
+        <a href="hub.html" class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 hover:text-amber-400 hover:border-amber-500/40 transition-all">
+          Subject Knowledge Hub
+        </a>
+        <a href="polity_judiciary.html" class="flex items-center gap-2 text-xs font-semibold text-amber-400 hover:text-amber-300 transition-colors">
+          Chapter 29: Indian Judiciary (SC & HC) <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX MODAL -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-amber-400">Parliamentary Architecture</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+
+    <!-- Viewer Canvas -->
+    <div class="relative flex-1 flex items-center justify-center overflow-hidden my-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 border-t border-slate-800/80 pt-2">
+      Tip: Use mouse wheel to zoom in/out • Click and drag to pan when zoomed
+    </div>
+  </div>
+
+  <!-- QUICK SEARCH MODAL (ESC TO CLOSE) -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="w-full max-w-lg bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <div class="flex items-center gap-2 text-slate-400 text-xs font-semibold">
+          <i data-lucide="search" class="w-4 h-4 text-amber-400"></i> Search Union & Parliament
+        </div>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-slate-200 text-xs">ESC to exit</button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type president, money bill, committee, or motion..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-amber-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Type keywords to search sections...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT INCLUSION -->
+  <script src="assets/js/polity_union_parliament.js"></script>
+</body>
+</html>

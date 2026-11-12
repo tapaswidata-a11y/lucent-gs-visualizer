@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State Executive, Panchayati Raj, Emergency & Amendments | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-amber-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-amber-400 hover:text-amber-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-600/10 border border-amber-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="vote" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-amber-300">LUCENT<span class="text-amber-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">State, Panchayats & Amendments</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <!-- Quick Search Button -->
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-amber-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+        <!-- Chapter Switcher Dropdown -->
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-amber-400 cursor-pointer">
+          <optgroup label="Ancient India">
+            <option value="index.html">01. Indus Valley Civilization</option>
+            <option value="vedic.html">02. Vedic Culture</option>
+            <option value="mahajanapadas.html">03. Mahajanapadas & Magadha</option>
+            <option value="religions.html">04. Buddhism & Jainism</option>
+            <option value="maurya.html">05. The Mauryan Empire</option>
+            <option value="post_maurya.html">06. Post-Maurya & Sangam</option>
+            <option value="gupta.html">07. Gupta Age & Harsha</option>
+          </optgroup>
+          <optgroup label="Medieval India">
+            <option value="early_medieval.html">08. Early Medieval & Rajputs</option>
+            <option value="delhi_sultanate.html">09. The Delhi Sultanate</option>
+            <option value="vijayanagar_bahmani.html">10. Vijayanagar & Bahmani</option>
+            <option value="mughal_empire.html">11. The Mughal Empire</option>
+            <option value="marathas.html">12. The Marathas & Later Mughals</option>
+            <option value="bhakti_sufi.html">13. Bhakti & Sufi Movements</option>
+          </optgroup>
+          <optgroup label="Modern India">
+            <option value="european_expansion.html">14. European Expansion in India</option>
+            <option value="economic_revolts.html">15. Economic Impact & Tribal Revolts</option>
+            <option value="reforms.html">16. Socio-Religious Reform Movements</option>
+            <option value="revolt_1857.html">17. The Great Revolt of 1857</option>
+            <option value="national_movement_early.html">18. Early National Movement (1885–1919)</option>
+            <option value="gandhian_era.html">19. The Gandhian Era (1919–1947)</option>
+            <option value="viceroys_acts.html">20. British Viceroys & Acts</option>
+          </optgroup>
+          <optgroup label="Geography">
+            <option value="geo_universe_earth.html">21. Universe, Solar System & Earth</option>
+            <option value="geo_geomorphology_climatology.html">22. Geomorphology, Atmosphere & Oceans</option>
+            <option value="geo_indian_physiography.html">23. Indian Physiography & Passes</option>
+            <option value="geo_indian_drainage.html">24. Indian Drainage & River Basins</option>
+            <option value="geo_climate_soils_agriculture.html">25. Climate, Soils, Agriculture & Minerals</option>
+          </optgroup>
+          <optgroup label="Indian Polity">
+            <option value="polity_framework_preamble.html">26. Constitutional Framework & Preamble</option>
+            <option value="polity_rights_dpsp_duties.html">27. Fundamental Rights, DPSP & Duties</option>
+            <option value="polity_union_parliament.html">28. Union Executive & Parliament</option>
+            <option value="polity_judiciary.html">29. Supreme Court & High Courts</option>
+            <option value="polity_state_panchayat_amendments.html" selected>30. State Executive, Panchayats & Amendments</option>
+          </optgroup>
+        </select>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+    <!-- HERO SECTION -->
+    <section class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-slate-950 p-8 sm:p-12 shadow-2xl">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-orange-500/5 to-transparent pointer-events-none"></div>
+      <div class="relative z-10 max-w-4xl space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold uppercase tracking-wider">
+          <i data-lucide="users-2" class="w-3.5 h-3.5"></i>
+          Section 30 • State Governance & Grassroots Democracy
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-black tracking-tight text-slate-100">
+          State Executive, <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-300 to-yellow-200">Panchayati Raj & Amendments</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+          A comprehensive visual encyclopedia covering the State Executive (Governor, Chief Minister, Advocate General), Panchayati Raj (73rd Amendment, Balwant Rai Mehta), Urban Local Bodies (74th Amendment), Emergency Provisions (Articles 352, 356, 360), and Landmark Amendments from the 1st to the 106th Amendment Act.
+        </p>
+
+        <!-- Quick Jump Filter Badges -->
+        <div class="flex flex-wrap gap-2 pt-2">
+          <a href="#state-executive" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-amber-300 transition-colors">1. State Executive (Governor & CM)</a>
+          <a href="#panchayati-raj" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-orange-300 transition-colors">2. Panchayati Raj (73rd Amend)</a>
+          <a href="#emergency-provisions" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-rose-300 transition-colors">3. Emergency Powers (352, 356, 360)</a>
+          <a href="#landmark-amendments" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-cyan-300 transition-colors">4. Landmark Amendments Matrix</a>
+          <a href="#flashcards" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-indigo-300 transition-colors">Flashcards</a>
+          <a href="#quiz" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-emerald-300 transition-colors">Prelims Quiz</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: THE STATE EXECUTIVE -->
+    <section id="state-executive" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2.5">
+            <i data-lucide="shield" class="w-6 h-6 text-amber-400"></i>
+            1. The State Executive & Legislature (Articles 153–213)
+          </h2>
+          <p class="text-xs text-slate-400">The Governor's dual role, Council of Ministers, Advocate General, and Bicameral Assemblies</p>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">Lucent GK pp. 194–201</span>
+      </div>
+
+      <!-- 4 State Governance Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Governor -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+            <i data-lucide="user-check" class="w-4 h-4"></i>
+          </div>
+          <h4 class="text-sm font-bold text-slate-100">Governor (Art 153–161)</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Constitutional head of the State and agent of the Centre. Appointed by President; holds office during <strong class="text-amber-300">"pleasure of President"</strong> (no fixed tenure). Minimum age: <strong class="text-white">35 years</strong>. 7th Amendment 1956 enabled one person to be Governor of two or more States.
+          </p>
+        </div>
+
+        <!-- Ordinance Power -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+          </div>
+          <h4 class="text-sm font-bold text-slate-100">Ordinances (Art 213)</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Promulgated when State Legislature is in recess. Has same force as legislative Act. Must be approved within <strong class="text-orange-300">6 weeks from reassembly</strong>. Max life is 6 months + 6 weeks. Cannot issue ordinance without President's instructions on bills requiring presidential assent.
+          </p>
+        </div>
+
+        <!-- Chief Minister -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+            <i data-lucide="briefcase" class="w-4 h-4"></i>
+          </div>
+          <h4 class="text-sm font-bold text-slate-100">CM & Council (Art 163–164)</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Real executive head. Appointed by Governor. Council of Ministers is <strong class="text-emerald-400">collectively responsible to Vidhan Sabha</strong>. Under 91st Amendment 2003, size of State Ministry <strong class="text-white">shall NOT exceed 15% of Assembly strength, with a minimum of 12 ministers</strong>.
+          </p>
+        </div>
+
+        <!-- Advocate General -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+            <i data-lucide="scale" class="w-4 h-4"></i>
+          </div>
+          <h4 class="text-sm font-bold text-slate-100">Advocate General (Art 165)</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Highest law officer of the State (State counterpart of Attorney General). Appointed by Governor; must be qualified to be a High Court judge. Right to speak and participate in Assembly proceedings, <strong class="text-rose-400 font-semibold">WITHOUT the right to vote</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bicameralism Card: 6 States -->
+      <div class="p-5 rounded-2xl bg-slate-900/40 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div>
+          <h4 class="text-sm font-bold text-amber-300 flex items-center gap-2">
+            <i data-lucide="layers" class="w-4 h-4"></i> Bicameral State Legislatures in India (Article 169)
+          </h4>
+          <p class="text-xs text-slate-300 mt-1">
+            Only 6 States have a Legislative Council (Vidhan Parishad): <strong class="text-white">Andhra Pradesh, Bihar, Karnataka, Maharashtra, Telangana, and Uttar Pradesh</strong>.<br>
+            Parliament can create or abolish a Legislative Council by simple majority if the Legislative Assembly passes a resolution by special majority.
+          </p>
+        </div>
+        <span class="text-xs font-mono text-amber-400 bg-amber-500/10 px-3 py-1 rounded-lg border border-amber-500/20 shrink-0">6 Bicameral States</span>
+      </div>
+    </section>
+
+    <!-- SECTION 2: PANCHAYATI RAJ & MUNICIPALITIES -->
+    <section id="panchayati-raj" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2.5">
+            <i data-lucide="trees" class="w-6 h-6 text-orange-400"></i>
+            2. Local Self-Government: Panchayati Raj & Municipalities
+          </h2>
+          <p class="text-xs text-slate-400">73rd & 74th Constitutional Amendment Acts, 1992 • The 3rd Tier of Indian Democracy</p>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-orange-500/10 border border-orange-500/30 text-orange-300 text-xs font-mono">Grassroots Democracy</span>
+      </div>
+
+      <!-- Hero Gallery Card: Panchayat / Gram Sabha -->
+      <div class="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 group cursor-pointer" onclick="openLightbox('assets/images/panchayati_raj_gram_sabha.jpg', 'Gram Sabha / Village Panchayat in Session in Rural India', 'Grassroots direct democracy in action. Under Article 243A, the Gram Sabha comprises all persons registered in the electoral rolls relating to a village comprised within the area of Panchayat.')">
+        <img src="assets/images/panchayati_raj_gram_sabha.jpg" alt="Panchayat India" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex items-end p-6">
+          <div class="space-y-1">
+            <span class="text-xs font-mono uppercase text-orange-400 bg-orange-500/20 px-2 py-0.5 rounded border border-orange-500/30">Click to Zoom (Full Detail)</span>
+            <h3 class="text-lg font-bold text-white">Gram Sabha & Panchayati Raj Institutions (PRIs)</h3>
+            <p class="text-xs text-slate-300 max-w-2xl">First launched in Nagaur, Rajasthan on October 2, 1959. Constitutionalized by the 73rd Amendment Act 1992 (Part IX, 11th Schedule with 29 subjects).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 73rd vs 74th Amendment Comparison -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- 73rd Amendment -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-orange-500/40 transition-all space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-0.5 rounded bg-orange-500/10 text-orange-300 font-mono text-xs font-bold">73rd Amendment (1992)</span>
+            <span class="text-xs text-slate-400">Effective: April 24, 1993</span>
+          </div>
+          <h4 class="text-base font-bold text-white">Panchayati Raj Institutions (PRIs)</h4>
+          <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+            <li>• <strong class="text-orange-400">Part Added:</strong> Part IX (Articles 243 to 243O).</li>
+            <li>• <strong class="text-orange-400">Schedule Added:</strong> <span class="text-white font-bold">Eleventh Schedule (29 Functional Matters)</span>.</li>
+            <li>• <strong class="text-orange-400">3-Tier Structure:</strong> Gram Panchayat (village), Panchayat Samiti (block), Zilla Parishad (district). (2-tier allowed for states with population &lt;20 lakhs).</li>
+            <li>• <strong class="text-orange-400">Women Reservation (Art 243D):</strong> Mandatory <strong class="text-white">not less than 1/3rd (33%)</strong> of total seats and chairpersons.</li>
+            <li>• <strong class="text-orange-400">Institutions:</strong> State Election Commission (Art 243K) & State Finance Commission (Art 243I).</li>
+            <li>• <strong class="text-orange-400">PESA Act 1996:</strong> Extended PRIs to 5th Schedule areas (Bhuria Committee).</li>
+          </ul>
+        </div>
+
+        <!-- 74th Amendment -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 transition-all space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="px-2.5 py-0.5 rounded bg-cyan-500/10 text-cyan-300 font-mono text-xs font-bold">74th Amendment (1992)</span>
+            <span class="text-xs text-slate-400">Effective: June 1, 1993</span>
+          </div>
+          <h4 class="text-base font-bold text-white">Urban Local Bodies (Municipalities)</h4>
+          <ul class="text-xs text-slate-300 space-y-2 leading-relaxed">
+            <li>• <strong class="text-cyan-400">Part Added:</strong> Part IXA (Articles 243P to 243ZG).</li>
+            <li>• <strong class="text-cyan-400">Schedule Added:</strong> <span class="text-white font-bold">Twelfth Schedule (18 Functional Matters)</span>.</li>
+            <li>• <strong class="text-cyan-400">3 Types of ULBs:</strong> Nagar Panchayat (transitional), Municipal Council (smaller urban), Municipal Corporation (larger urban).</li>
+            <li>• <strong class="text-cyan-400">Committees:</strong> Wards Committees (Art 243S), District Planning Committee (Art 243ZD), Metropolitan Planning Committee (Art 243ZE).</li>
+            <li>• <strong class="text-cyan-400">Reservations:</strong> 1/3rd seats for women; SC/ST proportional reservation.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: EMERGENCY PROVISIONS (ARTICLES 352–360) -->
+    <section id="emergency-provisions" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2.5">
+            <i data-lucide="alert-triangle" class="w-6 h-6 text-rose-400"></i>
+            3. Emergency Provisions: Part XVIII (Articles 352–360)
+          </h2>
+          <p class="text-xs text-slate-400">Transforms India's federal structure into a unitary system during national crises</p>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs font-mono">Part XVIII</span>
+      </div>
+
+      <!-- 3 Types of Emergencies Table -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/40 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left">
+            <thead class="bg-slate-950/80 text-slate-400 uppercase font-mono border-b border-slate-800">
+              <tr>
+                <th class="p-3.5">Emergency Type</th>
+                <th class="p-3.5">Grounds of Proclamation</th>
+                <th class="p-3.5">Parliamentary Approval & Majority</th>
+                <th class="p-3.5">Maximum Duration</th>
+                <th class="p-3.5">Impact on Rights & Historical Declarations</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-300">
+              <tr class="hover:bg-slate-800/30 bg-rose-500/5">
+                <td class="p-3.5 font-bold text-rose-400">National Emergency (Article 352)</td>
+                <td class="p-3.5">War, External Aggression, or <strong class="text-white font-bold">Armed Rebellion</strong> (44th Amend replaced 'internal disturbance')</td>
+                <td class="p-3.5">Within <strong class="text-amber-300">1 month</strong> by <strong class="text-white">Special Majority</strong> (majority of total membership + 2/3rd present & voting) in both Houses</td>
+                <td class="p-3.5">6 months at a time; can be extended <strong class="text-white">indefinitely</strong> with 6-month approvals</td>
+                <td class="p-3.5">Art 19 automatically suspended under Art 358. <strong class="text-emerald-400">Articles 20 & 21 can NEVER be suspended!</strong> Declared 3 times: 1962 (China), 1971 (Pakistan), 1975 (Internal disturbance).</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3.5 font-bold text-amber-400">President's Rule / State Emergency (Art 356 & 365)</td>
+                <td class="p-3.5">Failure of constitutional machinery in State (Art 356) or failure to comply with Union directions (Art 365)</td>
+                <td class="p-3.5">Within <strong class="text-amber-300">2 months</strong> by <strong class="text-white">Simple Majority</strong> in both Houses</td>
+                <td class="p-3.5">6 months at a time; <strong class="text-rose-400 font-bold">Maximum 3 years</strong> (beyond 1 year requires EC certificate & National Emergency)</td>
+                <td class="p-3.5">Governor runs administration on President's behalf. Parliament makes laws for State. <strong class="text-cyan-300">S.R. Bommai (1994)</strong> made Art 356 subject to judicial review.</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3.5 font-bold text-emerald-400">Financial Emergency (Article 360)</td>
+                <td class="p-3.5">Threat to financial stability or credit of India or any part thereof</td>
+                <td class="p-3.5">Within <strong class="text-amber-300">2 months</strong> by <strong class="text-white">Simple Majority</strong> in both Houses</td>
+                <td class="p-3.5">Continues indefinitely until revoked; no periodic parliamentary approval needed</td>
+                <td class="p-3.5">Centre can direct reduction of salaries of public servants and SC/HC judges. <strong class="text-emerald-400 font-bold">NEVER declared in India so far!</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: LANDMARK CONSTITUTIONAL AMENDMENTS -->
+    <section id="landmark-amendments" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2.5">
+            <i data-lucide="history" class="w-6 h-6 text-cyan-400"></i>
+            4. Landmark Constitutional Amendments (1st to 106th Amendment Acts)
+          </h2>
+          <p class="text-xs text-slate-400">High-yield revision matrix for UPSC, APSC & State Public Service Commission exams</p>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono">Article 368</span>
+      </div>
+
+      <!-- Amendments Table -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/40 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left">
+            <thead class="bg-slate-950/80 text-slate-400 uppercase font-mono border-b border-slate-800">
+              <tr>
+                <th class="p-3">Amendment Act & Year</th>
+                <th class="p-3">Key Provisions & Changes Made</th>
+                <th class="p-3">Historical / Prelims Significance</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-300">
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-amber-300">1st Amendment Act, 1951</td>
+                <td class="p-3">Added the <strong class="text-white">Ninth Schedule</strong> (Art 31B) to protect land reforms from judicial review; added 3 grounds of reasonable restrictions to freedom of speech under Art 19(2).</td>
+                <td class="p-3 text-slate-400">Enacted by Provisional Parliament before 1st General Election</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-amber-300">7th Amendment Act, 1956</td>
+                <td class="p-3">Implemented State Reorganization Act (14 States and 6 UTs); abolished Class A, B, C, D states; provided for common High Courts (Art 231) and appointment of same Governor for multiple states.</td>
+                <td class="p-3 text-slate-400">Fazl Ali Commission implementation</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30 bg-purple-500/5">
+                <td class="p-3 font-bold text-purple-300">42nd Amendment Act, 1976</td>
+                <td class="p-3"><strong class="text-white font-bold">"Mini-Constitution"</strong>: Added 'Socialist', 'Secular', 'Integrity' to Preamble; added Part IVA (Fundamental Duties, Art 51A); gave DPSP primacy over FRs; transferred 5 subjects (Education, Forests, Weights/Measures, Protection of Animals/Birds, Administration of Justice) to Concurrent List.</td>
+                <td class="p-3 text-amber-300 font-semibold">Swaran Singh Committee recommendations</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30 bg-emerald-500/5">
+                <td class="p-3 font-bold text-emerald-300">44th Amendment Act, 1978</td>
+                <td class="p-3">Restored civil liberties: deleted Right to Property from Part III (moved to Art 300A); replaced 'internal disturbance' with 'armed rebellion' in Art 352; safeguarded <strong class="text-white">Articles 20 and 21 from suspension during emergency</strong>.</td>
+                <td class="p-3 text-slate-400">Morarji Desai Janata Party Government</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-amber-300">52nd Amendment Act, 1985</td>
+                <td class="p-3">Introduced the <strong class="text-white">Tenth Schedule (Anti-Defection Law)</strong> disqualifying MPs and MLAs for defecting from their political parties.</td>
+                <td class="p-3 text-slate-400">Rajiv Gandhi administration</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-cyan-300">61st Amendment Act, 1988</td>
+                <td class="p-3">Lowered the voting age for elections to the Lok Sabha and State Legislative Assemblies from <strong class="text-white">21 years to 18 years</strong> (amended Art 326).</td>
+                <td class="p-3 text-slate-400">Expanded democratic franchise to youth</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-orange-300">73rd & 74th Amendments, 1992</td>
+                <td class="p-3">Constitutionalized Panchayati Raj (Part IX, 11th Sched - 29 items) and Municipalities (Part IXA, 12th Sched - 18 items) with 33% mandatory reservation for women.</td>
+                <td class="p-3 text-emerald-400 font-semibold">P.V. Narasimha Rao Government</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-teal-300">86th Amendment Act, 2002</td>
+                <td class="p-3">Made Elementary Education a Fundamental Right under <strong class="text-white">Article 21A</strong> (6–14 years); modified Art 45 (DPSP); added 11th Fundamental Duty under Art 51A(k).</td>
+                <td class="p-3 text-slate-400">Implemented via Right to Education (RTE) Act 2009</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-yellow-300">91st Amendment Act, 2003</td>
+                <td class="p-3">Capped the size of the Union and State Council of Ministers to <strong class="text-white">15% of the Assembly/Lok Sabha strength</strong> (min 12 in States); tightened Anti-Defection law by deleting the 1/3rd split exemption.</td>
+                <td class="p-3 text-slate-400">A.B. Vajpayee Government</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30 bg-blue-500/5">
+                <td class="p-3 font-bold text-blue-300">101st Amendment Act, 2016</td>
+                <td class="p-3">Introduced the <strong class="text-white">Goods and Services Tax (GST)</strong> regime; inserted Art 246A (concurrent tax power), Art 269A (IGST), and Art 279A (GST Council chaired by Union Finance Minister).</td>
+                <td class="p-3 text-slate-400">Effective July 1, 2017 ("One Nation, One Tax")</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-indigo-300">102nd Amendment Act, 2018</td>
+                <td class="p-3">Conferred constitutional status on the <strong class="text-white">National Commission for Backward Classes (NCBC)</strong> by inserting Article 338B and Article 342A.</td>
+                <td class="p-3 text-slate-400">Parity with NCSC (Art 338) & NCST (Art 338A)</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30 bg-emerald-500/5">
+                <td class="p-3 font-bold text-emerald-300">103rd Amendment Act, 2019</td>
+                <td class="p-3">Provided for up to <strong class="text-white">10% reservation for Economically Weaker Sections (EWS)</strong> in higher educational institutions and initial public employment (Articles 15(6) and 16(6)).</td>
+                <td class="p-3 text-emerald-300 font-semibold">Upheld by SC in Janhit Abhiyan Case (2022)</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-rose-300">104th Amendment Act, 2019</td>
+                <td class="p-3">Extended the reservation of seats for SCs and STs in Lok Sabha and State Assemblies for another 10 years (up to 2030); <strong class="text-rose-400 font-bold">ended the nomination of 2 Anglo-Indian members</strong> to Lok Sabha and State Assemblies.</td>
+                <td class="p-3 text-slate-400">Articles 331 and 333 discontinued</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30 bg-pink-500/5">
+                <td class="p-3 font-bold text-pink-300">106th Amendment Act, 2023</td>
+                <td class="p-3"><strong class="text-white font-bold">Nari Shakti Vandan Adhiniyam</strong>: Reserves one-third (33%) of all seats for women in the Lok Sabha, State Legislative Assemblies, and the Legislative Assembly of NCT of Delhi (Articles 239AA, 330A, 332A, 334A) for 15 years.</td>
+                <td class="p-3 text-pink-300 font-semibold">Effective after subsequent census & delimitation</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE 3D FLASHCARDS -->
+    <section id="flashcards" class="space-y-6 pt-4 border-t border-slate-800">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+            <i data-lucide="layers-3" class="w-6 h-6 text-amber-400"></i> Active Recall Flashcards (3D Flip)
+          </h2>
+          <p class="text-xs text-slate-400">Click any card to flip between Question and Prelims Answer</p>
+        </div>
+        <span class="text-xs font-mono text-slate-400">12 High-Yield Cards</span>
+      </div>
+
+      <div id="flashcardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- PRELIMS SELF-ASSESSMENT QUIZ -->
+    <section id="quiz" class="space-y-6 pt-6 border-t border-slate-800">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+          <i data-lucide="check-square" class="w-6 h-6 text-amber-400"></i> Prelims Self-Assessment Quiz
+        </h2>
+        <p class="text-xs text-slate-400">Test your mastery over Governor powers, Panchayati Raj 73rd amendment, Emergency provisions, and landmark amendments</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-4">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg">
+          Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all">
+          Reset Quiz
+        </button>
+      </div>
+    </section>
+
+    <!-- SECTION NAVIGATION FOOTER -->
+    <footer class="pt-12 border-t border-slate-800">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <a href="polity_judiciary.html" class="flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-amber-400 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Chapter 29: Supreme Court & High Courts
+        </a>
+        <a href="hub.html" class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 hover:text-amber-400 hover:border-amber-500/40 transition-all">
+          Subject Knowledge Hub
+        </a>
+        <a href="economy_national_income_planning.html" class="flex items-center gap-2 text-xs font-semibold text-amber-400 hover:text-amber-300 transition-colors">
+          Section IV: Indian Economy (Ch 31) <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX MODAL -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-amber-400">Governance Reference</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+
+    <!-- Viewer Canvas -->
+    <div class="relative flex-1 flex items-center justify-center overflow-hidden my-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 border-t border-slate-800/80 pt-2">
+      Tip: Use mouse wheel to zoom in/out • Click and drag to pan when zoomed
+    </div>
+  </div>
+
+  <!-- QUICK SEARCH MODAL (ESC TO CLOSE) -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="w-full max-w-lg bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <div class="flex items-center gap-2 text-slate-400 text-xs font-semibold">
+          <i data-lucide="search" class="w-4 h-4 text-amber-400"></i> Search State, Panchayats & Amendments
+        </div>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-slate-200 text-xs">ESC to exit</button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type governor, 73rd amendment, emergency, or GST..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-amber-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Type keywords to search sections...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT INCLUSION -->
+  <script src="assets/js/polity_state_panchayat_amendments.js"></script>
+</body>
+</html>

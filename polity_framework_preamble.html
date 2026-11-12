@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constitutional Framework & Preamble | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-amber-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-amber-400 hover:text-amber-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500/20 to-purple-600/10 border border-amber-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="scale" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-amber-300">LUCENT<span class="text-amber-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">Polity & Constitution</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <!-- Quick Search Button -->
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-amber-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+        <!-- Chapter Switcher Dropdown -->
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-amber-400 cursor-pointer">
+          <optgroup label="Ancient India">
+            <option value="index.html">01. Indus Valley Civilization</option>
+            <option value="vedic.html">02. Vedic Culture</option>
+            <option value="mahajanapadas.html">03. Mahajanapadas & Magadha</option>
+            <option value="religions.html">04. Buddhism & Jainism</option>
+            <option value="maurya.html">05. The Mauryan Empire</option>
+            <option value="post_maurya.html">06. Post-Maurya & Sangam</option>
+            <option value="gupta.html">07. Gupta Age & Harsha</option>
+          </optgroup>
+          <optgroup label="Medieval India">
+            <option value="early_medieval.html">08. Early Medieval & Rajputs</option>
+            <option value="delhi_sultanate.html">09. The Delhi Sultanate</option>
+            <option value="vijayanagar_bahmani.html">10. Vijayanagar & Bahmani</option>
+            <option value="mughal_empire.html">11. The Mughal Empire</option>
+            <option value="marathas.html">12. The Marathas & Later Mughals</option>
+            <option value="bhakti_sufi.html">13. Bhakti & Sufi Movements</option>
+          </optgroup>
+          <optgroup label="Modern India">
+            <option value="european_expansion.html">14. European Expansion in India</option>
+            <option value="economic_revolts.html">15. Economic Impact & Tribal Revolts</option>
+            <option value="reforms.html">16. Socio-Religious Reform Movements</option>
+            <option value="revolt_1857.html">17. The Great Revolt of 1857</option>
+            <option value="national_movement_early.html">18. Early National Movement (1885–1919)</option>
+            <option value="gandhian_era.html">19. The Gandhian Era (1919–1947)</option>
+            <option value="viceroys_acts.html">20. British Viceroys & Acts</option>
+          </optgroup>
+          <optgroup label="Geography">
+            <option value="geo_universe_earth.html">21. Universe, Solar System & Earth</option>
+            <option value="geo_geomorphology_climatology.html">22. Geomorphology, Atmosphere & Oceans</option>
+            <option value="geo_indian_physiography.html">23. Indian Physiography & Passes</option>
+            <option value="geo_indian_drainage.html">24. Indian Drainage & River Basins</option>
+            <option value="geo_climate_soils_agriculture.html">25. Climate, Soils, Agriculture & Minerals</option>
+          </optgroup>
+          <optgroup label="Indian Polity">
+            <option value="polity_framework_preamble.html" selected>26. Constitutional Framework & Preamble</option>
+            <option value="polity_rights_dpsp_duties.html">27. Fundamental Rights, DPSP & Duties</option>
+            <option value="polity_union_parliament.html">28. Union Executive & Parliament</option>
+            <option value="polity_judiciary.html">29. Supreme Court & High Courts</option>
+            <option value="polity_state_panchayat_amendments.html">30. State Executive, Panchayats & Amendments</option>
+          </optgroup>
+        </select>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+    <!-- HERO SECTION -->
+    <section class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-slate-950 p-8 sm:p-12 shadow-2xl">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-purple-500/5 to-transparent pointer-events-none"></div>
+      <div class="relative z-10 max-w-4xl space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold uppercase tracking-wider">
+          <i data-lucide="book-marked" class="w-3.5 h-3.5"></i>
+          Section 26 • Indian Polity & Constitution
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-black tracking-tight text-slate-100">
+          Constitutional Framework, <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-200">The Preamble & Sources</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+          An exhaustive, high-yield guide to the genesis of the Indian Constitution: Cabinet Mission Plan, Constituent Assembly committees, Dr. B.R. Ambedkar's Drafting Committee, verbatim Preamble architecture, the 10+ borrowed global sources, and the 12 Schedules for UPSC, APSC & State PSC exams.
+        </p>
+
+        <!-- Quick Jump Filter Badges -->
+        <div class="flex flex-wrap gap-2 pt-2">
+          <a href="#making-constitution" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-amber-300 transition-colors">1. Making of Constitution</a>
+          <a href="#preamble-analysis" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-yellow-300 transition-colors">2. The Preamble Verbatim</a>
+          <a href="#borrowed-sources" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-emerald-300 transition-colors">3. Global Sources Matrix</a>
+          <a href="#twelve-schedules" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-cyan-300 transition-colors">4. Twelve Schedules Table</a>
+          <a href="#flashcards" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-indigo-300 transition-colors">Flashcards</a>
+          <a href="#quiz" class="px-3 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 border border-slate-700/60 text-xs text-rose-300 transition-colors">Prelims Quiz</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: MAKING OF THE CONSTITUTION & CONSTITUENT ASSEMBLY -->
+    <section id="making-constitution" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2.5">
+            <i data-lucide="landmark" class="w-6 h-6 text-amber-400"></i>
+            1. Making of the Constitution & The Constituent Assembly
+          </h2>
+          <p class="text-xs text-slate-400">From the demand for a Constitution in 1934 (M.N. Roy) to enactment on January 26, 1950</p>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">Lucent GK pp. 161–168</span>
+      </div>
+
+      <!-- Hero Gallery Card: Constituent Assembly -->
+      <div class="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 group cursor-pointer" onclick="openLightbox('assets/images/constituent_assembly.jpg', 'Dr. B.R. Ambedkar presenting the Draft Constitution to Dr. Rajendra Prasad (Nov 25, 1949)', 'Historical photograph of Dr. Bhimrao Ramji Ambedkar, Chairman of the Drafting Committee, presenting the final draft of the Constitution of India to Dr. Rajendra Prasad, President of the Constituent Assembly.')">
+        <img src="assets/images/constituent_assembly.jpg" alt="Constituent Assembly Ambedkar Rajendra Prasad" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex items-end p-6">
+          <div class="space-y-1">
+            <span class="text-xs font-mono uppercase text-amber-400 bg-amber-500/20 px-2 py-0.5 rounded border border-amber-500/30">Click to Zoom (Full Detail)</span>
+            <h3 class="text-lg font-bold text-white">Presentation of the Final Draft Constitution (November 25, 1949)</h3>
+            <p class="text-xs text-slate-300 max-w-2xl">The Constituent Assembly held 11 sessions over 2 years, 11 months, and 18 days, spending ₹64 lakhs to produce the world's lengthiest written constitution.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Pillars Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- 1. Genesis -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+          </div>
+          <h4 class="text-sm font-bold text-slate-100">Genesis & Cabinet Mission</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Idea first proposed by <strong class="text-slate-200">M.N. Roy (1934)</strong>; officially demanded by INC in 1935. Accepted in principle by British in August Offer (1940). Constituted in Nov 1946 under <strong class="text-amber-400">Cabinet Mission Plan</strong> (Pethick-Lawrence, Stafford Cripps, A.V. Alexander). Total 389 seats (296 British India + 93 Princely States).
+          </p>
+        </div>
+
+        <!-- 2. First Meetings -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+            <i data-lucide="users" class="w-4 h-4"></i>
+          </div>
+          <h4 class="text-sm font-bold text-slate-100">Key Dates & Officers</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            • <strong class="text-slate-200">Dec 9, 1946:</strong> 1st meeting. Dr. Sachchidananda Sinha elected temporary President.<br>
+            • <strong class="text-slate-200">Dec 11, 1946:</strong> Dr. Rajendra Prasad elected permanent President; H.C. Mukherjee and V.T. Krishnamachari as Vice-Presidents.<br>
+            • <strong class="text-slate-200">Sir B.N. Rau:</strong> Appointed Constitutional Advisor.
+          </p>
+        </div>
+
+        <!-- 3. Objective Resolution -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+            <i data-lucide="file-text" class="w-4 h-4"></i>
+          </div>
+          <h4 class="text-sm font-bold text-slate-100">Objective Resolution</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Moved by <strong class="text-cyan-300">Pandit Jawaharlal Nehru</strong> on <strong class="text-slate-200">Dec 13, 1946</strong>. Outlined fundamentals of an Independent Sovereign Republic, guaranteeing justice, equality, freedom, and safeguards for minorities. Unanimously adopted on <strong class="text-cyan-400">Jan 22, 1947</strong>; modified form became the Preamble.
+          </p>
+        </div>
+
+        <!-- 4. Calligraphy & Art -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400">
+            <i data-lucide="pen-tool" class="w-4 h-4"></i>
+          </div>
+          <h4 class="text-sm font-bold text-slate-100">Calligraphy & Design</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Calligraphed entirely by hand by <strong class="text-purple-300">Prem Behari Narain Raizada</strong> in flowing English italic script using No. 303 nibs. Illuminated, decorated, and bordered by artists of <strong class="text-slate-200">Shantiniketan</strong>, spearheaded by <strong class="text-slate-200">Nandalal Bose</strong> and <strong class="text-purple-400">Beohar Rammanohar Sinha</strong> (who signed the Preamble page).
+          </p>
+        </div>
+      </div>
+
+      <!-- Drafting Committee & Other Major Committees Table -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/40 overflow-hidden">
+        <div class="p-4 bg-slate-900/80 border-b border-slate-800 flex items-center justify-between">
+          <h3 class="text-sm font-bold text-slate-200 flex items-center gap-2">
+            <i data-lucide="clipboard-list" class="w-4 h-4 text-amber-400"></i> Major Committees of the Constituent Assembly & Their Chairmen
+          </h3>
+          <span class="text-xs text-slate-400">Direct questions asked in UPSC / APSC</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left">
+            <thead class="bg-slate-950/80 text-slate-400 uppercase font-mono border-b border-slate-800">
+              <tr>
+                <th class="p-3">Committee Name</th>
+                <th class="p-3">Chairman</th>
+                <th class="p-3">Mandate / Crucial Details</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-300">
+              <tr class="hover:bg-slate-800/30 bg-amber-500/5">
+                <td class="p-3 font-bold text-amber-400">Drafting Committee (Set up Aug 29, 1947)</td>
+                <td class="p-3 font-bold text-white">Dr. B.R. Ambedkar</td>
+                <td class="p-3">7 Members: Dr. B.R. Ambedkar (Chairman), N. Gopalaswami Ayyangar, Alladi Krishnaswamy Iyer, Dr. K.M. Munshi, Syed Mohammad Saadulla, N. Madhava Rau (replaced B.L. Mitter), T.T. Krishnamachari (replaced D.P. Khaitan). Prepared original draft.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-semibold text-slate-200">Union Powers Committee</td>
+                <td class="p-3">Jawaharlal Nehru</td>
+                <td class="p-3">Delineated powers belonging exclusively to the Central Union Government</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-semibold text-slate-200">Union Constitution Committee</td>
+                <td class="p-3">Jawaharlal Nehru</td>
+                <td class="p-3">Drafted the structure and executive authority of the Union Government</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-semibold text-slate-200">Provincial Constitution Committee</td>
+                <td class="p-3">Sardar Vallabhbhai Patel</td>
+                <td class="p-3">Structured provincial executive, governor's role, and state legislatures</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-semibold text-slate-200">Advisory Committee on Fundamental Rights, Minorities & Tribal Areas</td>
+                <td class="p-3">Sardar Vallabhbhai Patel</td>
+                <td class="p-3">Sub-committees: Fundamental Rights (J.B. Kripalani), Minorities (H.C. Mukherjee), North-East Frontier Tribal Areas & Assam (Gopinath Bardoloi).</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-semibold text-slate-200">Rules of Procedure Committee & Steering Committee</td>
+                <td class="p-3">Dr. Rajendra Prasad</td>
+                <td class="p-3">Supervised the procedural conduct, agenda, and deliberations of the Assembly</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-semibold text-slate-200">States Committee (Committee for Negotiating with States)</td>
+                <td class="p-3">Jawaharlal Nehru</td>
+                <td class="p-3">Negotiated with princely state representatives regarding accession and representation</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-semibold text-slate-200">Order of Business Committee</td>
+                <td class="p-3">Dr. K.M. Munshi</td>
+                <td class="p-3">Prioritized legislative and constitutional drafts for debate</td>
+              </tr>
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-semibold text-slate-200">Ad-hoc Committee on the National Flag</td>
+                <td class="p-3">Dr. Rajendra Prasad</td>
+                <td class="p-3">Adopted the National Flag designed by Pingali Venkayya on <strong class="text-amber-400">July 22, 1947</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE PREAMBLE OF THE CONSTITUTION -->
+    <section id="preamble-analysis" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2.5">
+            <i data-lucide="feather" class="w-6 h-6 text-amber-400"></i>
+            2. The Preamble: Verbatim Text, Architecture & Landmark Cases
+          </h2>
+          <p class="text-xs text-slate-400">"The identity card of the Constitution" (N.A. Palkhivala) and its solemn philosophical foundations</p>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono">Preamble Analysis</span>
+      </div>
+
+      <!-- Hero Gallery Card: Preamble Original Calligraphy -->
+      <div class="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 group cursor-pointer" onclick="openLightbox('assets/images/preamble_calligraphy.jpg', 'Original Calligraphy of the Preamble of the Constitution of India', 'Handcrafted by Prem Behari Narain Raizada with intricate gold leaf and floral borders designed by Beohar Rammanohar Sinha at Shantiniketan. Note the artist\'s subtle monogram \'Ram\' in the bottom right corner.')">
+        <img src="assets/images/preamble_calligraphy.jpg" alt="Preamble Calligraphy" class="w-full h-96 object-contain bg-slate-950 p-4 group-hover:scale-105 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex items-end p-6 pointer-events-none">
+          <div class="space-y-1">
+            <span class="text-xs font-mono uppercase text-amber-400 bg-amber-500/20 px-2 py-0.5 rounded border border-amber-500/30">Click to Zoom (Full Detail)</span>
+            <h3 class="text-lg font-bold text-white">Original Calligraphic Page of the Preamble (1949)</h3>
+            <p class="text-xs text-slate-300 max-w-2xl">Decorated by Beohar Rammanohar Sinha and calligraphed by Prem Behari Narain Raizada. Signed on 26 November 1949.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Verbatim Preamble Text Box with Typography -->
+      <div class="p-8 rounded-3xl bg-gradient-to-br from-amber-950/20 via-slate-900 to-slate-900 border-2 border-amber-500/40 shadow-2xl relative">
+        <div class="absolute top-4 right-4 text-xs font-mono text-amber-400 uppercase tracking-widest bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">
+          Official Text of Constitution
+        </div>
+        <div class="max-w-3xl mx-auto space-y-6 text-center font-['Cinzel']">
+          <h3 class="text-2xl sm:text-3xl font-black text-amber-300 tracking-widest border-b border-amber-500/30 pb-4">
+            THE CONSTITUTION OF INDIA
+          </h3>
+          <p class="text-sm sm:text-base leading-relaxed text-slate-200 tracking-wide">
+            <span class="text-amber-400 font-extrabold text-lg sm:text-xl">WE, THE PEOPLE OF INDIA,</span> having solemnly resolved to constitute India into a <br class="hidden sm:inline">
+            <span class="text-amber-300 font-black tracking-widest">SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC</span><br>
+            and to secure to all its citizens:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left font-['Inter'] text-xs sm:text-sm py-4">
+            <div class="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
+              <span class="font-bold font-['Cinzel'] text-amber-400 block text-xs tracking-wider mb-1">JUSTICE</span>
+              <p class="text-slate-300">social, economic and political;</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
+              <span class="font-bold font-['Cinzel'] text-amber-400 block text-xs tracking-wider mb-1">LIBERTY</span>
+              <p class="text-slate-300">of thought, expression, belief, faith and worship;</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
+              <span class="font-bold font-['Cinzel'] text-amber-400 block text-xs tracking-wider mb-1">EQUALITY</span>
+              <p class="text-slate-300">of status and of opportunity; and to promote among them all</p>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
+              <span class="font-bold font-['Cinzel'] text-amber-400 block text-xs tracking-wider mb-1">FRATERNITY</span>
+              <p class="text-slate-300">assuring the dignity of the individual and the <strong class="text-amber-300">unity and integrity</strong> of the Nation;</p>
+            </div>
+          </div>
+
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light border-t border-amber-500/30 pt-4">
+            <span class="font-semibold text-slate-100">IN OUR CONSTITUENT ASSEMBLY</span> this twenty-sixth day of November, 1949, do <span class="text-amber-400 font-bold uppercase">HEREBY ADOPT, ENACT AND GIVE TO OURSELVES THIS CONSTITUTION.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Legal Evolution & Landmark Court Cases Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-rose-400 bg-rose-500/10 px-2 py-0.5 rounded border border-rose-500/20">1960</span>
+            <span class="text-[11px] text-slate-500">Earlier Doctrine</span>
+          </div>
+          <h4 class="text-sm font-bold text-white">Berubari Union Case (1960)</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            The Supreme Court held that the Preamble is a "key to open the minds of the makers," but <strong class="text-rose-400">is NOT a part of the Constitution</strong>. Hence, it could not be amended under Article 368 nor used as an independent source of substantive power.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">1973</span>
+            <span class="text-[11px] text-slate-500">Watershed Judgment</span>
+          </div>
+          <h4 class="text-sm font-bold text-white">Kesavananda Bharati Case (1973)</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            A 13-judge constitutional bench overturned Berubari and ruled that <strong class="text-emerald-400">the Preamble IS an integral part of the Constitution</strong>. It can be amended under Article 368, provided such amendments do not alter or destroy its <strong class="text-amber-400">Basic Structure</strong>.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-bold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">1976</span>
+            <span class="text-[11px] text-slate-500">42nd Amendment</span>
+          </div>
+          <h4 class="text-sm font-bold text-white">42nd Amendment Act 1976</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Enacted during Emergency under Indira Gandhi. Added three words to the Preamble: <strong class="text-amber-300">'SOCIALIST'</strong>, <strong class="text-amber-300">'SECULAR'</strong>, and replaced 'unity of the Nation' with <strong class="text-amber-300">'unity and INTEGRITY of the Nation'</strong>. Preamble has been amended only once till date.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: GLOBAL SOURCES OF THE CONSTITUTION -->
+    <section id="borrowed-sources" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2.5">
+            <i data-lucide="globe" class="w-6 h-6 text-emerald-400"></i>
+            3. Sources of the Indian Constitution: A Global Synthesis
+          </h2>
+          <p class="text-xs text-slate-400">Dr. Ambedkar stated the Constitution was crafted after "ransacking all known constitutions of the world"</p>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono">10+ Global Sources</span>
+      </div>
+
+      <!-- Master Sources Table -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/40 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left">
+            <thead class="bg-slate-950/80 text-slate-400 uppercase font-mono border-b border-slate-800">
+              <tr>
+                <th class="p-3.5">Source Country / Statute</th>
+                <th class="p-3.5">Constitutional Provisions Borrowed & Adapted</th>
+                <th class="p-3.5">Key Articles / Prelims Significance</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-300">
+              <tr class="hover:bg-slate-800/30 bg-amber-500/5">
+                <td class="p-3.5 font-bold text-amber-400 flex items-center gap-2">
+                  <i data-lucide="landmark" class="w-4 h-4 text-amber-400"></i> Government of India Act 1935 (~60% of Constitution)
+                </td>
+                <td class="p-3.5">Federal Scheme, Office of Governor, Judiciary, Public Service Commissions (UPSC/SPSC), Emergency Provisions, and elaborate administrative details.</td>
+                <td class="p-3.5 font-mono text-slate-400">Forms structural backbone of the Constitution</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3.5 font-bold text-cyan-400">United Kingdom (British Constitution)</td>
+                <td class="p-3.5">Parliamentary government, Rule of Law (Art 14), Legislative procedure, Single Citizenship, Cabinet system, Prerogative Writs, Parliamentary privileges, Bicameralism.</td>
+                <td class="p-3.5 font-mono text-slate-400">Articles 74, 75, 105, 107–122</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3.5 font-bold text-emerald-400">United States of America (US Constitution)</td>
+                <td class="p-3.5">Fundamental Rights (Bill of Rights), Independence of Judiciary, Judicial Review (Art 13), Impeachment of President (Art 61), Removal of Supreme Court & High Court judges, Post of Vice-President, Preamble concept.</td>
+                <td class="p-3.5 font-mono text-slate-400">Articles 12–35, 61, 63, 124, 137</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3.5 font-bold text-teal-400">Ireland (Irish Constitution)</td>
+                <td class="p-3.5">Directive Principles of State Policy (DPSP), Nomination of 12 members to Rajya Sabha by President (Art 80), Method of Election of the President (Art 55).</td>
+                <td class="p-3.5 font-mono text-slate-400">Articles 36–51, 55, 80</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3.5 font-bold text-yellow-400">Canada (Canadian Constitution)</td>
+                <td class="p-3.5">Federation with a strong Centre, Vesting of residuary powers in the Centre (Art 248), Appointment of State Governors by Centre, Advisory Jurisdiction of Supreme Court (Art 143).</td>
+                <td class="p-3.5 font-mono text-slate-400">Articles 143, 155, 248</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3.5 font-bold text-blue-400">Australia (Australian Constitution)</td>
+                <td class="p-3.5">Concurrent List (7th Schedule), Freedom of Trade, Commerce and Intercourse (Art 301), Joint Sitting of the two Houses of Parliament (Art 108).</td>
+                <td class="p-3.5 font-mono text-slate-400">Articles 108, 301, 7th Schedule</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3.5 font-bold text-rose-400">Germany (Weimar Constitution)</td>
+                <td class="p-3.5">Suspension of Fundamental Rights during National Emergency (Articles 358 and 359).</td>
+                <td class="p-3.5 font-mono text-slate-400">Articles 352, 358, 359</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3.5 font-bold text-red-400">USSR (Soviet Constitution)</td>
+                <td class="p-3.5">Fundamental Duties (Article 51A - added by 42nd Amendment 1976), Ideals of Justice (Social, Economic and Political) in the Preamble.</td>
+                <td class="p-3.5 font-mono text-slate-400">Article 51A, Preamble</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3.5 font-bold text-indigo-400">France (French Constitution)</td>
+                <td class="p-3.5">Republic concept, Ideals of Liberty, Equality, and Fraternity in the Preamble (derived from French Revolution 1789).</td>
+                <td class="p-3.5 font-mono text-slate-400">Preamble</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3.5 font-bold text-orange-400">South Africa</td>
+                <td class="p-3.5">Procedure for Amendment of the Constitution (Article 368), Election of members of the Rajya Sabha by proportional representation.</td>
+                <td class="p-3.5 font-mono text-slate-400">Article 368</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3.5 font-bold text-purple-400">Japan</td>
+                <td class="p-3.5">Procedure Established by Law (Article 21), differing from the American 'Due Process of Law'.</td>
+                <td class="p-3.5 font-mono text-slate-400">Article 21</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: THE TWELVE SCHEDULES -->
+    <section id="twelve-schedules" class="space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2.5">
+            <i data-lucide="table-properties" class="w-6 h-6 text-cyan-400"></i>
+            4. The Twelve Schedules of the Indian Constitution
+          </h2>
+          <p class="text-xs text-slate-400">Originally 8 Schedules in 1950; 4 added by amendments (1st, 52nd, 73rd, 74th Amendments)</p>
+        </div>
+        <span class="px-2.5 py-1 rounded bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono">12 Schedules</span>
+      </div>
+
+      <!-- Schedule Table -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/40 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left">
+            <thead class="bg-slate-950/80 text-slate-400 uppercase font-mono border-b border-slate-800">
+              <tr>
+                <th class="p-3">Schedule</th>
+                <th class="p-3">Subject Matter & Core Provisions</th>
+                <th class="p-3">Articles Concerned</th>
+                <th class="p-3">Amendment Origin / Key Notes</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-300">
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-amber-300">First Schedule</td>
+                <td class="p-3">Names of the States and their territorial jurisdiction; Names of Union Territories and their extent (Currently <strong class="text-white">28 States & 8 UTs</strong>).</td>
+                <td class="p-3 font-mono">Articles 1 and 4</td>
+                <td class="p-3 text-slate-400">Original (1950)</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-amber-300">Second Schedule</td>
+                <td class="p-3">Salaries, allowances, and emoluments of the President, Governors, Speaker/Deputy Speaker of LS & RS, SC/HC Judges, and Comptroller & Auditor General of India (CAG).</td>
+                <td class="p-3 font-mono">Articles 59, 65, 75, 97, 125, 148, 158, 164, 186, 221</td>
+                <td class="p-3 text-slate-400">Charged on Consolidated Fund of India</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-amber-300">Third Schedule</td>
+                <td class="p-3">Forms of Oaths or Affirmations for Union/State ministers, MPs/MLAs, SC/HC Judges, and CAG. <strong class="text-rose-400">(Note: President's oath is in Art 60, Governor in Art 159, VP in Art 69, NOT in 3rd Schedule!)</strong></td>
+                <td class="p-3 font-mono">Articles 75, 84, 99, 124, 146, 173, 188, 219</td>
+                <td class="p-3 text-slate-400">Frequent prelims trap question</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-amber-300">Fourth Schedule</td>
+                <td class="p-3">Allocation of seats in the Rajya Sabha (Council of States) to States and Union Territories based on population. (UP has highest with 31 seats).</td>
+                <td class="p-3 font-mono">Articles 4 and 80</td>
+                <td class="p-3 text-slate-400">Allocated proportionally</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-amber-300">Fifth Schedule</td>
+                <td class="p-3">Provisions relating to the administration and control of Scheduled Areas and Scheduled Tribes in 10 states (Tribes Advisory Councils).</td>
+                <td class="p-3 font-mono">Article 244(1)</td>
+                <td class="p-3 text-slate-400">Governor has special executive powers</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30 bg-cyan-500/5">
+                <td class="p-3 font-bold text-cyan-400">Sixth Schedule</td>
+                <td class="p-3">Administration of Tribal Areas in the 4 Northeastern States: <strong class="text-white">Assam, Meghalaya, Tripura, Mizoram (AMTM)</strong> through Autonomous District Councils (ADCs).</td>
+                <td class="p-3 font-mono">Articles 244(2) and 275(1)</td>
+                <td class="p-3 text-emerald-400 font-semibold">ADCs have legislative, judicial & taxing powers</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-amber-300">Seventh Schedule</td>
+                <td class="p-3">
+                  Division of powers between Union & States into 3 Lists:<br>
+                  • <strong class="text-slate-100">Union List:</strong> 100 items (originally 97: Defence, Atomic energy, Foreign affairs, Railways, Banking).<br>
+                  • <strong class="text-slate-100">State List:</strong> 61 items (originally 66: Police, Public health, Agriculture, Local government).<br>
+                  • <strong class="text-slate-100">Concurrent List:</strong> 52 items (originally 47: Education, Forests, Weights/measures, IPC/CrPC - 5 transferred from State by 42nd Amend 1976).
+                </td>
+                <td class="p-3 font-mono">Article 246</td>
+                <td class="p-3 text-slate-400">Residuary powers with Centre (Art 248)</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30 bg-emerald-500/5">
+                <td class="p-3 font-bold text-emerald-400">Eighth Schedule</td>
+                <td class="p-3">
+                  22 Officially Recognized Languages of India (originally 14).<br>
+                  • 21st Amend (1967) added: <strong class="text-white">Sindhi</strong>.<br>
+                  • 71st Amend (1992) added: <strong class="text-white">Konkani, Manipuri, Nepali</strong> (KMN).<br>
+                  • 92nd Amend (2003) added: <strong class="text-white">Bodo, Dogri, Maithili, Santhali</strong> (BDMS).<br>
+                  <span class="text-rose-400 font-semibold">Note: English and Rajasthani are NOT in the 8th Schedule!</span>
+                </td>
+                <td class="p-3 font-mono">Articles 344(1) and 351</td>
+                <td class="p-3 text-emerald-300 font-semibold">Classical Languages: 6 (Tamil, Sanskrit, Telugu, Kannada, Malayalam, Odia) + 5 added in 2024</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30">
+                <td class="p-3 font-bold text-amber-300">Ninth Schedule</td>
+                <td class="p-3">Validation of certain Acts and Regulations (originally land reforms to prevent challenge under Fundamental Rights). In <strong class="text-cyan-300">I.R. Coelho Case (2007)</strong>, SC ruled laws added after April 24, 1973 are open to judicial review for violating Basic Structure.</td>
+                <td class="p-3 font-mono">Article 31B</td>
+                <td class="p-3 text-amber-400 font-semibold">Added by 1st Amendment Act, 1951</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30 bg-rose-500/5">
+                <td class="p-3 font-bold text-rose-400">Tenth Schedule</td>
+                <td class="p-3">Disqualification of members on ground of defection (<strong class="text-white">Anti-Defection Law</strong>). Decision on disqualification made by Speaker/Chairman (subject to judicial review per Kihoto Hollohan 1992). 91st Amend 2003 deleted split provision (now requires 2/3rd merger).</td>
+                <td class="p-3 font-mono">Articles 102(2) and 191(2)</td>
+                <td class="p-3 text-amber-400 font-semibold">Added by 52nd Amendment Act, 1985</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30 bg-teal-500/5">
+                <td class="p-3 font-bold text-teal-400">Eleventh Schedule</td>
+                <td class="p-3">Specifies the powers, authority, and responsibilities of <strong class="text-white">Panchayati Raj Institutions (PRIs)</strong>. Contains <strong class="text-amber-300">29 functional matters</strong> (Agriculture, land improvement, minor irrigation, animal husbandry, cottage industries, etc.).</td>
+                <td class="p-3 font-mono">Article 243G</td>
+                <td class="p-3 text-amber-400 font-semibold">Added by 73rd Amendment Act, 1992</td>
+              </tr>
+
+              <tr class="hover:bg-slate-800/30 bg-purple-500/5">
+                <td class="p-3 font-bold text-purple-400">Twelfth Schedule</td>
+                <td class="p-3">Specifies the powers, authority, and responsibilities of <strong class="text-white">Municipalities / Urban Local Bodies (ULBs)</strong>. Contains <strong class="text-amber-300">18 functional matters</strong> (Urban planning, water supply, public health, roads, fire services, solid waste management).</td>
+                <td class="p-3 font-mono">Article 243W</td>
+                <td class="p-3 text-amber-400 font-semibold">Added by 74th Amendment Act, 1992</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE 3D FLASHCARDS -->
+    <section id="flashcards" class="space-y-6 pt-4 border-t border-slate-800">
+      <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+            <i data-lucide="layers-3" class="w-6 h-6 text-amber-400"></i> Active Recall Flashcards (3D Flip)
+          </h2>
+          <p class="text-xs text-slate-400">Click any card to flip between Question and Prelims Answer</p>
+        </div>
+        <span class="text-xs font-mono text-slate-400">12 High-Yield Cards</span>
+      </div>
+
+      <div id="flashcardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- PRELIMS SELF-ASSESSMENT QUIZ -->
+    <section id="quiz" class="space-y-6 pt-6 border-t border-slate-800">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+          <i data-lucide="check-square" class="w-6 h-6 text-amber-400"></i> Prelims Self-Assessment Quiz
+        </h2>
+        <p class="text-xs text-slate-400">Test your command over Constitutional evolution, Preamble cases, borrowed sources, and Schedules</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-4">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg">
+          Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all">
+          Reset Quiz
+        </button>
+      </div>
+    </section>
+
+    <!-- SECTION NAVIGATION FOOTER -->
+    <footer class="pt-12 border-t border-slate-800">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <a href="geo_climate_soils_agriculture.html" class="flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-amber-400 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Chapter 25: Climate, Soils & Minerals
+        </a>
+        <a href="hub.html" class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 hover:text-amber-400 hover:border-amber-500/40 transition-all">
+          Subject Knowledge Hub
+        </a>
+        <a href="polity_rights_dpsp_duties.html" class="flex items-center gap-2 text-xs font-semibold text-amber-400 hover:text-amber-300 transition-colors">
+          Chapter 27: Fundamental Rights, DPSP & Duties <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX MODAL -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-amber-400">Constitutional Document</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+
+    <!-- Viewer Canvas -->
+    <div class="relative flex-1 flex items-center justify-center overflow-hidden my-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 border-t border-slate-800/80 pt-2">
+      Tip: Use mouse wheel to zoom in/out • Click and drag to pan when zoomed
+    </div>
+  </div>
+
+  <!-- QUICK SEARCH MODAL (ESC TO CLOSE) -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="w-full max-w-lg bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <div class="flex items-center gap-2 text-slate-400 text-xs font-semibold">
+          <i data-lucide="search" class="w-4 h-4 text-amber-400"></i> Search Constitutional Framework
+        </div>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-slate-200 text-xs">ESC to exit</button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type committee, preamble term, source country, or schedule..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-amber-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Type keywords to search sections...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT INCLUSION -->
+  <script src="assets/js/polity_framework_preamble.js"></script>
+</body>
+</html>
