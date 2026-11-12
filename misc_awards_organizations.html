@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Major Awards & International Organizations | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-amber-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-amber-400 hover:text-amber-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500/20 to-yellow-600/10 border border-amber-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="trophy" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-amber-300">LUCENT<span class="text-amber-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">Awards & UN Bodies</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-amber-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-amber-400 cursor-pointer">
+          <optgroup label="Section VI: Miscellaneous & IT">
+            <option value="misc_first_in_india_symbols.html">40. National Symbols & Firsts</option>
+            <option value="misc_awards_organizations.html" selected>41. Major Awards & UN Bodies</option>
+            <option value="misc_computer_it.html">42. Computer Science & IT</option>
+          </optgroup>
+          <optgroup label="Section V: General Science">
+            <option value="science_physics.html">36. General Science: Physics</option>
+            <option value="science_chemistry.html">37. General Science: Chemistry</option>
+            <option value="science_botany_ecology.html">38. Biology: Botany & Ecology</option>
+            <option value="science_human_physiology.html">39. Biology: Human Physiology</option>
+          </optgroup>
+        </select>
+
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <!-- HERO SECTION -->
+    <div class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900/90 to-amber-950/40 p-6 sm:p-10 shadow-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-widest">
+            <i data-lucide="globe-2" class="w-3.5 h-3.5"></i> Section 41 • Global Honors & Multilateral Architecture
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-extrabold text-white tracking-tight leading-tight">
+            Major <span class="bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">Awards</span> & United Nations Architecture
+          </h1>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+            An encyclopedic survey of national honors (Bharat Ratna, Param Vir Chakra, Khel Ratna, Jnanpith), international distinctions (Nobel Prizes in Stockholm/Oslo, Ramon Magsaysay), and the United Nations system (UNSC P5 veto, ICJ at The Hague, and global secretariats from Paris to Nairobi).
+          </p>
+          <div class="flex flex-wrap gap-3 pt-2 text-xs font-medium">
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-amber-300 border border-slate-700/60">Bharat Ratna (1954)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-amber-300 border border-slate-700/60">Nobel Peace in Oslo</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-amber-300 border border-slate-700/60">Indian Nobel Laureates</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-amber-300 border border-slate-700/60">UN Security Council (P5)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-amber-300 border border-slate-700/60">ICJ (The Hague)</span>
+          </div>
+        </div>
+
+        <!-- Hero Zoomable Image -->
+        <div class="lg:col-span-5 relative group cursor-pointer" onclick="openLightbox('assets/images/misc_un_nobel.jpg', 'United Nations Headquarters (New York City)', 'Global headquarters of the United Nations situated in Manhattan along the East River: established in 1945 to foster world peace, international law, and human rights.')">
+          <div class="relative rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl aspect-[4/3] bg-slate-900">
+            <img src="assets/images/misc_un_nobel.jpg" alt="UN Headquarters" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-slate-200">
+              <span class="font-medium flex items-center gap-1.5"><i data-lucide="building" class="w-3.5 h-3.5 text-amber-400"></i> United Nations Secretariat</span>
+              <span class="bg-slate-900/80 px-2 py-0.5 rounded text-[10px] text-amber-300 border border-slate-700 flex items-center gap-1"><i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Zoom</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- QUICK NAV TABS -->
+    <nav class="flex overflow-x-auto gap-2 p-1.5 bg-slate-900/60 border border-slate-800/80 rounded-2xl backdrop-blur-md text-xs font-medium">
+      <a href="#indian-awards" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="medal" class="w-3.5 h-3.5 text-amber-400"></i> Indian Awards</a>
+      <a href="#international-nobel" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400"></i> Nobel Prizes</a>
+      <a href="#un-organs" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="landmark" class="w-3.5 h-3.5 text-amber-400"></i> UN & 6 Organs</a>
+      <a href="#un-agencies" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="globe" class="w-3.5 h-3.5 text-amber-400"></i> Specialized Agencies</a>
+      <a href="#flashcards" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400"></i> Flashcards</a>
+      <a href="#quiz" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="help-circle" class="w-3.5 h-3.5 text-amber-400"></i> Prelims Quiz</a>
+    </nav>
+
+    <!-- SECTION 1: INDIAN CIVILIAN & GALLANTRY AWARDS -->
+    <section id="indian-awards" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400">
+          <i data-lucide="medal" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">National Civilian, Gallantry & Literary Awards</h2>
+          <p class="text-xs text-slate-400 font-light">Honors of the Republic of India: Bharat Ratna, Param Vir Chakra, Khel Ratna & Jnanpith</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+        
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono font-bold text-amber-400 uppercase">Bharat Ratna (Est. 1954)</div>
+          <p class="text-slate-300 leading-relaxed">
+            Highest civilian award. Peepal-leaf shaped bronze medallion with embossed sun. No monetary grant. Maximum 3 awards/year.
+          </p>
+          <div class="p-2 rounded-lg bg-slate-950 border border-slate-800 text-[11px] text-slate-400">
+            <strong>Inaugural (1954):</strong> C. Rajagopalachari, S. Radhakrishnan, C.V. Raman. <strong>Non-citizens:</strong> Khan Abdul Ghaffar Khan (1987), Nelson Mandela (1990).
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono font-bold text-yellow-400 uppercase">Padma Awards</div>
+          <p class="text-slate-300 leading-relaxed">
+            Announced on Republic Day:
+            <br>• <strong>Padma Vibhushan:</strong> Exceptional and distinguished service.
+            <br>• <strong>Padma Bhushan:</strong> Distinguished service of a high order.
+            <br>• <strong>Padma Shri:</strong> Distinguished service in any field.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono font-bold text-rose-400 uppercase">Military Gallantry</div>
+          <p class="text-slate-300 leading-relaxed">
+            <strong>Wartime:</strong> Param Vir Chakra (PVC - highest; first to Major Somnath Sharma in 1947), Maha Vir Chakra, Vir Chakra.
+            <br><strong>Peacetime:</strong> Ashoka Chakra (highest peacetime), Kirti Chakra, Shaurya Chakra.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
+          <div class="text-xs font-mono font-bold text-emerald-400 uppercase">Sports & Literature</div>
+          <p class="text-slate-300 leading-relaxed">
+            • <strong>Major Dhyan Chand Khel Ratna:</strong> Highest sports honor (first to Viswanathan Anand 1991-92).
+            <br>• <strong>Jnanpith Award:</strong> Highest literary honor (first to G. Sankara Kurup in Malayalam 1965).
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: INTERNATIONAL HONORS & NOBEL PRIZES -->
+    <section id="international-nobel" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400">
+          <i data-lucide="sparkles" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">The Nobel Prizes & Indian Nobel Laureates</h2>
+          <p class="text-xs text-slate-400 font-light">Stockholm vs Oslo ceremonies, Alfred Nobel's bequest, and Indian laureates</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 text-xs">
+        
+        <div class="lg:col-span-5 p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-amber-300 uppercase tracking-wider">Nobel Prize Structure</h3>
+          <ul class="text-slate-300 space-y-2 leading-relaxed">
+            <li><strong>Origin:</strong> Established from the 1895 will of <strong>Alfred Nobel</strong> (inventor of dynamite); first awarded in 1901.</li>
+            <li><strong>Dual Venues:</strong>
+              <ul class="list-disc list-inside mt-1 text-slate-400 space-y-0.5">
+                <li><strong class="text-white">Oslo, Norway:</strong> Nobel Peace Prize exclusively.</li>
+                <li><strong class="text-white">Stockholm, Sweden:</strong> Physics, Chemistry, Physiology or Medicine, Literature, and Economic Sciences (added 1968 by Sveriges Riksbank).</li>
+              </ul>
+            </li>
+            <li><strong>Presentation Date:</strong> December 10 (anniversary of Alfred Nobel's death).</li>
+            <li><strong>Other Prestigious Awards:</strong> Ramon Magsaysay ("Asia's Nobel" - Philippines; first to Vinoba Bhave 1958); Booker Prize (Literature in English).</li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-7 p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-amber-300 uppercase tracking-wider">Indian / Indian-Origin Nobel Laureates</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-slate-800 text-amber-400 font-mono">
+                  <th class="py-1.5 px-3">Laureate</th>
+                  <th class="py-1.5 px-3">Year & Category</th>
+                  <th class="py-1.5 px-3">Seminal Contribution</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60 text-slate-300 font-light">
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Rabindranath Tagore</td><td class="py-1.5 px-3 font-mono text-amber-300">1913 Literature</td><td class="py-1.5 px-3 text-slate-400">Gitanjali (First non-European laureate)</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Sir C.V. Raman</td><td class="py-1.5 px-3 font-mono text-amber-300">1930 Physics</td><td class="py-1.5 px-3 text-slate-400">Raman Effect (Inelastic light scattering)</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Har Gobind Khorana</td><td class="py-1.5 px-3 font-mono text-amber-300">1968 Medicine</td><td class="py-1.5 px-3 text-slate-400">Interpretation of the genetic code</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Mother Teresa</td><td class="py-1.5 px-3 font-mono text-amber-300">1979 Peace</td><td class="py-1.5 px-3 text-slate-400">Missionaries of Charity in Kolkata</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Subrahmanyan Chandrasekhar</td><td class="py-1.5 px-3 font-mono text-amber-300">1983 Physics</td><td class="py-1.5 px-3 text-slate-400">Chandrasekhar Limit (1.44 Solar Masses)</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Amartya Sen</td><td class="py-1.5 px-3 font-mono text-amber-300">1998 Economics</td><td class="py-1.5 px-3 text-slate-400">Welfare economics & famine mechanics</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Venkatraman Ramakrishnan</td><td class="py-1.5 px-3 font-mono text-amber-300">2009 Chemistry</td><td class="py-1.5 px-3 text-slate-400">Structure and function of the ribosome</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Kailash Satyarthi</td><td class="py-1.5 px-3 font-mono text-amber-300">2014 Peace</td><td class="py-1.5 px-3 text-slate-400">Bachpan Bachao Andolan (Child rights)</td></tr>
+                <tr><td class="py-1.5 px-3 font-semibold text-white">Abhijit Banerjee</td><td class="py-1.5 px-3 font-mono text-amber-300">2019 Economics</td><td class="py-1.5 px-3 text-slate-400">Experimental approach to poverty alleviation</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: UNITED NATIONS & 6 PRINCIPAL ORGANS -->
+    <section id="un-organs" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400">
+          <i data-lucide="landmark" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">United Nations: Charter & Six Principal Organs</h2>
+          <p class="text-xs text-slate-400 font-light">Established 24 October 1945 in San Francisco; 193 member states and 6 official languages</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-xs">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2.5">
+          <h3 class="text-sm font-bold text-white">1. General Assembly (UNGA)</h3>
+          <p class="text-slate-300 leading-relaxed">
+            "World Parliament" comprising all 193 member nations, each with 1 equal vote. Meets annually in September in New York. Elects non-permanent UNSC members, ICJ judges, and approves UN budget.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2.5">
+          <h3 class="text-sm font-bold text-rose-300">2. Security Council (UNSC)</h3>
+          <p class="text-slate-300 leading-relaxed">
+            Primary organ for international peace and security. 15 members: <strong>5 Permanent members (P5: US, UK, France, Russia, China) with Veto Power</strong> + 10 Non-permanent members elected for 2-year terms. Resolutions are legally binding.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2.5">
+          <h3 class="text-sm font-bold text-amber-300">3. ICJ (The Hague)</h3>
+          <p class="text-slate-300 leading-relaxed">
+            <strong>International Court of Justice:</strong> Only principal organ NOT in New York. Located at Peace Palace in <strong>The Hague, Netherlands</strong>. Bench of 15 judges elected to 9-year terms by UNGA and UNSC.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2.5">
+          <h3 class="text-sm font-bold text-white">4. Economic & Social Council</h3>
+          <p class="text-slate-300 leading-relaxed">
+            ECOSOC has 54 members elected by UNGA for 3-year terms. Coordinates economic, social, environmental, and cultural activities of specialized agencies.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2.5">
+          <h3 class="text-sm font-bold text-white">5. Trusteeship Council</h3>
+          <p class="text-slate-300 leading-relaxed">
+            Supervised the administration of 11 trust territories transitioning to self-governance. Suspended operations in 1994 when Palau (last trust territory) gained independence.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2.5">
+          <h3 class="text-sm font-bold text-white">6. The Secretariat</h3>
+          <p class="text-slate-300 leading-relaxed">
+            Executive civil service of the UN headed by the <strong>UN Secretary-General</strong> (appointed by UNGA on UNSC recommendation for a 5-year renewable term; current: António Guterres of Portugal).
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: SPECIALIZED UN AGENCIES -->
+    <section id="un-agencies" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400">
+          <i data-lucide="globe" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Specialized UN Agencies & Headquarters Directory</h2>
+          <p class="text-xs text-slate-400 font-light">Global secretariats, foundation years, and mandates examined in Prelims</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+        
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <div class="font-bold text-amber-400">UNESCO</div>
+          <div class="text-[11px] text-slate-300">Paris, France (Est. 1945)</div>
+          <p class="text-slate-400 text-[11px]">World Heritage Sites, scientific cooperation, and global education.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <div class="font-bold text-amber-400">WHO</div>
+          <div class="text-[11px] text-slate-300">Geneva, Switzerland (Est. 1948)</div>
+          <p class="text-slate-400 text-[11px]">World Health Day celebrated on 7th April (WHO foundation date).</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <div class="font-bold text-amber-400">ILO</div>
+          <div class="text-[11px] text-slate-300">Geneva, Switzerland (Est. 1919)</div>
+          <p class="text-slate-400 text-[11px]">Oldest UN specialized agency (created by Treaty of Versailles).</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <div class="font-bold text-amber-400">FAO</div>
+          <div class="text-[11px] text-slate-300">Rome, Italy (Est. 1945)</div>
+          <p class="text-slate-400 text-[11px]">Food and Agriculture Organization; World Food Day on 16th October.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <div class="font-bold text-amber-400">UNEP</div>
+          <div class="text-[11px] text-slate-300">Nairobi, Kenya (Est. 1972)</div>
+          <p class="text-slate-400 text-[11px]">Born out of 1972 Stockholm Conference on the Human Environment.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <div class="font-bold text-amber-400">IAEA</div>
+          <div class="text-[11px] text-slate-300">Vienna, Austria (Est. 1957)</div>
+          <p class="text-slate-400 text-[11px]">"Atoms for Peace"; nuclear safeguards and non-proliferation.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <div class="font-bold text-amber-400">IMO</div>
+          <div class="text-[11px] text-slate-300">London, United Kingdom (Est. 1948)</div>
+          <p class="text-slate-400 text-[11px]">International Maritime Organization for shipping safety.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <div class="font-bold text-amber-400">Interpol</div>
+          <div class="text-[11px] text-slate-300">Lyon, France (Est. 1923)</div>
+          <p class="text-slate-400 text-[11px]">International Criminal Police Organization (Red Notices).</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: FLASHCARDS -->
+    <section id="flashcards" class="space-y-6 pt-4 border-t border-slate-800">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center gap-2.5">
+            <i data-lucide="sparkles" class="w-5 h-5 text-amber-400"></i> Active Recall Flashcards
+          </h2>
+          <p class="text-xs text-slate-400 font-light">Interactive 3D flip cards covering Bharat Ratna, Nobel ceremonies, ICJ location, and UN agencies</p>
+        </div>
+        <span class="text-xs font-mono text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">12 Cards</span>
+      </div>
+
+      <div id="flashcardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- SECTION 6: PRELIMS PRACTICE QUIZ -->
+    <section id="quiz" class="space-y-6 pt-6 border-t border-slate-800">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center justify-center gap-2">
+          <i data-lucide="check-circle" class="w-5 h-5 text-amber-400"></i> High-Yield Prelims Exam Simulator
+        </h2>
+        <p class="text-xs text-slate-400 font-light">Five standard multiple-choice questions on Khan Abdul Ghaffar Khan, Nobel Peace in Oslo, ICJ The Hague, and UNESCO Paris</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-2">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg shadow-amber-500/20 flex items-center gap-2">
+          <i data-lucide="award" class="w-4 h-4"></i> Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all flex items-center gap-2">
+          <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Reset Quiz
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 mt-16 py-8 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>Lucent General Knowledge Interactive Encyclopedia • Section VI: Miscellaneous (Awards & UN)</p>
+      <div class="flex items-center gap-4">
+        <a href="misc_first_in_india_symbols.html" class="hover:text-amber-400 flex items-center gap-1"><i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Prev: Ch 40</a>
+        <a href="hub.html" class="hover:text-amber-400">Master Index</a>
+        <a href="misc_computer_it.html" class="hover:text-amber-400 flex items-center gap-1">Next: Ch 42 (Computers & IT) <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-amber-400">United Nations</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+    
+    <div class="flex-1 overflow-hidden relative flex items-center justify-center p-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 pt-2 border-t border-slate-800">
+      Use Mouse Wheel to Zoom in/out • Click and Drag to Pan • Press Esc to Close
+    </div>
+  </div>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+        <span class="text-xs font-semibold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+          <i data-lucide="search" class="w-3.5 h-3.5"></i> Search Awards & UN Bodies
+        </span>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type Bharat Ratna, Nobel Peace, ICJ The Hague, UNESCO, or Param Vir Chakra..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-amber-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Search over 40+ awards & international organizations in Chapter 41...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/misc_awards_organizations.js"></script>
+</body>
+</html>

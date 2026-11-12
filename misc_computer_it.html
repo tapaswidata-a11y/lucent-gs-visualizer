@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Science, IT & Internet | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-cyan-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-cyan-400 hover:text-cyan-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-600/10 border border-cyan-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="cpu" class="w-5 h-5 text-cyan-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-cyan-300">LUCENT<span class="text-cyan-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">Computer Science & IT</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-cyan-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-cyan-400 cursor-pointer">
+          <optgroup label="Section VI: Miscellaneous & IT">
+            <option value="misc_first_in_india_symbols.html">40. National Symbols & Firsts</option>
+            <option value="misc_awards_organizations.html">41. Major Awards & UN Bodies</option>
+            <option value="misc_computer_it.html" selected>42. Computer Science & IT</option>
+          </optgroup>
+          <optgroup label="Section V: General Science">
+            <option value="science_physics.html">36. General Science: Physics</option>
+            <option value="science_chemistry.html">37. General Science: Chemistry</option>
+            <option value="science_botany_ecology.html">38. Biology: Botany & Ecology</option>
+            <option value="science_human_physiology.html">39. Biology: Human Physiology</option>
+          </optgroup>
+        </select>
+
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <!-- HERO SECTION -->
+    <div class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900/90 to-cyan-950/40 p-6 sm:p-10 shadow-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold uppercase tracking-widest">
+            <i data-lucide="binary" class="w-3.5 h-3.5"></i> Section 42 • Digital Technology & Computational Systems
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-extrabold text-white tracking-tight leading-tight">
+            Computer <span class="bg-gradient-to-r from-cyan-400 to-blue-300 bg-clip-text text-transparent">Science</span>, Networking & Cybersecurity
+          </h1>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+            Comprehensive synthesis of computer fundamentals: From Babbage's Analytical Engine and the 5 hardware generations to Von Neumann architecture, cache hierarchy, universal logic gates (NAND/NOR), OSI 7-layer networking, IPv4 vs IPv6, and modern cybersecurity defense.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-2 text-xs font-medium">
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/60">5 Computer Generations</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/60">Cache & RAM Hierarchy</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/60">Universal Gates (NAND/NOR)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/60">OSI 7 Layers</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-cyan-300 border border-slate-700/60">Malware & Firewalls</span>
+          </div>
+        </div>
+
+        <!-- Hero Zoomable Image -->
+        <div class="lg:col-span-5 relative group cursor-pointer" onclick="openLightbox('assets/images/misc_computer_chip.jpg', 'Silicon Microprocessor Integrated Circuit', 'Macro closeup of a VLSI silicon microprocessor chip: containing billions of microscopic etched transistors executing billions of machine cycle calculations per second.')">
+          <div class="relative rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl aspect-[4/3] bg-slate-900">
+            <img src="assets/images/misc_computer_chip.jpg" alt="Silicon Microprocessor Chip" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-slate-200">
+              <span class="font-medium flex items-center gap-1.5"><i data-lucide="cpu" class="w-3.5 h-3.5 text-cyan-400"></i> Microprocessor Silicon Architecture</span>
+              <span class="bg-slate-900/80 px-2 py-0.5 rounded text-[10px] text-cyan-300 border border-slate-700 flex items-center gap-1"><i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Zoom</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- QUICK NAV TABS -->
+    <nav class="flex overflow-x-auto gap-2 p-1.5 bg-slate-900/60 border border-slate-800/80 rounded-2xl backdrop-blur-md text-xs font-medium">
+      <a href="#generations-pioneers" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="history" class="w-3.5 h-3.5 text-cyan-400"></i> Generations</a>
+      <a href="#cpu-memory" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="hard-drive" class="w-3.5 h-3.5 text-cyan-400"></i> CPU & Memory</a>
+      <a href="#software-gates" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="code" class="w-3.5 h-3.5 text-cyan-400"></i> Software & Gates</a>
+      <a href="#networking-protocols" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="network" class="w-3.5 h-3.5 text-cyan-400"></i> Networking & OSI</a>
+      <a href="#cybersecurity-threats" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="shield" class="w-3.5 h-3.5 text-cyan-400"></i> Cybersecurity</a>
+      <a href="#flashcards" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-cyan-400"></i> Flashcards</a>
+      <a href="#quiz" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="help-circle" class="w-3.5 h-3.5 text-cyan-400"></i> Prelims Quiz</a>
+    </nav>
+
+    <!-- SECTION 1: FIVE GENERATIONS OF COMPUTERS -->
+    <section id="generations-pioneers" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
+          <i data-lucide="history" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Evolution of Computing & Five Hardware Generations</h2>
+          <p class="text-xs text-slate-400 font-light">From vacuum tubes and transistors to VLSI microprocessors and artificial intelligence</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3.5 text-xs">
+        
+        <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <span class="text-[10px] text-cyan-400 font-mono font-bold">1ST GEN (1940–1956)</span>
+          <div class="font-bold text-white">Vacuum Tubes</div>
+          <p class="text-slate-400 leading-relaxed text-[11px]">Thermionic valves; massive size, high heat generation. Machine language (binary). ENIAC, UNIVAC, EDVAC.</p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <span class="text-[10px] text-cyan-400 font-mono font-bold">2ND GEN (1956–1963)</span>
+          <div class="font-bold text-white">Transistors</div>
+          <p class="text-slate-400 leading-relaxed text-[11px]">Invented 1947 by Shockley, Bardeen, Brattain. Magnetic core memory; Assembly language, FORTRAN, COBOL.</p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <span class="text-[10px] text-cyan-400 font-mono font-bold">3RD GEN (1964–1971)</span>
+          <div class="font-bold text-white">Integrated Circuits (ICs)</div>
+          <p class="text-slate-400 leading-relaxed text-[11px]">Jack Kilby & Robert Noyce. Small/Medium Scale Integration on silicon chip; monitors, keyboards, time-sharing OS.</p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <span class="text-[10px] text-cyan-400 font-mono font-bold">4TH GEN (1971–PRESENT)</span>
+          <div class="font-bold text-white">Microprocessors (VLSI)</div>
+          <p class="text-slate-400 leading-relaxed text-[11px]">Intel 4004 (1971). Very Large Scale Integration; personal computers (PCs), GUI, high-speed networks, Internet.</p>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <span class="text-[10px] text-cyan-400 font-mono font-bold">5TH GEN (PRESENT–FUTURE)</span>
+          <div class="font-bold text-white">Artificial Intelligence</div>
+          <p class="text-slate-400 leading-relaxed text-[11px]">Ultra Large Scale Integration (ULSI); neural networks, quantum computing, parallel processing, Natural Language.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: CPU ARCHITECTURE & MEMORY HIERARCHY -->
+    <section id="cpu-memory" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
+          <i data-lucide="hard-drive" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">CPU Architecture & Memory Storage Hierarchy</h2>
+          <p class="text-xs text-slate-400 font-light">Registers, SRAM cache, volatile DRAM vs non-volatile ROM BIOS, and byte units</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-cyan-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="cpu" class="w-4 h-4"></i> The Central Processing Unit (CPU)
+          </h3>
+          <ul class="text-slate-300 space-y-2 leading-relaxed">
+            <li><strong>Arithmetic Logic Unit (ALU):</strong> Performs all basic arithmetic (+, −, ×, ÷) and Boolean logical operations (AND, OR, NOT, comparisons).</li>
+            <li><strong>Control Unit (CU):</strong> The "traffic police" or coordinator of the CPU; fetches instructions from memory, decodes them, and directs data flow across buses.</li>
+            <li><strong>Registers:</strong> High-speed temporary memory cells located right inside the processor (Program Counter PC, Accumulator AC, Memory Address Register MAR).</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-teal-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="database" class="w-4 h-4"></i> Primary vs Cache Memory
+          </h3>
+          <div class="space-y-2 text-slate-300 leading-relaxed">
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-cyan-400">Cache Memory (SRAM):</strong> Fastest on-chip buffer using flip-flops (no periodic refresh required). Sits between CPU registers and main RAM to prevent pipeline stalls.
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">RAM (Random Access Memory):</strong> Read/write, <span class="text-rose-400 font-bold">Volatile</span> (data lost on power down). Dynamic RAM (DRAM) uses capacitors and requires periodic electrical refresh.
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">ROM (Read Only Memory):</strong> <span class="text-emerald-400 font-bold">Non-Volatile</span>; permanently stores BIOS (Basic Input/Output System) firmware for bootstrap booting.
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-amber-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="layers" class="w-4 h-4"></i> Units of Digital Storage
+          </h3>
+          <div class="space-y-1 font-mono text-[11px] text-slate-300">
+            <div>1 Bit = Binary digit (0 or 1)</div>
+            <div>1 Nibble = <strong>4 Bits</strong></div>
+            <div>1 Byte = <strong>8 Bits</strong> (256 ASCII values)</div>
+            <div>1 Kilobyte (KB) = 1,024 Bytes (2¹⁰)</div>
+            <div>1 Megabyte (MB) = 1,024 KB (2²⁰)</div>
+            <div>1 Gigabyte (GB) = 1,024 MB (2³⁰)</div>
+            <div>1 Terabyte (TB) = 1,024 GB (2⁴⁰)</div>
+            <div>1 Petabyte (PB) = 1,024 TB (2⁵⁰)</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: SOFTWARE & UNIVERSAL LOGIC GATES -->
+    <section id="software-gates" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
+          <i data-lucide="code" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Software Architecture & Universal Logic Gates</h2>
+          <p class="text-xs text-slate-400 font-light">Compilers vs interpreters, open-source Linux, and Boolean logic gates</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-cyan-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="terminal" class="w-4 h-4"></i> System Software & Language Translators
+          </h3>
+          <ul class="text-slate-300 space-y-2 leading-relaxed">
+            <li><strong>Operating System (OS):</strong> System software interface managing computer hardware and software resources (Linux, Unix, Windows, Android).</li>
+            <li><strong>Compiler:</strong> Translates entire high-level program (C, C++, Java) into machine language in a single batch pass before execution; outputs an executable (.exe) file.</li>
+            <li><strong>Interpreter:</strong> Translates and executes high-level source code line-by-line sequentially (Python, Ruby, JavaScript); execution halts on the first encountered error.</li>
+            <li><strong>Assembler:</strong> Translates low-level assembly language mnemonic mnemonics (MOV, ADD) directly into binary machine code.</li>
+            <li><strong>Open Source:</strong> Linux kernel created by <strong>Linus Torvalds in 1991</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-teal-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="git-commit" class="w-4 h-4"></i> Digital Electronics & Universal Gates
+          </h3>
+          <div class="space-y-2 text-slate-300">
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Basic Gates:</strong>
+              <p class="text-slate-400 mt-0.5">• <strong>AND:</strong> Output is 1 only when ALL inputs are 1.<br>• <strong>OR:</strong> Output is 1 if ANY input is 1.<br>• <strong>NOT (Inverter):</strong> Inverts the input signal (1 to 0, 0 to 1).</p>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-cyan-400">Universal Gates (NAND & NOR):</strong>
+              <p class="text-slate-400 mt-0.5">Any basic logic gate and any complex boolean processor circuit can be fabricated exclusively using interconnected networks of either <strong>NAND</strong> or <strong>NOR</strong> gates alone.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: NETWORKING, OSI MODEL & PROTOCOLS -->
+    <section id="networking-protocols" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
+          <i data-lucide="network" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Computer Networking, the OSI 7-Layer Model & Internet Protocols</h2>
+          <p class="text-xs text-slate-400 font-light">Layered protocol stack, IPv4 vs IPv6 addressing, and port number allocations</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 text-xs">
+        
+        <!-- OSI 7 Layers -->
+        <div class="lg:col-span-6 p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-cyan-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="layers" class="w-4 h-4"></i> The OSI 7-Layer Reference Model (ISO 1984)
+          </h3>
+          <div class="space-y-1.5">
+            <div class="p-2 rounded-lg bg-slate-950 border border-slate-800 flex justify-between">
+              <span class="font-bold text-white">Layer 7: Application</span>
+              <span class="text-slate-400">User interface; HTTP, FTP, SMTP, DNS</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-950 border border-slate-800 flex justify-between">
+              <span class="font-bold text-white">Layer 6: Presentation</span>
+              <span class="text-slate-400">Data format, encryption, compression</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-950 border border-slate-800 flex justify-between">
+              <span class="font-bold text-white">Layer 5: Session</span>
+              <span class="text-slate-400">Session setup, maintenance, dialog control</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-950 border border-slate-800 flex justify-between">
+              <span class="font-bold text-white">Layer 4: Transport</span>
+              <span class="text-slate-400">End-to-end delivery; TCP (reliable) vs UDP</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-950 border border-slate-800 flex justify-between">
+              <span class="font-bold text-white">Layer 3: Network</span>
+              <span class="text-slate-400">Packet routing, logical IP addressing, Routers</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-950 border border-slate-800 flex justify-between">
+              <span class="font-bold text-white">Layer 2: Data Link</span>
+              <span class="text-slate-400">Frames, physical MAC address, Switches</span>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-950 border border-slate-800 flex justify-between">
+              <span class="font-bold text-white">Layer 1: Physical</span>
+              <span class="text-slate-400">Raw bitstreams, cables, hubs, repeaters</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Internet Protocols -->
+        <div class="lg:col-span-6 p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-teal-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="globe" class="w-4 h-4"></i> Internet Protocols & Port Directory
+          </h3>
+          <div class="space-y-2 text-slate-300">
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">IP Addressing:</strong>
+              <p class="text-slate-400 mt-0.5">• <strong>IPv4:</strong> 32-bit dotted-decimal (e.g. 192.168.1.1); ~4.3 billion addresses.<br>• <strong>IPv6:</strong> 128-bit hexadecimal (colon-separated); 2¹²⁸ addresses.<br>• <strong>MAC Address:</strong> 48-bit unique hardware identifier burned on NIC.</p>
+            </div>
+            <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800">
+              <strong class="text-white">Common Ports:</strong>
+              <p class="text-slate-400 mt-0.5">• <strong>DNS (Port 53):</strong> Resolves domain names to IP addresses.<br>• <strong>HTTP (Port 80) / HTTPS (Port 443):</strong> Web page delivery (SSL/TLS encrypted).<br>• <strong>SMTP (Port 25):</strong> Sending email.<br>• <strong>FTP (Port 20/21):</strong> File transfer.<br>• <strong>DHCP:</strong> Dynamic IP allocation.</p>
+            </div>
+            <p class="text-slate-400 italic text-[11px]">
+              *World Wide Web (WWW) was invented by <strong>Sir Tim Berners-Lee</strong> at CERN in 1989.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: CYBERSECURITY, THREATS & CRYPTOGRAPHY -->
+    <section id="cybersecurity-threats" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
+          <i data-lucide="shield" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">Cybersecurity, Malware Taxonomy & Cryptography</h2>
+          <p class="text-xs text-slate-400 font-light">Classification of malware, phishing mechanics, firewalls, and public key encryption</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs">
+        
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-rose-300 uppercase tracking-wider">Malware Taxonomy</h3>
+          <ul class="text-slate-300 space-y-2 leading-relaxed">
+            <li><strong>Virus:</strong> Malicious code that attaches to a legitimate host executable file; replicates only when host is run.</li>
+            <li><strong>Worm:</strong> Standalone malicious program that self-replicates across computer networks autonomously without requiring host file attachment.</li>
+            <li><strong>Trojan Horse:</strong> Harmful software that masquerades as useful, harmless software to deceive users into installation.</li>
+            <li><strong>Ransomware:</strong> Cryptographic malware that encrypts user files and demands ransom payment (e.g. WannaCry).</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-amber-300 uppercase tracking-wider">Cyber Attacks</h3>
+          <ul class="text-slate-300 space-y-2 leading-relaxed">
+            <li><strong>Phishing:</strong> Fraudulent deceptive emails or replica websites designed to trick victims into surrendering passwords and banking credentials.</li>
+            <li><strong>DDoS (Distributed Denial of Service):</strong> Flooding a targeted server or network with massive synthetic traffic generated by botnets to crash legitimate access.</li>
+            <li><strong>Spyware & Keyloggers:</strong> Secretly monitoring user activities, tracking browser history, and recording keystrokes.</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-emerald-300 uppercase tracking-wider">Defenses & Cryptography</h3>
+          <ul class="text-slate-300 space-y-2 leading-relaxed">
+            <li><strong>Firewall:</strong> Security barrier that monitors, filters, and blocks unauthorized incoming and outgoing network traffic based on predefined rule sets.</li>
+            <li><strong>Symmetric Encryption:</strong> Single secret key used for both encryption and decryption (e.g. AES). Fast, but requires secure key sharing.</li>
+            <li><strong>Asymmetric Encryption:</strong> Uses a mathematically linked key pair: <strong>Public Key</strong> (freely distributed to encrypt) and <strong>Private Key</strong> (kept secret to decrypt, e.g. RSA).</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: FLASHCARDS -->
+    <section id="flashcards" class="space-y-6 pt-4 border-t border-slate-800">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center gap-2.5">
+            <i data-lucide="sparkles" class="w-5 h-5 text-cyan-400"></i> Active Recall Flashcards
+          </h2>
+          <p class="text-xs text-slate-400 font-light">Interactive 3D flip cards covering computer generations, RAM vs ROM, universal gates, and OSI layers</p>
+        </div>
+        <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">12 Cards</span>
+      </div>
+
+      <div id="flashcardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- SECTION 7: PRELIMS PRACTICE QUIZ -->
+    <section id="quiz" class="space-y-6 pt-6 border-t border-slate-800">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center justify-center gap-2">
+          <i data-lucide="check-circle" class="w-5 h-5 text-cyan-400"></i> High-Yield Prelims Exam Simulator
+        </h2>
+        <p class="text-xs text-slate-400 font-light">Five standard multiple-choice questions on vacuum tubes, cache SRAM, IPv4/IPv6 bits, universal gates, and worm mechanics</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-2">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg shadow-cyan-500/20 flex items-center gap-2">
+          <i data-lucide="award" class="w-4 h-4"></i> Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all flex items-center gap-2">
+          <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Reset Quiz
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 mt-16 py-8 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>Lucent General Knowledge Interactive Encyclopedia • Section VI: Miscellaneous & IT (100% Complete Full Book)</p>
+      <div class="flex items-center gap-4">
+        <a href="misc_awards_organizations.html" class="hover:text-cyan-400 flex items-center gap-1"><i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Prev: Ch 41</a>
+        <a href="hub.html" class="hover:text-cyan-400 font-bold text-amber-400">Master Index</a>
+        <a href="index.html" class="hover:text-cyan-400 flex items-center gap-1">Back to Start: Ch 01 <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-cyan-400">Computer Hardware</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+    
+    <div class="flex-1 overflow-hidden relative flex items-center justify-center p-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 pt-2 border-t border-slate-800">
+      Use Mouse Wheel to Zoom in/out • Click and Drag to Pan • Press Esc to Close
+    </div>
+  </div>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+        <span class="text-xs font-semibold uppercase tracking-wider text-cyan-400 flex items-center gap-1.5">
+          <i data-lucide="search" class="w-3.5 h-3.5"></i> Search Computer & IT Topics
+        </span>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type Cache, IPv6, NAND gate, OSI Model, or Firewall..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Search over 40+ computer & networking concepts in Chapter 42...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/misc_computer_it.js"></script>
+</body>
+</html>

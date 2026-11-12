@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>National Symbols & First in India & World | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-amber-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-amber-400 hover:text-amber-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500/20 to-yellow-600/10 border border-amber-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="award" class="w-5 h-5 text-amber-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-amber-300">LUCENT<span class="text-amber-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">Symbols & Firsts</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-amber-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-amber-400 cursor-pointer">
+          <optgroup label="Section VI: Miscellaneous & IT">
+            <option value="misc_first_in_india_symbols.html" selected>40. National Symbols & Firsts</option>
+            <option value="misc_awards_organizations.html">41. Major Awards & UN Bodies</option>
+            <option value="misc_computer_it.html">42. Computer Science & IT</option>
+          </optgroup>
+          <optgroup label="Section V: General Science">
+            <option value="science_physics.html">36. General Science: Physics</option>
+            <option value="science_chemistry.html">37. General Science: Chemistry</option>
+            <option value="science_botany_ecology.html">38. Biology: Botany & Ecology</option>
+            <option value="science_human_physiology.html">39. Biology: Human Physiology</option>
+          </optgroup>
+        </select>
+
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <!-- HERO SECTION -->
+    <div class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900/90 to-amber-950/40 p-6 sm:p-10 shadow-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <div class="lg:col-span-7 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-widest">
+            <i data-lucide="compass" class="w-3.5 h-3.5"></i> Section 40 • National Heritage & Historical Milestones
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-extrabold text-white tracking-tight leading-tight">
+            National <span class="bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">Symbols</span> & Pioneers of India & World
+          </h1>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-light">
+            Comprehensive compendium of India's national emblems, flag specifications (2:3), Saka calendar mechanics, and historical firsts: first presidents, prime ministers, scientists, cosmonauts, women judges, and global trailblazers from Neil Armstrong to Sirimavo Bandaranaike.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-2 text-xs font-medium">
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-amber-300 border border-slate-700/60">Tiranga (2:3 Ratio)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-amber-300 border border-slate-700/60">Satyameva Jayate (Mundaka)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-amber-300 border border-slate-700/60">Anthem (52 Seconds)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-amber-300 border border-slate-700/60">Saka Era (78 AD)</span>
+            <span class="px-2.5 py-1 rounded-md bg-slate-800/80 text-amber-300 border border-slate-700/60">First Pioneers Matrix</span>
+          </div>
+        </div>
+
+        <!-- Hero Zoomable Image -->
+        <div class="lg:col-span-5 relative group cursor-pointer" onclick="openLightbox('assets/images/misc_national_emblem.jpg', 'Lion Capital of Ashoka (Sarnath Museum)', 'The National Emblem of India: sculpted in polished Chunar sandstone during Emperor Ashoka’s reign (~250 BCE). Four lions standing back-to-back atop an abacus with an elephant, galloping horse, bull, and lion separated by 24-spoke Dharmachakras.')">
+          <div class="relative rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl aspect-[4/3] bg-slate-900">
+            <img src="assets/images/misc_national_emblem.jpg" alt="Lion Capital of Ashoka" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-slate-200">
+              <span class="font-medium flex items-center gap-1.5"><i data-lucide="crown" class="w-3.5 h-3.5 text-amber-400"></i> Lion Capital of Ashoka</span>
+              <span class="bg-slate-900/80 px-2 py-0.5 rounded text-[10px] text-amber-300 border border-slate-700 flex items-center gap-1"><i data-lucide="maximize-2" class="w-2.5 h-2.5"></i> Zoom</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- QUICK NAV TABS -->
+    <nav class="flex overflow-x-auto gap-2 p-1.5 bg-slate-900/60 border border-slate-800/80 rounded-2xl backdrop-blur-md text-xs font-medium">
+      <a href="#national-symbols" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="flag" class="w-3.5 h-3.5 text-amber-400"></i> National Symbols</a>
+      <a href="#first-india-male" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="user" class="w-3.5 h-3.5 text-amber-400"></i> First in India (Men)</a>
+      <a href="#first-india-female" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="user-check" class="w-3.5 h-3.5 text-amber-400"></i> First in India (Women)</a>
+      <a href="#first-world" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="globe" class="w-3.5 h-3.5 text-amber-400"></i> First in World</a>
+      <a href="#flashcards" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400"></i> Flashcards</a>
+      <a href="#quiz" class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all whitespace-nowrap flex items-center gap-2"><i data-lucide="help-circle" class="w-3.5 h-3.5 text-amber-400"></i> Prelims Quiz</a>
+    </nav>
+
+    <!-- SECTION 1: NATIONAL SYMBOLS -->
+    <section id="national-symbols" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400">
+          <i data-lucide="flag" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">National Symbols of the Republic of India</h2>
+          <p class="text-xs text-slate-400 font-light">Constitutional adoption, historical origins, and statutory specifications</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-xs">
+        
+        <!-- Flag & Emblem -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-amber-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="shield" class="w-4 h-4 text-amber-400"></i> Flag & State Emblem
+          </h3>
+          <div class="space-y-2 text-slate-300 leading-relaxed">
+            <p><strong>National Flag (Tiranga):</strong> Designed by Pingali Venkayya; adopted on <strong>22nd July 1947</strong>. Specified ratio of width to length is <strong>2 : 3</strong>. Saffron (courage), White (truth/peace), Green (faith/fertility). Center has navy blue 24-spoke Ashoka Chakra.</p>
+            <p><strong>State Emblem:</strong> Adapted from the Lion Capital of Ashoka at Sarnath; adopted on <strong>26th January 1950</strong>. Features 4 lions standing back-to-back. Abacus has horse, bull, lion, elephant. Inscribed below is <strong>"Satyameva Jayate"</strong> in Devanagari script from the <em>Mundaka Upanishad</em>.</p>
+          </div>
+        </div>
+
+        <!-- Anthem & Song -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-yellow-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="music" class="w-4 h-4 text-yellow-400"></i> Anthem, Song & Calendar
+          </h3>
+          <div class="space-y-2 text-slate-300 leading-relaxed">
+            <p><strong>National Anthem (Jana Gana Mana):</strong> Composed by Rabindranath Tagore; first sung on 27th December 1911 at the Calcutta Session of INC. Adopted on 24th January 1950. Playing time: <strong>52 seconds</strong>.</p>
+            <p><strong>National Song (Vande Mataram):</strong> Composed by Bankim Chandra Chattopadhyay in Sanskrit/Bengali in his novel <em>Anandamath</em> (1882); first sung at 1896 INC session.</p>
+            <p><strong>National Calendar:</strong> Based on the <strong>Saka Era (78 AD)</strong>; adopted on 22nd March 1957. Normal year starts on <strong>22nd March</strong> (21st March in leap years) with month <em>Chaitra</em>.</p>
+          </div>
+        </div>
+
+        <!-- Flora & Fauna -->
+        <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <h3 class="text-sm font-bold text-emerald-300 uppercase tracking-wider flex items-center gap-2">
+            <i data-lucide="paw-print" class="w-4 h-4 text-emerald-400"></i> National Flora & Fauna
+          </h3>
+          <ul class="text-slate-300 space-y-1.5 leading-relaxed">
+            <li><strong>National Animal:</strong> Royal Bengal Tiger (<em>Panthera tigris</em>) - adopted 1973 (replaced Lion).</li>
+            <li><strong>National Bird:</strong> Indian Peacock (<em>Pavo cristatus</em>) - declared 1963.</li>
+            <li><strong>National Aquatic Animal:</strong> Ganges River Dolphin (<em>Platanista gangetica</em>) - notified 2009.</li>
+            <li><strong>National Heritage Animal:</strong> Indian Elephant (<em>Elephas maximus</em>) - declared 2010.</li>
+            <li><strong>National Flower:</strong> Lotus (<em>Nelumbo nucifera</em>).</li>
+            <li><strong>National Tree:</strong> Banyan Tree (<em>Ficus benghalensis</em>).</li>
+            <li><strong>National River:</strong> Ganga - declared 2008.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: FIRST IN INDIA (MALE) -->
+    <section id="first-india-male" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400">
+          <i data-lucide="user" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">First in India: Male Trailblazers</h2>
+          <p class="text-xs text-slate-400 font-light">Constitutional heads, civil servants, armed forces commanders, and science pioneers</p>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/60 shadow-xl text-xs">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-slate-800 bg-slate-950/80 text-amber-400 font-mono">
+              <th class="py-2.5 px-3">Designation / Achievement</th>
+              <th class="py-2.5 px-3">Personality</th>
+              <th class="py-2.5 px-3">Year / Landmark Context</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 text-slate-300 font-light">
+            <tr><td class="py-2 px-3 font-semibold text-white">First President of Independent India</td><td class="py-2 px-3 text-amber-300 font-medium">Dr. Rajendra Prasad</td><td class="py-2 px-3 text-slate-400">1950–1962 (Longest serving President)</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Prime Minister of India</td><td class="py-2 px-3 text-amber-300 font-medium">Pt. Jawaharlal Nehru</td><td class="py-2 px-3 text-slate-400">1947–1964 (Longest serving PM)</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Indian Nobel Laureate</td><td class="py-2 px-3 text-amber-300 font-medium">Rabindranath Tagore</td><td class="py-2 px-3 text-slate-400">1913 in Literature (Gitanjali)</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Indian in Space</td><td class="py-2 px-3 text-amber-300 font-medium">Sq. Ldr. Rakesh Sharma</td><td class="py-2 px-3 text-slate-400">April 1984 on Soviet Soyuz T-11</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Chief Justice of India (CJI)</td><td class="py-2 px-3 text-amber-300 font-medium">Justice H.J. Kania</td><td class="py-2 px-3 text-slate-400">Appointed 26th January 1950</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Chief Election Commissioner (CEC)</td><td class="py-2 px-3 text-amber-300 font-medium">Sukumar Sen</td><td class="py-2 px-3 text-slate-400">Conducted 1st General Election 1951-52</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Commander-in-Chief of Indian Army</td><td class="py-2 px-3 text-amber-300 font-medium">General K.M. Cariappa</td><td class="py-2 px-3 text-slate-400">Took command 15th January 1949 (Army Day)</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Field Marshal of India</td><td class="py-2 px-3 text-amber-300 font-medium">Sam Manekshaw</td><td class="py-2 px-3 text-slate-400">1973 (Architect of 1971 Liberation War)</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Indian to join Indian Civil Service (ICS)</td><td class="py-2 px-3 text-amber-300 font-medium">Satyendranath Tagore</td><td class="py-2 px-3 text-slate-400">1863 (Elder brother of Rabindranath)</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Indian to swim English Channel</td><td class="py-2 px-3 text-amber-300 font-medium">Mihir Sen</td><td class="py-2 px-3 text-slate-400">1958</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 3: FIRST IN INDIA (FEMALE) -->
+    <section id="first-india-female" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400">
+          <i data-lucide="user-check" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">First in India: Female Trailblazers</h2>
+          <p class="text-xs text-slate-400 font-light">Women pioneers in governance, constitutional law, police, and mountaineering</p>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/60 shadow-xl text-xs">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-slate-800 bg-slate-950/80 text-amber-400 font-mono">
+              <th class="py-2.5 px-3">Designation / Achievement</th>
+              <th class="py-2.5 px-3">Personality</th>
+              <th class="py-2.5 px-3">Year / Landmark Context</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 text-slate-300 font-light">
+            <tr><td class="py-2 px-3 font-semibold text-white">First Woman President of India</td><td class="py-2 px-3 text-amber-300 font-medium">Pratibha Devisingh Patil</td><td class="py-2 px-3 text-slate-400">2007–2012 (12th President of India)</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Woman Prime Minister of India</td><td class="py-2 px-3 text-amber-300 font-medium">Indira Gandhi</td><td class="py-2 px-3 text-slate-400">Assumed office January 1966</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Woman Governor of a State</td><td class="py-2 px-3 text-amber-300 font-medium">Sarojini Naidu</td><td class="py-2 px-3 text-slate-400">Governor of United Provinces (UP), 1947</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Woman Chief Minister of a State</td><td class="py-2 px-3 text-amber-300 font-medium">Sucheta Kripalani</td><td class="py-2 px-3 text-slate-400">Chief Minister of Uttar Pradesh, 1963–1967</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Woman Supreme Court Judge</td><td class="py-2 px-3 text-amber-300 font-medium">Justice M. Fathima Beevi</td><td class="py-2 px-3 text-slate-400">Appointed 6th October 1989</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Woman IPS Officer</td><td class="py-2 px-3 text-amber-300 font-medium">Kiran Bedi</td><td class="py-2 px-3 text-slate-400">Joined service in 1972</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Indian Woman to scale Mt. Everest</td><td class="py-2 px-3 text-amber-300 font-medium">Bachendri Pal</td><td class="py-2 px-3 text-slate-400">23rd May 1984 (Santosh Yadav climbed twice)</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Woman Nobel Peace Prize (India)</td><td class="py-2 px-3 text-amber-300 font-medium">Mother Teresa</td><td class="py-2 px-3 text-slate-400">1979 Nobel Peace Prize (Missionaries of Charity)</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Indian Woman to win Booker Prize</td><td class="py-2 px-3 text-amber-300 font-medium">Arundhati Roy</td><td class="py-2 px-3 text-slate-400">1997 for 'The God of Small Things'</td></tr>
+            <tr><td class="py-2 px-3 font-semibold text-white">First Indian Woman in Space</td><td class="py-2 px-3 text-amber-300 font-medium">Kalpana Chawla</td><td class="py-2 px-3 text-slate-400">1997 on STS-87 (Columbia space shuttle)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FIRST IN WORLD -->
+    <section id="first-world" class="space-y-6">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+        <div class="p-2 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-400">
+          <i data-lucide="globe" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white">First in the World: Global Pioneers</h2>
+          <p class="text-xs text-slate-400 font-light">Explorers, cosmonauts, and leaders who charted unprecedented global human achievements</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-xs">
+        
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <span class="text-[10px] text-amber-400 font-mono font-bold">SPACE EXPLORATION</span>
+          <div class="font-bold text-white">First Person in Space</div>
+          <p class="text-slate-300 font-medium">Yuri Gagarin (USSR) — 12th April 1961 aboard Vostok 1.</p>
+          <p class="text-slate-400 text-[11px]">First woman in space: Valentina Tereshkova (1963).</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <span class="text-[10px] text-amber-400 font-mono font-bold">LUNAR LANDING</span>
+          <div class="font-bold text-white">First Person on the Moon</div>
+          <p class="text-slate-300 font-medium">Neil Armstrong (USA) — 20th July 1969 on Apollo 11.</p>
+          <p class="text-slate-400 text-[11px]">Followed moments later by Edwin "Buzz" Aldrin.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <span class="text-[10px] text-amber-400 font-mono font-bold">POLAR EXPEDITIONS</span>
+          <div class="font-bold text-white">North & South Poles</div>
+          <p class="text-slate-300 font-medium">North Pole: Robert Peary (1909); South Pole: Roald Amundsen (1911).</p>
+          <p class="text-slate-400 text-[11px]">Amundsen reached Antarctica 5 weeks ahead of Scott.</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <span class="text-[10px] text-amber-400 font-mono font-bold">MOUNTAINEERING</span>
+          <div class="font-bold text-white">First to Scale Mt. Everest</div>
+          <p class="text-slate-300 font-medium">Edmund Hillary (NZ) & Tenzing Norgay (Nepal) — 29 May 1953.</p>
+          <p class="text-slate-400 text-[11px]">First woman: Junko Tabei of Japan (1975).</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <span class="text-[10px] text-amber-400 font-mono font-bold">GLOBAL GOVERNANCE</span>
+          <div class="font-bold text-white">First Woman Prime Minister</div>
+          <p class="text-slate-300 font-medium">Sirimavo Bandaranaike (Sri Lanka) — 21st July 1960.</p>
+          <p class="text-slate-400 text-[11px]">First woman President in world: Isabel Perón (Argentina 1974).</p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-1.5">
+          <span class="text-[10px] text-amber-400 font-mono font-bold">INTERNATIONAL DIPLOMACY</span>
+          <div class="font-bold text-white">First UN Secretary-General</div>
+          <p class="text-slate-300 font-medium">Trygve Lie of Norway — served 1946–1952.</p>
+          <p class="text-slate-400 text-[11px]">First woman President of UN General Assembly: Vijaya Lakshmi Pandit (1953).</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: FLASHCARDS -->
+    <section id="flashcards" class="space-y-6 pt-4 border-t border-slate-800">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center gap-2.5">
+            <i data-lucide="sparkles" class="w-5 h-5 text-amber-400"></i> Active Recall Flashcards
+          </h2>
+          <p class="text-xs text-slate-400 font-light">Interactive 3D flip cards covering flag dimensions, national motto, calendar, and historical firsts</p>
+        </div>
+        <span class="text-xs font-mono text-amber-400 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20">12 Cards</span>
+      </div>
+
+      <div id="flashcardsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- SECTION 6: PRELIMS PRACTICE QUIZ -->
+    <section id="quiz" class="space-y-6 pt-6 border-t border-slate-800">
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <h2 class="text-xl sm:text-2xl font-['Cinzel'] font-bold text-white flex items-center justify-center gap-2">
+          <i data-lucide="check-circle" class="w-5 h-5 text-amber-400"></i> High-Yield Prelims Exam Simulator
+        </h2>
+        <p class="text-xs text-slate-400 font-light">Five standard multiple-choice questions on Mundaka Upanishad, flag ratio, Fathima Beevi, and lunar firsts</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-2">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg shadow-amber-500/20 flex items-center gap-2">
+          <i data-lucide="award" class="w-4 h-4"></i> Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all flex items-center gap-2">
+          <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Reset Quiz
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 mt-16 py-8 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>Lucent General Knowledge Interactive Encyclopedia • Section VI: Miscellaneous (National Symbols & Firsts)</p>
+      <div class="flex items-center gap-4">
+        <a href="science_human_physiology.html" class="hover:text-amber-400 flex items-center gap-1"><i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Prev: Ch 39</a>
+        <a href="hub.html" class="hover:text-amber-400">Master Index</a>
+        <a href="misc_awards_organizations.html" class="hover:text-amber-400 flex items-center gap-1">Next: Ch 41 (Awards & UN) <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX VIEWER -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-amber-400">National Heritage</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+    
+    <div class="flex-1 overflow-hidden relative flex items-center justify-center p-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 pt-2 border-t border-slate-800">
+      Use Mouse Wheel to Zoom in/out • Click and Drag to Pan • Press Esc to Close
+    </div>
+  </div>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+        <span class="text-xs font-semibold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+          <i data-lucide="search" class="w-3.5 h-3.5"></i> Search Symbols & Pioneers
+        </span>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type National Flag, Satyameva Jayate, Rakesh Sharma, or Fathima Beevi..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-amber-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Search over 40+ national symbols and historical firsts in Chapter 40...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/misc_first_in_india_symbols.js"></script>
+</body>
+</html>
