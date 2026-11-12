@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Universe, Solar System & The Earth | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-amber-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-amber-400 hover:text-amber-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-600/10 border border-blue-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="globe" class="w-5 h-5 text-blue-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-blue-300">LUCENT<span class="text-blue-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">World Geography</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <!-- Quick Search Button -->
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-blue-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+        <!-- Chapter Switcher Dropdown -->
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-blue-400 cursor-pointer">
+          <optgroup label="Ancient India">
+            <option value="index.html">01. Indus Valley Civilization</option>
+            <option value="vedic.html">02. Vedic Culture</option>
+            <option value="mahajanapadas.html">03. Mahajanapadas & Magadha</option>
+            <option value="religions.html">04. Buddhism & Jainism</option>
+            <option value="maurya.html">05. The Mauryan Empire</option>
+            <option value="post_maurya.html">06. Post-Maurya & Sangam</option>
+            <option value="gupta.html">07. Gupta Age & Harsha</option>
+          </optgroup>
+          <optgroup label="Medieval India">
+            <option value="early_medieval.html">08. Early Medieval & Rajputs</option>
+            <option value="delhi_sultanate.html">09. The Delhi Sultanate</option>
+            <option value="vijayanagar_bahmani.html">10. Vijayanagar & Bahmani</option>
+            <option value="mughal_empire.html">11. The Mughal Empire</option>
+            <option value="marathas.html">12. The Marathas & Later Mughals</option>
+            <option value="bhakti_sufi.html">13. Bhakti & Sufi Movements</option>
+          </optgroup>
+          <optgroup label="Modern India">
+            <option value="european_expansion.html">14. European Expansion in India</option>
+            <option value="economic_revolts.html">15. Economic Impact & Tribal Revolts</option>
+            <option value="reforms.html">16. Socio-Religious Reform Movements</option>
+            <option value="revolt_1857.html">17. The Great Revolt of 1857</option>
+            <option value="national_movement_early.html">18. Early National Movement (1885–1919)</option>
+            <option value="gandhian_era.html">19. The Gandhian Era (1919–1947)</option>
+            <option value="viceroys_acts.html">20. British Viceroys & Acts</option>
+          </optgroup>
+          <optgroup label="Geography">
+            <option value="geo_universe_earth.html" selected>21. Universe, Solar System & Earth</option>
+            <option value="geo_geomorphology_climatology.html">22. Geomorphology, Atmosphere & Oceans</option>
+            <option value="geo_indian_physiography.html">23. Indian Physiography & Passes</option>
+            <option value="geo_indian_drainage.html">24. Indian Drainage & River Basins</option>
+            <option value="geo_climate_soils_agriculture.html">25. Climate, Soils, Agriculture & Minerals</option>
+          </optgroup>
+        </select>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+    <!-- HERO SECTION -->
+    <section class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-slate-950 p-8 sm:p-12 shadow-2xl">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent pointer-events-none"></div>
+      <div class="relative z-10 max-w-4xl space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-semibold uppercase tracking-wider">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          Section 21 • World Geography
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-black tracking-tight text-slate-100">
+          The Universe, The Solar System & <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-indigo-300">The Living Earth</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+          From the primeval expansion of the Big Bang to the eight orbital realms of our Solar System, the geometry of solstices and equinoxes, the international time grid, and the layered seismic depths of Earth’s crust, mantle, and core.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="#universe-origin" class="px-4 py-2 rounded-xl bg-blue-500 text-slate-950 font-semibold text-xs tracking-wide hover:bg-blue-400 transition-colors">The Universe</a>
+          <a href="#solar-system" class="px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-medium text-xs tracking-wide border border-slate-700 transition-colors">8 Planets Matrix</a>
+          <a href="#earth-motions" class="px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-medium text-xs tracking-wide border border-slate-700 transition-colors">Earth Motions & Seasons</a>
+          <a href="#earth-interior" class="px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-medium text-xs tracking-wide border border-slate-700 transition-colors">Internal Structure & Moho</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: THE UNIVERSE, BIG BANG & GALAXIES -->
+    <section id="universe-origin" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 font-['Cinzel'] font-bold text-lg">01</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">The Universe, Big Bang Theory & Cosmic Units</h2>
+          <p class="text-xs text-slate-400">Cosmological Origins, Galactic Architecture, and Measuring Distances in Deep Space</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center font-bold">1</div>
+          <h3 class="text-base font-bold text-slate-100">The Big Bang Theory</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Formulated by <strong>Georges Lemaître (1927)</strong>. All matter was concentrated into a tiny primeval point with infinite density and temperature, which exploded ~<strong>13.8 billion years ago</strong>. Edwin Hubble established that galaxies are moving away from each other (expanding universe).
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center font-bold">2</div>
+          <h3 class="text-base font-bold text-slate-100">Galaxies & The Milky Way</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Our solar system is in the <strong>Milky Way Galaxy (Akash Ganga)</strong>, a barred spiral galaxy with ~100–400 billion stars. The closest major galaxy to us is the <strong>Andromeda Galaxy (M31)</strong>, located 2.5 million light years away.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center font-bold">3</div>
+          <h3 class="text-base font-bold text-slate-100">Cosmic Distance Units</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            • <strong>Astronomical Unit (AU):</strong> Mean Earth-Sun distance = <strong>149.6 million km</strong>.
+            <br>• <strong>Light Year (ly):</strong> Distance light travels in 1 year = <strong>9.46 × 10¹² km</strong>.
+            <br>• <strong>Parsec:</strong> Parallax second = <strong>3.26 light years</strong> (largest unit of distance).
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE SOLAR SYSTEM & 8 PLANETS -->
+    <section id="solar-system" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 font-['Cinzel'] font-bold text-lg">02</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">The Solar System: The Sun and 8 Planets</h2>
+          <p class="text-xs text-slate-400">Terrestrial vs Jovian Planets, Physical Attributes, and Orbit Mechanics</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- NASA Image Container -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="expandable-image group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 cursor-zoom-in" data-title="The Solar System (NASA Overview)" data-caption="NASA graphic showing the Sun and the eight major planets ordered by distance from the Sun: Mercury, Venus, Earth, Mars (Terrestrial) followed by Jupiter, Saturn, Uranus, Neptune (Jovian).">
+            <img src="assets/images/solar_system.jpg" alt="Solar System NASA Graphic" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-xs text-slate-200 flex items-center justify-between">
+              <span class="font-semibold text-blue-300">NASA Solar System Graphic</span>
+              <span class="flex items-center gap-1 text-[11px] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700"><i data-lucide="maximize-2" class="w-3 h-3"></i> Zoom</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic text-center">Solar System: 8 major planets organized into Inner Terrestrial and Outer Jovian worlds.</p>
+        </div>
+
+        <!-- The Sun Points -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <h3 class="text-lg font-bold text-amber-300 flex items-center gap-2">
+              <i data-lucide="sun" class="w-5 h-5 text-amber-400"></i> The Sun: Central Luminary
+            </h3>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li>• <strong>Composition:</strong> 71% Hydrogen, 26.5% Helium, 2.5% other elements. Energy generated by nuclear fusion (Hydrogen into Helium).</li>
+              <li>• <strong>Temperatures:</strong> Core temperature is <strong>15 million K</strong>; surface (photosphere) temperature is <strong>~6,000 K</strong>.</li>
+              <li>• <strong>Atmosphere:</strong> Chromosphere (thin layer of gas above photosphere) and <strong>Corona</strong> (outermost incandescent halo visible during a total solar eclipse).</li>
+              <li>• <strong>Sunspots:</strong> Cooler regions on the photosphere (~4,000 K) with intense magnetic fields following an 11-year cycle.</li>
+              <li>• <strong>Light Travel Time:</strong> Sunlight takes approximately <strong>8 minutes and 20 seconds (500 seconds)</strong> to reach the Earth.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Master Prelims Matrix of 8 Planets -->
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-800/80 text-blue-300 border-b border-slate-700 font-semibold uppercase tracking-wider text-[11px]">
+            <tr>
+              <th class="p-3.5">Planet</th>
+              <th class="p-3.5">Category</th>
+              <th class="p-3.5">Revolution</th>
+              <th class="p-3.5">Rotation & Direction</th>
+              <th class="p-3.5">Moons</th>
+              <th class="p-3.5">Lucent Prelims Key Fact</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 text-slate-300">
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-slate-100">Mercury</td>
+              <td class="p-3.5 text-xs text-amber-400 font-semibold">Terrestrial</td>
+              <td class="p-3.5 font-mono">88 days (fastest)</td>
+              <td class="p-3.5 font-mono">59 days (W to E)</td>
+              <td class="p-3.5 font-mono">0</td>
+              <td class="p-3.5">Smallest planet; closest to Sun; extreme diurnal temperature range (-180°C to 430°C); no atmosphere.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-slate-100">Venus</td>
+              <td class="p-3.5 text-xs text-amber-400 font-semibold">Terrestrial</td>
+              <td class="p-3.5 font-mono">225 days</td>
+              <td class="p-3.5 font-mono text-rose-400 font-bold">243 days (E to W / Retrograde)</td>
+              <td class="p-3.5 font-mono">0</td>
+              <td class="p-3.5"><strong>Earth's Twin</strong>; brightest planet (Morning/Evening Star); <strong>hottest planet</strong> (~465°C) due to 96% CO₂ greenhouse atmosphere.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-blue-400">Earth</td>
+              <td class="p-3.5 text-xs text-amber-400 font-semibold">Terrestrial</td>
+              <td class="p-3.5 font-mono">365.25 days</td>
+              <td class="p-3.5 font-mono">23h 56m (W to E)</td>
+              <td class="p-3.5 font-mono">1 (Moon)</td>
+              <td class="p-3.5"><strong>Blue Planet</strong>; 71% water; highest density in solar system (5.52 g/cm³); only planet harboring life.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-slate-100">Mars</td>
+              <td class="p-3.5 text-xs text-amber-400 font-semibold">Terrestrial</td>
+              <td class="p-3.5 font-mono">687 days</td>
+              <td class="p-3.5 font-mono">24h 37m (W to E)</td>
+              <td class="p-3.5 font-mono">2 (Phobos, Deimos)</td>
+              <td class="p-3.5"><strong>Red Planet</strong> (iron oxide); <strong>Olympus Mons</strong> (largest volcano in solar system); Deimos is the smallest moon.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-slate-100">Jupiter</td>
+              <td class="p-3.5 text-xs text-sky-400 font-semibold">Jovian (Gas Giant)</td>
+              <td class="p-3.5 font-mono">12 years</td>
+              <td class="p-3.5 font-mono text-emerald-400 font-bold">9h 55m (fastest rotation)</td>
+              <td class="p-3.5 font-mono">95</td>
+              <td class="p-3.5"><strong>Largest planet</strong>; Great Red Spot (giant anticyclonic storm); <strong>Ganymede</strong> is the largest satellite in the solar system.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-slate-100">Saturn</td>
+              <td class="p-3.5 text-xs text-sky-400 font-semibold">Jovian (Gas Giant)</td>
+              <td class="p-3.5 font-mono">29.5 years</td>
+              <td class="p-3.5 font-mono">10h 33m (W to E)</td>
+              <td class="p-3.5 font-mono">146 (most moons)</td>
+              <td class="p-3.5">Spectacular ring system (ice/rock); lowest density (< water, 0.69 g/cm³); <strong>Titan</strong> has dense nitrogen atmosphere.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-slate-100">Uranus</td>
+              <td class="p-3.5 text-xs text-teal-400 font-semibold">Jovian (Ice Giant)</td>
+              <td class="p-3.5 font-mono">84 years</td>
+              <td class="p-3.5 font-mono text-rose-400 font-bold">17h 14m (E to W / Retrograde)</td>
+              <td class="p-3.5 font-mono">28</td>
+              <td class="p-3.5">Greenish appearance (methane gas); extreme axial tilt (98° - rolls on its side); discovered by William Herschel (1781).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-slate-100">Neptune</td>
+              <td class="p-3.5 text-xs text-teal-400 font-semibold">Jovian (Ice Giant)</td>
+              <td class="p-3.5 font-mono">165 years (slowest)</td>
+              <td class="p-3.5 font-mono">16h 6m (W to E)</td>
+              <td class="p-3.5 font-mono">16</td>
+              <td class="p-3.5">Farthest planet from the Sun; coldest atmosphere; fastest planetary winds (~2,100 km/h); large moon <strong>Triton</strong> has retrograde orbit.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 3: THE EARTH — SHAPE, BLUE MARBLE & MOTIONS -->
+    <section id="earth-motions" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 font-['Cinzel'] font-bold text-lg">03</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">The Earth: Shape, Dimensions & Planetary Motions</h2>
+          <p class="text-xs text-slate-400">The Geoid Spheroid, Rotation, Revolution, Solstices, and Equinoxes</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Blue Marble Image -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="expandable-image group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 cursor-zoom-in" data-title="The Blue Marble (Apollo 17, 1972)" data-caption="The famous 'Blue Marble' photograph of Earth taken on 7 December 1972 by the Apollo 17 crew at a distance of ~29,000 km. Demonstrates Earth's geoid shape, ocean coverage, and cloud bands.">
+            <img src="assets/images/blue_marble.jpg" alt="The Blue Marble NASA Apollo 17" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-xs text-slate-200 flex items-center justify-between">
+              <span class="font-semibold text-blue-300">The Blue Marble • Apollo 17</span>
+              <span class="flex items-center gap-1 text-[11px] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700"><i data-lucide="maximize-2" class="w-3 h-3"></i> Zoom</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic text-center">Earth's true shape is a <strong>Geoid</strong> (oblate spheroid flattened at the poles, bulging at the equator).</p>
+        </div>
+
+        <!-- Motions & Dimensions -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <h3 class="text-lg font-bold text-blue-300 flex items-center gap-2">
+              <i data-lucide="rotate-cw" class="w-5 h-5 text-blue-400"></i> Rotation vs. Revolution
+            </h3>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li>
+                <strong>Shape & Size:</strong> Equatorial diameter = 12,756 km; Polar diameter = 12,714 km (difference of 42 km). Equatorial circumference = 40,075 km.
+              </li>
+              <li>
+                <strong>Rotation:</strong> Earth spins on its axis tilted at <strong>23.5°</strong> (making 66.5° with the orbital plane) from <strong>West to East</strong> once every <strong>23 hours, 56 minutes, 4 seconds</strong>.
+                <br><em>Effects:</em> Day and night, Coriolis force (deflection of winds/currents), rise and fall of diurnal ocean tides.
+              </li>
+              <li>
+                <strong>Revolution:</strong> Earth revolves around the Sun in an elliptical orbit in <strong>365 days, 5 hours, 48 minutes, 46 seconds</strong> (~365.25 days).
+                <br><em>Effects:</em> Change of seasons, varying lengths of day and night throughout the year.
+              </li>
+              <li>
+                <strong>Perihelion & Aphelion:</strong>
+                <br>• <strong>Perihelion (Jan 3):</strong> Earth is closest to Sun (147 million km).
+                <br>• <strong>Aphelion (July 4):</strong> Earth is farthest from Sun (152 million km).
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Solstices & Equinoxes Table -->
+      <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-800/80 text-blue-300 border-b border-slate-700 font-semibold uppercase tracking-wider text-[11px]">
+            <tr>
+              <th class="p-3.5">Phenomenon</th>
+              <th class="p-3.5">Date</th>
+              <th class="p-3.5">Position of Overhead Sun</th>
+              <th class="p-3.5">Length of Day & Night</th>
+              <th class="p-3.5">Lucent Prelims Key Fact</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60 text-slate-300">
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-amber-400">Summer Solstice</td>
+              <td class="p-3.5 font-mono">June 21</td>
+              <td class="p-3.5 font-semibold text-slate-200">Tropic of Cancer (23.5° N)</td>
+              <td class="p-3.5">Longest day & shortest night in Northern Hemisphere.</td>
+              <td class="p-3.5">Arctic Circle experiences 24-hour continuous daylight (Midnight Sun).</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-emerald-400">Autumnal Equinox</td>
+              <td class="p-3.5 font-mono">September 23</td>
+              <td class="p-3.5 font-semibold text-slate-200">Equator (0°)</td>
+              <td class="p-3.5">Equal day and equal night (12 hours each) worldwide.</td>
+              <td class="p-3.5">'Equinox' literally means 'Equal Night'.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-sky-400">Winter Solstice</td>
+              <td class="p-3.5 font-mono">December 22</td>
+              <td class="p-3.5 font-semibold text-slate-200">Tropic of Capricorn (23.5° S)</td>
+              <td class="p-3.5">Shortest day & longest night in Northern Hemisphere.</td>
+              <td class="p-3.5">Southern Hemisphere enjoys its summer solstice and longest day.</td>
+            </tr>
+            <tr class="hover:bg-slate-800/40 transition-colors">
+              <td class="p-3.5 font-bold text-emerald-400">Vernal (Spring) Equinox</td>
+              <td class="p-3.5 font-mono">March 21</td>
+              <td class="p-3.5 font-semibold text-slate-200">Equator (0°)</td>
+              <td class="p-3.5">Equal day and equal night (12 hours each) worldwide.</td>
+              <td class="p-3.5">Marks commencement of Spring in Northern Hemisphere.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 4: LATITUDES, LONGITUDES & TIME ZONES -->
+    <section id="lat-long-time" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 font-['Cinzel'] font-bold text-lg">04</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Latitudes, Longitudes & World Time Zones</h2>
+          <p class="text-xs text-slate-400">The Coordinate Grid, Prime Meridian, Indian Standard Time, and the Date Line</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-blue-500/10 text-blue-400 text-[11px] font-mono font-bold">Parallels of Latitude</div>
+          <h3 class="text-base font-bold text-slate-100">Angular Distance from Equator</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            • <strong>Equator (0°):</strong> The only Great Circle parallel.
+            <br>• <strong>Tropic of Cancer (23.5° N) & Capricorn (23.5° S)</strong>
+            <br>• <strong>Arctic (66.5° N) & Antarctic (66.5° S) Circles</strong>
+            <br>• Linear distance between 1° of latitude is approximately <strong>111 km</strong> everywhere on Earth.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-blue-500/10 text-blue-400 text-[11px] font-mono font-bold">Meridians of Longitude</div>
+          <h3 class="text-base font-bold text-slate-100">Time and Longitude Relationship</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            • <strong>Prime Meridian (0°):</strong> Passes through the Royal Observatory at Greenwich, London.
+            <br>• Total 360 meridians. 360° = 24 hours.
+            <br>• <strong>15° Longitude = 1 Hour</strong>
+            <br>• <strong>1° Longitude = 4 Minutes</strong>
+            <br>• Places East of Greenwich gain time (ahead of GMT); places West lose time (behind GMT).
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 text-[11px] font-mono font-bold">IST & IDL</div>
+          <h3 class="text-base font-bold text-slate-100">Indian Standard Time & Date Line</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            • <strong>Indian Standard Time (IST):</strong> Calculated from <strong>82.5° E (82°30' E)</strong> meridian at <strong>Mirzapur, UP</strong>. IST is <strong>GMT +5 hours 30 minutes</strong>.
+            <br>• <strong>International Date Line (IDL):</strong> Follows <strong>180° meridian</strong>. Crossing West adds a day (+1 calendar date); crossing East subtracts a day. Zig-zags at Bering Strait and Pacific islands.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: INTERNAL STRUCTURE & SEISMIC DISCONTINUITIES -->
+    <section id="earth-interior" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 font-['Cinzel'] font-bold text-lg">05</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Internal Structure of the Earth & Discontinuities</h2>
+          <p class="text-xs text-slate-400">Chemical Composition, Rheological Layers, and Landmark Seismic Boundaries</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Earth Interior Diagram -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="expandable-image group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 cursor-zoom-in" data-title="Internal Layers of the Earth" data-caption="Cutaway diagram showing Earth's concentric internal zones: Continental & Oceanic Crust, Upper & Lower Mantle (including the Asthenosphere), Liquid Outer Core (magnetic dynamo generator), and Solid Inner Core.">
+            <img src="assets/images/earth_interior.jpg" alt="Earth Internal Structure Cutaway" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-xs text-slate-200 flex items-center justify-between">
+              <span class="font-semibold text-blue-300">Crust, Mantle, Core Differentiation</span>
+              <span class="flex items-center gap-1 text-[11px] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700"><i data-lucide="maximize-2" class="w-3 h-3"></i> Zoom</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic text-center">Concentric density layers: SIAL (crust), SIMA (crust/mantle), and NIFE (core).</p>
+        </div>
+
+        <!-- 3 Layers Breakdown -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <h3 class="text-lg font-bold text-blue-300 flex items-center gap-2">
+              <i data-lucide="layers" class="w-5 h-5 text-blue-400"></i> The Three Concentric Shells
+            </h3>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li>
+                <strong>1. Crust (Lithosphere):</strong> Outermost solid rind (0.5% of Earth volume).
+                <br>• <em>Continental Crust:</em> 30–50 km thick, lighter granitic rocks, rich in <strong>SIAL</strong> (Silica & Aluminium), density 2.7 g/cm³.
+                <br>• <em>Oceanic Crust:</em> 5–10 km thick, denser basaltic rocks, rich in <strong>SIMA</strong> (Silica & Magnesium), density 3.0 g/cm³.
+              </li>
+              <li>
+                <strong>2. Mantle (Mesosphere):</strong> 2,900 km thick (occupies 83% of Earth volume and 67% mass). Composed of dense silicate rocks (olivine, pyroxene). The upper portion (up to 400 km) is the <strong>Asthenosphere</strong>—plastic, semi-molten layer on which tectonic plates float.
+              </li>
+              <li>
+                <strong>3. Core (Barysphere / Centrosphere):</strong> From 2,900 km to center (6,371 km). Composed of <strong>NIFE</strong> (Nickel & Iron).
+                <br>• <em>Outer Core:</em> Liquid state (prevents S-waves from passing). Convection generates Earth’s magnetic field.
+                <br>• <em>Inner Core:</em> Solid state due to tremendous pressure, temperature ~6,000°C, density up to 13 g/cm³.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Master Prelims Table of 5 Discontinuities -->
+      <div id="discontinuities" class="space-y-4 scroll-mt-24">
+        <h3 class="text-lg font-['Cinzel'] font-bold text-slate-200 flex items-center gap-2">
+          <i data-lucide="split" class="w-5 h-5 text-amber-400"></i> Seismic Boundary Discontinuities (Prelims Table)
+        </h3>
+        <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-slate-800/80 text-blue-300 border-b border-slate-700 font-semibold uppercase tracking-wider text-[11px]">
+              <tr>
+                <th class="p-3.5">Discontinuity</th>
+                <th class="p-3.5">Location / Boundary</th>
+                <th class="p-3.5">Approx. Depth</th>
+                <th class="p-3.5">Lucent Prelims Key Fact</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-300">
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-amber-400">Conrad Discontinuity</td>
+                <td class="p-3.5">Upper Continental Crust and Lower Oceanic/Basaltic Crust</td>
+                <td class="p-3.5 font-mono">15–20 km</td>
+                <td class="p-3.5">Transition between granitic SIAL and basaltic SIMA.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-amber-400">Mohorovičić (Moho) Discontinuity</td>
+                <td class="p-3.5 font-semibold text-slate-100">Earth's Crust and the Mantle</td>
+                <td class="p-3.5 font-mono">35 km (avg)</td>
+                <td class="p-3.5">Discovered by Andrija Mohorovičić (1909); sudden increase in P-wave velocity from 6 km/s to 8 km/s.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-amber-400">Repetti Discontinuity</td>
+                <td class="p-3.5">Upper Mantle and Lower Mantle</td>
+                <td class="p-3.5 font-mono">~700 km</td>
+                <td class="p-3.5">Marks boundary below the asthenosphere transition zone.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-amber-400">Gutenberg-Wiechert Discontinuity</td>
+                <td class="p-3.5 font-semibold text-slate-100">Lower Mantle and Liquid Outer Core</td>
+                <td class="p-3.5 font-mono">2,900 km</td>
+                <td class="p-3.5">Discovered by Beno Gutenberg (1914); S-waves disappear entirely; P-waves drop sharply from 13.6 to 8 km/s.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-amber-400">Lehmann Discontinuity</td>
+                <td class="p-3.5">Liquid Outer Core and Solid Inner Core</td>
+                <td class="p-3.5 font-mono">5,150 km</td>
+                <td class="p-3.5">Discovered by Danish seismologist Inge Lehmann (1936); marks phase transition from liquid to solid iron.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: 3D FLASHCARDS -->
+    <section class="space-y-6 pt-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+            <i data-lucide="layers" class="w-6 h-6 text-blue-400"></i> Geography Flashcards: Universe & Earth
+          </h2>
+          <p class="text-xs text-slate-400">Click card to flip • Master high-yield Lucent GK Geography points</p>
+        </div>
+        <span id="cardCounter" class="text-xs font-mono px-3 py-1 rounded-full bg-slate-800 text-blue-400 border border-slate-700">1 / 12</span>
+      </div>
+
+      <div class="max-w-2xl mx-auto perspective-1000 py-6">
+        <div id="flashcard" class="relative w-full h-72 sm:h-80 cursor-pointer transform-style-preserve-3d transition-transform duration-500 rounded-3xl border border-slate-800 shadow-2xl bg-gradient-to-br from-slate-900 to-slate-950 p-8 flex flex-col justify-between select-none">
+          
+          <!-- Front Face -->
+          <div class="face-front flex flex-col justify-between h-full">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono uppercase text-blue-400 font-semibold tracking-wider">Question</span>
+              <span class="text-xs text-slate-400 flex items-center gap-1"><i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i> Tap to flip</span>
+            </div>
+            <div id="cardQuestion" class="text-base sm:text-xl font-medium text-slate-100 leading-snug py-4">Loading question...</div>
+            <div class="text-[11px] text-slate-400">Lucent GK Geography Prelims Series</div>
+          </div>
+
+          <!-- Back Face -->
+          <div class="face-back flex flex-col justify-between h-full absolute inset-0 p-8 rounded-3xl bg-slate-900 border border-blue-500/30">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono uppercase text-emerald-400 font-semibold tracking-wider">Answer & Concept</span>
+              <span class="text-xs text-slate-400 flex items-center gap-1"><i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i> Tap to flip</span>
+            </div>
+            <div id="cardAnswer" class="text-xs sm:text-sm text-slate-200 leading-relaxed overflow-y-auto pr-1">Loading answer...</div>
+            <div class="text-[11px] text-blue-400 font-mono">Exam Note: Essential Memorization</div>
+          </div>
+
+        </div>
+
+        <!-- Controls -->
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <button id="prevCard" class="px-5 py-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-2 transition-all">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> Previous
+          </button>
+          <button id="nextCard" class="px-5 py-2 rounded-xl bg-blue-500 hover:bg-blue-400 text-slate-950 text-xs font-semibold flex items-center gap-2 transition-all">
+            Next <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: 5-QUESTION MOCK QUIZ -->
+    <section class="space-y-6 pt-4">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+          <i data-lucide="check-square" class="w-6 h-6 text-blue-400"></i> Prelims Self-Assessment Quiz
+        </h2>
+        <p class="text-xs text-slate-400">Test your mastery over Universe, Earth motions, Time zones, and Earth interior</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-4">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-blue-500 hover:bg-blue-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg">
+          Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all">
+          Reset Quiz
+        </button>
+      </div>
+    </section>
+
+    <!-- SECTION NAVIGATION FOOTER -->
+    <footer class="pt-12 border-t border-slate-800">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <a href="viceroys_acts.html" class="flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-amber-400 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Chapter 20: British Viceroys & Acts
+        </a>
+        <a href="hub.html" class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 hover:text-blue-400 hover:border-blue-500/40 transition-all">
+          Subject Knowledge Hub
+        </a>
+        <a href="geo_geomorphology_climatology.html" class="flex items-center gap-2 text-xs font-semibold text-blue-400 hover:text-blue-300 transition-colors">
+          Chapter 22: Geomorphology, Atmosphere & Oceans <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX MODAL -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-blue-400">Astronomical Image View</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+
+    <!-- Viewer Canvas -->
+    <div class="relative flex-1 flex items-center justify-center overflow-hidden my-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 border-t border-slate-800/80 pt-2">
+      Tip: Use mouse wheel to zoom in/out • Click and drag to pan when zoomed
+    </div>
+  </div>
+
+  <!-- QUICK SEARCH MODAL (ESC TO CLOSE) -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="w-full max-w-lg bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <div class="flex items-center gap-2 text-slate-400 text-xs font-semibold">
+          <i data-lucide="search" class="w-4 h-4 text-blue-400"></i> Search Geography Topics
+        </div>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-slate-200 text-xs">ESC to exit</button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type planet, motion, discontinuity, or term..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Type keywords to search sections...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT INCLUSION -->
+  <script src="assets/js/geo_universe_earth.js"></script>
+</body>
+</html>

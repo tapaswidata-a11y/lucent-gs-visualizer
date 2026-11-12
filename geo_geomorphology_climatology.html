@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geomorphology, Climatology & Oceanography | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-blue-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-blue-400 hover:text-blue-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-600/10 border border-blue-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="wind" class="w-5 h-5 text-blue-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-blue-300">LUCENT<span class="text-blue-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">Physical Geography</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <!-- Quick Search Button -->
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-blue-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+        <!-- Chapter Switcher Dropdown -->
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-blue-400 cursor-pointer">
+          <optgroup label="Ancient India">
+            <option value="index.html">01. Indus Valley Civilization</option>
+            <option value="vedic.html">02. Vedic Culture</option>
+            <option value="mahajanapadas.html">03. Mahajanapadas & Magadha</option>
+            <option value="religions.html">04. Buddhism & Jainism</option>
+            <option value="maurya.html">05. The Mauryan Empire</option>
+            <option value="post_maurya.html">06. Post-Maurya & Sangam</option>
+            <option value="gupta.html">07. Gupta Age & Harsha</option>
+          </optgroup>
+          <optgroup label="Medieval India">
+            <option value="early_medieval.html">08. Early Medieval & Rajputs</option>
+            <option value="delhi_sultanate.html">09. The Delhi Sultanate</option>
+            <option value="vijayanagar_bahmani.html">10. Vijayanagar & Bahmani</option>
+            <option value="mughal_empire.html">11. The Mughal Empire</option>
+            <option value="marathas.html">12. The Marathas & Later Mughals</option>
+            <option value="bhakti_sufi.html">13. Bhakti & Sufi Movements</option>
+          </optgroup>
+          <optgroup label="Modern India">
+            <option value="european_expansion.html">14. European Expansion in India</option>
+            <option value="economic_revolts.html">15. Economic Impact & Tribal Revolts</option>
+            <option value="reforms.html">16. Socio-Religious Reform Movements</option>
+            <option value="revolt_1857.html">17. The Great Revolt of 1857</option>
+            <option value="national_movement_early.html">18. Early National Movement (1885–1919)</option>
+            <option value="gandhian_era.html">19. The Gandhian Era (1919–1947)</option>
+            <option value="viceroys_acts.html">20. British Viceroys & Acts</option>
+          </optgroup>
+          <optgroup label="Geography">
+            <option value="geo_universe_earth.html">21. Universe, Solar System & Earth</option>
+            <option value="geo_geomorphology_climatology.html" selected>22. Geomorphology, Atmosphere & Oceans</option>
+            <option value="geo_indian_physiography.html">23. Indian Physiography & Passes</option>
+            <option value="geo_indian_drainage.html">24. Indian Drainage & River Basins</option>
+            <option value="geo_climate_soils_agriculture.html">25. Climate, Soils, Agriculture & Minerals</option>
+          </optgroup>
+        </select>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+    <!-- HERO SECTION -->
+    <section class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-slate-950 p-8 sm:p-12 shadow-2xl">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-500/10 via-transparent to-transparent pointer-events-none"></div>
+      <div class="relative z-10 max-w-4xl space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs font-semibold uppercase tracking-wider">
+          <i data-lucide="waves" class="w-3.5 h-3.5"></i>
+          Section 22 • World Physical Geography
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-black tracking-tight text-slate-100">
+          Geomorphology, Atmosphere & <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-teal-300 to-sky-200">Oceanic Circulation</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+          The rock cycle and seismic waves, the glowing fires of active volcanoes, atmospheric stratification from Troposphere to Ionosphere, global planetary winds, and the mighty conveyor belts of warm and cold ocean currents.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="#rocks-geomorphology" class="px-4 py-2 rounded-xl bg-blue-500 text-slate-950 font-semibold text-xs tracking-wide hover:bg-blue-400 transition-colors">Rock Classification</a>
+          <a href="#volcanoes" class="px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-medium text-xs tracking-wide border border-slate-700 transition-colors">Volcanoes & Earthquakes</a>
+          <a href="#atmosphere-layers" class="px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-medium text-xs tracking-wide border border-slate-700 transition-colors">Atmospheric Layers</a>
+          <a href="#ocean-currents" class="px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-medium text-xs tracking-wide border border-slate-700 transition-colors">Ocean Currents Map</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: ROCKS & GEOMORPHOLOGY -->
+    <section id="rocks-geomorphology" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 font-['Cinzel'] font-bold text-lg">01</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Classification of Rocks & The Rock Cycle</h2>
+          <p class="text-xs text-slate-400">Igneous, Sedimentary, and Metamorphic Rocks with Metamorphic Transformations</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Igneous Rocks -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-rose-500/10 text-rose-400 text-[11px] font-mono font-bold">Primary Rocks</div>
+          <h3 class="text-base font-bold text-slate-100">Igneous Rocks</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Formed by cooling and crystallization of molten magma/lava. Non-stratified, crystalline, devoid of fossils.
+            <br>• <strong>Plutonic (Intrusive):</strong> Cools slowly deep underground with large crystals (e.g., <strong>Granite, Gabbro, Diorite</strong>).
+            <br>• <strong>Volcanic (Extrusive):</strong> Cools rapidly on the surface with fine grain (e.g., <strong>Basalt</strong> of Deccan Traps, <strong>Pumice, Obsidian</strong>).
+          </p>
+        </div>
+
+        <!-- Sedimentary Rocks -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-amber-500/10 text-amber-400 text-[11px] font-mono font-bold">Stratified Rocks</div>
+          <h3 class="text-base font-bold text-slate-100">Sedimentary Rocks</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Formed by lithification and compaction of layered sediments. Contain fossils and source of petroleum/coal.
+            <br>• <strong>Mechanically Formed:</strong> Sandstone, Shale, Conglomerate, Loess.
+            <br>• <strong>Organically Formed:</strong> Limestone, Coal, Peat, Chalk.
+            <br>• <strong>Chemically Formed:</strong> Rock Salt, Gypsum, Potash.
+          </p>
+        </div>
+
+        <!-- Metamorphic Rocks -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 text-[11px] font-mono font-bold">Changed Rocks</div>
+          <h3 class="text-base font-bold text-slate-100">Metamorphic Rocks</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Formed when pre-existing rocks undergo mineral recrystallization under extreme heat (thermal) and pressure (dynamic).
+            <br>• Highly compact and foliate.
+            <br>• Examples: Slate, Schist, Gneiss, Quartzite, Marble, Anthracite.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- High-Yield Prelims Table: Metamorphic Transformations -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-['Cinzel'] font-bold text-slate-200 flex items-center gap-2">
+          <i data-lucide="refresh-cw" class="w-5 h-5 text-blue-400"></i> Metamorphic Transformations (Lucent Prelims Table)
+        </h3>
+        <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-slate-800/80 text-blue-300 border-b border-slate-700 font-semibold uppercase tracking-wider text-[11px]">
+              <tr>
+                <th class="p-3.5">Original Rock</th>
+                <th class="p-3.5">Original Class</th>
+                <th class="p-3.5">Metamorphic Equivalent</th>
+                <th class="p-3.5">Key Physical Characteristic & Use</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-300">
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-slate-100">Granite</td>
+                <td class="p-3.5 text-rose-400 font-semibold">Igneous (Plutonic)</td>
+                <td class="p-3.5 font-bold text-emerald-400">Gneiss</td>
+                <td class="p-3.5">Banded foliation; highly resistant construction stone.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-slate-100">Clay / Shale</td>
+                <td class="p-3.5 text-amber-400 font-semibold">Sedimentary (Mechanical)</td>
+                <td class="p-3.5 font-bold text-emerald-400">Slate → Schist</td>
+                <td class="p-3.5">Splits into thin flat sheets; roofing and blackboards.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-slate-100">Sandstone</td>
+                <td class="p-3.5 text-amber-400 font-semibold">Sedimentary (Mechanical)</td>
+                <td class="p-3.5 font-bold text-emerald-400">Quartzite</td>
+                <td class="p-3.5">Hardest building stone; pure silica recrystallized.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-slate-100">Limestone</td>
+                <td class="p-3.5 text-amber-400 font-semibold">Sedimentary (Organic)</td>
+                <td class="p-3.5 font-bold text-emerald-400">Marble</td>
+                <td class="p-3.5">Calcite crystals interlocked; sculpture and monument architecture (Makrana).</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-slate-100">Coal</td>
+                <td class="p-3.5 text-amber-400 font-semibold">Sedimentary (Organic)</td>
+                <td class="p-3.5 font-bold text-emerald-400">Anthracite → Graphite → Diamond</td>
+                <td class="p-3.5">Highest carbon content (90%+); smokeless high-temperature fuel.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: EARTHQUAKES & VOLCANOES -->
+    <section id="volcanoes" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 font-['Cinzel'] font-bold text-lg">02</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Earthquakes & Volcanoes: The Dynamic Earth</h2>
+          <p class="text-xs text-slate-400">Seismic Body & Surface Waves, The Richter Scale, and Stromboli's Eternal Fires</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Archival Image: Stromboli -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="expandable-image group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 cursor-zoom-in" data-title="Mount Stromboli Eruption ('Lighthouse of the Mediterranean')" data-caption="Mount Stromboli erupting incandescent lava in the Tyrrhenian Sea, Italy. In continuous active eruption for over 2,000 years, ancient sailors used its luminous glow as a nocturnal maritime beacon, giving it the title 'Lighthouse of the Mediterranean'.">
+            <img src="assets/images/volcano_stromboli.jpg" alt="Mount Stromboli Volcanic Eruption" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-xs text-slate-200 flex items-center justify-between">
+              <span class="font-semibold text-rose-300">Stromboli, Italy • Continuous Eruption</span>
+              <span class="flex items-center gap-1 text-[11px] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700"><i data-lucide="maximize-2" class="w-3 h-3"></i> Zoom</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic text-center">Stromboli: 'Lighthouse of the Mediterranean' (Active composite volcano).</p>
+        </div>
+
+        <!-- Earthquakes & Seismic Waves -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <h3 class="text-lg font-bold text-blue-300 flex items-center gap-2">
+              <i data-lucide="activity" class="w-5 h-5 text-blue-400"></i> Seismic Anatomy of Earthquakes
+            </h3>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li>
+                <strong>Focus (Hypocenter) vs. Epicenter:</strong> Focus is the subsurface point where seismic energy is first released. The <strong>Epicenter</strong> is the point directly vertical on Earth's surface above the focus (experiences the first and strongest shock).
+              </li>
+              <li>
+                <strong>P-Waves (Primary):</strong> Longitudinal waves (push-pull); fastest (6–13 km/s); travel through <strong>solids, liquids, and gases</strong>.
+              </li>
+              <li>
+                <strong>S-Waves (Secondary):</strong> Transverse shear waves (up-and-down); slower; travel <strong>only through solids</strong>. Completely blocked by Earth's liquid outer core, creating an S-wave shadow zone beyond 105° from epicenter.
+              </li>
+              <li>
+                <strong>L-Waves (Surface Waves):</strong> Slowest; travel along surface crust; cause the greatest ground displacement and structural damage.
+              </li>
+              <li>
+                <strong>Scales of Measurement:</strong>
+                <br>• <strong>Richter Scale:</strong> Measures energy <em>magnitude</em> logarithmically (each unit represents a 31.6-fold increase in energy release). Scale 0–9+.
+                <br>• <strong>Mercalli Scale:</strong> Measures visible <em>intensity / damage</em> (scale I to XII).
+              </li>
+              <li>
+                <strong>Pacific Ring of Fire:</strong> Circum-Pacific belt where tectonic subduction zones host over <strong>75% of the world's active volcanoes</strong> and 90% of all earthquakes.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: ATMOSPHERE LAYERS -->
+    <section id="atmosphere-layers" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 font-['Cinzel'] font-bold text-lg">03</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Structure & Stratification of the Atmosphere</h2>
+          <p class="text-xs text-slate-400">From the Weather-Riddled Troposphere to the Radio-Reflective Ionosphere</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Atmospheric Layers Diagram -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="expandable-image group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 cursor-zoom-in" data-title="Atmospheric Stratification Layers" data-caption="Cross-section diagram illustrating the five thermal layers of Earth's atmosphere: Troposphere, Stratosphere (with the protective Ozone Layer), Mesosphere (meteoric burn zone), Thermosphere/Ionosphere (auroral displays and radio reflection), and Exosphere.">
+            <img src="assets/images/atmosphere_layers.jpg" alt="Atmospheric Stratification Layers" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-xs text-slate-200 flex items-center justify-between">
+              <span class="font-semibold text-blue-300">Atmospheric Layers & Thermal Gradients</span>
+              <span class="flex items-center gap-1 text-[11px] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700"><i data-lucide="maximize-2" class="w-3 h-3"></i> Zoom</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic text-center">Thermal layering of the atmosphere: Normal lapse rate in Troposphere vs Inversion in Stratosphere.</p>
+        </div>
+
+        <!-- Five Layers Breakdown -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <h3 class="text-lg font-bold text-blue-300 flex items-center gap-2">
+              <i data-lucide="cloud" class="w-5 h-5 text-blue-400"></i> The Five Thermal Atmospheric Zones
+            </h3>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li>
+                <strong>1. Troposphere (0–18 km):</strong> Extends 8 km at poles, 18 km at equator. Contains 75% of atmospheric mass and all water vapor/dust. <em>All weather phenomena (clouds, storms, rain) occur here</em>. Temperature drops at <strong>Normal Lapse Rate: 6.5°C per 1,000 m (1°C per 165 m)</strong>.
+              </li>
+              <li>
+                <strong>2. Stratosphere (18–50 km):</strong> Temperature rises due to absorption of UV rays by the <strong>Ozone Layer (Ozonosphere, 15–35 km)</strong>. Free from clouds and dust; ideal for flying jet aircraft. Boundary is <em>Stratopause</em>.
+              </li>
+              <li>
+                <strong>3. Mesosphere (50–80 km):</strong> Temperature drops again with altitude, reaching <strong>-100°C</strong> at the <em>Mesopause</em> (coldest place in Earth's atmosphere). Meteors burning up due to friction are visible here as 'shooting stars'.
+              </li>
+              <li>
+                <strong>4. Thermosphere / Ionosphere (80–400 km):</strong> Temperature rises dramatically above 1,000°C due to solar radiation. Contains electrically charged ions that reflect high-frequency radio waves back to Earth (D, E, F layers). Hosts the magnificent <strong>Auroras</strong> (Aurora Borealis in the Arctic, Aurora Australis in the Antarctic).
+              </li>
+              <li>
+                <strong>5. Exosphere (400+ km):</strong> The outermost fringe gradually thinning into interplanetary vacuum. Dominated by ultra-light hydrogen and helium atoms.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: PLANETARY WINDS & LOCAL WINDS -->
+    <section id="wind-belts" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 font-['Cinzel'] font-bold text-lg">04</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Planetary Pressure Belts, Winds & Cyclones</h2>
+          <p class="text-xs text-slate-400">Doldrums, Horse Latitudes, Roaring Forties, and World Local Winds</p>
+        </div>
+      </div>
+
+      <!-- Planetary Wind Belts Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-blue-500/10 text-blue-400 text-[11px] font-mono font-bold">Equatorial Low (0°–5°)</div>
+          <h3 class="text-base font-bold text-slate-100">The Doldrums (ITCZ)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Zone of intense solar heating. Air warms, expands, and rises vertically, creating an equatorial low-pressure trough. Characterized by calm air, absence of horizontal wind, and daily 4 o'clock convectional cloudbursts with thunder.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-blue-500/10 text-blue-400 text-[11px] font-mono font-bold">Sub-Tropical High (30°–35°)</div>
+          <h3 class="text-base font-bold text-slate-100">The Horse Latitudes</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Zone of descending dry air masses creating calm, stable high-pressure conditions. Sinking air produces clear skies and dry climate; world's great tropical deserts (Sahara, Thar, Atacama, Australian) are located in this latitude belt.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-blue-500/10 text-blue-400 text-[11px] font-mono font-bold">Westerlies (40°–60° S)</div>
+          <h3 class="text-base font-bold text-slate-100">Roaring Forties & Fifties</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            In the Southern Hemisphere, unobstructed oceanic expanses allow Westerly winds to blow with stormy ferocious regularity:
+            <br>• 40° S: <strong>Roaring Forties</strong>
+            <br>• 50° S: <strong>Furious Fifties</strong>
+            <br>• 60° S: <strong>Screaming Sixties</strong>.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Master Table: Local Winds of the World -->
+      <div id="local-winds" class="space-y-4 scroll-mt-24">
+        <h3 class="text-lg font-['Cinzel'] font-bold text-slate-200 flex items-center gap-2">
+          <i data-lucide="compass" class="w-5 h-5 text-blue-400"></i> Local Winds of the World (High-Yield Prelims Table)
+        </h3>
+        <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-slate-800/80 text-blue-300 border-b border-slate-700 font-semibold uppercase tracking-wider text-[11px]">
+              <tr>
+                <th class="p-3.5">Wind Name</th>
+                <th class="p-3.5">Nature / Temperature</th>
+                <th class="p-3.5">Region / Path</th>
+                <th class="p-3.5">Lucent Prelims Key Fact</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-300">
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-amber-400">Chinook</td>
+                <td class="p-3.5 text-rose-400 font-semibold">Warm &amp; Dry</td>
+                <td class="p-3.5">Eastern slopes of Rockies (USA &amp; Canada)</td>
+                <td class="p-3.5">Known as the <strong>'Snow Eater'</strong>; melts snow rapidly in winter, opening pastures for cattle.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-amber-400">Foehn</td>
+                <td class="p-3.5 text-rose-400 font-semibold">Warm &amp; Dry</td>
+                <td class="p-3.5">Northern slopes of Alps (Switzerland)</td>
+                <td class="p-3.5">Helps in early ripening of grapes and melting of mountain snow.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-amber-400">Sirocco</td>
+                <td class="p-3.5 text-rose-400 font-semibold">Hot, Dry &amp; Dusty</td>
+                <td class="p-3.5">Blows from Sahara northwards to Mediterranean</td>
+                <td class="p-3.5">Carries red sand causing <strong>'Blood Rain'</strong> in Southern Italy. Called <em>Khamsin</em> in Egypt, <em>Ghibli</em> in Libya.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-emerald-400">Harmattan</td>
+                <td class="p-3.5 text-sky-400 font-semibold">Cool, Dry &amp; Dusty</td>
+                <td class="p-3.5">Blows from Sahara to Guinea Coast (West Africa)</td>
+                <td class="p-3.5">Known as <strong>'The Doctor'</strong> for providing refreshing relief from coastal damp humidity.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-sky-400">Mistral</td>
+                <td class="p-3.5 text-blue-400 font-semibold">Cold &amp; Dry</td>
+                <td class="p-3.5">Blows down the Rhone Valley from Alps to Gulf of Lions (France)</td>
+                <td class="p-3.5">Severe winter cold wind; trees grow tilted southwards away from its blast.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-sky-400">Bora</td>
+                <td class="p-3.5 text-blue-400 font-semibold">Extremely Cold &amp; Gusty</td>
+                <td class="p-3.5">Blows from Dinaric Alps down to Adriatic Sea (Italy/Croatia)</td>
+                <td class="p-3.5">Catabatic wind bringing sub-zero temperatures and freezing blizzards.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-amber-400">Loo</td>
+                <td class="p-3.5 text-rose-400 font-semibold">Scorching Hot &amp; Dry</td>
+                <td class="p-3.5">Northern Plains of India &amp; Pakistan</td>
+                <td class="p-3.5">Blows in afternoons of May and June; causes deadly heatstrokes.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: HYDROSPHERE & OCEAN CURRENTS -->
+    <section id="ocean-currents" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 font-['Cinzel'] font-bold text-lg">05</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Ocean Relief, Tides & The Global Ocean Currents</h2>
+          <p class="text-xs text-slate-400">Mariana Trench, Saline Basins, Syzygy Tides, and the Warm & Cold Gyres</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Ocean Currents Map Image -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="expandable-image group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 cursor-zoom-in" data-title="Global Ocean Currents Circulation Map" data-caption="Chart illustrating the global conveyor belts of warm (red) and cold (blue) ocean currents in the Atlantic, Pacific, and Indian Oceans, including the Gulf Stream, Labrador Current, Kuroshio, and Humboldt Current.">
+            <img src="assets/images/ocean_currents.jpg" alt="Global Ocean Currents Map" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-xs text-slate-200 flex items-center justify-between">
+              <span class="font-semibold text-blue-300">Global Ocean Gyres & Currents</span>
+              <span class="flex items-center gap-1 text-[11px] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700"><i data-lucide="maximize-2" class="w-3 h-3"></i> Zoom</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic text-center">Global Ocean Currents: Warm currents flow poleward; cold currents flow equatorward.</p>
+        </div>
+
+        <!-- Oceanographic Facts -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <h3 class="text-lg font-bold text-blue-300 flex items-center gap-2">
+              <i data-lucide="droplet" class="w-5 h-5 text-blue-400"></i> Ocean Relief & Salinity Highlights
+            </h3>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li>
+                <strong>Deepest Trenches:</strong> <strong>Mariana Trench (Challenger Deep, 11,034 m)</strong> in the Pacific; <strong>Puerto Rico Trench (8,605 m)</strong> in the Atlantic; <strong>Java / Sunda Trench (7,725 m)</strong> in the Indian Ocean.
+              </li>
+              <li>
+                <strong>Ocean Salinity:</strong> Average salinity is <strong>35‰ (parts per thousand)</strong>. Main salt is Sodium Chloride (77.8%), followed by Magnesium Chloride.
+                <br>• <em>Highest Salinity:</em> <strong>Lake Van (Turkey, 330‰)</strong>, <strong>Dead Sea (238‰)</strong>, <strong>Great Salt Lake (USA, 220‰)</strong>.
+              </li>
+              <li>
+                <strong>Tidal Dynamics:</strong>
+                <br>• <strong>Spring Tides:</strong> Highest tides occurring on New Moon and Full Moon when Sun, Earth, Moon are in a straight line (<strong>Syzygy</strong>).
+                <br>• <strong>Neap Tides:</strong> Lowest tides occurring when Moon is at right angles to Sun (<strong>Quadrature</strong>).
+                <br>• <em>Highest Tides in World:</em> <strong>Bay of Fundy (Canada)</strong> with tidal range of 16–18 meters.
+              </li>
+              <li>
+                <strong>Sargasso Sea:</strong> An ice-free calm region in the North Atlantic enclosed by the clockwise gyre of the Gulf Stream, North Atlantic Drift, Canaries, and North Equatorial Currents. Unique sea with <strong>no land boundaries</strong>, densely covered by floating <em>Sargassum</em> seaweed.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Master Prelims Table of Ocean Currents -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-['Cinzel'] font-bold text-slate-200 flex items-center gap-2">
+          <i data-lucide="waves" class="w-5 h-5 text-blue-400"></i> Warm vs. Cold Ocean Currents (Prelims Table)
+        </h3>
+        <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-slate-800/80 text-blue-300 border-b border-slate-700 font-semibold uppercase tracking-wider text-[11px]">
+              <tr>
+                <th class="p-3.5">Ocean</th>
+                <th class="p-3.5 text-rose-400">Warm Ocean Currents (Poleward)</th>
+                <th class="p-3.5 text-sky-400">Cold Ocean Currents (Equatorward)</th>
+                <th class="p-3.5">Climatic & Commercial Consequence</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-300">
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-slate-100">Atlantic Ocean</td>
+                <td class="p-3.5 text-rose-300 font-semibold">Gulf Stream, North Atlantic Drift, Florida Current, Brazil Current.</td>
+                <td class="p-3.5 text-sky-300 font-semibold">Labrador Current, Canaries Current, Benguela Current, Falkland Current.</td>
+                <td class="p-3.5">Meeting of warm Gulf Stream & cold Labrador Current creates the famous fog-bound <strong>Grand Banks of Newfoundland</strong> (richest fishing ground).</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-slate-100">Pacific Ocean</td>
+                <td class="p-3.5 text-rose-300 font-semibold">Kuroshio (Japan) Current, North Pacific Drift, East Australian Current.</td>
+                <td class="p-3.5 text-sky-300 font-semibold">Oyashio (Kuril) Current, California Current, Peru (Humboldt) Current.</td>
+                <td class="p-3.5">Convergence of Kuroshio and Oyashio creates rich fisheries off Hokkaido; cold Peru current fuels world's largest anchovy fishery.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-slate-100">Indian Ocean</td>
+                <td class="p-3.5 text-rose-300 font-semibold">Mozambique Current, Agulhas Current, South Equatorial Current.</td>
+                <td class="p-3.5 text-sky-300 font-semibold">West Australian Current, Antarctic Circumpolar Current.</td>
+                <td class="p-3.5">Currents in North Indian Ocean reverse their direction biannually with the Southwest and Northeast Monsoons.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: 3D FLASHCARDS -->
+    <section class="space-y-6 pt-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+            <i data-lucide="layers" class="w-6 h-6 text-blue-400"></i> Geomorphology & Climatology Flashcards
+          </h2>
+          <p class="text-xs text-slate-400">Click card to flip • Master high-yield Lucent GK Physical Geography</p>
+        </div>
+        <span id="cardCounter" class="text-xs font-mono px-3 py-1 rounded-full bg-slate-800 text-blue-400 border border-slate-700">1 / 12</span>
+      </div>
+
+      <div class="max-w-2xl mx-auto perspective-1000 py-6">
+        <div id="flashcard" class="relative w-full h-72 sm:h-80 cursor-pointer transform-style-preserve-3d transition-transform duration-500 rounded-3xl border border-slate-800 shadow-2xl bg-gradient-to-br from-slate-900 to-slate-950 p-8 flex flex-col justify-between select-none">
+          
+          <!-- Front Face -->
+          <div class="face-front flex flex-col justify-between h-full">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono uppercase text-blue-400 font-semibold tracking-wider">Question</span>
+              <span class="text-xs text-slate-400 flex items-center gap-1"><i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i> Tap to flip</span>
+            </div>
+            <div id="cardQuestion" class="text-base sm:text-xl font-medium text-slate-100 leading-snug py-4">Loading question...</div>
+            <div class="text-[11px] text-slate-400">Lucent GK Geography Prelims Series</div>
+          </div>
+
+          <!-- Back Face -->
+          <div class="face-back flex flex-col justify-between h-full absolute inset-0 p-8 rounded-3xl bg-slate-900 border border-blue-500/30">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono uppercase text-emerald-400 font-semibold tracking-wider">Answer & Concept</span>
+              <span class="text-xs text-slate-400 flex items-center gap-1"><i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i> Tap to flip</span>
+            </div>
+            <div id="cardAnswer" class="text-xs sm:text-sm text-slate-200 leading-relaxed overflow-y-auto pr-1">Loading answer...</div>
+            <div class="text-[11px] text-blue-400 font-mono">Exam Note: Essential Memorization</div>
+          </div>
+
+        </div>
+
+        <!-- Controls -->
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <button id="prevCard" class="px-5 py-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-2 transition-all">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> Previous
+          </button>
+          <button id="nextCard" class="px-5 py-2 rounded-xl bg-blue-500 hover:bg-blue-400 text-slate-950 text-xs font-semibold flex items-center gap-2 transition-all">
+            Next <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: 5-QUESTION MOCK QUIZ -->
+    <section class="space-y-6 pt-4">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+          <i data-lucide="check-square" class="w-6 h-6 text-blue-400"></i> Prelims Self-Assessment Quiz
+        </h2>
+        <p class="text-xs text-slate-400">Test your mastery over Rocks, Seismic waves, Atmosphere layers, and Ocean currents</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-4">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-blue-500 hover:bg-blue-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg">
+          Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all">
+          Reset Quiz
+        </button>
+      </div>
+    </section>
+
+    <!-- SECTION NAVIGATION FOOTER -->
+    <footer class="pt-12 border-t border-slate-800">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <a href="geo_universe_earth.html" class="flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-blue-400 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Chapter 21: Universe, Solar System & Earth
+        </a>
+        <a href="hub.html" class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 hover:text-blue-400 hover:border-blue-500/40 transition-all">
+          Subject Knowledge Hub
+        </a>
+        <a href="geo_indian_physiography.html" class="flex items-center gap-2 text-xs font-semibold text-blue-400 hover:text-blue-300 transition-colors">
+          Chapter 23: Indian Physiography & Passes <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX MODAL -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-blue-400">Geographical Image View</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+
+    <!-- Viewer Canvas -->
+    <div class="relative flex-1 flex items-center justify-center overflow-hidden my-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 border-t border-slate-800/80 pt-2">
+      Tip: Use mouse wheel to zoom in/out • Click and drag to pan when zoomed
+    </div>
+  </div>
+
+  <!-- QUICK SEARCH MODAL (ESC TO CLOSE) -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="w-full max-w-lg bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <div class="flex items-center gap-2 text-slate-400 text-xs font-semibold">
+          <i data-lucide="search" class="w-4 h-4 text-blue-400"></i> Search Physical Geography
+        </div>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-slate-200 text-xs">ESC to exit</button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type rock, wave, wind, current, or trench..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-blue-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Type keywords to search sections...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT INCLUSION -->
+  <script src="assets/js/geo_geomorphology_climatology.js"></script>
+</body>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Drainage & River Basins | Lucent GK Visualizer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-['Inter'] selection:bg-cyan-500 selection:text-slate-950">
+
+  <!-- TOP APP HEADER -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/80 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+      
+      <!-- Logo & Hub Link -->
+      <div class="flex items-center gap-3">
+        <a href="hub.html" class="flex items-center gap-2.5 text-cyan-400 hover:text-cyan-300 transition-colors group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-600/10 border border-cyan-500/30 flex items-center justify-center group-hover:scale-105 transition-transform">
+            <i data-lucide="waves" class="w-5 h-5 text-cyan-400"></i>
+          </div>
+          <span class="font-['Cinzel'] font-bold text-lg tracking-wider text-slate-100 group-hover:text-cyan-300">LUCENT<span class="text-cyan-400">GS</span></span>
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold hidden md:inline">Indian Drainage</span>
+      </div>
+
+      <!-- Navigation & Utility Controls -->
+      <div class="flex items-center gap-3">
+        <!-- Quick Search Button -->
+        <button onclick="openSearchModal()" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200 hover:border-slate-700 text-xs transition-all shadow-inner">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-cyan-400"></i>
+          <span class="hidden sm:inline">Search (Ctrl+K)</span>
+        </button>
+
+        <!-- Chapter Switcher Dropdown -->
+        <select id="chapterDropdown" class="bg-slate-900 border border-slate-800 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-1 focus:ring-cyan-400 cursor-pointer">
+          <optgroup label="Ancient India">
+            <option value="index.html">01. Indus Valley Civilization</option>
+            <option value="vedic.html">02. Vedic Culture</option>
+            <option value="mahajanapadas.html">03. Mahajanapadas & Magadha</option>
+            <option value="religions.html">04. Buddhism & Jainism</option>
+            <option value="maurya.html">05. The Mauryan Empire</option>
+            <option value="post_maurya.html">06. Post-Maurya & Sangam</option>
+            <option value="gupta.html">07. Gupta Age & Harsha</option>
+          </optgroup>
+          <optgroup label="Medieval India">
+            <option value="early_medieval.html">08. Early Medieval & Rajputs</option>
+            <option value="delhi_sultanate.html">09. The Delhi Sultanate</option>
+            <option value="vijayanagar_bahmani.html">10. Vijayanagar & Bahmani</option>
+            <option value="mughal_empire.html">11. The Mughal Empire</option>
+            <option value="marathas.html">12. The Marathas & Later Mughals</option>
+            <option value="bhakti_sufi.html">13. Bhakti & Sufi Movements</option>
+          </optgroup>
+          <optgroup label="Modern India">
+            <option value="european_expansion.html">14. European Expansion in India</option>
+            <option value="economic_revolts.html">15. Economic Impact & Tribal Revolts</option>
+            <option value="reforms.html">16. Socio-Religious Reform Movements</option>
+            <option value="revolt_1857.html">17. The Great Revolt of 1857</option>
+            <option value="national_movement_early.html">18. Early National Movement (1885–1919)</option>
+            <option value="gandhian_era.html">19. The Gandhian Era (1919–1947)</option>
+            <option value="viceroys_acts.html">20. British Viceroys & Acts</option>
+          </optgroup>
+          <optgroup label="Geography">
+            <option value="geo_universe_earth.html">21. Universe, Solar System & Earth</option>
+            <option value="geo_geomorphology_climatology.html">22. Geomorphology, Atmosphere & Oceans</option>
+            <option value="geo_indian_physiography.html">23. Indian Physiography & Passes</option>
+            <option value="geo_indian_drainage.html" selected>24. Indian Drainage & River Basins</option>
+            <option value="geo_climate_soils_agriculture.html">25. Climate, Soils, Agriculture & Minerals</option>
+          </optgroup>
+        </select>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 transition-colors" title="Toggle White/Dark Theme">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+    <!-- HERO SECTION -->
+    <section class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-slate-950 p-8 sm:p-12 shadow-2xl">
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent pointer-events-none"></div>
+      <div class="relative z-10 max-w-4xl space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-semibold uppercase tracking-wider">
+          <i data-lucide="droplets" class="w-3.5 h-3.5"></i>
+          Section 24 • Indian Physical Geography
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-['Cinzel'] font-black tracking-tight text-slate-100">
+          Indian Drainage Systems: <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-200">Himalayan & Peninsular Rivers</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+          From the sacred glacial origins of the Ganga and the five holy Prayags to the braided majesty of the Brahmaputra, the rift-valley torrent of the Narmada, the delta-building power of the Godavari, and India's landmark multipurpose dams.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="#indus-system" class="px-4 py-2 rounded-xl bg-cyan-500 text-slate-950 font-semibold text-xs tracking-wide hover:bg-cyan-400 transition-colors">The Indus & Panchnad</a>
+          <a href="#ganga-system" class="px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-medium text-xs tracking-wide border border-slate-700 transition-colors">Panch Prayag Table</a>
+          <a href="#brahmaputra-system" class="px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-medium text-xs tracking-wide border border-slate-700 transition-colors">Brahmaputra & Majuli</a>
+          <a href="#peninsular-west" class="px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-200 font-medium text-xs tracking-wide border border-slate-700 transition-colors">Narmada Rift Valley</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: INDUS SYSTEM & PANCHNAD -->
+    <section id="indus-system" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-['Cinzel'] font-bold text-lg">01</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">The Indus (Sindhu) River System & The Panchnad</h2>
+          <p class="text-xs text-slate-400">Bokhar Chu Glacier, The Five Punjab Rivers, and the Indus Waters Treaty (1960)</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-cyan-500/10 text-cyan-400 text-[11px] font-mono font-bold">Main Stem</div>
+          <h3 class="text-base font-bold text-slate-100">The Indus (Sindhu)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            • <strong>Origin:</strong> <strong>Bokhar Chu glacier</strong> near Lake Mansarovar in Tibet (known as <em>Singi Khamban</em> / Lion's Mouth).
+            <br>• Enters India in Ladakh, flowing northwest between the <strong>Ladakh and Zaskar ranges</strong>.
+            <br>• Total length = <strong>2,880 km</strong> (1,114 km in India).
+            <br>• Receives Himalayan tributaries: Shyok (River of Death), Gilgit, Zaskar, Hunza, Shigar.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-cyan-500/10 text-cyan-400 text-[11px] font-mono font-bold">Panchnad Rivers</div>
+          <h3 class="text-base font-bold text-slate-100">The Five Punjab Tributaries</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            • <strong>Jhelum (Vitasta):</strong> Verinag spring (Kashmir); forms boundary with Pakistan; flows through Wular Lake.
+            <br>• <strong>Chenab (Asikni):</strong> Chandra + Bhaga at Tandi (HP); <em>largest tributary of Indus</em>.
+            <br>• <strong>Ravi (Purushni):</strong> Originates near Rohtang Pass (HP).
+            <br>• <strong>Beas (Vipasa):</strong> Originates at Beas Kund; lies entirely within India; joins Sutlej at Harike.
+            <br>• <strong>Sutlej (Satadru):</strong> Rakas Lake (Tibet); antecedent river entering via Shipki La.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-3">
+          <div class="inline-block px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 text-[11px] font-mono font-bold">1960 Treaty</div>
+          <h3 class="text-base font-bold text-slate-100">Indus Waters Treaty (IWT)</h3>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Signed on 19 September 1960 in Karachi by PM Jawaharlal Nehru and President Ayub Khan (brokered by the World Bank):
+            <br>• <strong>Eastern Rivers (Ravi, Beas, Sutlej):</strong> Allocated to <strong>India</strong> for unrestricted use.
+            <br>• <strong>Western Rivers (Indus, Jhelum, Chenab):</strong> Allocated to <strong>Pakistan</strong>, with India retaining non-consumptive usage rights for run-of-the-river hydroelectric power generation.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: GANGA SYSTEM & PANCH PRAYAG -->
+    <section id="ganga-system" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-['Cinzel'] font-bold text-lg">02</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">The Ganga River System & The Holy Panch Prayag</h2>
+          <p class="text-xs text-slate-400">Headwaters of Alaknanda & Bhagirathi, The Five Confluences, and Major Tributaries</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Devprayag Image -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="expandable-image group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 cursor-zoom-in" data-title="Devprayag: Confluence of Alaknanda and Bhagirathi" data-caption="Archival photograph of Devprayag in Uttarakhand, where the turquoise waters of the Alaknanda merge with the rapid currents of the Bhagirathi. From this point downstream, the unified river is officially called the Ganga.">
+            <img src="assets/images/ganga_devprayag.jpg" alt="Confluence of Alaknanda and Bhagirathi at Devprayag" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-xs text-slate-200 flex items-center justify-between">
+              <span class="font-semibold text-cyan-300">Devprayag, Uttarakhand • Birth of Ganga</span>
+              <span class="flex items-center gap-1 text-[11px] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700"><i data-lucide="maximize-2" class="w-3 h-3"></i> Zoom</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic text-center">Devprayag: Sacred confluence where Bhagirathi and Alaknanda unite to form the Ganga.</p>
+        </div>
+
+        <!-- Ganga Facts & Course -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <h3 class="text-lg font-bold text-cyan-300 flex items-center gap-2">
+              <i data-lucide="git-merge" class="w-5 h-5 text-cyan-400"></i> Course of the National River
+            </h3>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li>
+                <strong>Origin:</strong> Bhagirathi rises from <strong>Gangotri Glacier (Gaumukh, 3,900 m)</strong> in Uttarkashi. Alaknanda rises from <strong>Satopanth Glacier</strong> near Badrinath.
+              </li>
+              <li>
+                <strong>Plains Entry & Length:</strong> Enters the plains at <strong>Haridwar</strong>. Total length is <strong>2,525 km</strong> (longest river in India), draining 8.6 lakh sq km across Uttarakhand, UP, Bihar, and West Bengal.
+              </li>
+              <li>
+                <strong>Right-Bank Tributaries:</strong>
+                <br>• <strong>Yamuna (1,376 km):</strong> Rises from Yamunotri glacier; joins Ganga at Prayagraj (Triveni Sangam). Fed by Chambal, Betwa, Ken, Sind.
+                <br>• <strong>Son:</strong> Rises at Amarkantak plateau (MP); flows north to join Ganga near Patna.
+              </li>
+              <li>
+                <strong>Left-Bank Tributaries:</strong> Ramganga, <strong>Gomti</strong> (originates at Fulhar Jheel / Gomat Taal, Pilibhit, UP), <strong>Ghaghara</strong> (largest tributary by water volume), <strong>Gandak</strong>, <strong>Kosi</strong> ('Sorrow of Bihar' due to shifting courses), Mahananda.
+              </li>
+              <li>
+                <strong>Delta & Sundarbans:</strong> Bifurcates at Farakka Barrage (WB) into <strong>Bhagirathi-Hooghly</strong> (flowing past Kolkata to the sea) and <strong>Padma</strong> (flowing into Bangladesh to join Jamuna and Meghna, forming the <strong>Sundarbans Mangrove Delta</strong>).
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Master Table: The Panch Prayag -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-['Cinzel'] font-bold text-slate-200 flex items-center gap-2">
+          <i data-lucide="map-pin" class="w-5 h-5 text-cyan-400"></i> The Holy Panch Prayag (Essential Prelims Table)
+        </h3>
+        <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-slate-800/80 text-cyan-300 border-b border-slate-700 font-semibold uppercase tracking-wider text-[11px]">
+              <tr>
+                <th class="p-3.5">Prayag (Confluence)</th>
+                <th class="p-3.5">Main River</th>
+                <th class="p-3.5">Tributary Joining</th>
+                <th class="p-3.5">District (Uttarakhand)</th>
+                <th class="p-3.5">Religious & Mythological Importance</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 text-slate-300">
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-amber-400">1. Vishnuprayag</td>
+                <td class="p-3.5 font-semibold text-slate-100">Alaknanda</td>
+                <td class="p-3.5 font-bold text-cyan-300">Dhauliganga</td>
+                <td class="p-3.5">Chamoli</td>
+                <td class="p-3.5">First of the prayags down from Satopanth glacier; near Joshimath.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-amber-400">2. Nandaprayag</td>
+                <td class="p-3.5 font-semibold text-slate-100">Alaknanda</td>
+                <td class="p-3.5 font-bold text-cyan-300">Nandakini</td>
+                <td class="p-3.5">Chamoli</td>
+                <td class="p-3.5">Associated with King Nanda; holy sanctuary along the Badrinath pilgrimage route.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-amber-400">3. Karnaprayag</td>
+                <td class="p-3.5 font-semibold text-slate-100">Alaknanda</td>
+                <td class="p-3.5 font-bold text-cyan-300">Pindar River</td>
+                <td class="p-3.5">Chamoli</td>
+                <td class="p-3.5">Pindar originates from Pindari Glacier; site where Karna meditated in Mahabharata.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-amber-400">4. Rudraprayag</td>
+                <td class="p-3.5 font-semibold text-slate-100">Alaknanda</td>
+                <td class="p-3.5 font-bold text-cyan-300">Mandakini (Kali Ganga)</td>
+                <td class="p-3.5">Rudraprayag</td>
+                <td class="p-3.5">Mandakini flows down from Kedarnath glacier; site of severe 2013 flash floods.</td>
+              </tr>
+              <tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="p-3.5 font-bold text-emerald-400">5. Devprayag</td>
+                <td class="p-3.5 font-semibold text-slate-100">Alaknanda</td>
+                <td class="p-3.5 font-bold text-emerald-300">Bhagirathi</td>
+                <td class="p-3.5">Tehri Garhwal</td>
+                <td class="p-3.5 font-semibold text-slate-100">Most sacred confluence; the united stream is officially named <strong>The Ganga</strong>.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: BRAHMAPUTRA SYSTEM & MAJULI -->
+    <section id="brahmaputra-system" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-['Cinzel'] font-bold text-lg">03</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">The Brahmaputra River System & Majuli Island</h2>
+          <p class="text-xs text-slate-400">Yarlung Tsangpo, Namcha Barwa U-Turn, Braided Channels, and the World's Largest River Island</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Brahmaputra Image -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="expandable-image group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 cursor-zoom-in" data-title="Brahmaputra River at Goalpara, Assam" data-caption="The vast braided expanse of the Brahmaputra River flowing through Assam. Reaching widths of up to 10 km during monsoon season, it carries massive silt loads and sustains the world's largest river island, Majuli.">
+            <img src="assets/images/brahmaputra_river.jpg" alt="Brahmaputra River in Assam" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-xs text-slate-200 flex items-center justify-between">
+              <span class="font-semibold text-cyan-300">Brahmaputra River, Assam</span>
+              <span class="flex items-center gap-1 text-[11px] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700"><i data-lucide="maximize-2" class="w-3 h-3"></i> Zoom</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic text-center">Brahmaputra: Originates as Tsangpo in Tibet; enters India via the Great Bend of Namcha Barwa.</p>
+        </div>
+
+        <!-- Brahmaputra Highlights -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <h3 class="text-lg font-bold text-cyan-300 flex items-center gap-2">
+              <i data-lucide="compass" class="w-5 h-5 text-cyan-400"></i> The Great Red River of Assam
+            </h3>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li>
+                <strong>Origin & Course:</strong> Rises from <strong>Chemayungdung glacier</strong> in the Kailash range near Mansarovar. Flows east for 1,100 km parallel to the Himalayas as the <strong>Yarlung Tsangpo</strong> ('The Purifier').
+              </li>
+              <li>
+                <strong>The Great Bend:</strong> Carves the Yarlung Tsangpo Grand Canyon (world's deepest canyon) and makes an abrupt hairpin bend around <strong>Namcha Barwa (7,756 m)</strong>, entering Arunachal Pradesh as <strong>Siang / Dihang</strong>.
+              </li>
+              <li>
+                <strong>Formation of Brahmaputra:</strong> At Sadiya (Assam), joined by the <strong>Dibang</strong> and <strong>Lohit</strong> rivers; thereafter officially called the <strong>Brahmaputra</strong>.
+              </li>
+              <li>
+                <strong>Tributaries:</strong>
+                <br>• <em>Right-Bank:</em> <strong>Subansiri</strong> (largest tributary, antecedent), Kameng (Jia Bhoreli), Manas, Sankosh, Tista.
+                <br>• <em>Left-Bank:</em> Burhi Dihing, Dhansiri, Kopili.
+              </li>
+              <li>
+                <strong>Majuli River Island:</strong> Enclosed between the main Brahmaputra and the Kherkutia Xuti channel, <strong>Majuli</strong> is recognized by Guinness as the <strong>world's largest inhabited freshwater river island</strong> and is India's first river island district.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: PENINSULAR DRAINAGE (EAST & WEST) -->
+    <section id="peninsular-west" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-['Cinzel'] font-bold text-lg">04</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Peninsular River Basins: East-Flowing vs. West-Flowing</h2>
+          <p class="text-xs text-slate-400">Dakshin Ganga, Rift Valley Streams, Dhuandhar Falls, and the Tropic of Cancer Crossings</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Dhuandhar Falls Image -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="expandable-image group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 cursor-zoom-in" data-title="Dhuandhar Falls, Narmada River" data-caption="The majestic Dhuandhar Falls at Bhedaghat near Jabalpur, Madhya Pradesh. The Narmada plunges 30 meters through a canyon of white marble rocks, throwing up a dense smoky mist ('Dhuan-Dhar').">
+            <img src="assets/images/dhuandhar_falls_narmada.jpg" alt="Dhuandhar Falls Bhedaghat Narmada" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+            <div class="absolute bottom-3 left-3 right-3 text-xs text-slate-200 flex items-center justify-between">
+              <span class="font-semibold text-cyan-300">Dhuandhar Falls • Narmada River</span>
+              <span class="flex items-center gap-1 text-[11px] bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700"><i data-lucide="maximize-2" class="w-3 h-3"></i> Zoom</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 italic text-center">Narmada: Longest west-flowing river of India, carving through the Marble Rocks at Bhedaghat.</p>
+        </div>
+
+        <!-- Peninsular Drainage Facts -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <h3 class="text-lg font-bold text-cyan-300 flex items-center gap-2">
+              <i data-lucide="split" class="w-5 h-5 text-cyan-400"></i> The Great Peninsular Divide
+            </h3>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li>
+                <strong>East-Flowing Rivers (Bay of Bengal Drainage - form Deltas):</strong>
+                <br>• <strong>Godavari (1,465 km):</strong> Known as <em>'Dakshin Ganga'</em> or <em>'Vridha Ganga'</em>. Originates at Trimbakeshwar (Nashik, Maharashtra). Tributaries: Penganga, Wainganga, Wardha (unite as Pranhita), Indravati, Sabari, Manjira.
+                <br>• <strong>Krishna (1,400 km):</strong> Originates at Mahabaleshwar (Maharashtra). Tributaries: Tungabhadra, Bhima, Koyna, Musi (Hyderabad on its bank).
+                <br>• <strong>Cauvery (800 km):</strong> Known as <em>'Ganga of the South'</em>. Originates at Talakaveri in Brahmagiri Hills (Coorg, Karnataka). Receives SW monsoon in summer and NE monsoon in winter (perennial flow). Site of Shivasamudram Falls.
+                <br>• <strong>Mahanadi (851 km):</strong> Originates in Raipur (Chhattisgarh); drains Odisha; site of <strong>Hirakud Dam</strong>.
+              </li>
+              <li>
+                <strong>West-Flowing Rivers (Arabian Sea Drainage - form Estuaries):</strong>
+                <br>• <strong>Narmada (1,312 km):</strong> Originates at Amarkantak (MP). Flows west through a structural <strong>Rift Valley</strong> between the Vindhyas and Satpuras. Site of Dhuandhar Falls and <strong>Sardar Sarovar Dam</strong>.
+                <br>• <strong>Tapti (724 km):</strong> Originates at Multai (Betul, MP); flows through rift valley south of Satpuras. Surat on its banks; Ukai Dam.
+                <br>• <strong>Mahi:</strong> Originates in Vindhyas (MP); unique river that <strong>crosses the Tropic of Cancer twice</strong>.
+                <br>• <strong>Luni (511 km):</strong> Originates in Aravallis (Pushkar); only major desert river; terminates in the <strong>Rann of Kutch (Inland drainage)</strong>.
+                <br>• <strong>Sharavati (Karnataka):</strong> Site of <strong>Jog Falls (Gersoppa, 253 m)</strong>.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: LAKES & MULTIPURPOSE DAMS -->
+    <section id="lakes-waterfalls" class="space-y-8 scroll-mt-24">
+      <div class="flex items-center gap-3 border-b border-slate-800 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-['Cinzel'] font-bold text-lg">05</div>
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100">Major Lakes & Multipurpose River Valley Projects</h2>
+          <p class="text-xs text-slate-400">Wular to Chilika, Loktak's Floating Islands, and the Temples of Modern India</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Lakes Box -->
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+          <h3 class="text-lg font-bold text-cyan-400 flex items-center gap-2">
+            <i data-lucide="water" class="w-5 h-5"></i> Famous Natural Lakes of India
+          </h3>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <li>• <strong>Wular Lake (J&amp;K):</strong> Largest natural freshwater lake in India; tectonic origin; fed by the Jhelum River.</li>
+            <li>• <strong>Loktak Lake (Manipur):</strong> Largest freshwater lake in Northeast India; famous for circular floating vegetative masses called <strong>Phumdis</strong> and the <em>Keibul Lamjao National Park</em> (only floating national park in the world).</li>
+            <li>• <strong>Chilika Lake (Odisha):</strong> Largest brackish water coastal lagoon in India (Ramsar Wetland); famous for Irrawaddy dolphins.</li>
+            <li>• <strong>Pulicat Lake (Andhra/TN border):</strong> Second largest brackish water lake; separated from Bay of Bengal by the barrier island of Sriharikota (ISRO launch center).</li>
+            <li>• <strong>Sambhar Lake (Rajasthan):</strong> India's largest inland saline lake; major salt production center.</li>
+            <li>• <strong>Vembanad Lake (Kerala):</strong> Longest lake in India (96 km); site of Nehru Trophy Boat Race at Punnamada.</li>
+            <li>• <strong>Lonar Lake (Maharashtra):</strong> Famous crater lake in Buldhana district formed by a meteorite impact in basalt rock.</li>
+          </ul>
+        </div>
+
+        <!-- Multipurpose Dams Box -->
+        <div id="dams-projects" class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4 scroll-mt-24">
+          <h3 class="text-lg font-bold text-cyan-400 flex items-center gap-2">
+            <i data-lucide="dam" class="w-5 h-5"></i> Multipurpose River Valley Projects
+          </h3>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <li>• <strong>Bhakra Nangal Project:</strong> Built on the <strong>Sutlej River</strong> in Himachal Pradesh/Punjab. One of the highest straight gravity dams in the world (226 m); reservoir named <em>Gobind Sagar</em>.</li>
+            <li>• <strong>Tehri Dam:</strong> Built on the <strong>Bhagirathi River</strong> in Uttarakhand. <strong>Highest dam in India (260.5 m)</strong>; 8th tallest in the world.</li>
+            <li>• <strong>Hirakud Dam:</strong> Built on the <strong>Mahanadi River</strong> in Odisha. <strong>Longest earthen dam in the world (25.8 km total length)</strong>.</li>
+            <li>• <strong>Sardar Sarovar Dam:</strong> Built on the <strong>Narmada River</strong> in Gujarat; provides irrigation and drinking water to drought-prone Saurashtra and Rajasthan.</li>
+            <li>• <strong>Damodar Valley Corporation (DVC, 1948):</strong> First multipurpose river valley project of independent India; modeled on the US Tennessee Valley Authority (TVA). Controls floods on the Damodar ('Sorrow of Bengal').</li>
+            <li>• <strong>Nagarjuna Sagar Dam:</strong> Built on the <strong>Krishna River</strong> on the Andhra Pradesh/Telangana border; one of the largest masonry dams.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: 3D FLASHCARDS -->
+    <section class="space-y-6 pt-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div>
+          <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+            <i data-lucide="layers" class="w-6 h-6 text-cyan-400"></i> Indian Drainage Flashcards
+          </h2>
+          <p class="text-xs text-slate-400">Click card to flip • Master high-yield Lucent GK Indian Rivers</p>
+        </div>
+        <span id="cardCounter" class="text-xs font-mono px-3 py-1 rounded-full bg-slate-800 text-cyan-400 border border-slate-700">1 / 12</span>
+      </div>
+
+      <div class="max-w-2xl mx-auto perspective-1000 py-6">
+        <div id="flashcard" class="relative w-full h-72 sm:h-80 cursor-pointer transform-style-preserve-3d transition-transform duration-500 rounded-3xl border border-slate-800 shadow-2xl bg-gradient-to-br from-slate-900 to-slate-950 p-8 flex flex-col justify-between select-none">
+          
+          <!-- Front Face -->
+          <div class="face-front flex flex-col justify-between h-full">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono uppercase text-cyan-400 font-semibold tracking-wider">Question</span>
+              <span class="text-xs text-slate-400 flex items-center gap-1"><i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i> Tap to flip</span>
+            </div>
+            <div id="cardQuestion" class="text-base sm:text-xl font-medium text-slate-100 leading-snug py-4">Loading question...</div>
+            <div class="text-[11px] text-slate-400">Lucent GK Geography Prelims Series</div>
+          </div>
+
+          <!-- Back Face -->
+          <div class="face-back flex flex-col justify-between h-full absolute inset-0 p-8 rounded-3xl bg-slate-900 border border-cyan-500/30">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono uppercase text-emerald-400 font-semibold tracking-wider">Answer & Concept</span>
+              <span class="text-xs text-slate-400 flex items-center gap-1"><i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i> Tap to flip</span>
+            </div>
+            <div id="cardAnswer" class="text-xs sm:text-sm text-slate-200 leading-relaxed overflow-y-auto pr-1">Loading answer...</div>
+            <div class="text-[11px] text-cyan-400 font-mono">Exam Note: Essential Memorization</div>
+          </div>
+
+        </div>
+
+        <!-- Controls -->
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <button id="prevCard" class="px-5 py-2 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-2 transition-all">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> Previous
+          </button>
+          <button id="nextCard" class="px-5 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-semibold flex items-center gap-2 transition-all">
+            Next <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: 5-QUESTION MOCK QUIZ -->
+    <section class="space-y-6 pt-4">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-2xl font-['Cinzel'] font-bold text-slate-100 flex items-center gap-2">
+          <i data-lucide="check-square" class="w-6 h-6 text-cyan-400"></i> Prelims Self-Assessment Quiz
+        </h2>
+        <p class="text-xs text-slate-400">Test your mastery over Indian river basins, Panch Prayag, lakes, and multipurpose dams</p>
+      </div>
+
+      <div id="quizContainer" class="space-y-4 max-w-3xl mx-auto">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div id="quizScoreBanner" class="hidden max-w-3xl mx-auto"></div>
+
+      <div class="flex justify-center gap-4 pt-4">
+        <button id="submitQuizBtn" class="px-6 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold text-xs tracking-wider transition-all shadow-lg">
+          Submit Answers
+        </button>
+        <button id="resetQuizBtn" class="px-6 py-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 font-medium text-xs tracking-wider transition-all">
+          Reset Quiz
+        </button>
+      </div>
+    </section>
+
+    <!-- SECTION NAVIGATION FOOTER -->
+    <footer class="pt-12 border-t border-slate-800">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <a href="geo_indian_physiography.html" class="flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-cyan-400 transition-colors">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Chapter 23: Indian Physiography & Passes
+        </a>
+        <a href="hub.html" class="px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-all">
+          Subject Knowledge Hub
+        </a>
+        <a href="geo_climate_soils_agriculture.html" class="flex items-center gap-2 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+          Chapter 25: Climate, Soils, Agriculture & Minerals <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- FULL DETAIL IMAGE LIGHTBOX MODAL -->
+  <div id="imageLightbox" class="fixed inset-0 z-50 hidden bg-slate-950/95 backdrop-blur-md flex-col justify-between p-4 sm:p-6 select-none">
+    <div class="flex items-center justify-between border-b border-slate-800/80 pb-3">
+      <div>
+        <h3 id="lightboxTitle" class="text-sm sm:text-base font-bold text-cyan-400">River Drainage View</h3>
+        <p id="lightboxCaption" class="text-xs text-slate-400 max-w-xl truncate"></p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="zoomInBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom In"><i data-lucide="zoom-in" class="w-4 h-4"></i></button>
+        <button id="zoomOutBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Zoom Out"><i data-lucide="zoom-out" class="w-4 h-4"></i></button>
+        <button id="zoomResetBtn" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white" title="Reset Zoom"><i data-lucide="rotate-ccw" class="w-4 h-4"></i></button>
+        <button id="lightboxClose" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 text-rose-300 hover:bg-rose-500/30 ml-2" title="Close Lightbox"><i data-lucide="x" class="w-4 h-4"></i></button>
+      </div>
+    </div>
+
+    <!-- Viewer Canvas -->
+    <div class="relative flex-1 flex items-center justify-center overflow-hidden my-4">
+      <img id="lightboxImg" src="" alt="Enlarged view" class="max-h-full max-w-full object-contain transition-transform duration-100 ease-out cursor-grab">
+    </div>
+
+    <div class="text-center text-[11px] text-slate-400 border-t border-slate-800/80 pt-2">
+      Tip: Use mouse wheel to zoom in/out • Click and drag to pan when zoomed
+    </div>
+  </div>
+
+  <!-- QUICK SEARCH MODAL (ESC TO CLOSE) -->
+  <div id="searchModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm items-start justify-center pt-20 p-4">
+    <div class="w-full max-w-lg bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-2xl space-y-3">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <div class="flex items-center gap-2 text-slate-400 text-xs font-semibold">
+          <i data-lucide="search" class="w-4 h-4 text-cyan-400"></i> Search Indian Drainage
+        </div>
+        <button onclick="closeSearchModal()" class="text-slate-400 hover:text-slate-200 text-xs">ESC to exit</button>
+      </div>
+      <input type="text" id="searchInput" placeholder="Type river, prayag, dam, lake, or waterfall..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-slate-200 focus:outline-none focus:ring-1 focus:ring-cyan-400">
+      <div id="searchResults" class="max-h-60 overflow-y-auto space-y-2 pt-2">
+        <p class="text-slate-400 text-xs text-center py-4">Type keywords to search sections...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT INCLUSION -->
+  <script src="assets/js/geo_indian_drainage.js"></script>
+</body>
+</html>
